@@ -68,7 +68,7 @@ public class CardView extends JFrame{
         theButton.add(backButton);
 
         inputPanel.add(theButton);
-
+        refresh(this);
         // final frame
         frame.add(inputPanel, BorderLayout.NORTH);
         frame.add(scrollPane, BorderLayout.CENTER);

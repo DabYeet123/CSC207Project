@@ -163,4 +163,8 @@ public class CardController {
     public Card getCard(String cardID) {
         return cardDBAccess.readDataPoint(loggedInUser.getUserID(), cardID);
     }
+
+    public static void updateData(int userID, String cardID, double amount) {
+        cardDBAccess.updateData(userID, cardID, amount);
+    }
 }
