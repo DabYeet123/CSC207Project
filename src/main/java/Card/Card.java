@@ -1,11 +1,12 @@
 package Card;
 
+import DataObjects.UserObject;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Card {
 
-     private final String id ;
+     private final String id;
      private final String usage;
      private final String date;
      private final String code;
@@ -45,6 +46,6 @@ public class Card {
     }
 
     public void updateAmount(double newAmount) {
-        this.expenses = newAmount;
+        this.expenses -= newAmount;
     }
 }

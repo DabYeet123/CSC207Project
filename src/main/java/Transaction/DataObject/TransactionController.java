@@ -14,6 +14,7 @@ public class TransactionController {
 
         return user;
     }
+
     public List<TransactionObject> getAllTransactions(int userID) {
         return transactionDBAccess.readData(userID);
     }

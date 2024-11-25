@@ -18,6 +18,10 @@ Bob can take a loan from the, he chooses whether to pay periodically or automati
 Xing's Story: Joe wants to buy a house, he goes on the banking app and see a list of properties displayed on the map.
 Joe chooses a house he likes and makes the down payment and pays the mortgage rates every month. Joe also needs to buy
 insurance through the banking app to make sure he has all the insurance he needs covered, and will list the ones he
+
+Xing's Story: Joe wants to buy a houseObject, he goes on the banking app and see a list of properties displayed on the map. 
+Joe chooses a houseObject he likes and makes the down payment and pays the mortgage rates every month. Joe also needs to buy 
+insurance through the banking app to make sure he has all the insurance he needs covered, and will list the ones he 
 requires for the property.
 
 

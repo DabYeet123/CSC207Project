@@ -10,6 +10,8 @@ public class TransactionObject {
     double amount;
     LocalDateTime timeStamp;
 
+    public TransactionObject() {}
+
     public TransactionObject(int transactionID, int senderID, int receiverID,
                              String cardUsed, double amount, LocalDateTime timeStamp) {
         this.transactionID = transactionID;

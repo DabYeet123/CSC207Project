@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.23 change the back to main button and add the button of exchange currency" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.23 change amount is double">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +39,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
-    &quot;accountId&quot;: &quot;6ad2bf27-20b8-4fd9-bcc9-e62e48d3863d&quot;
+    &quot;accountId&quot;: &quot;52a0db03-ac1e-4a5a-8a92-0f4811ad9340&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -51,13 +56,15 @@
     &quot;Application.CardPresenter.executor&quot;: &quot;Run&quot;,
     &quot;Application.CardView.executor&quot;: &quot;Run&quot;,
     &quot;Application.CurrencyExchangePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
     &quot;Application.WelcomePresenter.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Yue-Zheng&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sincer.xu&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/U of T/CSC207/CSC207Project/src/main/java/Loans/SeeLoansHistory&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,6 +74,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\Loans\SeeLoansHistory" />
+      <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\Loans" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.View.CardView" />
     </key>

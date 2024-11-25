@@ -1,5 +1,7 @@
 package LogIn.LogIn;
 
+import LogIn.Welcome.WelcomeController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,17 +23,24 @@ public class LogInView extends JFrame {
         JTextField userIDField = new JTextField();
         JLabel passwordLabel = new JLabel("Password:");
         JPasswordField passwordField = new JPasswordField();
+        JButton backButton = new JButton("Back");
         JButton logInButton = new JButton("Log In");
 
         loginPanel.add(userIDLabel);
         loginPanel.add(userIDField);
         loginPanel.add(passwordLabel);
         loginPanel.add(passwordField);
-        loginPanel.add(new JLabel());
+        loginPanel.add(backButton);
         loginPanel.add(logInButton);
 
         add(loginPanel);
 
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                controller.goBackToWelcomeView();
+            }
+        });
         logInButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

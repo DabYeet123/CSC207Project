@@ -6,12 +6,13 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystems;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DataAccessController {
 
-    private static final String BASE_PATH = "data/";
+    private static final String BASE_PATH = "data" + FileSystems.getDefault().getSeparator();
 
     public <T> void saveData(String fileName, List<T> data, Class<T> classA) {
         ObjectMapper mapper = new ObjectMapper();

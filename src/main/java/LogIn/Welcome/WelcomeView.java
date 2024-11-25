@@ -19,7 +19,8 @@ public class WelcomeView extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         JButton loginButton = new JButton("Log In");
         JButton signUpButton = new JButton("Sign Up");
-
+        loginButton.setPreferredSize(new Dimension(80, 25));
+        signUpButton.setPreferredSize(new Dimension(80, 25));
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout());
         buttonPanel.add(loginButton);

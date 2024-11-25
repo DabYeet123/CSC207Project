@@ -23,6 +23,7 @@ public class SignUpView extends JFrame {
         JTextField lastNameField = new JTextField();
         JLabel passwordLabel = new JLabel("Password:");
         JPasswordField passwordField = new JPasswordField();
+        JButton backButton = new JButton("Back");
         JButton signUpButton = new JButton("Sign Up");
 
         signUpPanel.add(firstNameLabel);
@@ -31,11 +32,17 @@ public class SignUpView extends JFrame {
         signUpPanel.add(lastNameField);
         signUpPanel.add(passwordLabel);
         signUpPanel.add(passwordField);
-        signUpPanel.add(new JLabel());
+        signUpPanel.add(backButton);
         signUpPanel.add(signUpButton);
 
         add(signUpPanel);
 
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                controller.goBackToWelcomeView();
+            }
+        });
         signUpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

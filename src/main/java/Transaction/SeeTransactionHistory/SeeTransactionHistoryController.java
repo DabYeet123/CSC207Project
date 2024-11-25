@@ -1,5 +1,6 @@
 package Transaction.SeeTransactionHistory;
 
+import App.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.Welcome.WelcomeController;
 import Transaction.DataObject.TransactionController;
@@ -8,7 +9,7 @@ import Transaction.DataObject.TransactionObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SeeTransactionHistoryController {
+public class SeeTransactionHistoryController implements ControllerInterface {
     UserObject loggedInUser;
     List<TransactionObject> transactions;
     private SeeTransactionHistoryPresenter seeTransactionHistoryPresenter;
@@ -23,6 +24,7 @@ public class SeeTransactionHistoryController {
         this.seeTransactionHistoryPresenter = new SeeTransactionHistoryPresenter(this);
     }
 
+    @Override
     public void launch(){
         seeTransactionHistoryPresenter.showView();
     }

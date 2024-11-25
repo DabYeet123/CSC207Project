@@ -1,17 +1,20 @@
 package LogIn.LogIn;
 
+import App.ControllerInterface;
 import DataObjects.UserObject;
 import DataObjects.UsersController;
 import LogIn.LoggedIn.LoggedInController;
+import LogIn.Welcome.WelcomeController;
+import LogIn.Welcome.WelcomePresenter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class LogInController {
+public class LogInController implements ControllerInterface {
     private LogInPresenter logInPresenter = new LogInPresenter(this);
     private LoggedInController loggedInController;
     UsersController usersController = new UsersController();
 
-
+    @Override
     public void launch(){
         logInPresenter.showView();
     }
@@ -29,5 +32,11 @@ public class LogInController {
         logInPresenter.disposeView();
         loggedInController = new LoggedInController(user);
         loggedInController.launch();
+    }
+
+    public void goBackToWelcomeView() {
+        logInPresenter.disposeView();
+        WelcomeController controller = new WelcomeController();
+        controller.launch();
     }
 }

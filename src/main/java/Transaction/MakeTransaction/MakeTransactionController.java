@@ -1,11 +1,12 @@
 package Transaction.MakeTransaction;
 
+import App.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
 import Transaction.DataObject.TransactionController;
 
-public class MakeTransactionController{
+public class MakeTransactionController implements ControllerInterface {
     UserObject loggedInUser;
     private MakeTransactionPresenter makeTransactionPresenter;
     private WelcomeController welcomeController;
@@ -18,6 +19,7 @@ public class MakeTransactionController{
         this.makeTransactionPresenter = new MakeTransactionPresenter(this);
     }
 
+    @Override
     public void launch(){
         makeTransactionPresenter.showView();
     }

@@ -80,7 +80,7 @@ public class CurrencyExchangeView extends JFrame {
         });
 
         // back button
-        backButton = new JButton("BACK TO MAIN");
+        backButton = new JButton("Back to Main");
         backButton.setBounds(400, 300, 150, 30);
         add(backButton);
         backButton.addActionListener(new ActionListener() {
@@ -89,5 +89,6 @@ public class CurrencyExchangeView extends JFrame {
                 currencyExchangeController.goBackToBaseView();
             }
         });
+        setLocationRelativeTo(null);
     }
 }
