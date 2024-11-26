@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Add the override of interface of Controller and Presenter">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ExchangeCurrency/ExchangeCurrencyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" afterDir="false" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Write for Card and ExchangeCurrency Tests">
+      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +202,7 @@
       <workItem from="1732579545149" duration="351000" />
       <workItem from="1732579970472" duration="5567000" />
       <workItem from="1732588253253" duration="219000" />
-      <workItem from="1732588516847" duration="7272000" />
+      <workItem from="1732588516847" duration="7465000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -335,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732589257014</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Write for Card and ExchangeCurrency Tests">
+      <option name="closed" value="true" />
+      <created>1732658883178</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732658883178</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +365,8 @@
     <MESSAGE value="renew of some issue of card and make 5 test for card controller and DBA" />
     <MESSAGE value="1" />
     <MESSAGE value="Add the override of interface of Controller and Presenter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the override of interface of Controller and Presenter" />
+    <MESSAGE value="Write for Card and ExchangeCurrency Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write for Card and ExchangeCurrency Tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

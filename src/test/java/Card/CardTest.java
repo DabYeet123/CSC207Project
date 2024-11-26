@@ -14,25 +14,25 @@ class CardTest {
     UserObject userObject = new UserObject(11000, "Yue", "Zheng", "12", 0.0, "file");
     UsersDBAccess usersDBAccess = new UsersDBAccess();
     CardController cardController = new CardController(userObject);
+    /*
+        The UserId here is all 11000 because save data in 11000 user and in each user we can test the card part
+     */
 
     @Test
     void successCardExistsTestWithChangeExpenses() {
-        // Mock setup
+
         usersDBAccess.saveData(userObject);
 
         int userId = 11000;
         String cardId = "0010011111";
         Card mockCard = new Card(cardId, "Test Card", "12/2025", "123");
 
-        // Save the card using CardDBAccess
         CardDBAccess cardDBAccess = new CardDBAccess();
         cardDBAccess.saveData(userId, mockCard);
 
-        // Retrieve the card using CardController
         CardController controller = new CardController(userObject);
         Card retrievedCard = controller.getCard(cardId);
 
-        // Validate
         assertNotNull(retrievedCard);
         assertEquals(cardId, retrievedCard.getId());
         assertEquals("Test Card", retrievedCard.getUsage());
@@ -43,34 +43,27 @@ class CardTest {
 
     @Test
     void failureCardDoesNotExistTest() {
-        // Mock setup
-        String nonExistentCardId = "1000000000";
+        String fakeCardId = "1000000000";
 
-        // Attempt to retrieve the card using CardController
         CardController controller = new CardController(userObject);
-        Card retrievedCard = controller.getCard(nonExistentCardId);
+        Card retrievedCard = controller.getCard(fakeCardId);
 
-        // Validate
         assertNull(retrievedCard, "Expected no card to be returned.");
     }
 
     @Test
     void successDeleteCardTest() {
-        // Mock setup
-        int userId = 11000; // Mock user ID
+        int userId = 11000;
         String cardId = cardController.newId("11");
         Card testCard = new Card(cardId, "Test Card", "12/2025", "123");
 
-        // Save the card using CardDBAccess
         CardDBAccess cardDBAccess = new CardDBAccess();
         cardDBAccess.saveData(userId, testCard);
         assertEquals(cardId, cardDBAccess.readDataPoint(userId,cardId).getId());
 
-        // Delete the card using CardDBAccess
         int index = cardDBAccess.readDataIndex(userId, cardId);
         cardDBAccess.saveDeleteData(userId, index);
 
-        // Validate the card is removed
         CardController controller = new CardController(userObject);
         Card retrievedCard = controller.getCard(cardId);
 
@@ -83,11 +76,9 @@ class CardTest {
         String cardId = cardController.newId("11");
         Card testCard = new Card(cardId, "Test Card", "12/2025", "123");
 
-        // Create CardDBAccess instance
         CardDBAccess cardDBAccess = new CardDBAccess();
         cardDBAccess.saveData(userId, testCard);
 
-        // Read back the card to ensure it was saved
         List<Card> cards = cardDBAccess.readData(userId);
         int index = cardDBAccess.readDataIndex(userId, cardId);
         Card savedCard = cards.get(index);
