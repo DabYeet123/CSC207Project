@@ -88,4 +88,18 @@ class CardTest {
         assertEquals(0.0, savedCard.getExpenses());
     }
 
+    @Test
+    void successCardEntity() {
+        String cardId = CardController.newId("Test Card");
+        String date = CardController.newDate();
+        String code = CardController.newCode();
+        Card testCard = new Card(cardId, "Test Card", date, code);
+        assertEquals(testCard.getId(), cardId);
+        assertEquals(testCard.getCode(), code);
+        assertEquals(testCard.getDate(), date);
+        assertEquals(testCard.getExpenses(), 0);
+
+        testCard.updateAmount(7000);
+        assertEquals(testCard.getExpenses(), -7000);
+    }
 }

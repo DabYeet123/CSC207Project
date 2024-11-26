@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Write for Card and ExchangeCurrency Tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +62,7 @@
     "JUnit.CardTest.executor": "Run",
     "JUnit.CardTest.failureCardDoesNotExistTest.executor": "Run",
     "JUnit.CardTest.failureSaveDuplicateCardTest.executor": "Run",
+    "JUnit.CardTest.successCardEntity.executor": "Run",
     "JUnit.CardTest.successCardExistsTest.executor": "Run",
     "JUnit.CardTest.successDeleteCardTest.executor": "Run",
     "JUnit.CardTest.successSaveDataTest.executor": "Run",
@@ -94,7 +96,7 @@
       <recent name="Card.View.CardView" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExchangeCurrencyTest">
+  <component name="RunManager" selected="JUnit.CardTest.successCardEntity">
     <configuration name="APIget" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exchange.APIget" />
       <module name="homework-5" />
@@ -139,6 +141,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CardTest.successCardEntity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Card.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Card" />
+      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
+      <option name="METHOD_NAME" value="successCardEntity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExchangeCurrencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <extension name="coverage">
@@ -154,29 +172,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExchangeCurrencyTest.failureConnectionToApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ExchangeCurrency.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ExchangeCurrency" />
-      <option name="MAIN_CLASS_NAME" value="ExchangeCurrency.ExchangeCurrencyTest" />
-      <option name="METHOD_NAME" value="failureConnectionToApiTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardTest.successCardEntity" />
         <item itemvalue="JUnit.ExchangeCurrencyTest" />
         <item itemvalue="JUnit.CardTest.apiTest" />
         <item itemvalue="Application.APIget" />
         <item itemvalue="JUnit.CardTest" />
-        <item itemvalue="JUnit.ExchangeCurrencyTest.failureConnectionToApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +204,7 @@
       <workItem from="1732579545149" duration="351000" />
       <workItem from="1732579970472" duration="5567000" />
       <workItem from="1732588253253" duration="219000" />
-      <workItem from="1732588516847" duration="7465000" />
+      <workItem from="1732588516847" duration="8361000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -340,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732658883178</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Write for Card and ExchangeCurrency Tests">
+      <option name="closed" value="true" />
+      <created>1732659398250</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732659398250</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
