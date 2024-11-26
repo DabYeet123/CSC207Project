@@ -1,5 +1,6 @@
 package Exchange;
 
+import App.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
@@ -9,7 +10,7 @@ import com.crazzyghost.alphavantage.exchangerate.ExchangeRateResponse;
 
 import javax.swing.*;
 
-public class CurrencyExchangeController {
+public class CurrencyExchangeController implements ControllerInterface {
     private static double rate;
     static UserObject loggedInUser;
     private CurrencyExchangePresenter currencyExchangePresenter;
@@ -39,6 +40,7 @@ public class CurrencyExchangeController {
         this.welcomeController = new WelcomeController();
     }
 
+    @Override
     public void launch() {
         currencyExchangePresenter.showView();
     }

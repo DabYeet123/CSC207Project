@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="renew of some issue of card and make 5 test for card controller and DBA">
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangePresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +90,7 @@
       <recent name="Card.View.CardView" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CardTest.successSaveDataTest">
+  <component name="RunManager" selected="Application.MainLauncher">
     <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
       <module name="homework-5" />
@@ -166,9 +169,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainLauncher" />
         <item itemvalue="JUnit.CardTest.successSaveDataTest" />
         <item itemvalue="JUnit.CardTest" />
-        <item itemvalue="Application.MainLauncher" />
         <item itemvalue="JUnit.CardTest.successDeleteCardTest" />
         <item itemvalue="JUnit.CardTest.failureCardDoesNotExistTest" />
       </list>
@@ -196,7 +199,7 @@
       <workItem from="1732579545149" duration="351000" />
       <workItem from="1732579970472" duration="5567000" />
       <workItem from="1732588253253" duration="219000" />
-      <workItem from="1732588516847" duration="60000" />
+      <workItem from="1732588516847" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -310,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732584621284</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="1">
+      <option name="closed" value="true" />
+      <created>1732588809619</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732588809619</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,13 +339,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
     <MESSAGE value="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame." />
     <MESSAGE value="11.23 change amount is double" />
     <MESSAGE value="11.23 change the back to main button and add the button of exchange currency" />
     <MESSAGE value="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)" />
     <MESSAGE value="renew of some issue of card and make 5 test for card controller and DBA" />
-    <option name="LAST_COMMIT_MESSAGE" value="renew of some issue of card and make 5 test for card controller and DBA" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

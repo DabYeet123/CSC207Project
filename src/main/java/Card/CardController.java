@@ -1,5 +1,6 @@
 package Card;
 
+import App.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class CardController {
+public class CardController implements ControllerInterface {
     public static List<Card> cardList = new ArrayList<>();
     static UserObject loggedInUser;
     private CardPresenter cardPresenter;
@@ -23,6 +24,7 @@ public class CardController {
         this.welcomeController = new WelcomeController();
     }
 
+    @Override
     public void launch() {
         cardPresenter.showView();
     }
