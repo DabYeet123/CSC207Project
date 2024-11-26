@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/BrokerageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18__Changes_1.xml" beforeDir="false" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="renew of some issue of card and make 5 test for card controller and DBA">
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter$1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,12 +68,13 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "Yue-Zheng",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/U of T/CSC207/CSC207Project/src/main/java/Loans/SeeLoansHistory",
+    "last_opened_file_path": "C:/Users/郑Y/IdeaProjects/CSC207Project/mystyle.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -200,7 +194,9 @@
       <workItem from="1732142120786" duration="3555000" />
       <workItem from="1732383087980" duration="6021000" />
       <workItem from="1732579545149" duration="351000" />
-      <workItem from="1732579970472" duration="4555000" />
+      <workItem from="1732579970472" duration="5567000" />
+      <workItem from="1732588253253" duration="219000" />
+      <workItem from="1732588516847" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -306,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>2016572429998</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="renew of some issue of card and make 5 test for card controller and DBA">
+      <option name="closed" value="true" />
+      <created>1732584621284</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732584621284</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +333,11 @@
     <MESSAGE value="11.23 change amount is double" />
     <MESSAGE value="11.23 change the back to main button and add the button of exchange currency" />
     <MESSAGE value="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)" />
-    <option name="LAST_COMMIT_MESSAGE" value="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)" />
+    <MESSAGE value="renew of some issue of card and make 5 test for card controller and DBA" />
+    <option name="LAST_COMMIT_MESSAGE" value="renew of some issue of card and make 5 test for card controller and DBA" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
