@@ -46,6 +46,30 @@ public class CardController {
     }
 
     /**
+     * used to save the updated data in JSON file
+     * @param card cards given in CardMethod CardList
+     */
+    public static void saveCards(Card card) {
+        cardDBAccess.saveData(loggedInUser.getUserID(), card);
+    }
+
+    /**
+     * used to save the updated data in JSON file
+     * @param index the index card will be deleted in CardMethod CardList
+     */
+    public static void saveDeleteCard(int index) {
+        cardDBAccess.saveDeleteData(loggedInUser.getUserID(), index);
+    }
+
+    public Card getCard(String cardID) {
+        return cardDBAccess.readDataPoint(loggedInUser.getUserID(), cardID);
+    }
+
+    public static void updateData(int userID, String cardID, double amount) {
+        cardDBAccess.updateData(userID, cardID, amount);
+    }
+
+    /**
      * used to get the new if with no same id
      */
     @NotNull
@@ -57,7 +81,7 @@ public class CardController {
             id += String.valueOf(k);
         }
         String insideId = id + getDifferentnumber(id);
-        while (!checkId(insideId)) {
+        while (!checkId(insideId) | insideId.length() < 10) {
             insideId = id + getDifferentnumber(id);
         }
         id = insideId;
@@ -142,29 +166,5 @@ public class CardController {
             securityCode = "00" + num;
         }
         return securityCode;
-    }
-
-    /**
-     * used to save the updated data in JSON file
-     * @param card cards given in CardMethod CardList
-     */
-    public static void saveCards(Card card) {
-        cardDBAccess.saveData(loggedInUser.getUserID(), card);
-    }
-
-    /**
-     * used to save the updated data in JSON file
-     * @param index the index card will be deleted in CardMethod CardList
-     */
-    public static void saveDeleteCard(int index) {
-        cardDBAccess.saveDeleteData(loggedInUser.getUserID(), index);
-    }
-
-    public Card getCard(String cardID) {
-        return cardDBAccess.readDataPoint(loggedInUser.getUserID(), cardID);
-    }
-
-    public static void updateData(int userID, String cardID, double amount) {
-        cardDBAccess.updateData(userID, cardID, amount);
     }
 }

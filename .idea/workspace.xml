@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.23 change the back to main button and add the button of exchange currency">
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/BrokerageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter$1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
-    &quot;accountId&quot;: &quot;52a0db03-ac1e-4a5a-8a92-0f4811ad9340&quot;
+    &quot;accountId&quot;: &quot;6ad2bf27-20b8-4fd9-bcc9-e62e48d3863d&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -65,6 +64,12 @@
     "Application.Main.executor": "Run",
     "Application.MainLauncher.executor": "Run",
     "Application.WelcomePresenter.executor": "Run",
+    "JUnit.CardTest.executor": "Run",
+    "JUnit.CardTest.failureCardDoesNotExistTest.executor": "Run",
+    "JUnit.CardTest.failureSaveDuplicateCardTest.executor": "Run",
+    "JUnit.CardTest.successCardExistsTest.executor": "Run",
+    "JUnit.CardTest.successDeleteCardTest.executor": "Run",
+    "JUnit.CardTest.successSaveDataTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
@@ -88,20 +93,7 @@
       <recent name="Card.View.CardView" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainLauncher">
-    <configuration name="CardView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Card.Entity.CardView" />
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Card.Entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CardTest.successSaveDataTest">
     <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
       <module name="homework-5" />
@@ -115,10 +107,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Card.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Card" />
+      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTest.failureCardDoesNotExistTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Card.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Card" />
+      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
+      <option name="METHOD_NAME" value="failureCardDoesNotExistTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTest.successDeleteCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Card.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Card" />
+      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
+      <option name="METHOD_NAME" value="successDeleteCardTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTest.successSaveDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Card.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Card" />
+      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
+      <option name="METHOD_NAME" value="successSaveDataTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardTest.successSaveDataTest" />
+        <item itemvalue="JUnit.CardTest" />
         <item itemvalue="Application.MainLauncher" />
-        <item itemvalue="Application.CardView" />
+        <item itemvalue="JUnit.CardTest.successDeleteCardTest" />
+        <item itemvalue="JUnit.CardTest.failureCardDoesNotExistTest" />
       </list>
     </recent_temporary>
   </component>
@@ -141,6 +199,8 @@
       <workItem from="1731971553162" duration="418000" />
       <workItem from="1732142120786" duration="3555000" />
       <workItem from="1732383087980" duration="6021000" />
+      <workItem from="1732579545149" duration="351000" />
+      <workItem from="1732579970472" duration="4555000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -238,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732389153443</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)">
+      <option name="closed" value="true" />
+      <created>2016572429998</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>2016572429998</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,21 +328,7 @@
     <MESSAGE value="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame." />
     <MESSAGE value="11.23 change amount is double" />
     <MESSAGE value="11.23 change the back to main button and add the button of exchange currency" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.23 change the back to main button and add the button of exchange currency" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java</url>
-          <line>25</line>
-          <properties class="Card.CardDBAccess" method="updateData">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)" />
+    <option name="LAST_COMMIT_MESSAGE" value="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)" />
   </component>
 </project>
