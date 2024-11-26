@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="1">
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Add the override of interface of Controller and Presenter">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ExchangeCurrency/ExchangeCurrencyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +53,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.APIget.executor": "Run",
     "Application.CardPresenter.executor": "Run",
     "Application.CardView.executor": "Run",
     "Application.CurrencyExchangePresenter.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MainLauncher.executor": "Run",
     "Application.WelcomePresenter.executor": "Run",
+    "JUnit.CardTest.apiTest.executor": "Run",
     "JUnit.CardTest.executor": "Run",
     "JUnit.CardTest.failureCardDoesNotExistTest.executor": "Run",
     "JUnit.CardTest.failureSaveDuplicateCardTest.executor": "Run",
     "JUnit.CardTest.successCardExistsTest.executor": "Run",
     "JUnit.CardTest.successDeleteCardTest.executor": "Run",
     "JUnit.CardTest.successSaveDataTest.executor": "Run",
+    "JUnit.ExchangeCurrencyTest.executor": "Run",
+    "JUnit.ExchangeCurrencyTest.failureConnectionToApiTest.executor": "Run",
+    "JUnit.ExchangeCurrencyTest.failureInvalidCurrencyCodeTest.executor": "Run",
+    "JUnit.ExchangeCurrencyTest.failureInvalidInputAmountTest.executor": "Run",
+    "JUnit.ExchangeCurrencyTest.failureMissingFromCurrencyTest.executor": "Run",
+    "JUnit.ExchangeCurrencyTest.successCurrencyExchangeTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
@@ -90,13 +97,13 @@
       <recent name="Card.View.CardView" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainLauncher">
-    <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
+  <component name="RunManager" selected="JUnit.ExchangeCurrencyTest">
+    <configuration name="APIget" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exchange.APIget" />
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="App.*" />
+          <option name="PATTERN" value="Exchange.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,7 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardTest.failureCardDoesNotExistTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardTest.apiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
@@ -129,39 +136,38 @@
       </extension>
       <option name="PACKAGE_NAME" value="Card" />
       <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
-      <option name="METHOD_NAME" value="failureCardDoesNotExistTest" />
+      <option name="METHOD_NAME" value="apiTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardTest.successDeleteCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExchangeCurrencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Card.*" />
+          <option name="PATTERN" value="ExchangeCurrency.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Card" />
-      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
-      <option name="METHOD_NAME" value="successDeleteCardTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="ExchangeCurrency" />
+      <option name="MAIN_CLASS_NAME" value="ExchangeCurrency.ExchangeCurrencyTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardTest.successSaveDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExchangeCurrencyTest.failureConnectionToApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Card.*" />
+          <option name="PATTERN" value="ExchangeCurrency.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Card" />
-      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
-      <option name="METHOD_NAME" value="successSaveDataTest" />
+      <option name="PACKAGE_NAME" value="ExchangeCurrency" />
+      <option name="MAIN_CLASS_NAME" value="ExchangeCurrency.ExchangeCurrencyTest" />
+      <option name="METHOD_NAME" value="failureConnectionToApiTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainLauncher" />
-        <item itemvalue="JUnit.CardTest.successSaveDataTest" />
+        <item itemvalue="JUnit.ExchangeCurrencyTest" />
+        <item itemvalue="JUnit.CardTest.apiTest" />
+        <item itemvalue="Application.APIget" />
         <item itemvalue="JUnit.CardTest" />
-        <item itemvalue="JUnit.CardTest.successDeleteCardTest" />
-        <item itemvalue="JUnit.CardTest.failureCardDoesNotExistTest" />
+        <item itemvalue="JUnit.ExchangeCurrencyTest.failureConnectionToApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +205,7 @@
       <workItem from="1732579545149" duration="351000" />
       <workItem from="1732579970472" duration="5567000" />
       <workItem from="1732588253253" duration="219000" />
-      <workItem from="1732588516847" duration="688000" />
+      <workItem from="1732588516847" duration="7272000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -321,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732588809619</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add the override of interface of Controller and Presenter">
+      <option name="closed" value="true" />
+      <created>1732589257014</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732589257014</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +359,8 @@
     <MESSAGE value="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)" />
     <MESSAGE value="renew of some issue of card and make 5 test for card controller and DBA" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="Add the override of interface of Controller and Presenter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add the override of interface of Controller and Presenter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

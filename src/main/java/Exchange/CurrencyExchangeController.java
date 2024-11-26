@@ -11,7 +11,7 @@ import com.crazzyghost.alphavantage.exchangerate.ExchangeRateResponse;
 import javax.swing.*;
 
 public class CurrencyExchangeController implements ControllerInterface {
-    private static double rate;
+    public static double rate;
     static UserObject loggedInUser;
     private CurrencyExchangePresenter currencyExchangePresenter;
     private WelcomeController welcomeController;
@@ -21,7 +21,7 @@ public class CurrencyExchangeController implements ControllerInterface {
         // G8PHFOEQL7JRT4WA
         Config cfg = Config.builder()
                 .key("OMY21EWV5Y9FEBUJ")
-                .timeOut(10)
+                .timeOut(1)
                 .build();
 
         AlphaVantage.api().init(cfg);
@@ -34,15 +34,15 @@ public class CurrencyExchangeController implements ControllerInterface {
                 .fetch();
     }
 
+    @Override
+    public void launch() {
+        currencyExchangePresenter.showView();
+    }
+
     public CurrencyExchangeController(UserObject user) {
         this.loggedInUser = user;
         this.currencyExchangePresenter = new CurrencyExchangePresenter(this);
         this.welcomeController = new WelcomeController();
-    }
-
-    @Override
-    public void launch() {
-        currencyExchangePresenter.showView();
     }
 
     public void logOutTriggered(){
@@ -63,7 +63,6 @@ public class CurrencyExchangeController implements ControllerInterface {
     public void exchangeCurrency(CurrencyExchangeView currencyExchangeView,
                                  JComboBox<String> fromCurrencyBox,
                                  JTextField inputAmountField,
-                                 JTextField outputAmountField,
                                  JComboBox<String> toCurrencyBox) {
         try {
             double inputAmount = Double.parseDouble(inputAmountField.getText());

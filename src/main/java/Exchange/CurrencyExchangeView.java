@@ -74,7 +74,6 @@ public class CurrencyExchangeView extends JFrame {
                         CurrencyExchangeView.this,
                         fromCurrencyBox,
                         inputAmountField,
-                        outputAmountField,
                         toCurrencyBox);
             }
         });
