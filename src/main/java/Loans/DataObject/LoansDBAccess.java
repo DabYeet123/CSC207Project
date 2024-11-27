@@ -36,7 +36,7 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
         LocalDate today = LocalDate.now();
         for (LoansObject loan : loans) {
             if (loan.endDate.isBefore(today)) {
-                user = updateBalance(user, -loan.repayment);
+                updateBalance(user, -loan.repayment);
                 cardController.updateData(userID, loan.cardUsed, loan.repayment);
             } else {
                 newLoans.add(loan);

@@ -47,8 +47,7 @@ public class CardDBAccess implements DataAccessInterface<CardObject> {
     @Override
     public List<CardObject> readData(int userID) {
         UserObject user = usersController.getUser(userID);
-        List<CardObject> cards = controller.readData(user.getFileDirectory() + "\\CardInformation.json", CardObject.class);
-        return cards;
+        return controller.readData(user.getFileDirectory() + "\\CardInformation.json", CardObject.class);
     }
 
     public CardObject readDataPoint(int userID, String cardID) {

@@ -11,14 +11,13 @@ public class CardMethods {
      */
     @NotNull
     public static String newId(String name) {
-        String id = "";
+        StringBuilder id = new StringBuilder();
         for (int i = 0; i < Math.min(name.length(), 3); i++) {
-            char c = name.replaceAll("\\s", "").charAt(i);
-            int k = c;
-            id += String.valueOf(k);
+            int k = name.replaceAll("\\s", "").charAt(i);
+            id.append(k);
         }
-        String insideId = id + getDifferentnumber(id);
-        return getIdForTest(insideId, id);
+        String insideId = id + getDifferentnumber(id.toString());
+        return getIdForTest(insideId, id.toString());
     }
 
     @NotNull

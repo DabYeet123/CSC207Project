@@ -47,7 +47,7 @@ public class ExchangeCurrencyTest {
         currencyExchangeView.inputAmountField.setText("100");
         currencyExchangeView.fromCurrencyBox = new JComboBox<>(new String[]{"USD"});
         currencyExchangeView.toCurrencyBox = new JComboBox<>(new String[]{"CAD"});
-        currencyExchangeView.exchangeButton.doClick();;
+        currencyExchangeView.exchangeButton.doClick();
     }
 
     @Test

@@ -4,13 +4,9 @@ import DataObjects.UserObject;
 import DataObjects.UsersDBAccess;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.BeforeMethod;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-
-import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 

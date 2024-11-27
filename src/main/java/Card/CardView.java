@@ -40,28 +40,13 @@ public class CardView extends JFrame{
 
         //Button
         addButton = new JButton("Add Card");
-        addButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                addCard();
-            }
-        });
+        addButton.addActionListener(e -> addCard());
 
         deleteButton = new JButton("Delete Card");
-        deleteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                deleteCard();
-            }
-        });
+        deleteButton.addActionListener(e -> deleteCard());
 
         backButton = new JButton("Back to Main");
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controller.goBackToBaseView();
-            }
-        });
+        backButton.addActionListener(e -> controller.goBackToBaseView());
 
         JPanel theButton = new JPanel();
         theButton.setLayout(new GridLayout(1, 3));

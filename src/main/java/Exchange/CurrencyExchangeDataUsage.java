@@ -13,7 +13,7 @@ public class CurrencyExchangeDataUsage {
                 .exchangeRate()
                 .fromCurrency(input)
                 .toCurrency(output)
-                .onSuccess((e) -> onData(e))
+                .onSuccess(CurrencyExchangeDataUsage::onData)
                 .fetch();
     }
 

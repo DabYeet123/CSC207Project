@@ -11,11 +11,11 @@ import java.util.List;
 public class CardController implements ControllerInterface {
     public static List<CardObject> cardList = new ArrayList<>();
     static UserObject loggedInUser;
-    private CardPresenter cardPresenter;
+    private final CardPresenter cardPresenter;
     static CardDBAccess cardDBAccess = new CardDBAccess();
 
     public CardController(UserObject user) {
-        this.loggedInUser = user;
+        loggedInUser = user;
         this.cardPresenter = new CardPresenter(this);
     }
 
@@ -46,7 +46,7 @@ public class CardController implements ControllerInterface {
         return cardDBAccess.readDataPoint(loggedInUser.getUserID(), cardID);
     }
 
-    public static void updateData(int userID, String cardID, double amount) {
+    public void updateData(int userID, String cardID, double amount) {
         cardDBAccess.updateData(userID, cardID, amount);
     }
 

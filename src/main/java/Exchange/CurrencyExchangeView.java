@@ -67,26 +67,16 @@ public class CurrencyExchangeView extends JFrame {
         exchangeButton = new JButton("Exchange Currency");
         exchangeButton.setBounds(50, 250, 200, 30);
         add(exchangeButton);
-        exchangeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CurrencyExchangeView.this.exchangeCurrency(
-                        fromCurrencyBox,
-                        inputAmountField,
-                        toCurrencyBox);
-            }
-        });
+        exchangeButton.addActionListener(e -> CurrencyExchangeView.this.exchangeCurrency(
+                fromCurrencyBox,
+                inputAmountField,
+                toCurrencyBox));
 
         // back button
         backButton = new JButton("Back to Main");
         backButton.setBounds(400, 300, 150, 30);
         add(backButton);
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                currencyExchangeController.goBackToBaseView();
-            }
-        });
+        backButton.addActionListener(e -> currencyExchangeController.goBackToBaseView());
         setLocationRelativeTo(null);
     }
 
