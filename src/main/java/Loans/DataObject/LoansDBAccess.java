@@ -1,6 +1,5 @@
 package Loans.DataObject;
 
-import Card.Card;
 import Card.CardController;
 import DataAccess.DataAccessController;
 import DataAccess.DataAccessInterface;

@@ -70,8 +70,7 @@ public class CurrencyExchangeView extends JFrame {
         exchangeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                currencyExchangeController.exchangeCurrency(
-                        CurrencyExchangeView.this,
+                CurrencyExchangeView.this.exchangeCurrency(
                         fromCurrencyBox,
                         inputAmountField,
                         toCurrencyBox);
@@ -89,5 +88,21 @@ public class CurrencyExchangeView extends JFrame {
             }
         });
         setLocationRelativeTo(null);
+    }
+
+    public void exchangeCurrency(JComboBox<String> fromCurrencyBox,
+                                 JTextField inputAmountField,
+                                 JComboBox<String> toCurrencyBox) {
+        try {
+            double inputAmount = Double.parseDouble(inputAmountField.getText());
+            String fromCurrency = (String) fromCurrencyBox.getSelectedItem();
+            String toCurrency = (String) toCurrencyBox.getSelectedItem();
+
+            CurrencyExchangeDataUsage.changeInto(fromCurrency, toCurrency);
+            double outputAmount = inputAmount * CurrencyExchangeController.rate;
+            outputAmountField.setText(String.format("%.2f", outputAmount));
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Invalid Input Amount", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }

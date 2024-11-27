@@ -30,7 +30,7 @@ public class ExchangeCurrencyTest {
         JTextField mockInputField = new JTextField();
         JComboBox<String> fromCurrencyBox = new JComboBox<>(new String[]{"USD"});
         JComboBox<String> toCurrencyBox = new JComboBox<>(new String[]{"EUR"});
-        controller.exchangeCurrency(mockView, fromCurrencyBox, mockInputField, toCurrencyBox);
+        mockView.exchangeCurrency(fromCurrencyBox, mockInputField, toCurrencyBox);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class ExchangeCurrencyTest {
         JTextField mockInputField = new JTextField("100");
         JComboBox<String> fromCurrencyBox = new JComboBox<>(new String[]{"USD"});
         JComboBox<String> toCurrencyBox = new JComboBox<>(new String[]{"EUR"});
-        controller.exchangeCurrency(mockView, fromCurrencyBox, mockInputField, toCurrencyBox);
+        mockView.exchangeCurrency(fromCurrencyBox, mockInputField, toCurrencyBox);
     }
 
     @Test

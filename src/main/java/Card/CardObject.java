@@ -1,10 +1,9 @@
 package Card;
 
-import DataObjects.UserObject;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Card {
+public class CardObject {
 
      private final String id;
      private final String usage;
@@ -13,10 +12,10 @@ public class Card {
      private double expenses;
 
     @JsonCreator
-    public Card(@JsonProperty("id") String id,
-                @JsonProperty("name")String usage,
-                @JsonProperty("expiryDate")String date,
-                @JsonProperty("securityCode")String code) {
+    public CardObject(@JsonProperty("id") String id,
+                      @JsonProperty("name")String usage,
+                      @JsonProperty("expiryDate")String date,
+                      @JsonProperty("securityCode")String code) {
         this.id = id;
         this.usage = usage;
         this.date = date;

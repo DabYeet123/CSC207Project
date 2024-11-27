@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * clean the User repeated many times in Users.json, with UserId 12001, 11000, 11001, 11002
  */
 
-class CardViewTest {
+class CardObjectViewTest {
     UserObject userObject = new UserObject(12001, "Yue", "Zheng", "12", 0.0, "CardTestview");
     UsersDBAccess usersDBAccess = new UsersDBAccess();
 
