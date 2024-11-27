@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
-public class CardObject {
+public class Card {
 
      private final String id;
      @Getter
@@ -17,10 +17,10 @@ public class CardObject {
      private double expenses;
 
     @JsonCreator
-    public CardObject(@JsonProperty("id") String id,
-                      @JsonProperty("name")String usage,
-                      @JsonProperty("expiryDate")String date,
-                      @JsonProperty("securityCode")String code) {
+    public Card(@JsonProperty("id") String id,
+                @JsonProperty("name")String usage,
+                @JsonProperty("expiryDate")String date,
+                @JsonProperty("securityCode")String code) {
         this.id = id;
         this.usage = usage;
         this.date = date;

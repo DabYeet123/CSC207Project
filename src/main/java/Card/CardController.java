@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CardController implements ControllerInterface {
-    public static List<CardObject> cardList = new ArrayList<>();
+    public static List<Card> cardList = new ArrayList<>();
     static UserObject loggedInUser;
     private final CardPresenter cardPresenter;
     static CardDBAccess cardDBAccess = new CardDBAccess();
@@ -33,7 +33,7 @@ public class CardController implements ControllerInterface {
         cardList = cardDBAccess.readData(loggedInUser.getUserID());
     }
 
-    public static void saveCards(CardObject card) {
+    public static void saveCards(Card card) {
         cardDBAccess.saveData(loggedInUser.getUserID(), card);
     }
 
@@ -41,7 +41,7 @@ public class CardController implements ControllerInterface {
         cardDBAccess.saveDeleteData(loggedInUser.getUserID(), index);
     }
 
-    public CardObject getCard(String cardID) {
+    public Card getCard(String cardID) {
         return cardDBAccess.readDataPoint(loggedInUser.getUserID(), cardID);
     }
 

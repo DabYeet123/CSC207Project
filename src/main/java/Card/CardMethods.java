@@ -35,7 +35,7 @@ public class CardMethods {
      */
     public static boolean checkId(String id) {
         CardController.loadFromFile();
-        for (CardObject card : CardController.cardList) {
+        for (Card card : CardController.cardList) {
             if (Objects.equals(card.getId(), id)) {
                 return false;
             }

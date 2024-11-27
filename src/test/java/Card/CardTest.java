@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * clean the User repeated many times in Users.json, with UserId 12001, 11000, 11001, 11002
  */
 
-class CardObjectTest {
+class CardTest {
     UserObject userObject = new UserObject(11000, "Yue", "Zheng", "12", 0.0, "CardTest");
     UsersDBAccess usersDBAccess;
     CardController cardController;
@@ -32,13 +32,13 @@ class CardObjectTest {
     void successCardExistsTestWithChangeExpenses() {
         int userId = 11000;
         String cardId = "0010011111";
-        CardObject mockCard = new CardObject(cardId, "Test Card", "12/2025", "123");
+        Card mockCard = new Card(cardId, "Test Card", "12/2025", "123");
 
         CardDBAccess cardDBAccess = new CardDBAccess();
         cardDBAccess.saveData(userId, mockCard);
 
         CardController controller = new CardController(userObject);
-        CardObject retrievedCard = controller.getCard(cardId);
+        Card retrievedCard = controller.getCard(cardId);
 
         assertNotNull(retrievedCard);
         assertEquals(cardId, retrievedCard.getId());
@@ -53,7 +53,7 @@ class CardObjectTest {
         String fakeCardId = "1000000000";
 
         CardController controller = new CardController(userObject);
-        CardObject retrievedCard = controller.getCard(fakeCardId);
+        Card retrievedCard = controller.getCard(fakeCardId);
 
         assertNull(retrievedCard, "Expected no card to be returned.");
     }
@@ -62,7 +62,7 @@ class CardObjectTest {
     void successDeleteCardTest() {
         int userId = 11000;
         String cardId = CardMethods.newId("11");
-        CardObject testCard = new CardObject(cardId, "Test Card", "12/2025", "123");
+        Card testCard = new Card(cardId, "Test Card", "12/2025", "123");
 
         CardDBAccess cardDBAccess = new CardDBAccess();
         cardDBAccess.saveData(userId, testCard);
@@ -71,7 +71,7 @@ class CardObjectTest {
         cardDBAccess.saveDeleteData(userId, index);
 
         CardController controller = new CardController(userObject);
-        CardObject retrievedCard = controller.getCard(cardId);
+        Card retrievedCard = controller.getCard(cardId);
 
         assertNull(retrievedCard, "Expected the card to be deleted.");
     }
@@ -81,7 +81,7 @@ class CardObjectTest {
         int userId = 11000;
         double amount = 7000;
         String cardId = CardMethods.newId("11");
-        CardObject testCard = new CardObject(cardId, "Test Card", "12/2025", "123");
+        Card testCard = new Card(cardId, "Test Card", "12/2025", "123");
 
         CardDBAccess cardDBAccess = new CardDBAccess();
         cardDBAccess.saveData(userId, testCard);
@@ -89,7 +89,7 @@ class CardObjectTest {
         cardController.updateData(userId, cardId, amount);
 
         CardController controller = new CardController(userObject);
-        CardObject retrievedCard = controller.getCard(cardId);
+        Card retrievedCard = controller.getCard(cardId);
 
         assertEquals(retrievedCard.getExpenses(), - amount);
     }
@@ -98,14 +98,14 @@ class CardObjectTest {
     void successSaveDataTest() {
         int userId = 11000;
         String cardId = CardMethods.newId("11");
-        CardObject testCard = new CardObject(cardId, "Test Card", "12/2025", "123");
+        Card testCard = new Card(cardId, "Test Card", "12/2025", "123");
 
         CardDBAccess cardDBAccess = new CardDBAccess();
         cardDBAccess.saveData(userId, testCard);
 
-        List<CardObject> cards = cardDBAccess.readData(userId);
+        List<Card> cards = cardDBAccess.readData(userId);
         int index = cardDBAccess.readDataIndex(userId, cardId);
-        CardObject savedCard = cards.get(index);
+        Card savedCard = cards.get(index);
 
         assertEquals(cardId, savedCard.getId());
         assertEquals("Test Card", savedCard.getUsage());
@@ -118,8 +118,8 @@ class CardObjectTest {
         String cardId1 = "1000010000";
         String cardId2 = "2000020000";
         CardDBAccess cardDBAccess = new CardDBAccess();
-        CardObject testCard1 = new CardObject(cardId1, "Test Card", "12/2025", "123");
-        CardObject testCard2 = new CardObject(cardId2, "Test Card", "12/2025", "123");
+        Card testCard1 = new Card(cardId1, "Test Card", "12/2025", "123");
+        Card testCard2 = new Card(cardId2, "Test Card", "12/2025", "123");
         cardDBAccess.saveData(userId, testCard1);
         cardDBAccess.saveData(userId, testCard2);
 
@@ -155,7 +155,7 @@ class CardObjectTest {
         String cardId = CardMethods.newId("Test Card");
         String date = CardMethods.newDate();
         String code = CardMethods.newCode();
-        CardObject testCard = new CardObject(cardId, "Test Card", date, code);
+        Card testCard = new Card(cardId, "Test Card", date, code);
         assertEquals(testCard.getId(), cardId);
         assertEquals(testCard.getCode(), code);
         assertEquals(testCard.getDate(), date);
@@ -171,7 +171,7 @@ class CardObjectTest {
         usersDBAccess.saveData(userEmptyCard);
         cardController = new CardController(userEmptyCard);
         int userId = 11002;
-        CardObject card = new CardObject("1000210002", "CheckIdRepeat", "11/26", "234");
+        Card card = new Card("1000210002", "CheckIdRepeat", "11/26", "234");
         CardDBAccess cardDBAccess = new CardDBAccess();
         cardDBAccess.saveData(userId,card);
 

@@ -68,7 +68,7 @@ public class CardView extends JFrame{
     public static void refresh(CardView cardView) {
         CardController.loadFromFile();
         cardView.model.setRowCount(0);
-        for (CardObject card : CardController.cardList) {
+        for (Card card : CardController.cardList) {
             cardView.model.addRow
                     (new Object[]{card.getId(), card.getUsage(), card.getDate(), card.getCode(),card.getExpenses() + "$"});
         }
@@ -88,7 +88,7 @@ public class CardView extends JFrame{
             JOptionPane.showMessageDialog
                     (frame, "Too much cards", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
-            CardObject newCard = new CardObject(id, name, expiryDate, securityCode);
+            Card newCard = new Card(id, name, expiryDate, securityCode);
 //            model.addRow(new Object[]{id, name, expiryDate, securityCode, newCard.getExpenses()});
             CardController.saveCards(newCard);
             usageField.setText("");

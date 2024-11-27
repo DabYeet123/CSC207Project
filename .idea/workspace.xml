@@ -10,11 +10,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardObject.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeDataUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeDataUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardObjectViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Card/CardObjectViewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardObjectViewTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +173,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardObjectViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
@@ -183,7 +182,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Card" />
-      <option name="MAIN_CLASS_NAME" value="Card.CardObjectViewTest" />
+      <option name="MAIN_CLASS_NAME" value="Card.CardViewTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -223,7 +222,7 @@
         <item itemvalue="Application.MainLauncher" />
         <item itemvalue="JUnit.Exchange in homework-5" />
         <item itemvalue="JUnit.Card in homework-5" />
-        <item itemvalue="JUnit.CardObjectViewTest" />
+        <item itemvalue="JUnit.CardViewTest" />
         <item itemvalue="JUnit.ExchangeCurrencyTest" />
       </list>
     </recent_temporary>
@@ -251,7 +250,7 @@
       <workItem from="1732579970472" duration="5567000" />
       <workItem from="1732588253253" duration="219000" />
       <workItem from="1732588516847" duration="10689000" />
-      <workItem from="1732662312623" duration="22687000" />
+      <workItem from="1732662312623" duration="23629000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -429,7 +428,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732748304858</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Renew of refactor for Card and Exchange parts">
+      <option name="closed" value="true" />
+      <created>1732748876186</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732748876186</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Renew of refactor for Card and Exchange parts">
+      <option name="closed" value="true" />
+      <created>1732748911308</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732748911308</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
