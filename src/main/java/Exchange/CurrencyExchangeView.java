@@ -1,7 +1,6 @@
 package Exchange;
 
 import javax.swing.*;
-import java.awt.event.*;
 
 public class CurrencyExchangeView extends JFrame {
     public JTextField inputAmountField;
