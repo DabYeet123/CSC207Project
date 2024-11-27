@@ -1,18 +1,17 @@
 package login.loggedin;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
-import userdataobject.UserObject;
 
 /**
  * A GUI view for logged-in users, displaying account details
@@ -28,99 +27,93 @@ public class LoggedInView extends JFrame {
     private static final int LOGOUT_WIDTH = 80;
     private static final int LOGOUT_HEIGHT = 25;
     private static final int FONT_SIZE = 16;
-    private UserObject user;
+    private static final String FONT = "Arial";
+    private final LoggedInController controller;
 
     public LoggedInView(LoggedInController controller) {
-        this.user = controller.getLoggedInUser();
-
+        this.controller = controller;
         setTitle("Logged In View");
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
-        add(createTopPanel(controller), BorderLayout.NORTH);
-        add(createButtonPanel(controller), BorderLayout.CENTER);
+        add(createTopPanel(), BorderLayout.NORTH);
+        add(createButtonPanel(), BorderLayout.CENTER);
     }
 
     /**
-     * Creates the top panel containing the user's information and logout button.
+     * Updates the view with the latest data from the ViewModel.
+     * This method refreshes the displayed user information such as welcome message,
+     * user ID, and account balance based on the provided ViewModel.
      *
-     * @param controller the controller for handling user actions.
-     * @return the top panel component.
+     * @param viewModel The ViewModel that contains the updated data for the user.
      */
-    private JPanel createTopPanel(LoggedInController controller) {
+    public void updateView(LoggedInViewModel viewModel) {
+        // Update UI components with the new ViewModel data
+        final JLabel welcomeLabel = (JLabel) getComponentByName("welcomeLabel");
+        final JLabel accountLabel = (JLabel) getComponentByName("accountLabel");
+        final JLabel balanceLabel = (JLabel) getComponentByName("balanceLabel");
+
+        welcomeLabel.setText(viewModel.getWelcomeMessage());
+        accountLabel.setText("UserID: " + viewModel.getUserId());
+        balanceLabel.setText("Balance: " + viewModel.getBalance());
+    }
+
+    private Component getComponentByName(String name) {
+        Component newComponent = null;
+        for (Component component : getContentPane().getComponents()) {
+            if (component instanceof JLabel && ((JLabel) component).getText().contains(name)) {
+                newComponent = component;
+                break;
+            }
+        }
+        return newComponent;
+    }
+
+    private JPanel createTopPanel() {
         final JPanel topPanel = new JPanel(new BorderLayout());
-
-        final JPanel refreshPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        topPanel.add(refreshPanel, BorderLayout.CENTER);
-
-        final JPanel logoutPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        final JButton logoutButton = new JButton("Logout");
-        logoutButton.setPreferredSize(new Dimension(LOGOUT_WIDTH, LOGOUT_HEIGHT));
-        logoutPanel.add(logoutButton);
-        topPanel.add(logoutPanel, BorderLayout.EAST);
-
         final JPanel infoPanel = new JPanel();
         infoPanel.setLayout(new BoxLayout(infoPanel, BoxLayout.Y_AXIS));
 
-        final JLabel welcomeLabel = new JLabel("Welcome, " + user.getFirstName() + " " + user.getLastName() + "!");
-        welcomeLabel.setFont(new Font("Arial", Font.BOLD, FONT_SIZE));
-        final JLabel accountLabel = new JLabel("UserID: " + user.getUserID());
-        final JLabel balanceLabel = new JLabel("Balance: $" + user.getBalance());
+        final JLabel welcomeLabel = new JLabel("Welcome, ");
+        welcomeLabel.setFont(new Font(FONT, Font.BOLD, FONT_SIZE));
+        welcomeLabel.setName("welcomeLabel");
+
+        final JLabel accountLabel = new JLabel("Account: ");
+        accountLabel.setFont(new Font(FONT, Font.PLAIN, FONT_SIZE));
+        accountLabel.setName("accountLabel");
+
+        final JLabel balanceLabel = new JLabel("Balance: ");
+        balanceLabel.setFont(new Font(FONT, Font.PLAIN, FONT_SIZE));
+        balanceLabel.setName("balanceLabel");
 
         infoPanel.add(welcomeLabel);
         infoPanel.add(accountLabel);
         infoPanel.add(balanceLabel);
-        topPanel.add(infoPanel, BorderLayout.WEST);
 
-        logoutButton.addActionListener(event -> controller.logOutTriggered());
-
+        topPanel.add(infoPanel, BorderLayout.CENTER);
         return topPanel;
     }
 
-    /**
-     * Creates the central button panel with various user action options.
-     *
-     * @param controller the controller for handling user actions.
-     * @return the button panel component.
-     */
-    private JPanel createButtonPanel(LoggedInController controller) {
-        final JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(ROW_COUNT, COLUMN_COUNT, HORIZONTAL_GAP, VERTICAL_GAP));
-
-        final JButton sendMoneyButton = createButton("Send Money", controller::sendMoneyTriggered);
-        final JButton transactionsButton = createButton("Transactions", controller::seeTransactionHistoryTriggered);
-        final JButton cardsButton = createButton("Cards", controller::cardTriggered);
-        final JButton atmsButton = createButton("ATMs near me", controller::atmMapTriggered);
-        final JButton housesButton = createButton("Houses near me", controller::houseMapTriggered);
-        final JButton assetsButton = createButton("Assets", controller::buyAssetsTriggered);
-        final JButton loansButton = createButton("Apply Loans", controller::applyLoansTriggered);
-        final JButton loansHistoryButton = createButton("Loans History", controller::seeLoansHistoryTriggered);
-        final JButton exchangeButton = createButton("Currency exchange", controller::exchangeTriggered);
-
-        buttonPanel.add(sendMoneyButton);
-        buttonPanel.add(transactionsButton);
-        buttonPanel.add(cardsButton);
-        buttonPanel.add(atmsButton);
-        buttonPanel.add(housesButton);
-        buttonPanel.add(assetsButton);
-        buttonPanel.add(loansButton);
-        buttonPanel.add(loansHistoryButton);
-        buttonPanel.add(exchangeButton);
-
+    private JPanel createButtonPanel() {
+        final JPanel buttonPanel = new JPanel(new GridLayout(ROW_COUNT, COLUMN_COUNT, HORIZONTAL_GAP, VERTICAL_GAP));
+        buttonPanel.add(createButton("Logout", event -> controller.logOutTriggered()));
+        buttonPanel.add(createButton("Send Money", event -> controller.sendMoneyTriggered()));
+        buttonPanel.add(createButton("Transaction History", event -> controller.seeTransactionHistoryTriggered()));
+        buttonPanel.add(createButton("Card Options", event -> controller.cardTriggered()));
+        buttonPanel.add(createButton("Currency Exchange", event -> controller.exchangeTriggered()));
+        buttonPanel.add(createButton("Buy Assets", event -> controller.buyAssetsTriggered()));
+        buttonPanel.add(createButton("Apply Loans", event -> controller.applyLoansTriggered()));
+        buttonPanel.add(createButton("Loans History", event -> controller.seeLoansHistoryTriggered()));
+        buttonPanel.add(createButton("ATM Map", event -> controller.atmMapTriggered()));
+        buttonPanel.add(createButton("House Map", event -> controller.houseMapTriggered()));
         return buttonPanel;
     }
 
-    /**
-     * Creates a button and assigns an action to it.
-     *
-     * @param text     the text displayed on the button.
-     * @param action   the action to be performed when the button is clicked.
-     * @return the created button.
-     */
-    private JButton createButton(String text, Runnable action) {
+    private JButton createButton(String text, ActionListener action) {
         final JButton button = new JButton(text);
-        button.addActionListener(event -> action.run());
+        button.setPreferredSize(new Dimension(LOGOUT_WIDTH, LOGOUT_HEIGHT));
+        button.addActionListener(action);
         return button;
     }
 }

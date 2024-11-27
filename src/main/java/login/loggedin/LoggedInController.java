@@ -1,149 +1,109 @@
 package login.loggedin;
 
-import ATM.ATMMap.ATMMapController;
 import app.ControllerInterface;
-import Brokerage.BrokerageController;
-import Card.CardController;
-import Exchange.CurrencyExchangeController;
-import House.HouseMap.HouseMapController;
-import Loans.ApplyLoans.ApplyLoansController;
-import Loans.SeeLoansHistory.SeeLoansHistoryController;
-import transaction.makeTransaction.MakeTransactionController;
-import transaction.seeTransactionHistory.SeeTransactionHistoryController;
 import userdataobject.UserObject;
-import login.welcome.WelcomeController;
 
 /**
  * Controller responsible for managing user interactions after login.
  */
 public class LoggedInController implements ControllerInterface {
-    private UserObject loggedInUser;
-    private LoggedInPresenter loggedInPresenter;
-    private WelcomeController welcomeController;
-    private MakeTransactionController makeTransactionController;
-    private SeeTransactionHistoryController seeTransactionHistoryController;
-    private CardController cardController;
-    private CurrencyExchangeController exchangeController;
-    private BrokerageController brokerageController;
-    private ApplyLoansController applyLoansController;
-    private SeeLoansHistoryController seeLoansHistoryController;
-    private HouseMapController houseMapController;
-    private ATMMapController atmMapController;
+    private final UserObject loggedInUser;
+    private final LoggedInPresenter loggedInPresenter;
+    private final LoggedInUseCase loggedInUseCase;
 
-    public LoggedInController(UserObject user) {
+    public LoggedInController(UserObject user, LoggedInUseCase loggedInUseCase) {
         this.loggedInUser = user;
-        this.welcomeController = new WelcomeController();
-        this.makeTransactionController = new MakeTransactionController(loggedInUser);
-        this.seeTransactionHistoryController = new SeeTransactionHistoryController(loggedInUser);
-        this.houseMapController = new HouseMapController(user, this);
-        this.atmMapController = new ATMMapController(user, this);
-        this.applyLoansController = new ApplyLoansController(loggedInUser);
-        this.seeLoansHistoryController = new SeeLoansHistoryController(loggedInUser);
-        this.brokerageController = new BrokerageController(loggedInUser);
-        this.cardController = new CardController(user);
-        this.exchangeController = new CurrencyExchangeController(user);
-
-        // at last
-        this.loggedInPresenter = new LoggedInPresenter(this);
+        this.loggedInUseCase = loggedInUseCase;
+        this.loggedInPresenter = new LoggedInPresenter(this, loggedInUseCase);
     }
 
     @Override
     public void launch() {
-        seeLoansHistoryController.update();
+        loggedInUseCase.loadUserData(loggedInUser);
         loggedInPresenter.showView();
     }
 
     /**
-     * Logs the user out and navigates to the welcome screen.
+     * Handles the logout action, triggers the logout process, and disposes of the view.
      */
     public void logOutTriggered() {
+        loggedInUseCase.logOut();
         loggedInPresenter.disposeView();
-        welcomeController.launch();
     }
 
     /**
-     * Navigates to the "Send Money" view.
+     * Handles the send money action, triggers the send money process, and disposes of the view.
      */
     public void sendMoneyTriggered() {
+        loggedInUseCase.sendMoney();
         loggedInPresenter.disposeView();
-        makeTransactionController.launch();
     }
 
     /**
-     * Navigates to the transaction history view.
+     * Handles the view transaction history action, triggers the transaction history view, and disposes of the view.
      */
     public void seeTransactionHistoryTriggered() {
+        loggedInUseCase.viewTransactionHistory();
         loggedInPresenter.disposeView();
-        seeTransactionHistoryController.launch();
     }
 
     /**
-     * Navigates to the card management view.
+     * Handles the manage cards action, triggers the card management process, and disposes of the view.
      */
     public void cardTriggered() {
+        loggedInUseCase.manageCards();
         loggedInPresenter.disposeView();
-        cardController.launch();
     }
 
     /**
-     * Navigates to the currency exchange view.
+     * Handles the exchange currency action, triggers the currency exchange process, and disposes of the view.
      */
     public void exchangeTriggered() {
+        loggedInUseCase.exchangeCurrency();
         loggedInPresenter.disposeView();
-        exchangeController.launch();
     }
 
     /**
-     * Navigates to the asset purchasing view.
+     * Handles the buy assets action, triggers the asset buying process, and disposes of the view.
      */
     public void buyAssetsTriggered() {
+        loggedInUseCase.buyAssets();
         loggedInPresenter.disposeView();
-        brokerageController.launch();
     }
 
     /**
-     * Navigates to the loan application view.
+     * Handles the apply for loans action, triggers the loan application process, and disposes of the view.
      */
     public void applyLoansTriggered() {
+        loggedInUseCase.applyForLoans();
         loggedInPresenter.disposeView();
-        applyLoansController.launch();
     }
 
     /**
-     * Navigates to the loan history view.
+     * Handles the view loans history action, triggers the loan history view, and disposes of the view.
      */
     public void seeLoansHistoryTriggered() {
+        loggedInUseCase.viewLoansHistory();
         loggedInPresenter.disposeView();
-        seeLoansHistoryController.launch();
     }
 
     /**
-     * Navigates to the ATM map view.
+     * Handles the view ATM map action, triggers the ATM map view, and disposes of the view.
      */
     public void atmMapTriggered() {
+        loggedInUseCase.viewAtmMap();
         loggedInPresenter.disposeView();
-        atmMapController.launch();
     }
 
     /**
-     * Navigates to the house map view.
+     * Handles the view house map action, triggers the house map view, and disposes of the view.
      */
     public void houseMapTriggered() {
+        loggedInUseCase.viewHouseMap();
         loggedInPresenter.disposeView();
-        houseMapController.launch();
-    }
-
-    /**
-     * Gets the house map controller.
-     *
-     * @return the house map controller
-     */
-    public HouseMapController getHouseMapController() {
-        return houseMapController;
     }
 
     public UserObject getLoggedInUser() {
         return loggedInUser;
     }
 }
-
