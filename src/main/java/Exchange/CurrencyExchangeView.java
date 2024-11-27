@@ -4,12 +4,12 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class CurrencyExchangeView extends JFrame {
-    private JTextField inputAmountField;
-    public static JTextField outputAmountField;
-    private JComboBox<String> fromCurrencyBox;
-    private JComboBox<String> toCurrencyBox;
-    private JButton exchangeButton;
-    private JButton backButton;
+    public JTextField inputAmountField;
+    public JTextField outputAmountField;
+    public JComboBox<String> fromCurrencyBox;
+    public JComboBox<String> toCurrencyBox;
+    public JButton exchangeButton;
+    public JButton backButton;
 
     public CurrencyExchangeView(CurrencyExchangeController currencyExchangeController) {
         setTitle("Currency Exchange");

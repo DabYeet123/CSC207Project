@@ -29,11 +29,6 @@ public class CardController implements ControllerInterface {
         cardPresenter.showView();
     }
 
-    public void logOutTriggered(){
-        cardPresenter.disposeView();
-        welcomeController.launch();
-    }
-
     public void goBackToBaseView() {
         cardPresenter.disposeView();
         LoggedInController controller = new LoggedInController(loggedInUser);
@@ -43,7 +38,7 @@ public class CardController implements ControllerInterface {
     /**
      * used to load the file of json
      */
-    public static void loadFromFile() {
+    public static void  loadFromFile() {
         cardList = cardDBAccess.readData(loggedInUser.getUserID());
     }
 
@@ -83,6 +78,11 @@ public class CardController implements ControllerInterface {
             id += String.valueOf(k);
         }
         String insideId = id + getDifferentnumber(id);
+        return getIdForTest(insideId, id);
+    }
+
+    @NotNull
+    public static String getIdForTest(String insideId, String id) {
         while (!checkId(insideId) | insideId.length() < 10) {
             insideId = id + getDifferentnumber(id);
         }
@@ -94,7 +94,7 @@ public class CardController implements ControllerInterface {
      * used to check the repeating of id
      * @param id random id that need to check if there is same id in file
      */
-    private static boolean checkId(String id) {
+    public static boolean checkId(String id) {
         loadFromFile();
         for (Card card : cardList) {
             if (Objects.equals(card.getId(), id)) {
@@ -108,8 +108,13 @@ public class CardController implements ControllerInterface {
      * used to check the random part of id is with same index
      * @param id random id given by the name
      */
-    private static String getDifferentnumber(String id) {
+    public static String getDifferentnumber(String id) {
         long num = Math.round((Math.pow(10, (10 - id.length()))) * Math.random());
+        return threeCaseFor0(id, num);
+    }
+
+    @NotNull
+    public static String threeCaseFor0(String id, long num) {
         switch (10 - id.length()) {
             case 1:
                 return String.valueOf(num);
@@ -139,11 +144,16 @@ public class CardController implements ControllerInterface {
      */
     @NotNull
     public static String newDate() {
-        String expiryDate;
         LocalDate today = LocalDate.now();
-        String month;
         int currentYear = today.getYear();
         int currentMonth = today.getMonthValue();
+        return getDateForTest(currentMonth, currentYear);
+    }
+
+    @NotNull
+    public static String getDateForTest(int currentMonth, int currentYear) {
+        String month;
+        String expiryDate;
         if (currentMonth < 10) {
             month = "0" + currentMonth;
         } else {
@@ -158,8 +168,13 @@ public class CardController implements ControllerInterface {
      */
     @NotNull
     public static String newCode() {
-        String securityCode;
         long num = Math.round(1000 * Math.random());
+        return getNewCodeForTest(num);
+    }
+
+    @NotNull
+    public static String getNewCodeForTest(long num) {
+        String securityCode;
         if (num >= 100) {
             securityCode = String.valueOf(num);
         } else if (num >= 10) {

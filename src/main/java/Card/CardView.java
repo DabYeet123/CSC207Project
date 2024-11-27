@@ -11,6 +11,9 @@ public class CardView extends JFrame{
     public JTable table;
     public DefaultTableModel model;
     public JTextField usageField;
+    public JButton addButton;
+    public JButton deleteButton;
+    public JButton backButton;
 
     public CardView(CardController controller) {
         // Main frame
@@ -36,7 +39,7 @@ public class CardView extends JFrame{
         inputPanel.add(usageField);
 
         //Button
-        JButton addButton = new JButton("Add Card");
+        addButton = new JButton("Add Card");
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,7 +47,7 @@ public class CardView extends JFrame{
             }
         });
 
-        JButton deleteButton = new JButton("Delete Card");
+        deleteButton = new JButton("Delete Card");
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -52,7 +55,7 @@ public class CardView extends JFrame{
             }
         });
 
-        JButton backButton = new JButton("Back to Main");
+        backButton = new JButton("Back to Main");
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -103,7 +106,7 @@ public class CardView extends JFrame{
                     (frame, "Too much cards", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             Card newCard = new Card(id, name, expiryDate, securityCode);
-            model.addRow(new Object[]{id, name, expiryDate, securityCode, newCard.getExpenses()});
+//            model.addRow(new Object[]{id, name, expiryDate, securityCode, newCard.getExpenses()});
             CardController.saveCards(newCard);
             usageField.setText("");
         }

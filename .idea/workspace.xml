@@ -4,19 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Write for Card and ExchangeCurrency Tests">
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="update for Card Test with Entity">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Card/CardViewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExchangeCurrency/ExchangeCurrencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Exchange/ExchangeCurrencyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\郑Y\IdeaProjects\CSC207Project\htmlReport" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -58,23 +73,48 @@
     "Application.Main.executor": "Run",
     "Application.MainLauncher.executor": "Run",
     "Application.WelcomePresenter.executor": "Run",
+    "JUnit.All in homework-5.executor": "Run",
+    "JUnit.Card in homework-5.executor": "Coverage",
     "JUnit.CardTest.apiTest.executor": "Run",
+    "JUnit.CardTest.checkIdRepeat.executor": "Run",
     "JUnit.CardTest.executor": "Run",
     "JUnit.CardTest.failureCardDoesNotExistTest.executor": "Run",
     "JUnit.CardTest.failureSaveDuplicateCardTest.executor": "Run",
+    "JUnit.CardTest.getDifferentFinalNumTest.executor": "Run",
+    "JUnit.CardTest.getIdLoop.executor": "Run",
+    "JUnit.CardTest.noCardGetCard.executor": "Run",
+    "JUnit.CardTest.noCardIndex.executor": "Run",
+    "JUnit.CardTest.noindexFound.executor": "Run",
     "JUnit.CardTest.successCardEntity.executor": "Run",
     "JUnit.CardTest.successCardExistsTest.executor": "Run",
-    "JUnit.CardTest.successDeleteCardTest.executor": "Run",
+    "JUnit.CardTest.successDeleteCardTest.executor": "Coverage",
     "JUnit.CardTest.successSaveDataTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.executor": "Run",
+    "JUnit.CardTest.successUpdate.executor": "Run",
+    "JUnit.CardTest.testCaseLength1.executor": "Run",
+    "JUnit.CardTest.testNewIdNameWithSpaces.executor": "Run",
+    "JUnit.CardViewTest.executor": "Run",
+    "JUnit.CardViewTest.testAdd10Cards.executor": "Run",
+    "JUnit.CardViewTest.testAddCardSuccess.executor": "Run",
+    "JUnit.CardViewTest.testAddCard_Success.executor": "Run",
+    "JUnit.CardViewTest.testBack.executor": "Coverage",
+    "JUnit.CardViewTest.testDeleteCard.executor": "Run",
+    "JUnit.CardViewTest.testDeleteCardFail.executor": "Run",
+    "JUnit.CardViewTest.testLaunchAndBack.executor": "Run",
+    "JUnit.Exchange in homework-5.executor": "Coverage",
+    "JUnit.ExchangeCurrencyTest.executor": "Coverage",
     "JUnit.ExchangeCurrencyTest.failureConnectionToApiTest.executor": "Run",
     "JUnit.ExchangeCurrencyTest.failureInvalidCurrencyCodeTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.failureInvalidInputAmountTest.executor": "Run",
+    "JUnit.ExchangeCurrencyTest.failureInvalidInputAmountTest.executor": "Coverage",
     "JUnit.ExchangeCurrencyTest.failureMissingFromCurrencyTest.executor": "Run",
     "JUnit.ExchangeCurrencyTest.successCurrencyExchangeTest.executor": "Run",
+    "JUnit.ExchangeCurrencyTest.successInputAmountTest.executor": "Coverage",
+    "JUnit.ExchangeCurrencyTest.viewTestForButtonExchange.executor": "Run",
+    "JUnit.cardViewTest.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "Yue-Zheng",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/郑Y/IdeaProjects/CSC207Project/mystyle.xml",
@@ -83,7 +123,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -95,10 +135,44 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.View.CardView" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Card" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.CardTest.successCardEntity">
-    <configuration name="APIget" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exchange.APIget" />
+  <component name="RunManager" selected="JUnit.Card in homework-5">
+    <configuration name="Card in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Card.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Card" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Card.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Card" />
+      <option name="MAIN_CLASS_NAME" value="Card.CardViewTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exchange in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
@@ -106,53 +180,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Card.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Card" />
-      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardTest.apiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Card.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Card" />
-      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
-      <option name="METHOD_NAME" value="apiTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardTest.successCardEntity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Card.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Card" />
-      <option name="MAIN_CLASS_NAME" value="Card.CardTest" />
-      <option name="METHOD_NAME" value="successCardEntity" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="Exchange" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,24 +190,40 @@
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ExchangeCurrency.*" />
+          <option name="PATTERN" value="Exchange.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ExchangeCurrency" />
-      <option name="MAIN_CLASS_NAME" value="ExchangeCurrency.ExchangeCurrencyTest" />
+      <option name="MAIN_CLASS_NAME" value="Exchange.ExchangeCurrencyTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExchangeCurrencyTest.viewTestForButtonExchange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exchange.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Exchange" />
+      <option name="MAIN_CLASS_NAME" value="Exchange.ExchangeCurrencyTest" />
+      <option name="METHOD_NAME" value="viewTestForButtonExchange" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardTest.successCardEntity" />
+        <item itemvalue="JUnit.Card in homework-5" />
+        <item itemvalue="JUnit.CardViewTest" />
+        <item itemvalue="JUnit.Exchange in homework-5" />
         <item itemvalue="JUnit.ExchangeCurrencyTest" />
-        <item itemvalue="JUnit.CardTest.apiTest" />
-        <item itemvalue="Application.APIget" />
-        <item itemvalue="JUnit.CardTest" />
+        <item itemvalue="JUnit.ExchangeCurrencyTest.viewTestForButtonExchange" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +249,8 @@
       <workItem from="1732579545149" duration="351000" />
       <workItem from="1732579970472" duration="5567000" />
       <workItem from="1732588253253" duration="219000" />
-      <workItem from="1732588516847" duration="8361000" />
+      <workItem from="1732588516847" duration="10689000" />
+      <workItem from="1732662312623" duration="17582000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -350,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732659398250</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update for Card Test with Entity">
+      <option name="closed" value="true" />
+      <created>1732660014976</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732660014976</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,10 +430,56 @@
     <MESSAGE value="1" />
     <MESSAGE value="Add the override of interface of Controller and Presenter" />
     <MESSAGE value="Write for Card and ExchangeCurrency Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Write for Card and ExchangeCurrency Tests" />
+    <MESSAGE value="update for Card Test with Entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="update for Card Test with Entity" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.AssertionError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CSC207Project$cardViewTest.ic" NAME="cardViewTest Coverage Results" MODIFIED="1732664840152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardTest_successDeleteCardTest.ic" NAME="CardTest.successDeleteCardTest Coverage Results" MODIFIED="1732670682718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_successInputAmountTest.ic" NAME="ExchangeCurrencyTest.successInputAmountTest Coverage Results" MODIFIED="1732679392712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardViewTest.ic" NAME="CardViewTest Coverage Results" MODIFIED="1732670008439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardTest.ic" NAME="CardTest Coverage Results" MODIFIED="1732664784233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$Exchange_in_homework_5.ic" NAME="Exchange in homework-5 Coverage Results" MODIFIED="1732680634113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardViewTest_testBack.ic" NAME="CardViewTest.testBack Coverage Results" MODIFIED="1732669762032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest.ic" NAME="ExchangeCurrencyTest Coverage Results" MODIFIED="1732680404115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_failureInvalidInputAmountTest.ic" NAME="ExchangeCurrencyTest.failureInvalidInputAmountTest Coverage Results" MODIFIED="1732679333915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_viewTestForButtonExchange.ic" NAME="ExchangeCurrencyTest.viewTestForButtonExchange Coverage Results" MODIFIED="1732680258226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$Card_in_homework_5.ic" NAME="Card in homework-5 Coverage Results" MODIFIED="1732681466075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
   </component>
 </project>

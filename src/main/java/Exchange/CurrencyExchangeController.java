@@ -14,7 +14,6 @@ public class CurrencyExchangeController implements ControllerInterface {
     public static double rate;
     static UserObject loggedInUser;
     private CurrencyExchangePresenter currencyExchangePresenter;
-    private WelcomeController welcomeController;
 
     public static void changeInto(String input, String output) {
         // OMY21EWV5Y9FEBUJ
@@ -34,20 +33,14 @@ public class CurrencyExchangeController implements ControllerInterface {
                 .fetch();
     }
 
-    @Override
-    public void launch() {
-        currencyExchangePresenter.showView();
-    }
-
     public CurrencyExchangeController(UserObject user) {
         this.loggedInUser = user;
         this.currencyExchangePresenter = new CurrencyExchangePresenter(this);
-        this.welcomeController = new WelcomeController();
     }
 
-    public void logOutTriggered(){
-        currencyExchangePresenter.disposeView();
-        welcomeController.launch();
+    @Override
+    public void launch() {
+        currencyExchangePresenter.showView();
     }
 
     public void goBackToBaseView() {
@@ -71,7 +64,7 @@ public class CurrencyExchangeController implements ControllerInterface {
 
             changeInto(fromCurrency, toCurrency);
             double outputAmount = inputAmount * rate;
-            CurrencyExchangeView.outputAmountField.setText(String.format("%.2f", outputAmount));
+            currencyExchangeView.outputAmountField.setText(String.format("%.2f", outputAmount));
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(currencyExchangeView, "Invalid Input Amount", "Error", JOptionPane.ERROR_MESSAGE);
         }

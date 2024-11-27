@@ -23,7 +23,7 @@ public class CardDBAccess implements DataAccessInterface<Card> {
         return user;
     }
 
-    public UserObject updateData(int userID, String cardID, double amount) {
+    public void updateData(int userID, String cardID, double amount) {
         UserObject user = usersController.getUser(userID);
         List<Card> cards = controller.readData(user.getFileDirectory() + "\\CardInformation.json", Card.class);
         int index = readDataIndex(userID, cardID);
@@ -32,18 +32,16 @@ public class CardDBAccess implements DataAccessInterface<Card> {
         cards.set(index, card);
         controller.saveData(user.getFileDirectory() + "\\CardInformation.json", cards, Card.class);
 
-        return user;
     }
 
 
 
-    public UserObject saveDeleteData(int userID, int index) {
+    public void saveDeleteData(int userID, int index) {
         UserObject user = usersController.getUser(userID);
         List<Card> cards = controller.readData(user.getFileDirectory() + "\\CardInformation.json", Card.class);
         cards.remove(index);
         controller.saveData(user.getFileDirectory() + "\\CardInformation.json", cards, Card.class);
 
-        return user;
     }
 
     @Override
@@ -56,7 +54,7 @@ public class CardDBAccess implements DataAccessInterface<Card> {
     public Card readDataPoint(int userID, String cardID) {
         List<Card> cards = readData(userID);
         for (Card card : cards) {
-            if (card != null && Objects.equals(card.getId(), cardID)) {
+            if (Objects.equals(card.getId(), cardID)) {
                 return card;
             }
         }
@@ -66,7 +64,7 @@ public class CardDBAccess implements DataAccessInterface<Card> {
     public int readDataIndex(int userID, String cardID) {
         List<Card> cards = readData(userID);
         for (int i = 0; i < cards.size(); ++i) {
-            if (cards.get(i) != null && Objects.equals(cards.get(i).getId(), cardID)) {
+            if (Objects.equals(cards.get(i).getId(), cardID)) {
                 return i;
             }
         }
