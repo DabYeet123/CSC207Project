@@ -49,7 +49,7 @@ public class LoggedInView extends JFrame {
         add(topPanel, BorderLayout.NORTH);
 
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(4, 2, 10, 10));
+        buttonPanel.setLayout(new GridLayout(5, 2, 10, 10));
 
         JButton sendMoneyButton = new JButton("Send Money");
         sendMoneyButton.addActionListener(new ActionListener() {
@@ -90,6 +90,18 @@ public class LoggedInView extends JFrame {
             public void actionPerformed(ActionEvent e) { controller.seeLoansHistoryTriggered(); }
         });
 
+        JButton insuranceButton = new JButton("Purchase Insurance");
+        insuranceButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) { controller.purchaseInsuranceTriggered(); }
+        });
+
+        JButton myInsuranceButton = new JButton("My Insurance");
+        myInsuranceButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) { controller.myInsuranceTriggered(); }
+        });
+
         JButton assetsButton = new JButton("Assets");
         assetsButton.addActionListener(new ActionListener() {
             @Override
@@ -113,6 +125,8 @@ public class LoggedInView extends JFrame {
         buttonPanel.add(atmsButton);
         buttonPanel.add(loansButton);
         buttonPanel.add(loansHistoryButton);
+        buttonPanel.add(insuranceButton);
+        buttonPanel.add(myInsuranceButton);
         buttonPanel.add(assetsButton);
         buttonPanel.add(exchangeButton);
 

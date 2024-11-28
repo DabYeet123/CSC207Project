@@ -4,6 +4,8 @@ import Card.CardController;
 import App.ControllerInterface;
 import DataObjects.UserObject;
 import Exchange.CurrencyExchangeController;
+import Insurance.MyInsurance.MyInsuranceController;
+import Insurance.PurchaseInsurance.PurchaseInsuranceController;
 import Loans.ApplyLoans.ApplyLoansController;
 import Loans.SeeLoansHistory.SeeLoansHistoryController;
 import LogIn.Welcome.WelcomeController;
@@ -20,6 +22,8 @@ public class LoggedInController implements ControllerInterface {
     private CurrencyExchangeController exchangeController;
     private ApplyLoansController applyLoansController;
     private SeeLoansHistoryController seeLoansHistoryController;
+    private PurchaseInsuranceController purchaseInsuranceController;
+    private MyInsuranceController myInsuranceController;
 
     public LoggedInController(UserObject user) {
         this.loggedInUser = user;
@@ -28,6 +32,8 @@ public class LoggedInController implements ControllerInterface {
         this.seeTransactionHistoryController = new SeeTransactionHistoryController(loggedInUser);
         this.applyLoansController = new ApplyLoansController(loggedInUser);
         this.seeLoansHistoryController = new SeeLoansHistoryController(loggedInUser);
+        this.purchaseInsuranceController = new PurchaseInsuranceController(loggedInUser);
+        this.myInsuranceController = new MyInsuranceController(loggedInUser);
         this.cardController = new CardController(user);
         this.exchangeController = new CurrencyExchangeController(user);
 
@@ -80,6 +86,16 @@ public class LoggedInController implements ControllerInterface {
     public void seeLoansHistoryTriggered() {
         loggedInPresenter.disposeView();
         seeLoansHistoryController.launch();
+    }
+
+    public void purchaseInsuranceTriggered() {
+        loggedInPresenter.disposeView();
+        purchaseInsuranceController.launch();
+    }
+
+    public void myInsuranceTriggered() {
+        loggedInPresenter.disposeView();
+        myInsuranceController.launch();
     }
 
     public void buyAssetsTriggered() {
