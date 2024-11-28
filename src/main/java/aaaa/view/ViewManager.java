@@ -1,41 +1,56 @@
 package aaaa.view;
 
-import login.login.LogInView;
-import login.signup.SignUpView;
-
-import java.awt.*;
+import java.awt.CardLayout;
 import java.util.Objects;
 
-import javax.swing.*;
+import javax.swing.JPanel;
 
+import aaaa.interface_adapter.login.LoginController;
+import aaaa.interface_adapter.login.LoginPresenter;
+
+/**
+ * Manages transitions and state changes between various views in the application.
+ * Responsible for displaying the appropriate view based on the current state.
+ */
 public class ViewManager {
-    private static JFrame currentView = null;
-    private static JPanel currentPanel;
+    private static JPanel allViews;
     private static CardLayout cardLayout;
+    private static String currentViewName;
+    private final LoginController loginController = new LoginController();
+    private final LoginPresenter loginPresenter = new LoginPresenter(this, getCurrentViewName());
 
-    public ViewManager(JPanel jPanel, CardLayout layout) {
-        currentPanel = jPanel;
+    public ViewManager(JPanel views, CardLayout layout) {
+        allViews = views;
         cardLayout = layout;
     }
 
-    public JFrame getCurrentView() {
-        return currentView;
-    }
-
+    /**
+     * Updates the view to the specified state.
+     *
+     * @param viewName the name of the view to display
+     */
     public void setState(String viewName) {
-        JFrame currentView = getCurrentView(viewName);
-        cardLayout.show(currentView, viewName);
+        JPanel view = getCurrentView();
+        cardLayout.show(allViews, viewName);
+        currentViewName = viewName;
     }
 
-    private JFrame getCurrentView(String viewName) {
+    /**
+     * Retrieves the view corresponding to the specified name.
+     *
+     * @return the {@code JFrame} of the view
+     */
+    private JPanel getCurrentView() {
         // TODO: fix logic
         JPanel newView = null;
-        if (Objects.equals(viewName, "welcome")) {
-            newView = new WelcomeView();
+        if (Objects.equals(currentViewName, "welcome")) {
+            newView = new WelcomeView(this);
         }
-        else if (Objects.equals(viewName, "login")) {
-            newView = new LogInView();
+        else if (Objects.equals(currentViewName, "login")) {
+            newView = new LoginView(this);
         }
+
+        /**
         else if (Objects.equals(viewName, "signup")) {
             newView = new SignUpView();
         }
@@ -48,6 +63,12 @@ public class ViewManager {
         else if (Objects.equals(viewName, "seetransaction")) {
             newView = new SeeTransactionsView();
         }
+         */
         return newView;
     }
+
+    public LoginController getLoginController() {
+        return loginController;
+    }
 }
+

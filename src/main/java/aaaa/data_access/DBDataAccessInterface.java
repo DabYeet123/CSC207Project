@@ -2,7 +2,7 @@ package aaaa.data_access;
 
 import java.util.List;
 
-import userdataobject.UserObject;
+import aaaa.entity.User;
 
 /**
  * Interface for data access operations. Provides methods for saving and reading data
@@ -20,7 +20,7 @@ public interface DBDataAccessInterface<T> {
      * @param dataPoint the object to save
      * @return a userObject
      */
-    UserObject saveData(int userID, T dataPoint);
+    User saveData(int userID, T dataPoint);
 
     /**
      * Read a list of objects from the specified file.

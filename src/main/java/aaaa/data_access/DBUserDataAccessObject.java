@@ -2,7 +2,7 @@ package aaaa.data_access;
 
 import java.util.List;
 
-import userdataobject.UserObject;
+import aaaa.entity.User;
 
 /**
  * Provides database access operations for managing `UserObject` instances.
@@ -20,10 +20,10 @@ public class DBUserDataAccessObject {
      *
      * @param user the `UserObject` to save
      */
-    public void saveData(UserObject user) {
-        final List<UserObject> users = controller.readData(DIRECTORY, UserObject.class);
+    public void saveData(User user) {
+        final List<User> users = controller.readData(DIRECTORY, User.class);
         users.add(user);
-        controller.saveData(DIRECTORY, users, UserObject.class);
+        controller.saveData(DIRECTORY, users, User.class);
     }
 
     /**
@@ -31,8 +31,8 @@ public class DBUserDataAccessObject {
      *
      * @return a list of all `UserObject` instances stored in the database
      */
-    public List<UserObject> readData() {
-        return controller.readData(DIRECTORY, UserObject.class);
+    public List<User> readData() {
+        return controller.readData(DIRECTORY, User.class);
     }
 
     /**
@@ -43,10 +43,10 @@ public class DBUserDataAccessObject {
      * @param userID the unique ID of the user to retrieve
      * @return the `UserObject` associated with the given user ID, or null if not found
      */
-    public UserObject readDataPoint(int userID) {
-        final List<UserObject> users = readData();
-        UserObject userFound = null;
-        for (UserObject user : users) {
+    public User readDataPoint(int userID) {
+        final List<User> users = readData();
+        User userFound = null;
+        for (User user : users) {
             if (user != null && user.getUserID() == userID) {
                 userFound = user;
                 break;
@@ -61,16 +61,16 @@ public class DBUserDataAccessObject {
      * updates their information with the provided `UserObject`.
      *
      * @param userID the unique ID of the user to update
-     * @param user the updated `UserObject` containing the new user data
+     * @param user   the updated `UserObject` containing the new user data
      */
-    public void updateDataPoint(int userID, UserObject user) {
-        final List<UserObject> users = readData();
+    public void updateDataPoint(int userID, User user) {
+        final List<User> users = readData();
         for (int i = 0; i < users.size(); i++) {
             if (user != null && users.get(i).getUserID() == userID) {
                 users.set(i, user);
             }
         }
-        controller.saveData(DIRECTORY, users, UserObject.class);
+        controller.saveData(DIRECTORY, users, User.class);
     }
 
     /**
@@ -79,7 +79,35 @@ public class DBUserDataAccessObject {
      * @return the number of `UserObject` instances in the database
      */
     public int numberOfUsers() {
-        final List<UserObject> users = readData();
+        final List<User> users = readData();
         return users.size();
+    }
+
+    /**
+     * Checks whether a user exists in the system based on their user ID.
+     *
+     * @param userID the unique ID of the user to check
+     * @return true if the user exists, false otherwise
+     */
+    public boolean checkUserExistance(int userID) {
+        return readDataPoint(userID) != null;
+    }
+
+    /**
+     * Checks if the provided user ID and password correspond to an existing user.
+     *
+     * @param userID   the unique identifier of the user
+     * @param password the password to verify
+     * @return {@code true} if the user exists and the password matches; {@code false} otherwise
+     */
+    public boolean correspondsToUser(int userID, String password) {
+        boolean success = false;
+        if (readDataPoint(userID) != null) {
+            final User user = readDataPoint(userID);
+            if (password.equals(user.getPasswordHash())) {
+                success = true;
+            }
+        }
+        return success;
     }
 }
