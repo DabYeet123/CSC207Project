@@ -4,7 +4,7 @@ import DataObjects.UserObject;
 import java.util.List;
 
 public class InsuranceController {
-    InsuranceDBAccess insuranceDBAccess = new InsuranceDBAccess();
+    private InsuranceDBAccess insuranceDBAccess = new InsuranceDBAccess();
 
     public UserObject addInsurance(int userID, String type, double premium, int term, boolean autoRenew) {
         InsuranceObject newInsurance = new InsuranceObject(userID, type, premium, term, autoRenew);

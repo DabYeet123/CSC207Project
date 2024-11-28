@@ -104,7 +104,10 @@ public class PurchaseInsuranceView extends JFrame {
                     String type = (String) typeComboBox.getSelectedItem();
                     if (nameIDComboBox.getSelectedIndex() > 0) {
                         double premium = Double.parseDouble(cardField.getText());
-                        int term = Integer.parseInt(termField.getText());
+                        int term = 0;
+                        if (termField.getText() != "") {
+                            term = Integer.parseInt(termField.getText());
+                        }
                         boolean autoRenew = autoRenewCheckBox.isSelected();
                         boolean success = controller.applyInsuranceTriggered(type, premium, term, autoRenew);
                         if (success) {

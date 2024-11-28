@@ -58,7 +58,7 @@ public class InsuranceObject {
         this.autoRenew = autoRenew;
         this.startDate = LocalDate.now();
         this.endDate = LocalDate.now().plusYears(term);
-        this.insuranceID = 100000000 + (int)(Math.random() * 100000); // Generate a unique ID for each policy
+        this.insuranceID = 100000000 + (int) (Math.random() * 100000); // Generate a unique ID for each policy
         this.policyDetails = generatePolicyDetails(type);
         this.insuranceName = "Sample " + type + " Insurance";
     }
@@ -86,14 +86,34 @@ public class InsuranceObject {
         }
     }
 
-    public int getUserID() { return userID; }
-    public String getType() { return type; }
-    public double getPremium() { return premium; }
-    public int getTerm() { return term; }
-    public LocalDate getStartDate() { return startDate; }
-    public LocalDate getEndDate() { return endDate; }
-    public boolean isAutoRenew() { return autoRenew; }
-    public int getInsuranceID() { return insuranceID; }
-    public String getPolicyDetails() { return policyDetails; }
-    public String getInsuranceName() { return insuranceName; }
+    public int getUserID() {
+        return userID;
+    }
+    public String getType() {
+        return type;
+    }
+    public double getPremium() {
+        return premium;
+    }
+    public int getTerm() {
+        return term;
+    }
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+    public boolean isAutoRenew() {
+        return autoRenew;
+    }
+    public int getInsuranceID() {
+        return insuranceID;
+    }
+    public String getPolicyDetails() {
+        return policyDetails;
+    }
+    public String getInsuranceName() {
+        return insuranceName;
+    }
 }

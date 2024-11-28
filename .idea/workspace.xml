@@ -5,27 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.23 change amount is double">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Insurance/MyInsurance/MyInsuranceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Insurance/MyInsurance/MyInsurancePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Insurance/MyInsurance/MyInsuranceView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Insurance/PurchaseInsurance/PurchaseInsuranceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Insurance/PurchaseInsurance/PurchaseInsurancePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Insurance/PurchaseInsurance/PurchaseInsuranceView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceDBAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardObjectTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardObjectViewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/PurchaseInsurance/PurchaseInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/PurchaseInsurance/PurchaseInsuranceView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Yue-Zheng" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,7 +110,7 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Yue-Zheng",
+    "git-widget-placeholder": "sincer.xu",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/郑Y/IdeaProjects/CSC207Project/mystyle.xml",
     "node.js.detected.package.eslint": "true",
@@ -150,14 +134,14 @@
       <recent name="Exchange.CurrencyExchangeAPIConfig" />
       <recent name="Card.View.CardView" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Insurance.MyInsurance" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Card" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Insurance.MyInsurance" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainLauncher">
