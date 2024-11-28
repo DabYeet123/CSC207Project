@@ -3,7 +3,7 @@ package Views;
 import javax.swing.*;
 import java.awt.*;
 
-public abstract class ViewMaker extends JFrame {
+public class ViewMaker extends JFrame {
 
     public ViewMaker(String name, int width, int height) {
         super(name);

@@ -11,13 +11,13 @@ public class LabelMaker extends JLabel {
         setBounds(x, y, width, height);
         setFont(font);
 
-        setBorder(new LineBorder(Color.RED, 1)); //Temporary Border
+        //setBorder(new LineBorder(Color.RED, 1)); //Temporary Border
     }
 
     public LabelMaker(String name, Font font) {
         super(name);
         setFont(font);
 
-        setBorder(new LineBorder(Color.RED, 1)); //Temporary Border
+        //setBorder(new LineBorder(Color.RED, 1)); //Temporary Border
     }
 }
