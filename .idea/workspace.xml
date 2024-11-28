@@ -12,6 +12,8 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/Insurance/PurchaseInsurance/PurchaseInsurancePresenter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Insurance/PurchaseInsurance/PurchaseInsuranceView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceDBAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceObject.java" afterDir="false" />

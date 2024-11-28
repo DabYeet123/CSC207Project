@@ -52,7 +52,7 @@ public class CardView extends JFrame{
             }
         });
 
-        JButton backButton = new JButton("BACK TO MAIN");
+        JButton backButton = new JButton("Back to Main");
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -72,6 +72,7 @@ public class CardView extends JFrame{
         // final frame
         frame.add(inputPanel, BorderLayout.NORTH);
         frame.add(scrollPane, BorderLayout.CENTER);
+        frame.setLocationRelativeTo(null);
     }
 
     /**

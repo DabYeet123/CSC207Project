@@ -1,5 +1,6 @@
 package LogIn.LoggedIn;
 
+import Brokerage.BrokerageController;
 import Card.CardController;
 import App.ControllerInterface;
 import DataObjects.UserObject;
@@ -18,6 +19,7 @@ public class LoggedInController implements ControllerInterface {
     private WelcomeController welcomeController;
     private MakeTransactionController makeTransactionController;
     private SeeTransactionHistoryController seeTransactionHistoryController;
+    private BrokerageController brokerageController;
     private CardController cardController;
     private CurrencyExchangeController exchangeController;
     private ApplyLoansController applyLoansController;
@@ -34,6 +36,7 @@ public class LoggedInController implements ControllerInterface {
         this.seeLoansHistoryController = new SeeLoansHistoryController(loggedInUser);
         this.purchaseInsuranceController = new PurchaseInsuranceController(loggedInUser);
         this.myInsuranceController = new MyInsuranceController(loggedInUser);
+        this.brokerageController = new BrokerageController(loggedInUser);
         this.cardController = new CardController(user);
         this.exchangeController = new CurrencyExchangeController(user);
 
