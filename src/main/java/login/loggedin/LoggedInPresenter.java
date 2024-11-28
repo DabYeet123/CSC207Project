@@ -7,13 +7,16 @@ import app.PresenterInterface;
  */
 public class LoggedInPresenter implements PresenterInterface<LoggedInController> {
     private final LoggedInView loggedInView;
+    private final LoggedInViewModel viewModel;
 
-    public LoggedInPresenter(LoggedInController controller) {
+    public LoggedInPresenter(LoggedInController controller, LoggedInUseCase loggedInUseCase) {
+        this.viewModel = loggedInUseCase.getViewModel();
         this.loggedInView = new LoggedInView(controller);
     }
 
     @Override
     public void showView() {
+        loggedInView.updateView(viewModel);
         loggedInView.setVisible(true);
     }
 
