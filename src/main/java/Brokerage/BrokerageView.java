@@ -122,6 +122,13 @@ public class BrokerageView extends JFrame {
                                 "Success",  // Title
                                 JOptionPane.INFORMATION_MESSAGE  // Message type
                         );
+                    } else {
+                         JOptionPane.showMessageDialog(
+                                null,
+                                "Insufficient funds to buy the asset.",
+                                "Insufficient funds",
+                                JOptionPane.ERROR_MESSAGE
+                         );
                     }
                 } else {
                     JOptionPane.showMessageDialog(
@@ -183,8 +190,6 @@ public class BrokerageView extends JFrame {
             }
         });
     }
-
-
 
     private void drawGraph(String stockSymbol, List<StockUnit> stockUnits) {
         TimeSeries series = new TimeSeries(stockSymbol);

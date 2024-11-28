@@ -1,15 +1,14 @@
 package Exchange;
 
 import javax.swing.*;
-import java.awt.event.*;
 
 public class CurrencyExchangeView extends JFrame {
-    private JTextField inputAmountField;
-    public static JTextField outputAmountField;
-    private JComboBox<String> fromCurrencyBox;
-    private JComboBox<String> toCurrencyBox;
-    private JButton exchangeButton;
-    private JButton backButton;
+    public JTextField inputAmountField;
+    public JTextField outputAmountField;
+    public JComboBox<String> fromCurrencyBox;
+    public JComboBox<String> toCurrencyBox;
+    public JButton exchangeButton;
+    public JButton backButton;
 
     public CurrencyExchangeView(CurrencyExchangeController currencyExchangeController) {
         setTitle("Currency Exchange");
@@ -67,28 +66,32 @@ public class CurrencyExchangeView extends JFrame {
         exchangeButton = new JButton("Exchange Currency");
         exchangeButton.setBounds(50, 250, 200, 30);
         add(exchangeButton);
-        exchangeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                currencyExchangeController.exchangeCurrency(
-                        CurrencyExchangeView.this,
-                        fromCurrencyBox,
-                        inputAmountField,
-                        outputAmountField,
-                        toCurrencyBox);
-            }
-        });
+        exchangeButton.addActionListener(e -> CurrencyExchangeView.this.exchangeCurrency(
+                fromCurrencyBox,
+                inputAmountField,
+                toCurrencyBox));
 
         // back button
         backButton = new JButton("Back to Main");
         backButton.setBounds(400, 300, 150, 30);
         add(backButton);
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                currencyExchangeController.goBackToBaseView();
-            }
-        });
+        backButton.addActionListener(e -> currencyExchangeController.goBackToBaseView());
         setLocationRelativeTo(null);
+    }
+
+    public void exchangeCurrency(JComboBox<String> fromCurrencyBox,
+                                 JTextField inputAmountField,
+                                 JComboBox<String> toCurrencyBox) {
+        try {
+            double inputAmount = Double.parseDouble(inputAmountField.getText());
+            String fromCurrency = (String) fromCurrencyBox.getSelectedItem();
+            String toCurrency = (String) toCurrencyBox.getSelectedItem();
+
+            CurrencyExchangeDataUsage.changeInto(fromCurrency, toCurrency);
+            double outputAmount = inputAmount * CurrencyExchangeController.rate;
+            outputAmountField.setText(String.format("%.2f", outputAmount));
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Invalid Input Amount", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }

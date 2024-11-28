@@ -1,15 +1,19 @@
 package Card;
 
-import DataObjects.UserObject;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 
 public class Card {
 
      private final String id;
+     @Getter
      private final String usage;
+     @Getter
      private final String date;
+     @Getter
      private final String code;
+     @Getter
      private double expenses;
 
     @JsonCreator
@@ -27,22 +31,6 @@ public class Card {
     @JsonProperty
     public String getId() {
         return this.id;
-    }
-
-    public String getUsage() {
-        return this.usage;
-    }
-
-    public String getDate() {
-        return this.date;
-    }
-
-    public String getCode() {
-        return this.code;
-    }
-
-    public double getExpenses() {
-        return this.expenses;
     }
 
     public void updateAmount(double newAmount) {

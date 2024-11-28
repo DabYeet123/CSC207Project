@@ -58,7 +58,8 @@ public class LoggedInController implements ControllerInterface {
     public void refreshTriggered() {
         loggedInPresenter.disposeView();
         seeLoansHistoryController.update();
-        loggedInPresenter.showView();
+        cardTriggered();
+        cardController.goBackToBaseView();
     }
 
     public void sendMoneyTriggered() {

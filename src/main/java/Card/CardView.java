@@ -3,14 +3,15 @@ package Card;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class CardView extends JFrame{
     public JFrame frame;
     public JTable table;
     public DefaultTableModel model;
     public JTextField usageField;
+    public JButton addButton;
+    public JButton deleteButton;
+    public JButton backButton;
 
     public CardView(CardController controller) {
         // Main frame
@@ -36,29 +37,14 @@ public class CardView extends JFrame{
         inputPanel.add(usageField);
 
         //Button
-        JButton addButton = new JButton("Add Card");
-        addButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                addCard();
-            }
-        });
+        addButton = new JButton("Add Card");
+        addButton.addActionListener(e -> addCard());
 
-        JButton deleteButton = new JButton("Delete Card");
-        deleteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                deleteCard();
-            }
-        });
+        deleteButton = new JButton("Delete Card");
+        deleteButton.addActionListener(e -> deleteCard());
 
-        JButton backButton = new JButton("Back to Main");
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controller.goBackToBaseView();
-            }
-        });
+        backButton = new JButton("Back to Main");
+        backButton.addActionListener(e -> controller.goBackToBaseView());
 
         JPanel theButton = new JPanel();
         theButton.setLayout(new GridLayout(1, 3));
@@ -68,7 +54,7 @@ public class CardView extends JFrame{
         theButton.add(backButton);
 
         inputPanel.add(theButton);
-
+        refresh(this);
         // final frame
         frame.add(inputPanel, BorderLayout.NORTH);
         frame.add(scrollPane, BorderLayout.CENTER);
@@ -94,16 +80,16 @@ public class CardView extends JFrame{
     public void addCard() {
         CardController.loadFromFile();
         String name = usageField.getText();
-        String securityCode = CardController.newCode();
-        String id = CardController.newId(name);
-        String expiryDate = CardController.newDate();
+        String securityCode = CardMethods.newCode();
+        String id = CardMethods.newId(name);
+        String expiryDate = CardMethods.newDate();
 
         if (CardController.cardList.size() >= 10) {
             JOptionPane.showMessageDialog
                     (frame, "Too much cards", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             Card newCard = new Card(id, name, expiryDate, securityCode);
-            model.addRow(new Object[]{id, name, expiryDate, securityCode, newCard.getExpenses()});
+//            model.addRow(new Object[]{id, name, expiryDate, securityCode, newCard.getExpenses()});
             CardController.saveCards(newCard);
             usageField.setText("");
         }
