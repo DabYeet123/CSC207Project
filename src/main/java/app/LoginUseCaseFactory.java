@@ -1,7 +1,7 @@
 package app;
 
+// import interface_adapter.logged_in.LoggedInViewModel;
 import interface_adapter.ViewManagerModel;
-import interface_adapter.logged_in.LoggedInViewModel;
 import interface_adapter.login.LoginController;
 import interface_adapter.login.LoginPresenter;
 import interface_adapter.login.LoginViewModel;
@@ -25,18 +25,15 @@ public final class LoginUseCaseFactory {
      * Factory function for creating the LoginView.
      * @param viewManagerModel the ViewManagerModel to inject into the LoginView
      * @param loginViewModel the LoginViewModel to inject into the LoginView
-     * @param loggedInViewModel the LoggedInViewModel to inject into the LoginView
      * @param userDataAccessObject the LoginUserDataAccessInterface to inject into the LoginView
      * @return the LoginView created for the provided input classes
      */
-    public static LoginView create(
-            ViewManagerModel viewManagerModel,
-            LoginViewModel loginViewModel,
-            LoggedInViewModel loggedInViewModel,
-            LoginUserDataAccessInterface userDataAccessObject) {
+    public static LoginView create(ViewManagerModel viewManagerModel,
+                                               LoginViewModel loginViewModel,
+                                               LoginUserDataAccessInterface userDataAccessObject) {
 
         final LoginController loginController = createLoginUseCase(viewManagerModel, loginViewModel,
-                loggedInViewModel, userDataAccessObject);
+                userDataAccessObject);
         return new LoginView(loginViewModel, loginController);
 
     }
@@ -44,11 +41,9 @@ public final class LoginUseCaseFactory {
     private static LoginController createLoginUseCase(
             ViewManagerModel viewManagerModel,
             LoginViewModel loginViewModel,
-            LoggedInViewModel loggedInViewModel,
             LoginUserDataAccessInterface userDataAccessObject) {
 
-        final LoginOutputBoundary loginOutputBoundary = new LoginPresenter(viewManagerModel,
-                loggedInViewModel, loginViewModel);
+        final LoginOutputBoundary loginOutputBoundary = new LoginPresenter(viewManagerModel, loginViewModel);
         final LoginInputBoundary loginInteractor = new LoginInteractor(
                 userDataAccessObject, loginOutputBoundary);
 

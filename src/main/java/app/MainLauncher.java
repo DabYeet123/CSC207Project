@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
+import data_access.DBUserDataAccessObject;
+import interface_adapter.ViewManagerModel;
+import interface_adapter.login.LoginViewModel;
 import view.LoginView;
 import view.ViewManager;
 import view.WelcomeView;
@@ -32,6 +35,11 @@ public class MainLauncher {
         final JPanel views = new JPanel(cardLayout);
         application.add(views);
 
+        final ViewManagerModel viewManagerModel = new ViewManagerModel();
+        new ViewManager(views, cardLayout, viewManagerModel);
+
+        final LoginViewModel loginViewModel = new LoginViewModel();
+
         // TODO: add other Views
         /**
         final LoggedinView loggedinView = new LoggedinView();
@@ -44,13 +52,15 @@ public class MainLauncher {
         views.add(seeTransactionsView, seeTransactionsView.getViewName());
          */
 
-        final ViewManager viewManager = new ViewManager(views, cardLayout);
-        final WelcomeView welcomeView = new WelcomeView(viewManager);
+        final DBUserDataAccessObject userDataAccessObject = new DBUserDataAccessObject();
+
+        final WelcomeView welcomeView = WelcomeUseCaseFactory.create(viewManagerModel, loginViewModel);
         views.add(welcomeView, welcomeView.getViewName());
-        final LoginView loginView = new LoginView(viewManager);
+        final LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, loginViewModel, userDataAccessObject);
         views.add(loginView, loginView.getViewName());
 
-        viewManager.setState(welcomeView.getViewName());
+        viewManagerModel.setState(welcomeView.getViewName());
+        viewManagerModel.firePropertyChanged();
 
         application.pack();
         application.setVisible(true);

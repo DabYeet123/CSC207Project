@@ -1,15 +1,17 @@
 package interface_adapter.login;
 
+import use_case.login.LoginInputBoundary;
 import use_case.login.LoginInputData;
-import use_case.login.LoginUseCase;
 
 /**
  * The controller for the Login Use Case.
  */
 public class LoginController {
-    private final LoginUseCase loginUseCase = new LoginUseCase();
 
-    public LoginController() {
+    private final LoginInputBoundary loginUseCaseInteractor;
+
+    public LoginController(LoginInputBoundary loginUseCaseInteractor) {
+        this.loginUseCaseInteractor = loginUseCaseInteractor;
     }
 
     /**
@@ -21,6 +23,6 @@ public class LoginController {
         final LoginInputData loginInputData = new LoginInputData(
                 userId, password);
 
-        loginUseCase.execute(loginInputData);
+        loginUseCaseInteractor.execute(loginInputData);
     }
 }

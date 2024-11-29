@@ -4,11 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Refactor">
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.23 change amount is double">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/WelcomeUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/ViewManagerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/ViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomeState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomeViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginUserDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/welcome/WelcomeInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/welcome/WelcomeInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/welcome/WelcomeOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/LabelTextPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aaaa/interface_adapter/login/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aaaa/interface_adapter/login/LoginPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aaaa/use_case/login/LoginUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aaaa/use_case/login/LoginUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aaaa/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aaaa/view/ViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/LoginUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/LoginUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/DBUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/DBUserDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/login/LoginUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/WelcomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/WelcomeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,40 +78,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CardPresenter.executor": "Run",
-    "Application.CardView.executor": "Run",
-    "Application.CurrencyExchangePresenter.executor": "Run",
-    "Application.MainLauncher.executor": "Run",
-    "Application.WelcomePresenter.executor": "Run",
-    "JUnit.ControllerInterfaceTest.executor": "Run",
-    "JUnit.DataAccessControllerTest.executor": "Run",
-    "JUnit.DataAccessControllerTest.testSaveData.executor": "Run",
-    "JUnit.MainLauncherTest.executor": "Run",
-    "JUnit.MainLauncherTest.testMainLauncher (1).executor": "Run",
-    "JUnit.MainLauncherTest.testMainLauncher.executor": "Debug",
-    "JUnit.PresenterInterfaceTest.executor": "Run",
-    "Maven.homework-5 [clean,install].executor": "Run",
-    "Maven.homework-5 [clean].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "mattea.busato",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/mystyle.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CardPresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CardView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CurrencyExchangePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WelcomePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ControllerInterfaceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DataAccessControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DataAccessControllerTest.testSaveData.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainLauncherTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainLauncherTest.testMainLauncher (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainLauncherTest.testMainLauncher.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.PresenterInterfaceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.homework-5 [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.homework-5 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mattea.busato&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/mystyle.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.View.CardView" />
@@ -361,13 +384,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame." />
-    <MESSAGE value="11.23 change amount is double" />
     <MESSAGE value="Refactor Transactions + CheckStyle" />
     <MESSAGE value="Refactor Checkstyle" />
     <MESSAGE value="Refactor Checkstyle + Card Functionality" />
     <MESSAGE value="Add tests" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="11.23 change amount is double" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.23 change amount is double" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

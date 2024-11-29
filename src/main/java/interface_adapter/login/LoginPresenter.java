@@ -1,30 +1,45 @@
 package interface_adapter.login;
 
-import javax.swing.JPanel;
-
+// import interface_adapter.logged_in.LoggedInState;
+// import interface_adapter.logged_in.LoggedInViewModel;
+import interface_adapter.ViewManagerModel;
+import use_case.login.LoginOutputBoundary;
 import use_case.login.LoginOutputData;
-import view.LoginView;
-import view.ViewManager;
 
 /**
  * The Presenter for the Login Use Case.
  */
-public class LoginPresenter {
-    private final ViewManager viewManager;
-    private final LoginView loginView;
+public class LoginPresenter implements LoginOutputBoundary {
+    private final LoginViewModel loginViewModel;
+    // private final LoggedInViewModel loggedInViewModel;
+    private final ViewManagerModel viewManagerModel;
 
-    public LoginPresenter(ViewManager viewManager, JPanel loginView) {
-        this.viewManager = viewManager;
-        this.loginView = (LoginView) loginView;
+    public LoginPresenter(ViewManagerModel viewManagerModel,
+                          LoginViewModel loginViewModel) {
+        this.viewManagerModel = viewManagerModel;
+        // this.loggedInViewModel = loggedInViewModel;
+        this.loginViewModel = loginViewModel;
     }
 
     @Override
     public void prepareSuccessView(LoginOutputData response) {
-        viewManager.setState("");
+        // On success, switch to the logged in view.
+
+        /**
+        final LoggedInState loggedInState = loggedInViewModel.getState();
+        loggedInState.setUserId(response.getUserId());
+        this.loggedInViewModel.setState(loggedInState);
+        this.loggedInViewModel.firePropertyChanged();
+
+        this.viewManagerModel.setState(loggedInViewModel.getViewName());
+        this.viewManagerModel.firePropertyChanged();
+         */
     }
 
     @Override
     public void prepareFailView(String error) {
-        loginView.displayMessage(error, false);
+        final LoginState loginState = loginViewModel.getState();
+        loginState.setLoginError(error);
+        loginViewModel.firePropertyChanged();
     }
 }

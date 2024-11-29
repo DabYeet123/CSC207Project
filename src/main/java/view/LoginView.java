@@ -1,94 +1,159 @@
 package view;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 import interface_adapter.login.LoginController;
+import interface_adapter.login.LoginState;
+import interface_adapter.login.LoginViewModel;
 
 /**
  * View class for handling the login interface.
  */
-public class LoginView extends JPanel {
-    private static final String VIEWNAME = "login";
+public class LoginView extends JPanel implements ActionListener, PropertyChangeListener {
     private static final int ROW_COUNT = 3;
     private static final int COLUMN_COUNT = 2;
     private static final int HORIZONTAL_GAP = 10;
     private static final int VERTICAL_GAP = 10;
     private static final int FRAME_WIDTH = 400;
     private static final int FRAME_HEIGHT = 400;
-    private final JLabel messageLabel = new JLabel();
 
-    public LoginView(ViewManager viewManager) {
-        final LoginController loginController = viewManager.getLoginController();
+    private final String viewName = "login";
+    private final LoginViewModel loginViewModel;
+
+    private final JTextField userIdInputField = new JTextField(15);
+    private final JLabel usernameErrorField = new JLabel();
+
+    private final JPasswordField passwordInputField = new JPasswordField(15);
+    private final JLabel passwordErrorField = new JLabel();
+
+    private final JButton logIn;
+    private final JButton cancel;
+    private final LoginController loginController;
+
+    public LoginView(LoginViewModel loginViewModel, LoginController controller) {
+        setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
+        this.loginController = controller;
+        this.loginViewModel = loginViewModel;
+        this.loginViewModel.addPropertyChangeListener(this);
+
+        final JLabel title = new JLabel("Login Screen");
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
 
-        final JPanel loginPanel = new JPanel();
-        loginPanel.setLayout(new GridLayout(ROW_COUNT, COLUMN_COUNT, HORIZONTAL_GAP, VERTICAL_GAP));
+        final LabelTextPanel usernameInfo = new LabelTextPanel(
+                new JLabel("UserID"), userIdInputField);
+        final LabelTextPanel passwordInfo = new LabelTextPanel(
+                new JLabel("Password"), passwordInputField);
 
-        final JLabel userIDLabel = new JLabel("User ID:");
-        final JTextField userIDField = new JTextField();
-        final JLabel passwordLabel = new JLabel("Password:");
-        final JPasswordField passwordField = new JPasswordField();
-        final JButton backButton = new JButton("Back");
-        final JButton logInButton = new JButton("Log In");
+        final JPanel buttons = new JPanel();
+        logIn = new JButton("log in");
+        buttons.add(logIn);
+        cancel = new JButton("cancel");
+        buttons.add(cancel);
 
-        loginPanel.add(userIDLabel);
-        loginPanel.add(userIDField);
-        loginPanel.add(passwordLabel);
-        loginPanel.add(passwordField);
-        loginPanel.add(backButton);
-        loginPanel.add(logInButton);
+        logIn.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent event) {
+                    if (event.getSource().equals(logIn)) {
+                        final LoginState currentState = loginViewModel.getState();
+                        loginController.execute(
+                                currentState.getUserId(),
+                                currentState.getPassword()
+                        );
+                    }
+                }
+            }
+        );
 
-        add(loginPanel);
+        cancel.addActionListener(this);
 
-        backButton.addActionListener(new ActionListener() {
+        userIdInputField.getDocument().addDocumentListener(new DocumentListener() {
+
+            private void documentListenerHelper() {
+                final LoginState currentState = loginViewModel.getState();
+                currentState.setUserId(Integer.parseInt(userIdInputField.getText()));
+                loginViewModel.setState(currentState);
+            }
+
             @Override
-            public void actionPerformed(ActionEvent e) {
-                viewManager.setState("welcome");
+            public void insertUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                documentListenerHelper();
             }
         });
 
-        logInButton.addActionListener(new ActionListener() {
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
+        passwordInputField.getDocument().addDocumentListener(new DocumentListener() {
+
+            private void documentListenerHelper() {
+                final LoginState currentState = loginViewModel.getState();
+                currentState.setPassword(new String(passwordInputField.getPassword()));
+                loginViewModel.setState(currentState);
+            }
+
             @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    final int userID = Integer.parseInt(userIDField.getText().trim());
-                    final String password = new String(passwordField.getPassword());
-                    loginController.execute(userID, password);
-                }
-                catch (NumberFormatException ex) {
-                    displayMessage("User ID must be a number.", false);
-                }
+            public void insertUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                documentListenerHelper();
             }
         });
+
+        this.add(title);
+        this.add(usernameInfo);
+        this.add(usernameErrorField);
+        this.add(passwordInfo);
+        this.add(buttons);
     }
 
     /**
-     * Displays a message to the user.
-     *
-     * @param message   the message to display
-     * @param isSuccess whether the message is a success (green) or error (red)
+     * React to a button click that results in evt.
+     * @param evt the ActionEvent to react to
      */
-    public void displayMessage(String message, boolean isSuccess) {
-        messageLabel.setText(message);
-        if (isSuccess) {
-            messageLabel.setForeground(Color.GREEN);
-        }
-        else {
-            messageLabel.setForeground(Color.RED);
-        }
+    public void actionPerformed(ActionEvent evt) {
+        System.out.println("Click " + evt.getActionCommand());
+    }
+
+    @Override
+    public void propertyChange(PropertyChangeEvent evt) {
+        final LoginState state = (LoginState) evt.getNewValue();
+        setFields(state);
+        usernameErrorField.setText(state.getLoginError());
+    }
+
+    private void setFields(LoginState state) {
+        userIdInputField.setText(String.valueOf(state.getUserId()));
     }
 
     public String getViewName() {
-        return VIEWNAME;
+        return viewName;
     }
+
 }

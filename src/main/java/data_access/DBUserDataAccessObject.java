@@ -3,15 +3,72 @@ package data_access;
 import java.util.List;
 
 import entity.User;
+import use_case.login.LoginUserDataAccessInterface;
 
 /**
  * Provides database access operations for managing `UserObject` instances.
  * This class interacts with the underlying data access controller to perform
  * CRUD (Create, Read, Update, Delete) operations on user data stored in a JSON file.
  */
-public class DBUserDataAccessObject {
+public class DBUserDataAccessObject implements LoginUserDataAccessInterface {
     private static final String DIRECTORY = "Users.json";
     private DBDataAccessObject controller = new DBDataAccessObject();
+
+    public DBUserDataAccessObject() {
+    }
+
+    @Override
+    public User get(int userId) {
+        final List<User> users = readData();
+        User userFound = null;
+        for (User user : users) {
+            if (user != null && user.getUserID() == userId) {
+                userFound = user;
+                break;
+            }
+        }
+        return userFound;
+    }
+
+    @Override
+    public void setCurrentUser(int userId, User user) {
+        final List<User> users = readData();
+        for (int i = 0; i < users.size(); i++) {
+            if (user != null && users.get(i).getUserID() == userId) {
+                users.set(i, user);
+            }
+        }
+        controller.saveData(DIRECTORY, users, User.class);
+    }
+
+    @Override
+    public int getCurrentUser() {
+        return 0;
+    }
+
+    @Override
+    public boolean existsByName(int userId) {
+        return readDataPoint(userId) != null;
+    }
+
+    @Override
+    public void save(User user) {
+        final List<User> users = controller.readData(DIRECTORY, User.class);
+        users.add(user);
+        controller.saveData(DIRECTORY, users, User.class);
+    }
+
+    @Override
+    public boolean correspondsToUser(int userID, String password) {
+        boolean success = false;
+        if (readDataPoint(userID) != null) {
+            final User user = readDataPoint(userID);
+            if (password.equals(user.getPasswordHash())) {
+                success = true;
+            }
+        }
+        return success;
+    }
 
     /**
      * Saves a new user to the database.
@@ -91,23 +148,5 @@ public class DBUserDataAccessObject {
      */
     public boolean checkUserExistance(int userID) {
         return readDataPoint(userID) != null;
-    }
-
-    /**
-     * Checks if the provided user ID and password correspond to an existing user.
-     *
-     * @param userID   the unique identifier of the user
-     * @param password the password to verify
-     * @return {@code true} if the user exists and the password matches; {@code false} otherwise
-     */
-    public boolean correspondsToUser(int userID, String password) {
-        boolean success = false;
-        if (readDataPoint(userID) != null) {
-            final User user = readDataPoint(userID);
-            if (password.equals(user.getPasswordHash())) {
-                success = true;
-            }
-        }
-        return success;
     }
 }
