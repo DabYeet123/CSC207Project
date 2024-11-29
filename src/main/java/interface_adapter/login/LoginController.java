@@ -25,4 +25,11 @@ public class LoginController {
 
         loginUseCaseInteractor.execute(loginInputData);
     }
+
+    /**
+     * Executes the "switch to WelcomeView" Use Case.
+     */
+    public void switchToWelcomeView() {
+        loginUseCaseInteractor.switchToWelcomeView();
+    }
 }

@@ -7,12 +7,12 @@ import entity.User;
  */
 public class LoginInteractor implements LoginInputBoundary {
     private final LoginUserDataAccessInterface userDataAccessObject;
-    private final LoginOutputBoundary loginPresenter;
+    private final LoginOutputBoundary loginOutputBoundary;
 
     public LoginInteractor(LoginUserDataAccessInterface userDataAccessInterface,
                            LoginOutputBoundary loginOutputBoundary) {
         this.userDataAccessObject = userDataAccessInterface;
-        this.loginPresenter = loginOutputBoundary;
+        this.loginOutputBoundary = loginOutputBoundary;
     }
 
     /**
@@ -29,12 +29,16 @@ public class LoginInteractor implements LoginInputBoundary {
             final User user = userDataAccessObject.get(loginInputData.getUserId());
 
             final LoginOutputData loginOutputData = new LoginOutputData(user);
-            loginPresenter.prepareSuccessView(loginOutputData);
+            loginOutputBoundary.prepareSuccessView(loginOutputData);
         }
         else {
-            loginPresenter.prepareFailView(" Incorrect userId or Password. ");
+            loginOutputBoundary.prepareFailView(" Incorrect userId or Password. ");
         }
+    }
 
+    @Override
+    public void switchToWelcomeView() {
+        loginOutputBoundary.switchToWelcomeView();
     }
 
 }

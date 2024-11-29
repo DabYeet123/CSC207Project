@@ -9,6 +9,7 @@ import javax.swing.WindowConstants;
 import data_access.DBUserDataAccessObject;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.login.LoginViewModel;
+import interface_adapter.welcome.WelcomeViewModel;
 import view.LoginView;
 import view.ViewManager;
 import view.WelcomeView;
@@ -38,9 +39,9 @@ public class MainLauncher {
         final ViewManagerModel viewManagerModel = new ViewManagerModel();
         new ViewManager(views, cardLayout, viewManagerModel);
 
+        final WelcomeViewModel welcomeViewModel = new WelcomeViewModel();
         final LoginViewModel loginViewModel = new LoginViewModel();
 
-        // TODO: add other Views
         /**
         final LoggedinView loggedinView = new LoggedinView();
         views.add(loggedinView, loggedinView.getViewName());
@@ -56,7 +57,8 @@ public class MainLauncher {
 
         final WelcomeView welcomeView = WelcomeUseCaseFactory.create(viewManagerModel, loginViewModel);
         views.add(welcomeView, welcomeView.getViewName());
-        final LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, loginViewModel, userDataAccessObject);
+        final LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, welcomeViewModel, loginViewModel,
+                userDataAccessObject);
         views.add(loginView, loginView.getViewName());
 
         viewManagerModel.setState(welcomeView.getViewName());

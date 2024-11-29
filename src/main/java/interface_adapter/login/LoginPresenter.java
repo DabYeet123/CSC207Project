@@ -3,6 +3,7 @@ package interface_adapter.login;
 // import interface_adapter.logged_in.LoggedInState;
 // import interface_adapter.logged_in.LoggedInViewModel;
 import interface_adapter.ViewManagerModel;
+import interface_adapter.welcome.WelcomeViewModel;
 import use_case.login.LoginOutputBoundary;
 import use_case.login.LoginOutputData;
 
@@ -11,12 +12,15 @@ import use_case.login.LoginOutputData;
  */
 public class LoginPresenter implements LoginOutputBoundary {
     private final LoginViewModel loginViewModel;
+    private final WelcomeViewModel welcomeViewModel;
     // private final LoggedInViewModel loggedInViewModel;
     private final ViewManagerModel viewManagerModel;
 
     public LoginPresenter(ViewManagerModel viewManagerModel,
+                          WelcomeViewModel welcomeViewModel,
                           LoginViewModel loginViewModel) {
         this.viewManagerModel = viewManagerModel;
+        this.welcomeViewModel = welcomeViewModel;
         // this.loggedInViewModel = loggedInViewModel;
         this.loginViewModel = loginViewModel;
     }
@@ -41,5 +45,11 @@ public class LoginPresenter implements LoginOutputBoundary {
         final LoginState loginState = loginViewModel.getState();
         loginState.setLoginError(error);
         loginViewModel.firePropertyChanged();
+    }
+
+    @Override
+    public void switchToWelcomeView() {
+        viewManagerModel.setState(welcomeViewModel.getViewName());
+        viewManagerModel.firePropertyChanged();
     }
 }

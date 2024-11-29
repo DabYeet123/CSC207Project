@@ -9,7 +9,7 @@ public class WelcomeViewModel extends ViewModel<WelcomeState> {
     public static final String TITLE_LABEL = "Welcome View";
 
     public WelcomeViewModel() {
-        super("sign up");
+        super("welcome");
         setState(new WelcomeState());
     }
 }

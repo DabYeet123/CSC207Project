@@ -4,34 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.23 change amount is double">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/WelcomeUseCaseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/ViewManagerModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/ViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomeState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomeViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginUserDataAccessInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/welcome/WelcomeInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/welcome/WelcomeInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/use_case/welcome/WelcomeOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/LabelTextPanel.java" afterDir="false" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/LoginUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/LoginUseCaseFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/DBUserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/DBUserDataAccessObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/login/LoginPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/login/LoginUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomeViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/welcome/WelcomeViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/login/LoginInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/login/LoginInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/use_case/login/LoginOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/use_case/login/LoginOutputBoundary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ViewManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/WelcomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/WelcomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/API/NominatimAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/API/StaticMapAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/Adapter/ATMMapController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/Adapter/ATMMapPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/DataObject/ATMObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/UseCase/ATMGenerationIB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/UseCase/ATMGenerationInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/UseCase/ATMGenerationOB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/UseCase/ATMGenerationOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/UseCase/ATMGenerationUseCase$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/UseCase/ATMGenerationUseCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/Utility/PixelConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/View/ATMButton$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/View/ATMButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/View/ATMMapView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/View/ATMMapView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/View/ATMPopUp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/View/ATMPopUp$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/View/ATMPopUp$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ATMMap/View/ATMPopUp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataObjects/NewUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataObjects/UserObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataObjects/UsersDBAccess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/Adapter/HouseMapController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/Adapter/HouseMapPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/Adapter/PopUpTransactionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/Adapter/PopUpTransactionPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/DataAccess/CardData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/DataAccess/HouseDBAccess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/DataAccess/HouseData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/DataObject/HouseObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/HouseTransaction/HouseTransactionIB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/HouseTransaction/HouseTransactionInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/HouseTransaction/HouseTransactionOB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/HouseTransaction/HouseTransactionOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/HouseTransaction/HouseTransactionUseCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/PopUpTransaction/PopUpTransactionIB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/PopUpTransaction/PopUpTransactionInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/PopUpTransaction/PopUpTransactionOB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/PopUpTransaction/PopUpTransactionOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/UseCase/PopUpTransaction/PopUpTransactionUseCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HouseButton$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HouseButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HouseMapView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HouseMapView$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HouseMapView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HousePopUp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HousePopUp$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HousePopUp$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/HousePopUp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/PopUpTransactionView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/PopUpTransactionView$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/PopUpTransactionView$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HouseMap/View/PopUpTransactionView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Insurance/DataObject/InsuranceController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Insurance/DataObject/InsuranceDBAccess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Insurance/DataObject/InsuranceObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/transaction/makeTransaction/MakeTransactionView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/transaction/makeTransaction/MakeTransactionView$2.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,14 +160,20 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.View.CardView" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\busat\OneDrive\Desktop\UofT\SoftwareDesign\CSC207Project\src\main\java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.MainLauncher">
     <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="aaaa.app.MainLauncher" />
+      <option name="MAIN_CLASS_NAME" value="app.MainLauncher" />
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="aaaa.app.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,7 +216,7 @@
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,7 +232,7 @@
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -235,6 +285,8 @@
       <workItem from="1732743808280" duration="619000" />
       <workItem from="1732744449055" duration="729000" />
       <workItem from="1732746188483" duration="2471000" />
+      <workItem from="1732845066864" duration="1508000" />
+      <workItem from="1732846629574" duration="1941000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -364,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732834365832</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Refactor">
+      <option name="closed" value="true" />
+      <created>1732843302717</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732843302717</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,9 +448,9 @@
     <MESSAGE value="Refactor Checkstyle" />
     <MESSAGE value="Refactor Checkstyle + Card Functionality" />
     <MESSAGE value="Add tests" />
-    <MESSAGE value="Refactor" />
     <MESSAGE value="11.23 change amount is double" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.23 change amount is double" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -399,6 +459,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/aaaa/view/WelcomeView.java</url>
           <line>51</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/view/LoginView.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

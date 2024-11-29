@@ -13,7 +13,7 @@ Lorem Ipsum ...
 ## Usage Instructions
 Version of Java - Swing - Packages
 
-Run MainLauncher.java to use the software!
+Run to use the software!
 
 ## User Stories
 

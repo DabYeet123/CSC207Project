@@ -1,12 +1,18 @@
 package view;
 
-import java.awt.*;
+import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import javax.swing.*;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
@@ -18,10 +24,6 @@ import interface_adapter.login.LoginViewModel;
  * View class for handling the login interface.
  */
 public class LoginView extends JPanel implements ActionListener, PropertyChangeListener {
-    private static final int ROW_COUNT = 3;
-    private static final int COLUMN_COUNT = 2;
-    private static final int HORIZONTAL_GAP = 10;
-    private static final int VERTICAL_GAP = 10;
     private static final int FRAME_WIDTH = 400;
     private static final int FRAME_HEIGHT = 400;
 
@@ -139,6 +141,9 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
      */
     public void actionPerformed(ActionEvent evt) {
         System.out.println("Click " + evt.getActionCommand());
+        if ("cancel".equals(evt.getActionCommand())) {
+            loginController.switchToWelcomeView();
+        }
     }
 
     @Override
