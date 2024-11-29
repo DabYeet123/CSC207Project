@@ -16,7 +16,8 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
  * and deserialization of data.
  */
 public class DBDataAccessObject {
-    private static final String BASE_PATH = "data" + FileSystems.getDefault().getSeparator();
+    // private static final String BASE_PATH = "data" + FileSystems.getDefault().getSeparator();
+    private static final String BASE_PATH = "data\\";
 
     /**
      * Saves a list of data objects to a JSON file.

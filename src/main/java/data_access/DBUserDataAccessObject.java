@@ -4,13 +4,15 @@ import java.util.List;
 
 import entity.User;
 import use_case.login.LoginUserDataAccessInterface;
+import use_case.signup.SignupUserDataAccessInterface;
 
 /**
  * Provides database access operations for managing `UserObject` instances.
  * This class interacts with the underlying data access controller to perform
  * CRUD (Create, Read, Update, Delete) operations on user data stored in a JSON file.
  */
-public class DBUserDataAccessObject implements LoginUserDataAccessInterface {
+public class DBUserDataAccessObject implements LoginUserDataAccessInterface,
+                                                SignupUserDataAccessInterface {
     private static final String DIRECTORY = "Users.json";
     private DBDataAccessObject controller = new DBDataAccessObject();
 
@@ -63,6 +65,8 @@ public class DBUserDataAccessObject implements LoginUserDataAccessInterface {
         boolean success = false;
         if (readDataPoint(userID) != null) {
             final User user = readDataPoint(userID);
+            System.out.println(user.getPasswordHash());
+            System.out.println(password);
             if (password.equals(user.getPasswordHash())) {
                 success = true;
             }

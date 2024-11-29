@@ -5,7 +5,7 @@ package interface_adapter.login;
  */
 public class LoginState {
     private int userId;
-    private String loginError;
+    private String loginError = "";
     private String password = "";
 
     public int getUserId() {

@@ -40,5 +40,4 @@ public class LoginInteractor implements LoginInputBoundary {
     public void switchToWelcomeView() {
         loginOutputBoundary.switchToWelcomeView();
     }
-
 }

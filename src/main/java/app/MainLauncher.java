@@ -8,11 +8,13 @@ import javax.swing.WindowConstants;
 
 import data_access.DBUserDataAccessObject;
 import interface_adapter.ViewManagerModel;
+import interface_adapter.loggedin.LoggedinViewModel;
 import interface_adapter.login.LoginViewModel;
+import interface_adapter.maketransaction.MakeTransactionViewModel;
+import interface_adapter.seetransactions.SeeTransactionsViewModel;
+import interface_adapter.signup.SignupViewModel;
 import interface_adapter.welcome.WelcomeViewModel;
-import view.LoginView;
-import view.ViewManager;
-import view.WelcomeView;
+import view.*;
 
 /**
  * MainLauncher class to start the application.
@@ -39,27 +41,27 @@ public class MainLauncher {
         final ViewManagerModel viewManagerModel = new ViewManagerModel();
         new ViewManager(views, cardLayout, viewManagerModel);
 
+        // TODO: add here
         final WelcomeViewModel welcomeViewModel = new WelcomeViewModel();
         final LoginViewModel loginViewModel = new LoginViewModel();
-
-        /**
-        final LoggedinView loggedinView = new LoggedinView();
-        views.add(loggedinView, loggedinView.getViewName());
-        final LoginView loginView = new LoginView();
-        views.add(loginView, loginView.getViewName());
-        final MakeTransactionView makeTransactionView = new MakeTransactionView();
-        views.add(makeTransactionView, makeTransactionView.getViewName());
-        final SeeTransactionsView seeTransactionsView = new SeeTransactionsView();
-        views.add(seeTransactionsView, seeTransactionsView.getViewName());
-         */
+        final SignupViewModel signupViewModel = new SignupViewModel();
+        final LoggedinViewModel loggedinViewModel = new LoggedinViewModel();
+        final MakeTransactionViewModel makeTransactionViewModel = new MakeTransactionViewModel();
+        final SeeTransactionsViewModel seeTransactionsViewModel = new SeeTransactionsViewModel();
 
         final DBUserDataAccessObject userDataAccessObject = new DBUserDataAccessObject();
 
-        final WelcomeView welcomeView = WelcomeUseCaseFactory.create(viewManagerModel, loginViewModel);
+        final WelcomeView welcomeView = WelcomeUseCaseFactory.create(viewManagerModel, signupViewModel, loginViewModel);
         views.add(welcomeView, welcomeView.getViewName());
-        final LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, welcomeViewModel, loginViewModel,
-                userDataAccessObject);
+        final LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, welcomeViewModel, loggedinViewModel,
+                loginViewModel, userDataAccessObject);
         views.add(loginView, loginView.getViewName());
+        final SignupView signupView = SignupUseCaseFactory.create(viewManagerModel, welcomeViewModel, signupViewModel,
+                userDataAccessObject);
+        views.add(signupView, signupView.getViewName());
+        final LoggedinView loggedinView = LoggedinUseCaseFactory.create(viewManagerModel, welcomeViewModel,
+                makeTransactionViewModel, seeTransactionsViewModel, loggedinViewModel);
+        views.add(loggedinView, loggedinView.getViewName());
 
         viewManagerModel.setState(welcomeView.getViewName());
         viewManagerModel.firePropertyChanged();
