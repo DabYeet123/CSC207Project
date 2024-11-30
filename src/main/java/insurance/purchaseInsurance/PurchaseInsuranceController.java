@@ -1,10 +1,12 @@
-package Insurance.PurchaseInsurance;
+package insurance.purchaseInsurance;
 
+import Card.CardController;
 import DataObjects.UserObject;
-import Insurance.DataObject.InsuranceController;
-import Insurance.DataObject.InsuranceObject;
+import insurance.dataObject.InsuranceController;
+import insurance.dataObject.InsuranceObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
+import insurance.dataObject.UserInsuranceController;
 
 import java.util.List;
 
@@ -13,13 +15,16 @@ public class PurchaseInsuranceController {
     private PurchaseInsurancePresenter purchaseInsurancePresenter;
     private WelcomeController welcomeController;
     private InsuranceController insuranceController;
+    private UserInsuranceController userInsuranceController;
     private List<InsuranceObject> availableInsurances;
 
     public PurchaseInsuranceController(UserObject user) {
         this.loggedInUser = user;
-        this.insuranceController = new InsuranceController();
-        this.availableInsurances = insuranceController.getAllInsurance(user.getUserID());
         this.welcomeController = new WelcomeController();
+        this.insuranceController = new InsuranceController();
+        this.userInsuranceController = new UserInsuranceController();
+        this.availableInsurances = insuranceController.getAllInsurance();
+
         this.purchaseInsurancePresenter = new PurchaseInsurancePresenter(this);
     }
 
@@ -32,12 +37,19 @@ public class PurchaseInsuranceController {
         welcomeController.launch();
     }
 
-    public boolean applyInsuranceTriggered(String type, double premium, int term, boolean autoRenew) {
-        return type != null && !type.isEmpty() && premium > 0 && (term > 0 || autoRenew);
+    public void goBackToBaseView() {
+        purchaseInsurancePresenter.disposeView();
+        LoggedInController controller = new LoggedInController(loggedInUser);
+        controller.launch();
     }
 
-    public void onApplyInsuranceSuccess(String type, double premium, int term, boolean autoRenew) {
-        loggedInUser = insuranceController.addInsurance(loggedInUser.getUserID(), type, premium, term, autoRenew);
+    public boolean purchaseInsuranceTriggered(int term, boolean autoRenew, String cardNumber) {
+        CardController cardController = new CardController(loggedInUser);
+        return (term > 0 && term < 100 || autoRenew) && cardController.getCard(cardNumber) != null;
+    }
+
+    public void onPurchaseInsuranceSuccess(InsuranceObject insurance, int term, boolean autoRenew, String cardNumber) {
+        loggedInUser = userInsuranceController.addInsurance(loggedInUser.getUserID(), insurance, term, autoRenew, cardNumber);
         purchaseInsurancePresenter.disposeView();
         LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();

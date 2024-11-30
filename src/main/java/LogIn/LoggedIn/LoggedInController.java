@@ -5,10 +5,10 @@ import Card.CardController;
 import App.ControllerInterface;
 import DataObjects.UserObject;
 import Exchange.CurrencyExchangeController;
-import Insurance.MyInsurance.MyInsuranceController;
-import Insurance.PurchaseInsurance.PurchaseInsuranceController;
-import Loans.ApplyLoans.ApplyLoansController;
-import Loans.SeeLoansHistory.SeeLoansHistoryController;
+import insurance.myInsurance.MyInsuranceController;
+import insurance.purchaseInsurance.PurchaseInsuranceController;
+import loans.applyLoans.ApplyLoansController;
+import loans.seeLoansHistory.SeeLoansHistoryController;
 import LogIn.Welcome.WelcomeController;
 import Transaction.MakeTransaction.MakeTransactionController;
 import Transaction.SeeTransactionHistory.SeeTransactionHistoryController;
@@ -45,7 +45,7 @@ public class LoggedInController implements ControllerInterface {
     }
 
     @Override
-    public void launch(){
+    public void launch() {
         seeLoansHistoryController.update();
         loggedInPresenter.showView();
     }

@@ -1,9 +1,9 @@
-package Loans.ApplyLoans;
+package loans.applyLoans;
 
 import App.PresenterInterface;
 
 public class ApplyLoansPresenter implements PresenterInterface<ApplyLoansController> {
-    private final Loans.ApplyLoans.ApplyLoansView applyLoansView;
+    private final loans.applyLoans.ApplyLoansView applyLoansView;
 
     public ApplyLoansPresenter(ApplyLoansController controller){
         this.applyLoansView = new ApplyLoansView(controller);

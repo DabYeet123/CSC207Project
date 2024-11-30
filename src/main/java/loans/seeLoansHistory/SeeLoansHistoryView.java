@@ -1,7 +1,7 @@
-package Loans.SeeLoansHistory;
+package loans.seeLoansHistory;
 
 import DataObjects.UserObject;
-import Loans.DataObject.LoansObject;
+import loans.dataObject.LoansObject;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

@@ -1,4 +1,4 @@
-package Loans.DataObject;
+package loans.dataObject;
 
 import Card.CardController;
 import DataAccess.DataAccessController;
@@ -38,7 +38,8 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
             if (loan.endDate.isBefore(today)) {
                 updateBalance(user, -loan.repayment);
                 cardController.updateData(userID, loan.cardUsed, loan.repayment);
-            } else {
+            }
+            else {
                 newLoans.add(loan);
             }
         }
@@ -46,7 +47,7 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
         return newLoans;
     }
 
-    private UserObject updateBalance(UserObject user, double amount){
+    private UserObject updateBalance(UserObject user, double amount) {
         user.setBalance(user.getBalance() + amount);
         usersController.changeUser(user.getUserID(), user);
         return user;

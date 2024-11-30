@@ -1,4 +1,4 @@
-package Loans.SeeLoansHistory;
+package loans.seeLoansHistory;
 
 import App.PresenterInterface;
 

@@ -1,4 +1,4 @@
-package Loans.DataObject;
+package loans.dataObject;
 
 import DataObjects.UserObject;
 

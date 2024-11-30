@@ -1,4 +1,4 @@
-package Insurance.PurchaseInsurance;
+package insurance.purchaseInsurance;
 
 import App.PresenterInterface;
 

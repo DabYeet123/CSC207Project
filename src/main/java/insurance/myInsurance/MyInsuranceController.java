@@ -1,25 +1,27 @@
-package Insurance.MyInsurance;
+package insurance.myInsurance;
 
 import App.ControllerInterface;
 import DataObjects.UserObject;
-import Insurance.DataObject.InsuranceController;
-import Insurance.DataObject.InsuranceObject;
+import insurance.dataObject.UserInsuranceController;
+import insurance.dataObject.UserInsuranceObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
+import lombok.Getter;
 
 import java.util.List;
 
 public class MyInsuranceController implements ControllerInterface {
     UserObject loggedInUser;
-    List<InsuranceObject> insurances;
-    private MyInsurancePresenter myInsurancePresenter;
-    private WelcomeController welcomeController;
-    private InsuranceController insuranceController;
+    @Getter
+    List<UserInsuranceObject> insurances;
+    private final MyInsurancePresenter myInsurancePresenter;
+    private final WelcomeController welcomeController;
+    private final UserInsuranceController userInsuranceController;
 
     public MyInsuranceController(UserObject user) {
         this.loggedInUser = user;
-        this.insuranceController = new InsuranceController();
-        this.insurances = insuranceController.getAllInsurance(loggedInUser.getUserID());
+        this.userInsuranceController = new UserInsuranceController();
+        this.insurances = userInsuranceController.getAllInsurance(loggedInUser.getUserID());
         this.welcomeController = new WelcomeController();
         this.myInsurancePresenter = new MyInsurancePresenter(this);
     }
@@ -41,10 +43,10 @@ public class MyInsuranceController implements ControllerInterface {
     }
 
     public void update() {
-        this.insurances = insuranceController.getAllInsurance(loggedInUser.getUserID());
+        this.insurances = userInsuranceController.getAllInsurance(loggedInUser.getUserID());
     }
 
-    public List<InsuranceObject> getInsurancesByType(String type) {
-        return insurances.stream().filter(insurance -> insurance.getType().equals(type)).toList();
+    public List<UserInsuranceObject> getInsurancesByType(String type) {
+        return insurances.stream().filter(insurance -> insurance.getInsurance().getType().equals(type)).toList();
     }
 }

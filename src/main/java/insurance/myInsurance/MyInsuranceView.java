@@ -1,7 +1,7 @@
-package Insurance.MyInsurance;
+package insurance.myInsurance;
 
 import DataObjects.UserObject;
-import Insurance.DataObject.InsuranceObject;
+import insurance.dataObject.UserInsuranceObject;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -27,30 +27,22 @@ public class MyInsuranceView extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 20));
         add(titleLabel, BorderLayout.NORTH);
 
-        String[] columnNames = {"ID", "Type", "Premium ($)", "Start Date", "End Date", "Auto Renew"};
+        String[] columnNames = {"ID", "Type", "Premium ($)", "Start Date", "End Date", "Auto Renew", "Card"};
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         JTable insuranceTable = new JTable(tableModel);
 
         JComboBox<String> typeComboBox = new JComboBox<>(new String[]{"Choose Insurance Type", "Health", "Vehicle", "Home", "Travel", "Life", "Pet", "Business", "Dental"});
+        updateTable(tableModel, controller.getInsurances());
         typeComboBox.addActionListener(e -> {
             String selectedType = (String) typeComboBox.getSelectedItem();
-            if (selectedType != null && !selectedType.equals("Choose Insurance Type")) {
-                List<InsuranceObject> filteredInsurances = controller.getInsurancesByType(selectedType);
-                tableModel.setRowCount(0); // Clear the table
-                int insuranceID = 200000000;
-                for (InsuranceObject insurance : filteredInsurances) {
-                    String[] rowData = {
-                            String.valueOf(insuranceID),
-                            insurance.getType(),
-                            String.format("%.2f", insurance.getPremium()),
-                            String.valueOf(insurance.getStartDate()),
-                            String.valueOf(insurance.getEndDate()),
-                            insurance.isAutoRenew() ? "Yes" : "No",
-                    };
-                    tableModel.addRow(rowData);
-                    ++insuranceID;
-                }
+            final List<UserInsuranceObject> filteredInsurances;
+            if (selectedType != null && !"Choose Insurance Type".equals(selectedType)) {
+                filteredInsurances = controller.getInsurancesByType(selectedType);
             }
+            else {
+                filteredInsurances = controller.getInsurances();
+            }
+            updateTable(tableModel, filteredInsurances);
         });
 
         JPanel filterPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -72,5 +64,31 @@ public class MyInsuranceView extends JFrame {
         });
         backPanel.add(backButton);
         add(backPanel, BorderLayout.SOUTH);
+    }
+
+    private static void updateTable(DefaultTableModel tableModel, List<UserInsuranceObject> filteredInsurances) {
+        tableModel.setRowCount(0);
+        for (UserInsuranceObject insurance : filteredInsurances) {
+            final String endDate;
+            final String autoRenew;
+            if (insurance.isAutoRenew()) {
+                autoRenew = "Yes";
+                endDate = "/";
+            }
+            else {
+                endDate = String.valueOf(insurance.getEndDate());
+                autoRenew = "No";
+            }
+            final String[] rowData = {
+                String.valueOf(insurance.getInsurance().getInsuranceID()),
+                insurance.getInsurance().getType(),
+                String.format("%.2f", insurance.getInsurance().getPremium()),
+                String.valueOf(insurance.getStartDate()),
+                endDate,
+                autoRenew,
+                insurance.getCardNumber(),
+            };
+            tableModel.addRow(rowData);
+        }
     }
 }

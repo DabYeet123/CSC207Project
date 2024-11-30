@@ -1,4 +1,4 @@
-package Loans.DataObject;
+package loans.dataObject;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -13,7 +13,9 @@ public class LoansObject implements Comparable<LoansObject> {
     double repayment;
     String cardUsed;
 
-    public LoansObject() {}
+    public LoansObject() {
+
+    }
 
     public LoansObject(int userID, double amount, int term, double rate, String cardUsed) {
         this.userID = userID;
@@ -24,24 +26,31 @@ public class LoansObject implements Comparable<LoansObject> {
         this.repayment = amount * (1 + 0.01 * term * rate);
         this.cardUsed = cardUsed;
     }
+
     public int getUserID() {
         return userID;
     }
+
     public double getAmount() {
         return amount;
     }
+
     public LocalDate getStartDate() {
         return startDate;
     }
+
     public LocalDate getEndDate() {
         return endDate;
     }
+
     public double getRate() {
         return rate;
     }
+
     public double getRepayment() {
         return repayment;
     }
+
     public String getCardUsed() {
         return cardUsed;
     }
@@ -49,27 +58,34 @@ public class LoansObject implements Comparable<LoansObject> {
     public int compareTo(@NotNull LoansObject anotherLoan) {
         return sortByEndDate(anotherLoan);
     }
+
     public int sortByEndDate(LoansObject anotherLoan) {
         if (this.endDate.isAfter(anotherLoan.endDate)) {
             return 1;
-        } else if (this.endDate.isBefore(anotherLoan.endDate)) {
+        }
+        else if (this.endDate.isBefore(anotherLoan.endDate)) {
             return -1;
-        } else {
+        }
+        else {
             return sortByStartDate(anotherLoan);
         }
     }
+
     public int sortByStartDate(LoansObject anotherLoan) {
         if (this.startDate.isAfter(anotherLoan.startDate)) {
             return 1;
-        } else if (this.startDate.isBefore(anotherLoan.startDate)) {
+        }
+        else if (this.startDate.isBefore(anotherLoan.startDate)) {
             return -1;
-        } else {
+        }
+        else {
             return sortByRepayment(anotherLoan);
         }
     }
+
     public int sortByRepayment(LoansObject anotherLoan) {
-        Double x = this.repayment;
-        Double y = anotherLoan.repayment;
+        final Double x = this.repayment;
+        final Double y = anotherLoan.repayment;
         return x.compareTo(y);
     }
 }
