@@ -1,8 +1,10 @@
-package Card;
+package cardandexchange.adapter;
 
 import App.PresenterInterface;
 import Transaction.MakeTransaction.MakeTransactionController;
+import cardandexchange.view.CardView;
 
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CardPresenter implements PresenterInterface<MakeTransactionController> {
     private final CardView cardView;
 
@@ -12,13 +14,12 @@ public class CardPresenter implements PresenterInterface<MakeTransactionControll
 
     @Override
     public void showView() {
-        cardView.frame.setVisible(true);
-        CardView.refresh(cardView);
+        cardView.getFrame().setVisible(true);
     }
 
     @Override
     public void disposeView() {
-        cardView.frame.setVisible(false);
+        cardView.getFrame().setVisible(false);
         cardView.dispose();
     }
 }

@@ -1,7 +1,11 @@
-package Card;
+package cardandexchange;
 
 import DataObjects.UserObject;
 import DataObjects.UsersDBAccess;
+import cardandexchange.adapter.CardController;
+import cardandexchange.dataAccess.CardDBAccess;
+import cardandexchange.dataObject.Card;
+import cardandexchange.useCase.card.CardMethods;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.List;

@@ -1,12 +1,15 @@
-package Exchange;
+package cardandexchange.adapter;
 
 import App.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
+import lombok.Getter;
 
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CurrencyExchangeController implements ControllerInterface {
-    public static double rate;
-    static UserObject loggedInUser;
+    private static UserObject loggedInUser;
+    @Getter
+    private static double rate;
     private final CurrencyExchangePresenter currencyExchangePresenter;
 
     public CurrencyExchangeController(UserObject user) {
@@ -14,14 +17,21 @@ public class CurrencyExchangeController implements ControllerInterface {
         this.currencyExchangePresenter = new CurrencyExchangePresenter(this);
     }
 
+    public static void setRate(double rate) {
+        CurrencyExchangeController.rate = rate;
+    }
+
     @Override
     public void launch() {
         currencyExchangePresenter.showView();
     }
 
+    /**
+     * Go back to base view.
+     */
     public void goBackToBaseView() {
         currencyExchangePresenter.disposeView();
-        LoggedInController controller = new LoggedInController(loggedInUser);
+        final LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();
     }
 

@@ -1,10 +1,10 @@
 package LogIn.LoggedIn;
 
 import Brokerage.BrokerageController;
-import Card.CardController;
+import cardandexchange.adapter.CardController;
 import App.ControllerInterface;
 import DataObjects.UserObject;
-import Exchange.CurrencyExchangeController;
+import cardandexchange.adapter.CurrencyExchangeController;
 import Loans.ApplyLoans.ApplyLoansController;
 import Loans.SeeLoansHistory.SeeLoansHistoryController;
 import LogIn.Welcome.WelcomeController;

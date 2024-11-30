@@ -1,7 +1,9 @@
-package Card;
+package cardandexchange;
 
 import DataObjects.UserObject;
 import DataObjects.UsersDBAccess;
+import cardandexchange.adapter.CardController;
+import cardandexchange.view.CardView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -34,15 +36,15 @@ class CardViewTest {
         model = new DefaultTableModel(new String[]{"ID", "Name", "Expiry Date", "Security Code", "Expenses"}, 0);
 
 
-        cardView.usageField = usageField;
-        cardView.model = model;
+        cardView.setUsageField(usageField);
+        cardView.setModel(model);
     }
 
     @Test
     void testAddCardSuccess() {
         usageField.setText("TestCard");
 
-        cardView.addButton.doClick();
+        cardView.getAddButton().doClick();
 
         assertEquals("TestCard", model.getValueAt(model.getRowCount() - 1, 1));
         assertEquals("", usageField.getText());
@@ -50,15 +52,15 @@ class CardViewTest {
 
     @Test
     void testDeleteCardSuccess() {
-        cardView.table.setRowSelectionInterval(0, 0);
-        cardView.deleteButton.doClick();
+        cardView.getTable().setRowSelectionInterval(0, 0);
+        cardView.getDeleteButton().doClick();
 
         assertEquals(model.getRowCount(), 0);
     }
 
     @Test
     void testDeleteCardFail() {
-        cardView.deleteButton.doClick();
+        cardView.getDeleteButton().doClick();
     }
 
     @Test
@@ -68,15 +70,15 @@ class CardViewTest {
 
     @Test
     void testBack() {
-        cardView.backButton.doClick();
+        cardView.getBackButton().doClick();
     }
 
     @Test
     void testAdd10Cards() {
         for (int i = 0; i < 10; i++) {
             usageField.setText("TestCard");
-            cardView.addButton.doClick();
+            cardView.getAddButton().doClick();
         }
-        cardView.addButton.doClick();
+        cardView.getAddButton().doClick();
     }
 }

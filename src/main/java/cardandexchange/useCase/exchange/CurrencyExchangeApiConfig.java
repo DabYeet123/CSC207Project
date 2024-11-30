@@ -1,11 +1,15 @@
-package Exchange;
+package cardandexchange.useCase.exchange;
 
 import com.crazzyghost.alphavantage.AlphaVantage;
 import com.crazzyghost.alphavantage.Config;
 
-public class CurrencyExchangeAPIConfig {
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
+public class CurrencyExchangeApiConfig {
+    /**
+     * Offer an initialize.
+     */
     public static void initialize() {
-        Config cfg = Config.builder()
+        final Config cfg = Config.builder()
                 .key("OMY21EWV5Y9FEBUJ")
                 .timeOut(1)
                 .build();

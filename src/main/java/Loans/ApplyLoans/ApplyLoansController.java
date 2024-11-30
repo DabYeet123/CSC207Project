@@ -1,7 +1,7 @@
 package Loans.ApplyLoans;
 
 import App.ControllerInterface;
-import Card.CardController;
+import cardandexchange.adapter.CardController;
 import DataObjects.UserObject;
 import Loans.DataObject.LoansController;
 import LogIn.LoggedIn.LoggedInController;

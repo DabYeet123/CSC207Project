@@ -5,15 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Renew of refactor for Card and Exchange parts">
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardObjectTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardObjectViewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/dataObject/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/dataAccess/CardDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/card/CardMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CardPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/view/CardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/APIget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/exchange/CurrencyExchangeApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeDataUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/exchange/CurrencyExchangeDataUsage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CurrencyExchangePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/view/CurrencyExchangeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/SeeTransactionHistory/SeeTransactionHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Transaction/SeeTransactionHistory/SeeTransactionHistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/CardViewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Exchange/ExchangeCurrencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/ExchangeCurrencyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +42,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -109,6 +125,7 @@
     "JUnit.ExchangeCurrencyTest.successInputAmountTest.executor": "Coverage",
     "JUnit.ExchangeCurrencyTest.viewTestForButtonExchange.executor": "Run",
     "JUnit.cardViewTest.executor": "Coverage",
+    "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
@@ -123,7 +140,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -159,25 +176,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Card in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Card.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Card" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CardViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Card.*" />
+          <option name="PATTERN" value="cardandexchange.adapter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,7 +195,7 @@
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exchange.*" />
+          <option name="PATTERN" value="cardandexchange.useCase.exchange.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -202,28 +205,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExchangeCurrencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="cardandexchange in homework-5 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exchange.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ExchangeCurrency" />
-      <option name="MAIN_CLASS_NAME" value="Exchange.ExchangeCurrencyTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/cardandexchange" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="cardandexchange in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cardandexchange.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cardandexchange" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainLauncher" />
+      <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
+      <item itemvalue="JUnit.cardandexchange in homework-5" />
+      <item itemvalue="JUnit.CardViewTest" />
+      <item itemvalue="JUnit.Exchange in homework-5" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainLauncher" />
+        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
         <item itemvalue="JUnit.Exchange in homework-5" />
-        <item itemvalue="JUnit.Card in homework-5" />
+        <item itemvalue="JUnit.cardandexchange in homework-5" />
         <item itemvalue="JUnit.CardViewTest" />
-        <item itemvalue="JUnit.ExchangeCurrencyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -251,6 +268,8 @@
       <workItem from="1732588253253" duration="219000" />
       <workItem from="1732588516847" duration="10689000" />
       <workItem from="1732662312623" duration="23629000" />
+      <workItem from="1732935818479" duration="109000" />
+      <workItem from="1732935936292" duration="4158000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -476,16 +495,6 @@
     <MESSAGE value="Renew of refactor for Card and Exchange parts" />
     <option name="LAST_COMMIT_MESSAGE" value="Renew of refactor for Card and Exchange parts" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.AssertionError" package="java.lang" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
@@ -500,9 +509,6 @@
     <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_successInputAmountTest.ic" NAME="ExchangeCurrencyTest.successInputAmountTest Coverage Results" MODIFIED="1732679392712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Exchange.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CSC207Project$CardViewTest.ic" NAME="CardViewTest Coverage Results" MODIFIED="1732670008439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>Card.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/CSC207Project$CardTest.ic" NAME="CardTest Coverage Results" MODIFIED="1732664784233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Card.*</FILTER>
     </SUITE>
@@ -515,6 +521,10 @@
     <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest.ic" NAME="ExchangeCurrencyTest Coverage Results" MODIFIED="1732680404115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Exchange.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardViewTest.ic" NAME="CardViewTest Coverage Results" MODIFIED="1732670008439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$cardandexchange_in_homework_5__1_.ic" NAME="cardandexchange in homework-5 (1) Coverage Results" MODIFIED="1732940063182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_failureInvalidInputAmountTest.ic" NAME="ExchangeCurrencyTest.failureInvalidInputAmountTest Coverage Results" MODIFIED="1732679333915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Exchange.*</FILTER>
     </SUITE>

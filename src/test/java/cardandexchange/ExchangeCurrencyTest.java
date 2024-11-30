@@ -1,7 +1,9 @@
-package Exchange;
+package cardandexchange;
 
 import DataObjects.UserObject;
 import DataObjects.UsersDBAccess;
+import cardandexchange.adapter.CurrencyExchangeController;
+import cardandexchange.view.CurrencyExchangeView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -44,15 +46,15 @@ public class ExchangeCurrencyTest {
 
     @Test
     void viewTestForButtonExchange() {
-        currencyExchangeView.inputAmountField.setText("100");
-        currencyExchangeView.fromCurrencyBox = new JComboBox<>(new String[]{"USD"});
-        currencyExchangeView.toCurrencyBox = new JComboBox<>(new String[]{"CAD"});
-        currencyExchangeView.exchangeButton.doClick();
+        currencyExchangeView.getInputAmountField().setText("100");
+        currencyExchangeView.setFromCurrencyBox(new JComboBox<>(new String[]{"USD"}));
+        currencyExchangeView.setToCurrencyBox(new JComboBox<>(new String[]{"CAD"}));
+        currencyExchangeView.getExchangeButton().doClick();
     }
 
     @Test
     void testBack() {
-        currencyExchangeView.backButton.doClick();
+        currencyExchangeView.getBackButton().doClick();
     }
 
     @Test

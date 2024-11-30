@@ -1,20 +1,21 @@
-package Card;
+package cardandexchange.dataObject;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class Card {
 
-     private final String id;
-     @Getter
-     private final String usage;
-     @Getter
-     private final String date;
-     @Getter
-     private final String code;
-     @Getter
-     private double expenses;
+    private final String id;
+    @Getter
+    private final String usage;
+    @Getter
+    private final String date;
+    @Getter
+    private final String code;
+    @Getter
+    private double expenses;
 
     @JsonCreator
     public Card(@JsonProperty("id") String id,
@@ -33,6 +34,10 @@ public class Card {
         return this.id;
     }
 
+    /**
+     * Update .
+     * @param newAmount update new amount
+     */
     public void updateAmount(double newAmount) {
         this.expenses -= newAmount;
     }
