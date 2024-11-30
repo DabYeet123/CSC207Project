@@ -17,10 +17,10 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
 
     @Override
     public UserObject saveData(int userID, LoansObject loan) {
-        UserObject user = usersController.getUser(userID);
-        double amount = loan.amount;
+        final UserObject user = usersController.getUser(userID);
+        final double amount = loan.getAmount();
 
-        List<LoansObject> loans = controller.readData(user.getFileDirectory() + "\\LoansHistory.json", LoansObject.class);
+        final List<LoansObject> loans = controller.readData(user.getFileDirectory() + "\\LoansHistory.json", LoansObject.class);
         loans.add(loan);
         Collections.sort(loans);
         controller.saveData(user.getFileDirectory() + "\\LoansHistory.json", loans, LoansObject.class);
@@ -35,9 +35,9 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
         List<LoansObject> newLoans = new ArrayList<>();
         LocalDate today = LocalDate.now();
         for (LoansObject loan : loans) {
-            if (loan.endDate.isBefore(today)) {
-                updateBalance(user, -loan.repayment);
-                cardController.updateData(userID, loan.cardUsed, loan.repayment);
+            if (loan.getEndDate().isBefore(today)) {
+                updateBalance(user, -loan.getAmount());
+                cardController.updateData(userID, loan.getCardUsed(), loan.getRepayment());
             }
             else {
                 newLoans.add(loan);

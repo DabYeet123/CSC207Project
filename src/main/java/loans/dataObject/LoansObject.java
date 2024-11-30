@@ -1,17 +1,20 @@
 package loans.dataObject;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.time.LocalDate;
 
+import org.jetbrains.annotations.NotNull;
+
+import lombok.Getter;
+
+@Getter
 public class LoansObject implements Comparable<LoansObject> {
-    int userID;
-    double amount;
-    LocalDate startDate;
-    LocalDate endDate;
-    double rate;
-    double repayment;
-    String cardUsed;
+    private int userID;
+    private double amount;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private double rate;
+    private double repayment;
+    private String cardUsed;
 
     public LoansObject() {
 
@@ -27,60 +30,36 @@ public class LoansObject implements Comparable<LoansObject> {
         this.cardUsed = cardUsed;
     }
 
-    public int getUserID() {
-        return userID;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public LocalDate getStartDate() {
-        return startDate;
-    }
-
-    public LocalDate getEndDate() {
-        return endDate;
-    }
-
-    public double getRate() {
-        return rate;
-    }
-
-    public double getRepayment() {
-        return repayment;
-    }
-
-    public String getCardUsed() {
-        return cardUsed;
-    }
-
     public int compareTo(@NotNull LoansObject anotherLoan) {
         return sortByEndDate(anotherLoan);
     }
 
     public int sortByEndDate(LoansObject anotherLoan) {
+        final int res;
         if (this.endDate.isAfter(anotherLoan.endDate)) {
-            return 1;
+            res = 1;
         }
         else if (this.endDate.isBefore(anotherLoan.endDate)) {
-            return -1;
+            res = -1;
         }
         else {
-            return sortByStartDate(anotherLoan);
+            res = sortByStartDate(anotherLoan);
         }
+        return res;
     }
 
     public int sortByStartDate(LoansObject anotherLoan) {
+        final int res;
         if (this.startDate.isAfter(anotherLoan.startDate)) {
-            return 1;
+            res = 1;
         }
         else if (this.startDate.isBefore(anotherLoan.startDate)) {
-            return -1;
+            res = -1;
         }
         else {
-            return sortByRepayment(anotherLoan);
+            res = sortByRepayment(anotherLoan);
         }
+        return res;
     }
 
     public int sortByRepayment(LoansObject anotherLoan) {
