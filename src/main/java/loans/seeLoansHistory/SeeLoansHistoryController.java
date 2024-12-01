@@ -19,6 +19,11 @@ public class SeeLoansHistoryController implements ControllerInterface {
     private final WelcomeController welcomeController;
     private final LoansController loansController;
 
+    /**
+     * Constructs a new SeeLoansHistoryController with the given user.
+     *
+     * @param user The logged-in user.
+     */
     public SeeLoansHistoryController(UserObject user) {
         this.loggedInUser = user;
         this.loansController = new LoansController();
@@ -27,22 +32,26 @@ public class SeeLoansHistoryController implements ControllerInterface {
         this.seeLoansHistoryPresenter = new SeeLoansHistoryPresenter(this);
     }
 
+    /**
+     * Launches the SeeLoansHistory view.
+     */
     @Override
     public void launch() {
         seeLoansHistoryPresenter.showView();
     }
 
-    public void logOutTriggered() {
-        seeLoansHistoryPresenter.disposeView();
-        welcomeController.launch();
-    }
-
+    /**
+     * Navigates back to the base view for the logged-in user.
+     */
     public void goBackToBaseView() {
         seeLoansHistoryPresenter.disposeView();
         final LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();
     }
 
+    /**
+     * Updates the list of loans associated with the logged-in user.
+     */
     public void update() {
         this.loans = loansController.getAllLoans(loggedInUser.getUserID());
     }

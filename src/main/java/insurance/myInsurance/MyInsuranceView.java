@@ -33,6 +33,11 @@ public class MyInsuranceView extends JFrame {
     private static final int INTERVAL_2 = 400;
     private final UserObject user;
 
+    /**
+     * Constructs the MyInsuranceView for displaying user's insurance policies.
+     *
+     * @param controller The controller to manage actions within the view.
+     */
     public MyInsuranceView(MyInsuranceController controller) {
         this.user = controller.getLoggedInUser();
         setTitle("My Insurance Policies");
@@ -56,7 +61,7 @@ public class MyInsuranceView extends JFrame {
 
         final JPanel headerPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         final JLabel titleLabel = new JLabel("My Insurance Policies");
-        final JButton cancelButton = new JButton("Cancel Auto Renew");
+        final JButton cancelButton = new JButton("Cancel Auto Renewal");
         titleLabel.setFont(new Font("Arial", Font.BOLD, FONT_SIZE));
         headerPanel.add(new JLabel("Filter by Type:"));
         headerPanel.add(typeComboBox);
@@ -72,13 +77,18 @@ public class MyInsuranceView extends JFrame {
         cancelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cancelAutoRenewButton(insuranceTable);
+                cancelAutoRenewalButton(insuranceTable);
                 controller.goBackToBaseView();
             }
         });
         backPanel(controller);
     }
 
+    /**
+     * Creates a back panel with a back button to return to the base view.
+     *
+     * @param controller The controller that manages the back navigation.
+     */
     private void backPanel(MyInsuranceController controller) {
         final JPanel backPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         final JButton backButton = new JButton("Back");
@@ -92,6 +102,13 @@ public class MyInsuranceView extends JFrame {
         add(backPanel, BorderLayout.SOUTH);
     }
 
+    /**
+     * Filters the insurance policies based on the selected type and updates the table.
+     *
+     * @param typeComboBox The combo box for selecting the type of insurance.
+     * @param controller   The controller that provides the filtered insurance policies.
+     * @param tableModel   The table model to be updated with filtered insurance policies.
+     */
     private static void filter(JComboBox<String> typeComboBox, MyInsuranceController controller,
                                DefaultTableModel tableModel) {
         final String selectedType = (String) typeComboBox.getSelectedItem();
@@ -105,6 +122,12 @@ public class MyInsuranceView extends JFrame {
         updateTable(tableModel, filteredInsurances);
     }
 
+    /**
+     * Updates the table with the given list of insurance policies.
+     *
+     * @param tableModel         The table model to be updated.
+     * @param filteredInsurances The list of insurance policies to populate the table.
+     */
     private static void updateTable(DefaultTableModel tableModel, List<UserInsuranceObject> filteredInsurances) {
         tableModel.setRowCount(0);
         for (UserInsuranceObject insurance : filteredInsurances) {
@@ -133,7 +156,12 @@ public class MyInsuranceView extends JFrame {
         }
     }
 
-    private void cancelAutoRenewButton(JTable table) {
+    /**
+     * Handles the action for cancelling auto-renewal for the selected insurance policy.
+     *
+     * @param table The table displaying the insurance policies.
+     */
+    private void cancelAutoRenewalButton(JTable table) {
         final UserInsuranceController userInsuranceController = new UserInsuranceController();
         final int selectedRow = table.getSelectedRow();
         if (selectedRow == -1) {
@@ -149,7 +177,7 @@ public class MyInsuranceView extends JFrame {
             }
             else {
                 final int insuranceID = Integer.parseInt(table.getValueAt(selectedRow, INSURANCE_ID_COL).toString());
-                userInsuranceController.cancelAutoRenewByInsuranceID(user.getUserID(), insuranceID);
+                userInsuranceController.cancelAutoRenewalByInsuranceID(user.getUserID(), insuranceID);
             }
         }
     }

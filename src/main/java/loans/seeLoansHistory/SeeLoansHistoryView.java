@@ -31,12 +31,16 @@ public class SeeLoansHistoryView extends JFrame {
     private static final int LOAN_ID = 100000000;
     private static final String DECIMAL = "%.2f";
 
+    /**
+     * Constructs the SeeLoansHistoryView to display loan history.
+     *
+     * @param controller The controller that manages actions within this view.
+     */
     public SeeLoansHistoryView(SeeLoansHistoryController controller) {
         setTitle("Loans History");
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
-
         setLayout(new BorderLayout());
 
         final JLabel titleLabel = new JLabel("Loans History", SwingConstants.CENTER);
@@ -59,6 +63,12 @@ public class SeeLoansHistoryView extends JFrame {
         add(backPanel, BorderLayout.SOUTH);
     }
 
+    /**
+     * Creates and returns a JScrollPane containing the loans' history.
+     *
+     * @param controller The controller to provide the list of loans.
+     * @return The JScrollPane with the loans history table.
+     */
     @NotNull
     private static JScrollPane getjScrollPane(SeeLoansHistoryController controller) {
         final String[] columnNames = {"ID", "Amount ($)", "Start Date", "End Date", "Interest Rate (%)",

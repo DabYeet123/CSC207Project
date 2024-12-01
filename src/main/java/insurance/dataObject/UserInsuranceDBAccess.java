@@ -17,6 +17,13 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
     private final DataAccessController controller = new DataAccessController();
     private final UsersController usersController = new UsersController();
 
+    /**
+     * Saves a new insurance policy for the given user.
+     *
+     * @param userID    The ID of the user.
+     * @param insurance The insurance object to be saved.
+     * @return The user object associated with the given userID.
+     */
     @Override
     public UserObject saveData(int userID, UserInsuranceObject insurance) {
         final UserObject user = usersController.getUser(userID);
@@ -34,6 +41,12 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
         return user;
     }
 
+    /**
+     * Reads the insurance data for a given user.
+     *
+     * @param userID The ID of the user.
+     * @return A list of user insurance objects.
+     */
     @Override
     public List<UserInsuranceObject> readData(int userID) {
         final UserObject user = usersController.getUser(userID);
@@ -59,6 +72,12 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
         return newInsurances;
     }
 
+    /**
+     * Cancels the auto-renewal option for a specific insurance policy by ID.
+     *
+     * @param userID      The ID of the user.
+     * @param insuranceID The ID of the insurance policy to cancel auto-renew for.
+     */
     public void cancelAutoRenewInsuranceID(int userID, int insuranceID) {
         final UserObject user = usersController.getUser(userID);
         final List<UserInsuranceObject> insurances = readData(user.getUserID());
@@ -74,23 +93,47 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
         controller.saveData(user.getFileDirectory() + INSURANCE_JSON, newInsurances, UserInsuranceObject.class);
     }
 
+    /**
+     * Updates the user's balance.
+     *
+     * @param user   The user whose balance is to be updated.
+     * @param amount The amount to add to the balance (can be negative).
+     */
     private void updateBalance(UserObject user, double amount) {
         user.setBalance(user.getBalance() + amount);
         usersController.changeUser(user.getUserID(), user);
     }
 
+    /**
+     * Renews the given insurance policy for another term.
+     *
+     * @param insurance The insurance object to be renewed.
+     * @return A new insurance object with an updated end date.
+     */
     private UserInsuranceObject renew(UserInsuranceObject insurance) {
         final LocalDate newEndDate = insurance.getEndDate().plusYears(1);
         return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(),
                 insurance.getStartDate(), newEndDate, insurance.isAutoRenew(), insurance.getCardUsed());
     }
 
+    /**
+     * Cancels the auto-renewal option for the given insurance object.
+     *
+     * @param insurance The insurance object to cancel auto-renew for.
+     * @return A new insurance object with auto-renew set to false.
+     */
     private UserInsuranceObject cancelAutoRenew(UserInsuranceObject insurance) {
-        final boolean isAutoRenew = !insurance.isAutoRenew();
+        final boolean isAutoRenew = false;
         return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(),
                 insurance.getStartDate(), insurance.getEndDate(), isAutoRenew, insurance.getCardUsed());
     }
 
+    /**
+     * Gets the term duration of the given insurance policy in years.
+     *
+     * @param insurance The insurance object.
+     * @return The term duration in years.
+     */
     private int getTerm(UserInsuranceObject insurance) {
         return insurance.getEndDate().plusDays(1).getYear() - insurance.getStartDate().getYear();
     }

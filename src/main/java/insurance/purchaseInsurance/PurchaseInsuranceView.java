@@ -29,6 +29,11 @@ public class PurchaseInsuranceView extends JFrame {
     private static final String INVALID_INPUT = "Invalid Input";
     private static final String INVALID_SELECTION = "Invalid Selection";
 
+    /**
+     * Constructs the PurchaseInsuranceView for purchasing insurance policies.
+     *
+     * @param controller The controller to manage actions within the view.
+     */
     public PurchaseInsuranceView(PurchaseInsuranceController controller) {
         setTitle("Purchase Insurance");
         setSize(WIDTH, HEIGHT);

@@ -18,10 +18,22 @@ public class LoansObject implements Comparable<LoansObject> {
     private double repayment;
     private String cardUsed;
 
+    /**
+     * Default constructor for LoansObject.
+     */
     public LoansObject() {
 
     }
 
+    /**
+     * Constructs a new LoansObject with the specified parameters.
+     *
+     * @param userID   The ID of the user applying for the loan.
+     * @param amount   The amount of the loan.
+     * @param term     The term of the loan in years.
+     * @param rate     The interest rate of the loan.
+     * @param cardUsed The card used for loan repayment.
+     */
     public LoansObject(int userID, double amount, int term, double rate, String cardUsed) {
         this.userID = userID;
         this.amount = amount;
@@ -32,9 +44,15 @@ public class LoansObject implements Comparable<LoansObject> {
         this.cardUsed = cardUsed;
     }
 
+    /**
+     * Compares this LoansObject to another LoansObject by their end dates.
+     *
+     * @param o The other LoansObject to compare to.
+     * @return A positive integer, zero, or a negative integer as this object's end date is
+     *         after, equal to, or before the specified object's end date.
+     */
     @Override
     public int compareTo(@NotNull LoansObject o) {
         return LoansMethods.sortByEndDate(this, o);
     }
-
 }

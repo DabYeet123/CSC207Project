@@ -17,6 +17,13 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
     private final DataAccessController controller = new DataAccessController();
     private final UsersController usersController = new UsersController();
 
+    /**
+     * Saves a new loan for the specified user.
+     *
+     * @param userID The ID of the user.
+     * @param loan   The loan object to be saved.
+     * @return The updated user object after saving the loan.
+     */
     @Override
     public UserObject saveData(int userID, LoansObject loan) {
         final UserObject user = usersController.getUser(userID);
@@ -31,6 +38,12 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
         return user;
     }
 
+    /**
+     * Reads the loans data for the specified user.
+     *
+     * @param userID The ID of the user.
+     * @return A list of loan objects associated with the user.
+     */
     @Override
     public List<LoansObject> readData(int userID) {
         final UserObject user = usersController.getUser(userID);
@@ -52,6 +65,12 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
         return newLoans;
     }
 
+    /**
+     * Updates the user's balance.
+     *
+     * @param user   The user whose balance is to be updated.
+     * @param amount The amount to update the balance by (can be positive or negative).
+     */
     private void updateBalance(UserObject user, double amount) {
         user.setBalance(user.getBalance() + amount);
         usersController.changeUser(user.getUserID(), user);

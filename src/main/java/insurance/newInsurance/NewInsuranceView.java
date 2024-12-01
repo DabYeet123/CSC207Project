@@ -25,6 +25,11 @@ public class NewInsuranceView extends JFrame {
     private static final int H_GAP = 10;
     private static final int V_GAP = 10;
 
+    /**
+     * Constructs the NewInsuranceView for adding new insurance policies.
+     *
+     * @param controller The controller to manage actions within the view.
+     */
     public NewInsuranceView(NewInsuranceController controller) {
         setTitle("Add New Insurance");
         setSize(WIDTH, HEIGHT);
@@ -36,8 +41,8 @@ public class NewInsuranceView extends JFrame {
         final JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new GridLayout(ROWS, COLS, H_GAP, V_GAP));
         final JLabel typeLabel = new JLabel("Insurance Type:");
-        final JComboBox<String> typeComboBox = new JComboBox<>(new String[]{"Choose Insurance Type", "Health",
-            "Vehicle", "Home", "Travel", "Life", "Pet", "Business", "Dental", "Other"});
+        final JComboBox<String> typeComboBox = new JComboBox<>(new String[]{InsuranceMethods.CHOOSE_INSURANCE_TYPE,
+            "Health", "Vehicle", "Home", "Travel", "Life", "Pet", "Business", "Dental", "Other"});
         final JLabel nameLabel = new JLabel("Insurance Name:");
         final JTextField nameField = new JTextField();
         final JLabel premiumLabel = new JLabel("Premium per year ($):");
@@ -75,11 +80,20 @@ public class NewInsuranceView extends JFrame {
         });
     }
 
+    /**
+     * Handles the action for confirming the creation of a new insurance policy.
+     *
+     * @param typeComboBox The combo box for selecting the insurance type.
+     * @param nameField    The text field for entering the insurance name.
+     * @param premiumField The text field for entering the premium amount.
+     * @param policyField  The text field for entering the policy details.
+     * @param controller   The controller to handle further actions.
+     */
     private void confirmCreated(JComboBox<String> typeComboBox, JTextField nameField,
                                 JTextField premiumField, JTextField policyField, NewInsuranceController controller) {
         final String type = (String) typeComboBox.getSelectedItem();
         try {
-            if (type != null && !"Choose Insurance Type".equals(type)) {
+            if (type != null && !InsuranceMethods.CHOOSE_INSURANCE_TYPE.equals(type)) {
                 final String name = nameField.getText();
                 final Double premium = (Double) Double.parseDouble(premiumField.getText());
                 final String policy = policyField.getText();
@@ -96,7 +110,7 @@ public class NewInsuranceView extends JFrame {
                             "You have successfully added a new insurance."
                                     + InsuranceMethods.END_LINE + InsuranceMethods.END_LINE
                                     + InsuranceMethods.getInsurancePolicyDetails(type,
-                                            insuranceController.getLatestInsurance()),
+                                    insuranceController.getLatestInsurance()),
                             "Success", JOptionPane.PLAIN_MESSAGE);
                     controller.goBackToBaseView();
                 }

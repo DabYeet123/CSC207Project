@@ -21,6 +21,11 @@ public class ApplyLoansView extends JFrame {
     private static final int H_GAP = 10;
     private static final int V_GAP = 10;
 
+    /**
+     * Constructs a new ApplyLoansView for applying for loans.
+     *
+     * @param controller The controller to manage actions within the view.
+     */
     public ApplyLoansView(ApplyLoansController controller) {
         setTitle("Apply Loans");
         setSize(WIDTH, HEIGHT);
@@ -71,6 +76,15 @@ public class ApplyLoansView extends JFrame {
         });
     }
 
+    /**
+     * Handles the confirmation process for applying for a loan.
+     *
+     * @param cardField        The text field containing the card number for repayment.
+     * @param amountField      The text field containing the loan amount.
+     * @param termField        The text field containing the loan term in years.
+     * @param interestRateField The text field containing the interest rate.
+     * @param controller       The controller to manage the loan application process.
+     */
     private void confirm(JTextField cardField, JTextField amountField, JTextField termField,
                          JTextField interestRateField, ApplyLoansController controller) {
         try {
@@ -96,7 +110,7 @@ public class ApplyLoansView extends JFrame {
         }
         catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(ApplyLoansView.this,
-                    "Amount, term and rate must be numbers.\\Card number must be valid.",
+                    "Amount, term, and rate must be numbers. Card number must be valid.",
                     "Invalid Selection", JOptionPane.WARNING_MESSAGE);
         }
     }
