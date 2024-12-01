@@ -45,7 +45,7 @@ public class MyInsuranceView extends JFrame {
         final DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         final JTable insuranceTable = new JTable(tableModel);
         final JComboBox<String> typeComboBox = new JComboBox<>(new String[]{"Choose Insurance Type",
-            "Health", "Vehicle", "Home", "Travel", "Life", "Pet", "Business", "Dental"});
+            "Health", "Vehicle", "Home", "Travel", "Life", "Pet", "Business", "Dental", "Other"});
         updateTable(tableModel, controller.getInsurances());
         typeComboBox.addActionListener(new ActionListener() {
             @Override
@@ -73,7 +73,7 @@ public class MyInsuranceView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 cancelAutoRenewButton(insuranceTable);
-                updateTable(tableModel, controller.getInsurances());
+                controller.goBackToBaseView();
             }
         });
         backPanel(controller);

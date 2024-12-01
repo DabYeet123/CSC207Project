@@ -4,7 +4,7 @@ import App.PresenterInterface;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class ApplyLoansPresenter implements PresenterInterface<ApplyLoansController> {
-    private final loans.applyLoans.ApplyLoansView applyLoansView;
+    private final ApplyLoansView applyLoansView;
 
     public ApplyLoansPresenter(ApplyLoansController controller) {
         this.applyLoansView = new ApplyLoansView(controller);

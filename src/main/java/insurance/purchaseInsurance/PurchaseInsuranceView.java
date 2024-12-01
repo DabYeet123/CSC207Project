@@ -17,6 +17,8 @@ import javax.swing.JTextField;
 
 import org.jetbrains.annotations.NotNull;
 
+import insurance.dataObject.InsuranceController;
+import insurance.dataObject.InsuranceMethods;
 import insurance.dataObject.InsuranceObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
@@ -24,7 +26,9 @@ public class PurchaseInsuranceView extends JFrame {
     private static final int WIDTH = 600;
     private static final int HEIGHT = 600;
     private static final String CHOOSE_INSURANCE_TYPE = "Choose Insurance Type";
-    private static final String END_LINE = "\n";
+    private static final String CHOOSE_INSURANCE_NAME_ID = "Choose Insurance Name (ID)";
+    private static final String INVALID_INPUT = "Invalid Input";
+    private static final String INVALID_SELECTION = "Invalid Selection";
 
     public PurchaseInsuranceView(PurchaseInsuranceController controller) {
 
@@ -35,13 +39,13 @@ public class PurchaseInsuranceView extends JFrame {
 
         setLayout(new BorderLayout());
 
-        final JPanel inputPanel = new JPanel(new GridLayout(7, 2, 10, 10));
+        final JPanel inputPanel = new JPanel(new GridLayout(8, 2, 10, 10));
 
         final JLabel typeLabel = new JLabel("Insurance Type:");
         final JComboBox<String> typeComboBox = new JComboBox<>(new String[]{CHOOSE_INSURANCE_TYPE, "Health", "Vehicle",
-            "Home", "Travel", "Life", "Pet", "Business", "Dental"});
+            "Home", "Travel", "Life", "Pet", "Business", "Dental", "Other"});
         final JLabel nameIDLabel = new JLabel("Insurance Name (ID):");
-        final JComboBox<String> nameIDComboBox = new JComboBox<>(new String[]{"Choose Insurance Name/ID"});
+        final JComboBox<String> nameIDComboBox = new JComboBox<>(new String[]{CHOOSE_INSURANCE_NAME_ID});
         nameIDComboBox.setEnabled(false);
 
         typeComboBox.addActionListener(new ActionListener() {
@@ -67,6 +71,8 @@ public class PurchaseInsuranceView extends JFrame {
 
         final JButton policyDetailsButton = getjButton(controller, typeComboBox, nameIDComboBox);
 
+        final JButton deleteButton = new JButton("Delete Insurance");
+        final JButton newButton = new JButton("+ New Insurance");
         final JButton confirmButton = new JButton("Confirm");
         final JButton cancelButton = new JButton("Cancel");
 
@@ -74,18 +80,34 @@ public class PurchaseInsuranceView extends JFrame {
         inputPanel.add(typeComboBox);
         inputPanel.add(nameIDLabel);
         inputPanel.add(nameIDComboBox);
+        inputPanel.add(policyDetailsButton);
+        inputPanel.add(new JLabel());
         inputPanel.add(cardLabel);
         inputPanel.add(cardField);
         inputPanel.add(autoRenewCheckBox);
         inputPanel.add(new JLabel());
         inputPanel.add(termLabel);
         inputPanel.add(termField);
-        inputPanel.add(policyDetailsButton);
-        inputPanel.add(new JLabel());
+        inputPanel.add(deleteButton);
+        inputPanel.add(newButton);
         inputPanel.add(confirmButton);
         inputPanel.add(cancelButton);
 
         add(inputPanel, BorderLayout.CENTER);
+
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                deleteInsurance(nameIDComboBox, typeComboBox, controller);
+            }
+        });
+
+        newButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                controller.addNewInsuranceTriggered();
+            }
+        });
 
         confirmButton.addActionListener(new ActionListener() {
             @Override
@@ -100,6 +122,31 @@ public class PurchaseInsuranceView extends JFrame {
                 controller.goBackToBaseView();
             }
         });
+    }
+
+    private void deleteInsurance(JComboBox<String> nameIDComboBox, JComboBox<String> typeComboBox,
+                                 PurchaseInsuranceController controller) {
+        if (nameIDComboBox.getSelectedIndex() > 0) {
+            final String selectedType = (String) typeComboBox.getSelectedItem();
+            final List<InsuranceObject> filteredInsurances = controller.getInsurancesByType(selectedType);
+            final int selectedIndex = nameIDComboBox.getSelectedIndex() - 1;
+            final InsuranceObject selectedInsurance = filteredInsurances.get(selectedIndex);
+            JOptionPane.showConfirmDialog(PurchaseInsuranceView.this,
+                    "Are you sure to delete the selected insurance?" + InsuranceMethods.END_LINE + InsuranceMethods.END_LINE
+                            + InsuranceMethods.getInsurancePolicyDetails(selectedType, selectedInsurance),
+                    "Confirmation", JOptionPane.YES_NO_OPTION);
+            final InsuranceController insuranceController = new InsuranceController();
+            insuranceController.deleteInsurance(selectedInsurance);
+            JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
+                    "You have successfully deleted the selected insurance.",
+                    "Success", JOptionPane.PLAIN_MESSAGE);
+            controller.goBackToBaseView();
+        }
+        else {
+            JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
+                    "Please select a valid Insurance.",
+                    INVALID_SELECTION, JOptionPane.WARNING_MESSAGE);
+        }
     }
 
     private void confirm(JComboBox<String> nameIDComboBox, JTextField cardField, JTextField termField,
@@ -127,18 +174,18 @@ public class PurchaseInsuranceView extends JFrame {
                 else {
                     JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
                             "Please fill all the fields correctly.",
-                            "Invalid Input", JOptionPane.WARNING_MESSAGE);
+                            INVALID_INPUT, JOptionPane.WARNING_MESSAGE);
                 }
             }
             else {
                 JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
                         "Please select a valid Insurance.",
-                        "Invalid Selection", JOptionPane.WARNING_MESSAGE);
+                        INVALID_SELECTION, JOptionPane.WARNING_MESSAGE);
             }
         }
         catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
-                    "Card number and term must be valid.", "Invalid Input",
+                    "Card number and term must be valid.", INVALID_INPUT,
                     JOptionPane.WARNING_MESSAGE);
         }
     }
@@ -157,19 +204,14 @@ public class PurchaseInsuranceView extends JFrame {
                     if (nameIDComboBox.getSelectedIndex() > 0) {
                         final int selectedIndex = nameIDComboBox.getSelectedIndex() - 1;
                         final InsuranceObject selectedInsurance = filteredInsurances.get(selectedIndex);
-                        final String policyDetails = selectedInsurance.getPolicyDetails();
                         JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
-                                "Insurance Type: " + selectedType + END_LINE
-                                        + "Insurance Name: " + selectedInsurance.getInsuranceName() + END_LINE
-                                        + "Insurance ID: " + selectedInsurance.getInsuranceID() + END_LINE
-                                        + "Price per year ($): " + selectedInsurance.getPremium() + END_LINE
-                                        + "Insurance Policy: " + policyDetails,
+                                InsuranceMethods.getInsurancePolicyDetails(selectedType, selectedInsurance),
                                 "Insurance Policy Details", JOptionPane.INFORMATION_MESSAGE);
                     }
                 }
                 else {
                     JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
-                            "Please select a valid Insurance Type.", "Invalid Selection",
+                            "Please select a valid Insurance Type.", INVALID_SELECTION,
                             JOptionPane.WARNING_MESSAGE);
                 }
             }
@@ -183,7 +225,7 @@ public class PurchaseInsuranceView extends JFrame {
         if (selectedType != null && !selectedType.equals(CHOOSE_INSURANCE_TYPE)) {
             final List<InsuranceObject> filteredInsurances = controller.getInsurancesByType(selectedType);
             nameIDComboBox.removeAllItems();
-            nameIDComboBox.addItem("Choose Insurance Name (ID)");
+            nameIDComboBox.addItem(CHOOSE_INSURANCE_NAME_ID);
             for (InsuranceObject insurance : filteredInsurances) {
                 nameIDComboBox.addItem(insurance.getInsuranceName() + " (" + insurance.getInsuranceID() + ")");
             }
@@ -192,7 +234,7 @@ public class PurchaseInsuranceView extends JFrame {
         else {
             nameIDComboBox.setEnabled(false);
             nameIDComboBox.removeAllItems();
-            nameIDComboBox.addItem("Choose Insurance Name (ID)");
+            nameIDComboBox.addItem(CHOOSE_INSURANCE_NAME_ID);
         }
     }
 }

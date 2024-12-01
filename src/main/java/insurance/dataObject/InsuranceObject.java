@@ -23,5 +23,4 @@ public class InsuranceObject {
         this.policyDetails = policyDetails;
         this.insuranceName = insuranceName;
     }
-
 }

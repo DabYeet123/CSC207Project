@@ -61,11 +61,14 @@ public class ApplyLoansView extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     final String cardNumber = cardField.getText();
-                    final double amount = Double.parseDouble(amountField.getText());
+                    final Double amount = (Double) Double.parseDouble(amountField.getText());
                     final int term = Integer.parseInt(termField.getText());
-                    final double rate = Double.parseDouble(interestRateField.getText());
+                    final Double rate = (Double) Double.parseDouble(interestRateField.getText());
                     final boolean success = controller.applyLoansTriggered(amount, term, rate, cardNumber);
                     if (success) {
+                        JOptionPane.showConfirmDialog(ApplyLoansView.this,
+                                "Are you sure to apply the loan?",
+                                "Confirmation", JOptionPane.YES_NO_OPTION);
                         controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
                     }
                     else {

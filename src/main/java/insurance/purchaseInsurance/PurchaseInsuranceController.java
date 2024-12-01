@@ -10,6 +10,8 @@ import LogIn.Welcome.WelcomeController;
 import insurance.dataObject.InsuranceController;
 import insurance.dataObject.InsuranceObject;
 import insurance.dataObject.UserInsuranceController;
+import insurance.newInsurance.NewInsuranceController;
+import insurance.newInsurance.NewInsurancePresenter;
 import lombok.Getter;
 
 @Getter
@@ -19,6 +21,7 @@ public class PurchaseInsuranceController {
     private static final int MAX_TERM = 100;
     private UserObject loggedInUser;
     private final PurchaseInsurancePresenter purchaseInsurancePresenter;
+    private final NewInsurancePresenter newInsurancePresenter;
     private final WelcomeController welcomeController;
     private final UserInsuranceController userInsuranceController;
     private final List<InsuranceObject> availableInsurances;
@@ -31,15 +34,17 @@ public class PurchaseInsuranceController {
         this.availableInsurances = getAvailableInsurances(user.getUserID(), insuranceController.getAllInsurance());
 
         this.purchaseInsurancePresenter = new PurchaseInsurancePresenter(this);
+        final NewInsuranceController newInsuranceController = new NewInsuranceController(user);
+        this.newInsurancePresenter = new NewInsurancePresenter(newInsuranceController);
     }
 
     public void launch() {
         purchaseInsurancePresenter.showView();
     }
 
-    public void logOutTriggered() {
+    public void addNewInsuranceTriggered() {
         purchaseInsurancePresenter.disposeView();
-        welcomeController.launch();
+        newInsurancePresenter.showView();
     }
 
     public void goBackToBaseView() {

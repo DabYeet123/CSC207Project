@@ -5,27 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="12.1 Insurance update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/InsuranceMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/insurance/newInsurance/NewInsuranceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/insurance/newInsurance/NewInsurancePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/insurance/newInsurance/NewInsuranceView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Insurance.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Insurance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/InsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/InsuranceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/InsuranceDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/InsuranceDBAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/InsuranceObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/InsuranceObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/myInsurance/MyInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/myInsurance/MyInsuranceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/insurance/myInsurance/MyInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/myInsurance/MyInsuranceView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsuranceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsurancePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsurancePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsuranceView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loans/applyLoans/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/applyLoans/ApplyLoansController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loans/applyLoans/ApplyLoansPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/applyLoans/ApplyLoansPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loans/applyLoans/ApplyLoansView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/applyLoans/ApplyLoansView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/seeLoansHistory/SeeLoansHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/seeLoansHistory/SeeLoansHistoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/seeLoansHistory/SeeLoansHistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/seeLoansHistory/SeeLoansHistoryPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/seeLoansHistory/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/seeLoansHistory/SeeLoansHistoryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +270,7 @@
       <workItem from="1732588516847" duration="10689000" />
       <workItem from="1732662312623" duration="23629000" />
       <workItem from="1732813998921" duration="36484000" />
-      <workItem from="1733011983605" duration="17844000" />
+      <workItem from="1733011983605" duration="30765000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -502,7 +496,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733030171121</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="12.1 Insurance update">
+      <option name="closed" value="true" />
+      <created>1733033525762</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1733033525762</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
