@@ -1,5 +1,7 @@
 package ATM.ATMMap;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -8,15 +10,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ATM.DataObject.ATMObject;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.swing.*;
 
 public class NominatimAPI {
-    public static double[] getCoordinates(String address) throws Exception {
-        String url = "https://nominatim.openstreetmap.org/search?format=json&q=" +
-                java.net.URLEncoder.encode(address, "UTF-8");
+    public static double[] getCoordinates(String address) {
+        String url = null;
+        try {
+            url = "https://nominatim.openstreetmap.org/search?format=json&q=" +
+                    java.net.URLEncoder.encode(address, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -24,10 +32,22 @@ public class NominatimAPI {
                 .header("User-Agent", "JavaApp")
                 .build();
 
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = null;
+        try {
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode root = mapper.readTree(response.body()).get(0); // Take the first result
+        JsonNode root = null; // Take the first result
+        try {
+            root = mapper.readTree(response.body()).get(0);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
         double lat = root.path("lat").asDouble();
         double lon = root.path("lon").asDouble();
 

@@ -1,8 +1,9 @@
 package ATM.ATMMap;
 
 import ATM.DataObject.ATMObject;
-import DataObjects.UserObject;
-import LogIn.Welcome.WelcomeController;
+import userdataobject.UserObject;
+import Functionality.FunctionalityController;
+import login.loggedin.LoggedInController;
 import Views.PanelMaker;
 
 import javax.swing.*;
@@ -10,20 +11,15 @@ import java.awt.*;
 
 import static ATM.ATMMap.NominatimAPI.getATMCoordinates;
 
-public class ATMMapController {
+public class ATMMapController extends FunctionalityController {
 
     UserObject loggedInUser;
-    private WelcomeController welcomeController;
     private final ATMMapPresenter atmMapPresenter;
+    private final LoggedInController loggedInController;
 
-    public ATMMapController(UserObject user) throws Exception {
+    public ATMMapController(UserObject user, LoggedInController loggedInController) {
         this.loggedInUser = user;
-        this.welcomeController = new WelcomeController();
-        this.atmMapPresenter = new ATMMapPresenter(this);
-    }
-
-    //Temporary
-    public ATMMapController() throws Exception {
+        this.loggedInController = loggedInController;
         this.atmMapPresenter = new ATMMapPresenter(this);
     }
 
@@ -31,12 +27,7 @@ public class ATMMapController {
         atmMapPresenter.showView();
     }
 
-    public void logOutTriggered(){
-        atmMapPresenter.disposeView();
-        welcomeController.launch();
-    }
-
-    public void generateATM(String address, JPanel panel) throws Exception {
+    public void generateATM(String address, JPanel panel) {
         try {
             double[] addressCoordinate = NominatimAPI.getCoordinates(address);
 
@@ -51,7 +42,7 @@ public class ATMMapController {
         }
     }
 
-    public JPanel generatePanel(String address) throws Exception {
+    public JPanel generatePanel(String address) {
         double[] addressCoordinate = NominatimAPI.getCoordinates(address);
 
         double lon = addressCoordinate[0];
@@ -71,4 +62,9 @@ public class ATMMapController {
     }
 
 
+    @Override
+    public void back() {
+        atmMapPresenter.disposeView();
+        loggedInController.launch();
+    }
 }

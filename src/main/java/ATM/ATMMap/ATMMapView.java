@@ -1,6 +1,6 @@
 package ATM.ATMMap;
 
-import DataObjects.UserObject;
+import userdataobject.UserObject;
 import Views.PanelMaker;
 
 import javax.swing.*;
@@ -8,29 +8,24 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 
-public class ATMMapView extends JFrame {
+public class ATMMapView extends PanelMaker {
 
     public static final int WIDTH = 600;
     public static final int HEIGHT = 600;
     private JPanel panel;
     private UserObject user;
 
-    public ATMMapView(ATMMapController controller) throws Exception {
-        super("ATM Locations");
+    public ATMMapView(ATMMapController controller){
+        super(0, 0, WIDTH, HEIGHT + 50, null);
 
         this.user = controller.loggedInUser;
-        pack();
-        Insets insets = getInsets();
-        int frameWidth = WIDTH + insets.left + insets.right;
-        int frameHeight = HEIGHT + insets.top + insets.bottom;
 
-        setSize(frameWidth, frameHeight + 50); // Set the size of the frame
-        setLayout(null);
-        JPanel panel = controller.generatePanel("University of Toronto");
+        //JPanel panel = controller.generatePanel("University of Toronto");
+        JPanel panel = new PanelMaker(0, 0, WIDTH, HEIGHT, null);
         setPanel(panel);
         add(panel);
 
-        JPanel buttonPanel = new PanelMaker(0, 600, 600, 50, new GridLayout(1,2));
+        JPanel buttonPanel = new PanelMaker(0, HEIGHT, WIDTH, 50, new GridLayout(1,2));
         JTextField input = new JTextField(1);
         input.setBounds(250, 10, 100, 30);
         JButton submit = new JButton("Enter");
@@ -51,10 +46,7 @@ public class ATMMapView extends JFrame {
         });
         buttonPanel.add(input);
         buttonPanel.add(submit);
-        this.add(buttonPanel);
-
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Close Application on clicking X
-        setLocationRelativeTo(null); //Puts the Menu in the center
+        add(buttonPanel);
     }
 
     public JPanel getPanel() {

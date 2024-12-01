@@ -1,7 +1,7 @@
 package cardandexchange.adapter;
 
 import App.PresenterInterface;
-import Transaction.MakeTransaction.MakeTransactionController;
+import transaction.MakeTransaction.MakeTransactionController;
 import cardandexchange.view.CardView;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

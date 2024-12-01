@@ -1,9 +1,9 @@
 package House.DataObject;
 
-import DataAccess.DataAccessController;
-import DataAccess.DataAccessInterface;
-import DataObjects.UserObject;
-import DataObjects.UsersController;
+import dataaccess.DataAccessController;
+import dataaccess.DataAccessInterface;
+import userdataobject.UserObject;
+import userdataobject.UsersController;
 
 import java.util.ArrayList;
 import java.util.List;

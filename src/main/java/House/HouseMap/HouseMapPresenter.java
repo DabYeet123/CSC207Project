@@ -1,22 +1,28 @@
 package House.HouseMap;
 
-import ATM.ATMMap.ATMMapController;
-import ATM.ATMMap.ATMMapView;
+import app.PresenterInterface;
+import userdataobject.UserObject;
+import Functionality.FunctionalityView;
 
-public class HouseMapPresenter {
+import javax.swing.*;
 
-    private final HouseMapView atmMapView;
+public class HouseMapPresenter implements PresenterInterface<HouseMapController> {
 
-    public HouseMapPresenter(HouseMapController controller) throws Exception {
-        this.atmMapView = new HouseMapView(controller);
+    private final JFrame houseMapView;
+
+    public HouseMapPresenter(UserObject user, HouseMapController controller) {
+        HouseMapView houseView = new HouseMapView(user,controller);
+        this.houseMapView = new FunctionalityView(houseView, controller);
     }
 
+    @Override
     public void showView(){
-        atmMapView.setVisible(true);
+        houseMapView.setVisible(true);
     }
 
+    @Override
     public void disposeView(){
-        atmMapView.setVisible(false);
-        atmMapView.dispose();
+        houseMapView.setVisible(false);
+        houseMapView.dispose();
     }
 }

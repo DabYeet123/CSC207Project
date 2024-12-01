@@ -1,6 +1,6 @@
 package Loans.ApplyLoans;
 
-import App.PresenterInterface;
+import app.PresenterInterface;
 
 public class ApplyLoansPresenter implements PresenterInterface<ApplyLoansController> {
     private final Loans.ApplyLoans.ApplyLoansView applyLoansView;

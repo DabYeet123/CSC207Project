@@ -1,6 +1,7 @@
 package House.DataObject;
 
-import DataObjects.UserObject;
+import userdataobject.UserObject;
+import House.HouseMap.HouseMapController;
 
 import java.util.List;
 
@@ -8,19 +9,20 @@ public class HouseController {
 
     private final UserObject user;
     private final HouseDBAccess houseDBAccess;
+    private final HouseMapController houseMapController;
 
-    public HouseController(UserObject user) {
-        //this.user = user;
-        this.user = new UserObject(0, "Joe Dude", "", "", 0, "");
+    public HouseController(UserObject user, HouseMapController houseMapcontroller) {
+        this.user = user;
+        //this.user = new UserObject(0, "Joe Dude", "", "", 0, "");
         this.houseDBAccess = new HouseDBAccess();
+        this.houseMapController = houseMapcontroller;
     }
 
     public void buyHouse(String address) {
         List<HouseObject> houses = getHouses();
         for(HouseObject house: houses) {
             if (house.getAddress().equals(address)) {
-                house.setOwner(user.getFirstName());
-                houseDBAccess.saveData(0, house);
+                houseMapController.buyHouse(house,house.getPrice());
                 return;
             }
         }
