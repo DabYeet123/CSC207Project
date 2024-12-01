@@ -17,7 +17,7 @@ public class MyInsuranceView extends JFrame {
         this.user = controller.loggedInUser;
 
         setTitle("My Insurance Policies");
-        setSize(1050, 400);
+        setSize(1200, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -27,7 +27,7 @@ public class MyInsuranceView extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 20));
         add(titleLabel, BorderLayout.NORTH);
 
-        String[] columnNames = {"ID", "Type", "Premium ($)", "Start Date", "End Date", "Auto Renew", "Card"};
+        String[] columnNames = {"Type", "Name", "ID", "Premium ($)", "Start Date", "End Date", "Auto Renew", "Card"};
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         JTable insuranceTable = new JTable(tableModel);
 
@@ -80,13 +80,14 @@ public class MyInsuranceView extends JFrame {
                 autoRenew = "No";
             }
             final String[] rowData = {
-                String.valueOf(insurance.getInsurance().getInsuranceID()),
                 insurance.getInsurance().getType(),
+                insurance.getInsurance().getInsuranceName(),
+                String.valueOf(insurance.getInsurance().getInsuranceID()),
                 String.format("%.2f", insurance.getInsurance().getPremium()),
                 String.valueOf(insurance.getStartDate()),
                 endDate,
                 autoRenew,
-                insurance.getCardNumber(),
+                insurance.getCardUsed(),
             };
             tableModel.addRow(rowData);
         }

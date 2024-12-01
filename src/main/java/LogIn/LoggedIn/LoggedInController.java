@@ -47,6 +47,7 @@ public class LoggedInController implements ControllerInterface {
     @Override
     public void launch() {
         seeLoansHistoryController.update();
+        myInsuranceController.update();
         loggedInPresenter.showView();
     }
 
@@ -58,6 +59,7 @@ public class LoggedInController implements ControllerInterface {
     public void refreshTriggered() {
         loggedInPresenter.disposeView();
         seeLoansHistoryController.update();
+        myInsuranceController.update();
         cardTriggered();
         cardController.goBackToBaseView();
     }

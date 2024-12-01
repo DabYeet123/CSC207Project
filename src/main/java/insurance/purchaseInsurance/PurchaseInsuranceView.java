@@ -33,7 +33,7 @@ public class PurchaseInsuranceView extends JFrame {
         typeComboBox.addActionListener(e -> {
             String selectedType = (String) typeComboBox.getSelectedItem();
             if (selectedType != null && !selectedType.equals("Choose Insurance Type")) {
-                List<InsuranceObject> filteredInsurances = controller.getInsurancesByType(selectedType);
+                final List<InsuranceObject> filteredInsurances = controller.getInsurancesByType(selectedType);
                 nameIDComboBox.removeAllItems();
                 nameIDComboBox.addItem("Choose Insurance Name (ID)");
                 for (InsuranceObject insurance : filteredInsurances) {

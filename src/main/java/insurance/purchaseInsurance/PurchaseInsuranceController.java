@@ -1,14 +1,15 @@
 package insurance.purchaseInsurance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import Card.CardController;
 import DataObjects.UserObject;
-import insurance.dataObject.InsuranceController;
-import insurance.dataObject.InsuranceObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
+import insurance.dataObject.InsuranceController;
+import insurance.dataObject.InsuranceObject;
 import insurance.dataObject.UserInsuranceController;
-
-import java.util.List;
 
 public class PurchaseInsuranceController {
     UserObject loggedInUser;
@@ -23,7 +24,7 @@ public class PurchaseInsuranceController {
         this.welcomeController = new WelcomeController();
         this.insuranceController = new InsuranceController();
         this.userInsuranceController = new UserInsuranceController();
-        this.availableInsurances = insuranceController.getAllInsurance();
+        this.availableInsurances = getAvailableInsurances(user.getUserID(), insuranceController.getAllInsurance());
 
         this.purchaseInsurancePresenter = new PurchaseInsurancePresenter(this);
     }
@@ -57,5 +58,15 @@ public class PurchaseInsuranceController {
 
     public List<InsuranceObject> getInsurancesByType(String type) {
         return availableInsurances.stream().filter(insurance -> insurance.getType().equals(type)).toList();
+    }
+
+    public List<InsuranceObject> getAvailableInsurances(int userID, List<InsuranceObject> insurances) {
+        final List<InsuranceObject> newInsurances = new ArrayList<>();
+        for (InsuranceObject insurance : insurances) {
+            if (!userInsuranceController.isPurchased(userID, insurance)) {
+                newInsurances.add(insurance);
+            }
+        }
+        return newInsurances;
     }
 }

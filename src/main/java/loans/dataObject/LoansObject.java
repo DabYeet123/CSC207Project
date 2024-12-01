@@ -30,6 +30,7 @@ public class LoansObject implements Comparable<LoansObject> {
         this.cardUsed = cardUsed;
     }
 
+    @Override
     public int compareTo(@NotNull LoansObject anotherLoan) {
         return sortByEndDate(anotherLoan);
     }

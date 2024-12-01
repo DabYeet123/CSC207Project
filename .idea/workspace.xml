@@ -7,6 +7,14 @@
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.30 Insurance update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataObject/UserInsuranceObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/myInsurance/MyInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/myInsurance/MyInsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/myInsurance/MyInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/myInsurance/MyInsuranceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/purchaseInsurance/PurchaseInsuranceView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansDBAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/dataObject/LoansObject.java" afterDir="false" />
     </list>
@@ -40,12 +48,12 @@
     &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DabYeet123/CSC207Project.git",
-    "accountId": "52a0db03-ac1e-4a5a-8a92-0f4811ad9340"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
+    &quot;accountId&quot;: &quot;52a0db03-ac1e-4a5a-8a92-0f4811ad9340&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -58,72 +66,72 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.APIget.executor": "Run",
-    "Application.CardPresenter.executor": "Run",
-    "Application.CardView.executor": "Run",
-    "Application.CurrencyExchangePresenter.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainLauncher.executor": "Run",
-    "Application.WelcomePresenter.executor": "Run",
-    "JUnit.All in homework-5.executor": "Run",
-    "JUnit.Card in homework-5.executor": "Coverage",
-    "JUnit.CardTest.apiTest.executor": "Run",
-    "JUnit.CardTest.checkIdRepeat.executor": "Run",
-    "JUnit.CardTest.executor": "Run",
-    "JUnit.CardTest.failureCardDoesNotExistTest.executor": "Run",
-    "JUnit.CardTest.failureSaveDuplicateCardTest.executor": "Run",
-    "JUnit.CardTest.getDifferentFinalNumTest.executor": "Run",
-    "JUnit.CardTest.getIdLoop.executor": "Run",
-    "JUnit.CardTest.noCardGetCard.executor": "Run",
-    "JUnit.CardTest.noCardIndex.executor": "Run",
-    "JUnit.CardTest.noindexFound.executor": "Run",
-    "JUnit.CardTest.successCardEntity.executor": "Run",
-    "JUnit.CardTest.successCardExistsTest.executor": "Run",
-    "JUnit.CardTest.successDeleteCardTest.executor": "Coverage",
-    "JUnit.CardTest.successSaveDataTest.executor": "Run",
-    "JUnit.CardTest.successUpdate.executor": "Run",
-    "JUnit.CardTest.testCaseLength1.executor": "Run",
-    "JUnit.CardTest.testNewIdNameWithSpaces.executor": "Run",
-    "JUnit.CardViewTest.executor": "Run",
-    "JUnit.CardViewTest.testAdd10Cards.executor": "Run",
-    "JUnit.CardViewTest.testAddCardSuccess.executor": "Run",
-    "JUnit.CardViewTest.testAddCard_Success.executor": "Run",
-    "JUnit.CardViewTest.testBack.executor": "Coverage",
-    "JUnit.CardViewTest.testDeleteCard.executor": "Run",
-    "JUnit.CardViewTest.testDeleteCardFail.executor": "Run",
-    "JUnit.CardViewTest.testLaunchAndBack.executor": "Run",
-    "JUnit.Exchange in homework-5.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.executor": "Coverage",
-    "JUnit.ExchangeCurrencyTest.failureConnectionToApiTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.failureInvalidCurrencyCodeTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.failureInvalidInputAmountTest.executor": "Coverage",
-    "JUnit.ExchangeCurrencyTest.failureMissingFromCurrencyTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.successCurrencyExchangeTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.successInputAmountTest.executor": "Coverage",
-    "JUnit.ExchangeCurrencyTest.viewTestForButtonExchange.executor": "Run",
-    "JUnit.InsuranceTest.executor": "Run",
-    "JUnit.LoansTest.executor": "Run",
-    "JUnit.cardViewTest.executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "sincer.xu",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/U of T/CSC207/CSC207Project/mystyle.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.APIget.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CardPresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CardView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CurrencyExchangePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WelcomePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in homework-5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Card in homework-5.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CardTest.apiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.checkIdRepeat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.failureCardDoesNotExistTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.failureSaveDuplicateCardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.getDifferentFinalNumTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.getIdLoop.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.noCardGetCard.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.noCardIndex.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.noindexFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.successCardEntity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.successCardExistsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.successDeleteCardTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CardTest.successSaveDataTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.successUpdate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.testCaseLength1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.testNewIdNameWithSpaces.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testAdd10Cards.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testAddCardSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testAddCard_Success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testBack.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CardViewTest.testDeleteCard.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testDeleteCardFail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testLaunchAndBack.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Exchange in homework-5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.failureConnectionToApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.failureInvalidCurrencyCodeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.failureInvalidInputAmountTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.failureMissingFromCurrencyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.successCurrencyExchangeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.successInputAmountTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.viewTestForButtonExchange.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InsuranceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoansTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.cardViewTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sincer.xu&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/U of T/CSC207/CSC207Project/mystyle.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.infernus.idea.checkstyle.CheckStyleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\Loans\SeeLoansHistory" />
@@ -217,6 +225,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MainLauncher" />
+      <item itemvalue="JUnit.Card in homework-5" />
+      <item itemvalue="JUnit.CardViewTest" />
+      <item itemvalue="JUnit.Exchange in homework-5" />
+      <item itemvalue="JUnit.ExchangeCurrencyTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainLauncher" />
@@ -252,6 +267,7 @@
       <workItem from="1732588516847" duration="10689000" />
       <workItem from="1732662312623" duration="23629000" />
       <workItem from="1732813998921" duration="36484000" />
+      <workItem from="1733011983605" duration="167000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />

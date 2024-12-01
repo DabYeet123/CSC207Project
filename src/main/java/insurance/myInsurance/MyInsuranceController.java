@@ -2,6 +2,7 @@ package insurance.myInsurance;
 
 import App.ControllerInterface;
 import DataObjects.UserObject;
+import insurance.dataObject.InsuranceObject;
 import insurance.dataObject.UserInsuranceController;
 import insurance.dataObject.UserInsuranceObject;
 import LogIn.LoggedIn.LoggedInController;
