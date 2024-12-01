@@ -1,4 +1,4 @@
-package insurance.myInsurance;
+package insurance.view;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -19,7 +19,8 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import DataObjects.UserObject;
-import insurance.dataObject.UserInsuranceController;
+import insurance.adapter.MyInsuranceController;
+import insurance.adapter.UserInsuranceController;
 import insurance.dataObject.UserInsuranceObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

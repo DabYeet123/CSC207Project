@@ -1,6 +1,7 @@
-package loans.seeLoansHistory;
+package loans.adapter;
 
 import App.PresenterInterface;
+import loans.view.SeeLoansHistoryView;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class SeeLoansHistoryPresenter implements PresenterInterface<SeeLoansHistoryController> {

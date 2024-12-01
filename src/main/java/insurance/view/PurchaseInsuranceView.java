@@ -1,4 +1,4 @@
-package insurance.purchaseInsurance;
+package insurance.view;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -17,9 +17,10 @@ import javax.swing.JTextField;
 
 import org.jetbrains.annotations.NotNull;
 
-import insurance.dataObject.InsuranceController;
-import insurance.dataObject.InsuranceMethods;
+import insurance.adapter.InsuranceController;
+import insurance.adapter.PurchaseInsuranceController;
 import insurance.dataObject.InsuranceObject;
+import insurance.useCase.InsuranceMethods;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class PurchaseInsuranceView extends JFrame {

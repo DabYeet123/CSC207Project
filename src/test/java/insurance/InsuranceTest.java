@@ -1,10 +1,10 @@
 package insurance;
 
 import DataObjects.UserObject;
-import insurance.dataObject.InsuranceController;
-import insurance.dataObject.InsuranceDBAccess;
+import insurance.adapter.InsuranceController;
+import insurance.dataAccess.InsuranceDBAccess;
 import insurance.dataObject.InsuranceObject;
-import insurance.purchaseInsurance.PurchaseInsuranceController;
+import insurance.adapter.PurchaseInsuranceController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

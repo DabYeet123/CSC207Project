@@ -1,6 +1,7 @@
-package insurance.newInsurance;
+package insurance.adapter;
 
 import App.PresenterInterface;
+import insurance.view.NewInsuranceView;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class NewInsurancePresenter implements PresenterInterface<NewInsuranceController> {

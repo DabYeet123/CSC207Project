@@ -1,4 +1,4 @@
-package insurance.purchaseInsurance;
+package insurance.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,7 @@ import Card.CardController;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
-import insurance.dataObject.InsuranceController;
 import insurance.dataObject.InsuranceObject;
-import insurance.dataObject.UserInsuranceController;
-import insurance.newInsurance.NewInsuranceController;
 import lombok.Getter;
 
 @Getter

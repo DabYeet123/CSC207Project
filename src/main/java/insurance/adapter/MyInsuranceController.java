@@ -1,4 +1,4 @@
-package insurance.myInsurance;
+package insurance.adapter;
 
 import java.util.List;
 
@@ -6,7 +6,6 @@ import App.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
-import insurance.dataObject.UserInsuranceController;
 import insurance.dataObject.UserInsuranceObject;
 import lombok.Getter;
 

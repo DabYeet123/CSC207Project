@@ -1,4 +1,4 @@
-package insurance.newInsurance;
+package insurance.view;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -13,8 +13,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import insurance.dataObject.InsuranceController;
-import insurance.dataObject.InsuranceMethods;
+import insurance.adapter.InsuranceController;
+import insurance.adapter.NewInsuranceController;
+import insurance.useCase.InsuranceMethods;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class NewInsuranceView extends JFrame {
@@ -90,7 +91,8 @@ public class NewInsuranceView extends JFrame {
      * @param controller   The controller to handle further actions.
      */
     private void confirmCreated(JComboBox<String> typeComboBox, JTextField nameField,
-                                JTextField premiumField, JTextField policyField, NewInsuranceController controller) {
+                                JTextField premiumField, JTextField policyField,
+                                NewInsuranceController controller) {
         final String type = (String) typeComboBox.getSelectedItem();
         try {
             if (type != null && !InsuranceMethods.CHOOSE_INSURANCE_TYPE.equals(type)) {

@@ -1,10 +1,9 @@
-package loans.applyLoans;
+package loans.adapter;
 
 import App.ControllerInterface;
 import Card.CardController;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
-import loans.dataObject.LoansController;
 import lombok.Getter;
 
 @Getter

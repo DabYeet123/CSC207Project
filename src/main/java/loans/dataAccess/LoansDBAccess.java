@@ -1,4 +1,4 @@
-package loans.dataObject;
+package loans.dataAccess;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,6 +10,7 @@ import DataAccess.DataAccessController;
 import DataAccess.DataAccessInterface;
 import DataObjects.UserObject;
 import DataObjects.UsersController;
+import loans.dataObject.LoansObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class LoansDBAccess implements DataAccessInterface<LoansObject> {

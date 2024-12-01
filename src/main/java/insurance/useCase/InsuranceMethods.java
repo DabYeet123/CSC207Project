@@ -1,4 +1,6 @@
-package insurance.dataObject;
+package insurance.useCase;
+
+import insurance.dataObject.InsuranceObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class InsuranceMethods {

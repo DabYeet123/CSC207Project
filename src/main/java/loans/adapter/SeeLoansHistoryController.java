@@ -1,4 +1,4 @@
-package loans.seeLoansHistory;
+package loans.adapter;
 
 import java.util.List;
 
@@ -6,7 +6,6 @@ import App.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
-import loans.dataObject.LoansController;
 import loans.dataObject.LoansObject;
 import lombok.Getter;
 

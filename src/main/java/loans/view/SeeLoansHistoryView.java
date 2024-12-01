@@ -1,4 +1,4 @@
-package loans.seeLoansHistory;
+package loans.view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -19,6 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 import org.jetbrains.annotations.NotNull;
 
+import loans.adapter.SeeLoansHistoryController;
 import loans.dataObject.LoansObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

@@ -1,6 +1,7 @@
-package loans.applyLoans;
+package loans.adapter;
 
 import App.PresenterInterface;
+import loans.view.ApplyLoansView;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class ApplyLoansPresenter implements PresenterInterface<ApplyLoansController> {

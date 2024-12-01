@@ -1,4 +1,4 @@
-package insurance.dataObject;
+package insurance.dataAccess;
 
 import java.time.LocalDate;
 import java.util.Collections;
@@ -10,6 +10,7 @@ import DataAccess.DataAccessController;
 import DataAccess.DataAccessInterface;
 import DataObjects.UserObject;
 import DataObjects.UsersController;
+import insurance.dataObject.UserInsuranceObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceObject> {

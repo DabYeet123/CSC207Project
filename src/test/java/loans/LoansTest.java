@@ -6,7 +6,7 @@ import Card.Card;
 import Card.CardDBAccess;
 import DataObjects.UserObject;
 import DataObjects.UsersDBAccess;
-import loans.dataObject.LoansDBAccess;
+import loans.dataAccess.LoansDBAccess;
 import loans.dataObject.LoansObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,7 +1,10 @@
-package insurance.myInsurance;
+package insurance.adapter;
 
 import App.PresenterInterface;
+import insurance.view.MyInsuranceView;
+import lombok.Getter;
 
+@Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class MyInsurancePresenter implements PresenterInterface<MyInsuranceController> {
     private final MyInsuranceView myInsuranceView;
@@ -31,4 +34,5 @@ public class MyInsurancePresenter implements PresenterInterface<MyInsuranceContr
         myInsuranceView.setVisible(false);
         myInsuranceView.dispose();
     }
+
 }

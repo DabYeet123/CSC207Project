@@ -1,12 +1,12 @@
-package insurance.newInsurance;
+package insurance.adapter;
 
 import App.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
 import lombok.Getter;
 
-@Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
+@Getter
 public class NewInsuranceController implements ControllerInterface {
     private final UserObject loggedInUser;
     private final NewInsurancePresenter newInsurancePresenter;

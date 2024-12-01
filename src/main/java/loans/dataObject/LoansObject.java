@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import org.jetbrains.annotations.NotNull;
 
+import loans.useCase.LoansMethods;
 import lombok.Getter;
 
 @Getter

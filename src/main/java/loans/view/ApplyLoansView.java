@@ -1,4 +1,4 @@
-package loans.applyLoans;
+package loans.view;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import loans.adapter.ApplyLoansController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class ApplyLoansView extends JFrame {

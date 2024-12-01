@@ -1,4 +1,6 @@
-package loans.dataObject;
+package loans.useCase;
+
+import loans.dataObject.LoansObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class LoansMethods {

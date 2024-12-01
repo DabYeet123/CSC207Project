@@ -1,6 +1,9 @@
-package insurance.dataObject;
+package insurance.adapter;
 
 import java.util.List;
+
+import insurance.dataAccess.InsuranceDBAccess;
+import insurance.dataObject.InsuranceObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class InsuranceController {
