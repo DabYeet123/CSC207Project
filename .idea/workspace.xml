@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="after merge">
+    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="after merge from the main, change refactor thing into main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +62,7 @@
   "keyToString": {
     "Application.MainLauncher.executor": "Run",
     "Application.app.MainLauncher.executor": "Run",
+    "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Yue-Zheng",
     "node.js.selected.package.tslint": "(autodetect)"
@@ -89,7 +85,7 @@
       <recent name="Card" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.app.MainLauncher">
+  <component name="RunManager" selected="JUnit.cardandexchange in homework-5 (1)">
     <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
       <module name="homework-5" />
@@ -146,16 +142,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cardandexchange in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="cardandexchange in homework-5 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cardandexchange.adapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cardandexchange" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/cardandexchange" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,17 +153,17 @@
     <list>
       <item itemvalue="Application.app.MainLauncher" />
       <item itemvalue="Application.MainLauncher" />
-      <item itemvalue="JUnit.cardandexchange in homework-5" />
+      <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
       <item itemvalue="JUnit.CardViewTest" />
       <item itemvalue="JUnit.Exchange in homework-5" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
         <item itemvalue="Application.app.MainLauncher" />
         <item itemvalue="Application.MainLauncher" />
         <item itemvalue="Application.MainLauncher" />
         <item itemvalue="Application.MainLauncher" />
-        <item itemvalue="JUnit.Exchange in homework-5" />
       </list>
     </recent_temporary>
   </component>
@@ -315,13 +305,13 @@
       <option name="project" value="LOCAL" />
       <updated>1732584621284</updated>
     </task>
-    <task id="LOCAL-00015" summary="1">
+    <task id="LOCAL-00015" summary="after merge from the main, change refactor thing into main">
       <option name="closed" value="true" />
-      <created>1732588809619</created>
+      <created>1733093985951</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1732588809619</updated>
+      <updated>1733093985951</updated>
     </task>
     <task id="LOCAL-00016" summary="Add the override of interface of Controller and Presenter">
       <option name="closed" value="true" />
@@ -403,7 +393,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +427,8 @@
     <MESSAGE value="Renew of refactor for Card and Exchange parts" />
     <MESSAGE value="11.29 renew for refactor with the reorganization" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Readme" />
+    <MESSAGE value="after merge from the main, change refactor thing into main" />
+    <option name="LAST_COMMIT_MESSAGE" value="after merge from the main, change refactor thing into main" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -468,7 +459,7 @@
     <SUITE FILE_PATH="coverage/CSC207Project$CardViewTest.ic" NAME="CardViewTest Coverage Results" MODIFIED="1732670008439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Card.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CSC207Project$cardandexchange_in_homework_5__1_.ic" NAME="cardandexchange in homework-5 (1) Coverage Results" MODIFIED="1732940063182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CSC207Project$cardandexchange_in_homework_5__1_.ic" NAME="cardandexchange in homework-5 (1) Coverage Results" MODIFIED="1733094264308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_failureInvalidInputAmountTest.ic" NAME="ExchangeCurrencyTest.failureInvalidInputAmountTest Coverage Results" MODIFIED="1732679333915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Exchange.*</FILTER>
     </SUITE>
