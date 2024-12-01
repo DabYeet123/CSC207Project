@@ -1,20 +1,23 @@
 package loans.seeLoansHistory;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import loans.dataObject.LoansController;
-import loans.dataObject.LoansObject;
-import LogIn.LoggedIn.LoggedInController;
-import LogIn.Welcome.WelcomeController;
-
 import java.util.List;
 
+import App.ControllerInterface;
+import DataObjects.UserObject;
+import LogIn.LoggedIn.LoggedInController;
+import LogIn.Welcome.WelcomeController;
+import loans.dataObject.LoansController;
+import loans.dataObject.LoansObject;
+import lombok.Getter;
+
+@Getter
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class SeeLoansHistoryController implements ControllerInterface {
-    UserObject loggedInUser;
-    List<LoansObject> loans;
-    private SeeLoansHistoryPresenter seeLoansHistoryPresenter;
-    private WelcomeController welcomeController;
-    private LoansController loansController;
+    private final UserObject loggedInUser;
+    private List<LoansObject> loans;
+    private final SeeLoansHistoryPresenter seeLoansHistoryPresenter;
+    private final WelcomeController welcomeController;
+    private final LoansController loansController;
 
     public SeeLoansHistoryController(UserObject user) {
         this.loggedInUser = user;
@@ -25,18 +28,18 @@ public class SeeLoansHistoryController implements ControllerInterface {
     }
 
     @Override
-    public void launch(){
+    public void launch() {
         seeLoansHistoryPresenter.showView();
     }
 
-    public void logOutTriggered(){
+    public void logOutTriggered() {
         seeLoansHistoryPresenter.disposeView();
         welcomeController.launch();
     }
 
     public void goBackToBaseView() {
         seeLoansHistoryPresenter.disposeView();
-        LoggedInController controller = new LoggedInController(loggedInUser);
+        final LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();
     }
 

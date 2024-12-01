@@ -4,6 +4,10 @@ import java.time.LocalDate;
 
 import org.jetbrains.annotations.NotNull;
 
+import lombok.Getter;
+
+@Getter
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class UserInsuranceObject implements Comparable<UserInsuranceObject> {
 
     private int userID;
@@ -26,7 +30,8 @@ public class UserInsuranceObject implements Comparable<UserInsuranceObject> {
         this.cardUsed = cardUsed;
     }
 
-    public UserInsuranceObject(int userID, InsuranceObject insurance, LocalDate startDate, LocalDate endDate, boolean autoRenew, String cardUsed) {
+    public UserInsuranceObject(int userID, InsuranceObject insurance, LocalDate startDate, LocalDate endDate,
+                               boolean autoRenew, String cardUsed) {
         this.userID = userID;
         this.insurance = insurance;
         this.startDate = startDate;
@@ -35,42 +40,8 @@ public class UserInsuranceObject implements Comparable<UserInsuranceObject> {
         this.cardUsed = cardUsed;
     }
 
-    public int getUserID() {
-        return userID;
-    }
-
-    public InsuranceObject getInsurance() {
-        return insurance;
-    }
-
-    public LocalDate getStartDate() {
-        return startDate;
-    }
-
-    public LocalDate getEndDate() {
-        return endDate;
-    }
-
-    public boolean isAutoRenew() {
-        return autoRenew;
-    }
-
-    public String getCardUsed() {
-        return cardUsed;
-    }
-
     @Override
     public int compareTo(@NotNull UserInsuranceObject o) {
-        final int res;
-        if (this.insurance.getInsuranceID() > o.getInsurance().getInsuranceID()) {
-            res = 1;
-        }
-        else if (this.insurance.getInsuranceID() < o.getInsurance().getInsuranceID()) {
-            res = -1;
-        }
-        else {
-            res = 0;
-        }
-        return res;
+        return Integer.compare(this.insurance.getInsuranceID(), o.getInsurance().getInsuranceID());
     }
 }

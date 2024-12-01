@@ -1,61 +1,54 @@
 package loans.seeLoansHistory;
 
-import DataObjects.UserObject;
-import loans.dataObject.LoansObject;
-
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableModel;
+
+import org.jetbrains.annotations.NotNull;
+
+import loans.dataObject.LoansObject;
+
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class SeeLoansHistoryView extends JFrame {
-    UserObject user;
+    private static final int WIDTH = 1050;
+    private static final int HEIGHT = 400;
+    private static final int BUTTON_WIDTH = 80;
+    private static final int BUTTON_HEIGHT = 25;
+    private static final int FONT_SIZE = 20;
+    private static final int LOAN_ID = 100000000;
+    private static final String DECIMAL = "%.2f";
 
     public SeeLoansHistoryView(SeeLoansHistoryController controller) {
-        this.user = controller.loggedInUser;
-
         setTitle("Loans History");
-        setSize(1050, 400);
+        setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
         setLayout(new BorderLayout());
 
-        JLabel titleLabel = new JLabel("Loans History", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        final JLabel titleLabel = new JLabel("Loans History", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, FONT_SIZE));
         add(titleLabel, BorderLayout.NORTH);
 
-        String[] columnNames = {"ID", "Amount ($)", "Start Date", "End Date", "Interest Rate (%)", "Repayment ($)", "Card"};
-        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
-        JTable loanTable = new JTable(tableModel);
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-
-        List<LoansObject> loans = controller.loans;
-        int loanID = 100000000;
-        for (LoansObject loan : loans) {
-            String[] rowData = {
-                    String.valueOf(loanID),
-                    String.format("%.2f", loan.getAmount()),
-                    String.valueOf(loan.getStartDate()),
-                    String.valueOf(loan.getEndDate()),
-                    String.format("%.2f", loan.getRate()),
-                    String.format("%.2f", loan.getRepayment()),
-                    loan.getCardUsed(),
-            };
-            tableModel.addRow(rowData);
-            ++loanID;
-        }
-
-        JScrollPane scrollPane = new JScrollPane(loanTable);
+        final JScrollPane scrollPane = getjScrollPane(controller);
         add(scrollPane, BorderLayout.CENTER);
 
-        JPanel backPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        JButton backButton = new JButton("Back");
-        backButton.setPreferredSize(new Dimension(80, 25));
+        final JPanel backPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        final JButton backButton = new JButton("Back");
+        backButton.setPreferredSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -64,5 +57,30 @@ public class SeeLoansHistoryView extends JFrame {
         });
         backPanel.add(backButton);
         add(backPanel, BorderLayout.SOUTH);
+    }
+
+    @NotNull
+    private static JScrollPane getjScrollPane(SeeLoansHistoryController controller) {
+        final String[] columnNames = {"ID", "Amount ($)", "Start Date", "End Date", "Interest Rate (%)",
+            "Repayment ($)", "Card"};
+        final DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
+        final JTable loanTable = new JTable(tableModel);
+
+        final List<LoansObject> loans = controller.getLoans();
+        int loanID = LOAN_ID;
+        for (LoansObject loan : loans) {
+            final String[] rowData = {
+                    String.valueOf(loanID),
+                    String.format(DECIMAL, loan.getAmount()),
+                    String.valueOf(loan.getStartDate()),
+                    String.valueOf(loan.getEndDate()),
+                    String.format(DECIMAL, loan.getRate()),
+                    String.format(DECIMAL, loan.getRepayment()),
+                    loan.getCardUsed(),
+            };
+            tableModel.addRow(rowData);
+            ++loanID;
+        }
+        return new JScrollPane(loanTable);
     }
 }

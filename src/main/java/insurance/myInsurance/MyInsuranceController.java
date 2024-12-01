@@ -1,20 +1,20 @@
 package insurance.myInsurance;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import insurance.dataObject.InsuranceObject;
-import insurance.dataObject.UserInsuranceController;
-import insurance.dataObject.UserInsuranceObject;
-import LogIn.LoggedIn.LoggedInController;
-import LogIn.Welcome.WelcomeController;
-import lombok.Getter;
-
 import java.util.List;
 
+import App.ControllerInterface;
+import DataObjects.UserObject;
+import LogIn.LoggedIn.LoggedInController;
+import LogIn.Welcome.WelcomeController;
+import insurance.dataObject.UserInsuranceController;
+import insurance.dataObject.UserInsuranceObject;
+import lombok.Getter;
+
+@Getter
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class MyInsuranceController implements ControllerInterface {
-    UserObject loggedInUser;
-    @Getter
-    List<UserInsuranceObject> insurances;
+    private final UserObject loggedInUser;
+    private List<UserInsuranceObject> insurances;
     private final MyInsurancePresenter myInsurancePresenter;
     private final WelcomeController welcomeController;
     private final UserInsuranceController userInsuranceController;
@@ -39,7 +39,7 @@ public class MyInsuranceController implements ControllerInterface {
 
     public void goBackToBaseView() {
         myInsurancePresenter.disposeView();
-        LoggedInController controller = new LoggedInController(loggedInUser);
+        final LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();
     }
 

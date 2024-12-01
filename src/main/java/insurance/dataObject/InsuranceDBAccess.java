@@ -7,21 +7,23 @@ import DataAccess.DataAccessInterface;
 import DataObjects.UserObject;
 import DataObjects.UsersController;
 
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class InsuranceDBAccess implements DataAccessInterface<InsuranceObject> {
-    DataAccessController controller = new DataAccessController();
-    UsersController usersController = new UsersController();
+    private static final String INSURANCE_JSON = "\\Insurance.json";
+    private final DataAccessController controller = new DataAccessController();
+    private final UsersController usersController = new UsersController();
 
     @Override
     public UserObject saveData(int userID, InsuranceObject insurance) {
-        UserObject user = usersController.getUser(userID);
-        List<InsuranceObject> insurances = controller.readData("\\Insurance.json", InsuranceObject.class);
+        final UserObject user = usersController.getUser(userID);
+        final List<InsuranceObject> insurances = controller.readData(INSURANCE_JSON, InsuranceObject.class);
         insurances.add(insurance);
-        controller.saveData("\\Insurance.json", insurances, InsuranceObject.class);
+        controller.saveData(INSURANCE_JSON, insurances, InsuranceObject.class);
         return user;
     }
 
     @Override
     public List<InsuranceObject> readData(int userID) {
-        return controller.readData("\\Insurance.json", InsuranceObject.class);
+        return controller.readData(INSURANCE_JSON, InsuranceObject.class);
     }
 }

@@ -3,15 +3,19 @@ package loans.applyLoans;
 import App.ControllerInterface;
 import Card.CardController;
 import DataObjects.UserObject;
-import loans.dataObject.LoansController;
 import LogIn.LoggedIn.LoggedInController;
 import LogIn.Welcome.WelcomeController;
+import loans.dataObject.LoansController;
+import lombok.Getter;
 
+@Getter
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class ApplyLoansController implements ControllerInterface {
-    UserObject loggedInUser;
-    private ApplyLoansPresenter applyLoansPresenter;
-    private WelcomeController welcomeController;
-    private LoansController loansController;
+    private static final int MAX_TERM = 100;
+    private UserObject loggedInUser;
+    private final ApplyLoansPresenter applyLoansPresenter;
+    private final WelcomeController welcomeController;
+    private final LoansController loansController;
 
     public ApplyLoansController(UserObject user) {
         this.loggedInUser = user;
@@ -21,7 +25,7 @@ public class ApplyLoansController implements ControllerInterface {
     }
 
     @Override
-    public void launch(){
+    public void launch() {
         applyLoansPresenter.showView();
     }
 
@@ -31,20 +35,20 @@ public class ApplyLoansController implements ControllerInterface {
     }
 
     public boolean applyLoansTriggered(double amount, int term, double rate, String cardNumber) {
-        CardController cardController = new CardController(loggedInUser);
-        return amount > 0 && term > 0 && term < 100 && rate >= 0 && cardController.getCard(cardNumber) != null;
+        final CardController cardController = new CardController(loggedInUser);
+        return amount > 0 && term > 0 && term < MAX_TERM && rate >= 0 && cardController.getCard(cardNumber) != null;
     }
 
     public void onApplyLoansSuccess(double amount, int term, double rate, String cardUsed) {
         loggedInUser = loansController.addLoans(loggedInUser.getUserID(), amount, term, rate, cardUsed);
         applyLoansPresenter.disposeView();
-        LoggedInController controller = new LoggedInController(loggedInUser);
+        final LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();
     }
 
     public void goBackToBaseView() {
         applyLoansPresenter.disposeView();
-        LoggedInController controller = new LoggedInController(loggedInUser);
+        final LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();
     }
 }

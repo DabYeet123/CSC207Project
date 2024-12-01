@@ -12,10 +12,11 @@ import insurance.dataObject.InsuranceObject;
 import insurance.dataObject.UserInsuranceController;
 import lombok.Getter;
 
+@Getter
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class PurchaseInsuranceController {
 
     private static final int MAX_TERM = 100;
-    @Getter
     private UserObject loggedInUser;
     private final PurchaseInsurancePresenter purchaseInsurancePresenter;
     private final WelcomeController welcomeController;

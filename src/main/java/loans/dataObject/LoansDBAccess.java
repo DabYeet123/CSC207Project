@@ -1,40 +1,44 @@
 package loans.dataObject;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import Card.CardController;
 import DataAccess.DataAccessController;
 import DataAccess.DataAccessInterface;
 import DataObjects.UserObject;
 import DataObjects.UsersController;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class LoansDBAccess implements DataAccessInterface<LoansObject> {
-    DataAccessController controller = new DataAccessController();
-    UsersController usersController = new UsersController();
+    private static final String LOANS_HISTORY_JSON = "\\LoansHistory.json";
+    private final DataAccessController controller = new DataAccessController();
+    private final UsersController usersController = new UsersController();
 
     @Override
     public UserObject saveData(int userID, LoansObject loan) {
         final UserObject user = usersController.getUser(userID);
         final double amount = loan.getAmount();
 
-        final List<LoansObject> loans = controller.readData(user.getFileDirectory() + "\\LoansHistory.json", LoansObject.class);
+        final List<LoansObject> loans = controller.readData(user.getFileDirectory()
+                + LOANS_HISTORY_JSON, LoansObject.class);
         loans.add(loan);
         Collections.sort(loans);
-        controller.saveData(user.getFileDirectory() + "\\LoansHistory.json", loans, LoansObject.class);
+        controller.saveData(user.getFileDirectory() + LOANS_HISTORY_JSON, loans, LoansObject.class);
         updateBalance(user, amount);
         return user;
     }
 
     @Override
     public List<LoansObject> readData(int userID) {
-        UserObject user = usersController.getUser(userID);
-        CardController cardController = new CardController(user);
-        List<LoansObject> loans = controller.readData(user.getFileDirectory() + "\\LoansHistory.json", LoansObject.class);
-        List<LoansObject> newLoans = new ArrayList<>();
-        LocalDate today = LocalDate.now();
+        final UserObject user = usersController.getUser(userID);
+        final CardController cardController = new CardController(user);
+        final List<LoansObject> loans = controller.readData(user.getFileDirectory()
+                + LOANS_HISTORY_JSON, LoansObject.class);
+        final List<LoansObject> newLoans = new ArrayList<>();
+        final LocalDate today = LocalDate.now();
         for (LoansObject loan : loans) {
             if (loan.getEndDate().isBefore(today)) {
                 updateBalance(user, -loan.getRepayment());
@@ -44,7 +48,7 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
                 newLoans.add(loan);
             }
         }
-        controller.saveData(user.getFileDirectory() + "\\LoansHistory.json", newLoans, LoansObject.class);
+        controller.saveData(user.getFileDirectory() + LOANS_HISTORY_JSON, newLoans, LoansObject.class);
         return newLoans;
     }
 

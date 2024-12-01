@@ -11,7 +11,9 @@ import DataAccess.DataAccessInterface;
 import DataObjects.UserObject;
 import DataObjects.UsersController;
 
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceObject> {
+    private static final String INSURANCE_JSON = "\\Insurance.json";
     private final DataAccessController controller = new DataAccessController();
     private final UsersController usersController = new UsersController();
 
@@ -19,7 +21,8 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
     public UserObject saveData(int userID, UserInsuranceObject insurance) {
         final UserObject user = usersController.getUser(userID);
         final CardController cardController = new CardController(user);
-        final List<UserInsuranceObject> insurances = controller.readData(user.getFileDirectory() + "\\Insurance.json", UserInsuranceObject.class);
+        final List<UserInsuranceObject> insurances = controller.readData(user.getFileDirectory()
+                + INSURANCE_JSON, UserInsuranceObject.class);
         insurances.add(insurance);
         Collections.sort(insurances);
         if (!insurance.isAutoRenew()) {
@@ -27,7 +30,7 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
             updateBalance(user, -amount);
             cardController.updateData(userID, insurance.getCardUsed(), amount);
         }
-        controller.saveData(user.getFileDirectory() + "\\Insurance.json", insurances, UserInsuranceObject.class);
+        controller.saveData(user.getFileDirectory() + INSURANCE_JSON, insurances, UserInsuranceObject.class);
         return user;
     }
 
@@ -35,7 +38,8 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
     public List<UserInsuranceObject> readData(int userID) {
         final UserObject user = usersController.getUser(userID);
         final CardController cardController = new CardController(user);
-        final List<UserInsuranceObject> insurances = controller.readData(user.getFileDirectory() + "\\Insurance.json", UserInsuranceObject.class);
+        final List<UserInsuranceObject> insurances = controller.readData(user.getFileDirectory()
+                + INSURANCE_JSON, UserInsuranceObject.class);
         final List<UserInsuranceObject> newInsurances = new LinkedList<>();
         final LocalDate today = LocalDate.now();
         for (UserInsuranceObject insurance : insurances) {
@@ -51,7 +55,7 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
                 newInsurances.add(insurance);
             }
         }
-        controller.saveData(user.getFileDirectory() + "\\Insurance.json", newInsurances, UserInsuranceObject.class);
+        controller.saveData(user.getFileDirectory() + INSURANCE_JSON, newInsurances, UserInsuranceObject.class);
         return newInsurances;
     }
 
@@ -67,7 +71,7 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
                 newInsurances.add(insurance);
             }
         }
-        controller.saveData(user.getFileDirectory() + "\\Insurance.json", newInsurances, UserInsuranceObject.class);
+        controller.saveData(user.getFileDirectory() + INSURANCE_JSON, newInsurances, UserInsuranceObject.class);
     }
 
     private void updateBalance(UserObject user, double amount) {
@@ -77,12 +81,14 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
 
     private UserInsuranceObject renew(UserInsuranceObject insurance) {
         final LocalDate newEndDate = insurance.getEndDate().plusYears(1);
-        return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(), insurance.getStartDate(), newEndDate, insurance.isAutoRenew(), insurance.getCardUsed());
+        return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(),
+                insurance.getStartDate(), newEndDate, insurance.isAutoRenew(), insurance.getCardUsed());
     }
 
     private UserInsuranceObject cancelAutoRenew(UserInsuranceObject insurance) {
         final boolean isAutoRenew = !insurance.isAutoRenew();
-        return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(), insurance.getStartDate(), insurance.getEndDate(), isAutoRenew, insurance.getCardUsed());
+        return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(),
+                insurance.getStartDate(), insurance.getEndDate(), isAutoRenew, insurance.getCardUsed());
     }
 
     private int getTerm(UserInsuranceObject insurance) {

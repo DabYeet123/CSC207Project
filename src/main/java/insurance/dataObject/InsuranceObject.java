@@ -1,5 +1,9 @@
 package insurance.dataObject;
 
+import lombok.Getter;
+
+@Getter
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class InsuranceObject {
 
     private String type;
@@ -20,23 +24,4 @@ public class InsuranceObject {
         this.insuranceName = insuranceName;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public double getPremium() {
-        return premium;
-    }
-
-    public int getInsuranceID() {
-        return insuranceID;
-    }
-
-    public String getPolicyDetails() {
-        return policyDetails;
-    }
-
-    public String getInsuranceName() {
-        return insuranceName;
-    }
 }

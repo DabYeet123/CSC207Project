@@ -4,13 +4,15 @@ import java.util.List;
 
 import DataObjects.UserObject;
 
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class InsuranceController {
-    private InsuranceDBAccess insuranceDBAccess = new InsuranceDBAccess();
+    private final InsuranceDBAccess insuranceDBAccess = new InsuranceDBAccess();
 
-    public UserObject addInsurance(int userID, String type, double premium, int insuranceID, String policyDetails, String insuranceName) {
-        InsuranceObject newInsurance = new InsuranceObject(type, premium, insuranceID, policyDetails, insuranceName);
-        UserObject user = insuranceDBAccess.saveData(userID, newInsurance);
-        return user;
+    public UserObject addInsurance(int userID, String type, double premium, int insuranceID, String policyDetails,
+                                   String insuranceName) {
+        final InsuranceObject newInsurance = new InsuranceObject(type, premium, insuranceID, policyDetails,
+                insuranceName);
+        return insuranceDBAccess.saveData(userID, newInsurance);
     }
 
     public List<InsuranceObject> getAllInsurance() {

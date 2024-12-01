@@ -34,7 +34,7 @@ public class MyInsuranceView extends JFrame {
     private final UserObject user;
 
     public MyInsuranceView(MyInsuranceController controller) {
-        this.user = controller.loggedInUser;
+        this.user = controller.getLoggedInUser();
         setTitle("My Insurance Policies");
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
