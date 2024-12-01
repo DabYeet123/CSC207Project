@@ -1,5 +1,6 @@
-package Brokerage;
+package brokerage.app;
 
+import brokerage.StockApiConfig;
 import com.crazzyghost.alphavantage.AlphaVantage;
 import com.crazzyghost.alphavantage.parameters.Interval;
 import com.crazzyghost.alphavantage.parameters.OutputSize;
@@ -13,7 +14,7 @@ public class FetchStockDataUseCase {
 
     public static List<StockUnit> execute(String stockSymbol) {
 
-        StockAPIConfig.initialize();
+        StockApiConfig.initialize();
 
         TimeSeriesResponse response = AlphaVantage.api()
                 .timeSeries()
