@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.29 renew for refactor with the reorganization">
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +42,12 @@
     &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DabYeet123/CSC207Project.git",
-    "accountId": "a7fb78d8-006c-48c3-a6c9-96666325973c"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
+    &quot;accountId&quot;: &quot;a7fb78d8-006c-48c3-a6c9-96666325973c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -53,75 +56,76 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2p2kRfzUgoATYvv5vUGgBKtn1B3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.APIget.executor": "Run",
-    "Application.CardPresenter.executor": "Run",
-    "Application.CardView.executor": "Run",
-    "Application.CurrencyExchangePresenter.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainLauncher.executor": "Run",
-    "Application.WelcomePresenter.executor": "Run",
-    "JUnit.All in homework-5.executor": "Run",
-    "JUnit.Card in homework-5.executor": "Coverage",
-    "JUnit.CardTest.apiTest.executor": "Run",
-    "JUnit.CardTest.checkIdRepeat.executor": "Run",
-    "JUnit.CardTest.executor": "Run",
-    "JUnit.CardTest.failureCardDoesNotExistTest.executor": "Run",
-    "JUnit.CardTest.failureSaveDuplicateCardTest.executor": "Run",
-    "JUnit.CardTest.getDifferentFinalNumTest.executor": "Run",
-    "JUnit.CardTest.getIdLoop.executor": "Run",
-    "JUnit.CardTest.noCardGetCard.executor": "Run",
-    "JUnit.CardTest.noCardIndex.executor": "Run",
-    "JUnit.CardTest.noindexFound.executor": "Run",
-    "JUnit.CardTest.successCardEntity.executor": "Run",
-    "JUnit.CardTest.successCardExistsTest.executor": "Run",
-    "JUnit.CardTest.successDeleteCardTest.executor": "Coverage",
-    "JUnit.CardTest.successSaveDataTest.executor": "Run",
-    "JUnit.CardTest.successUpdate.executor": "Run",
-    "JUnit.CardTest.testCaseLength1.executor": "Run",
-    "JUnit.CardTest.testNewIdNameWithSpaces.executor": "Run",
-    "JUnit.CardViewTest.executor": "Run",
-    "JUnit.CardViewTest.testAdd10Cards.executor": "Run",
-    "JUnit.CardViewTest.testAddCardSuccess.executor": "Run",
-    "JUnit.CardViewTest.testAddCard_Success.executor": "Run",
-    "JUnit.CardViewTest.testBack.executor": "Coverage",
-    "JUnit.CardViewTest.testDeleteCard.executor": "Run",
-    "JUnit.CardViewTest.testDeleteCardFail.executor": "Run",
-    "JUnit.CardViewTest.testLaunchAndBack.executor": "Run",
-    "JUnit.Exchange in homework-5.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.executor": "Coverage",
-    "JUnit.ExchangeCurrencyTest.failureConnectionToApiTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.failureInvalidCurrencyCodeTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.failureInvalidInputAmountTest.executor": "Coverage",
-    "JUnit.ExchangeCurrencyTest.failureMissingFromCurrencyTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.successCurrencyExchangeTest.executor": "Run",
-    "JUnit.ExchangeCurrencyTest.successInputAmountTest.executor": "Coverage",
-    "JUnit.ExchangeCurrencyTest.viewTestForButtonExchange.executor": "Run",
-    "JUnit.cardViewTest.executor": "Coverage",
-    "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Yue-Zheng",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/郑Y/IdeaProjects/CSC207Project/mystyle.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.APIget.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CardPresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CardView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CurrencyExchangePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WelcomePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in homework-5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Card in homework-5.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CardTest.apiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.checkIdRepeat.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.failureCardDoesNotExistTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.failureSaveDuplicateCardTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.getDifferentFinalNumTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.getIdLoop.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.noCardGetCard.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.noCardIndex.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.noindexFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.successCardEntity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.successCardExistsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.successDeleteCardTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CardTest.successSaveDataTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.successUpdate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.testCaseLength1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardTest.testNewIdNameWithSpaces.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testAdd10Cards.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testAddCardSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testAddCard_Success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testBack.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CardViewTest.testDeleteCard.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testDeleteCardFail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CardViewTest.testLaunchAndBack.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Exchange in homework-5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.failureConnectionToApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.failureInvalidCurrencyCodeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.failureInvalidInputAmountTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.failureMissingFromCurrencyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.successCurrencyExchangeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.successInputAmountTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ExchangeCurrencyTest.viewTestForButtonExchange.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.cardViewTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.cardandexchange in homework-5 (1).executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Yue-Zheng&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/郑Y/IdeaProjects/CSC207Project/mystyle.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.infernus.idea.checkstyle.CheckStyleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\Loans\SeeLoansHistory" />
@@ -215,10 +219,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainLauncher" />
-        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
         <item itemvalue="JUnit.Exchange in homework-5" />
-        <item itemvalue="JUnit.cardandexchange in homework-5" />
         <item itemvalue="JUnit.CardViewTest" />
+        <item itemvalue="JUnit.cardandexchange in homework-5" />
+        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -472,7 +476,6 @@
     <MESSAGE value="11.23 change the back to main button and add the button of exchange currency" />
     <MESSAGE value="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)" />
     <MESSAGE value="renew of some issue of card and make 5 test for card controller and DBA" />
-    <MESSAGE value="1" />
     <MESSAGE value="Add the override of interface of Controller and Presenter" />
     <MESSAGE value="Write for Card and ExchangeCurrency Tests" />
     <MESSAGE value="update for Card Test with Entity" />
@@ -480,7 +483,8 @@
     <MESSAGE value="Renew of Yue Zheng's Story" />
     <MESSAGE value="Renew of refactor for Card and Exchange parts" />
     <MESSAGE value="11.29 renew for refactor with the reorganization" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.29 renew for refactor with the reorganization" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
