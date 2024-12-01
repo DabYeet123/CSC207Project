@@ -4,31 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Renew of refactor for Card and Exchange parts">
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="11.29 renew for refactor with the reorganization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/dataObject/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/dataAccess/CardDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/card/CardMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CardPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/view/CardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/APIget.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/exchange/CurrencyExchangeApiConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CurrencyExchangeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeDataUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/exchange/CurrencyExchangeDataUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CurrencyExchangePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardandexchange/view/CurrencyExchangeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/SeeTransactionHistory/SeeTransactionHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Transaction/SeeTransactionHistory/SeeTransactionHistoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/CardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Card/CardViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/CardViewTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Exchange/ExchangeCurrencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/ExchangeCurrencyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +39,12 @@
     &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
-    &quot;accountId&quot;: &quot;6ad2bf27-20b8-4fd9-bcc9-e62e48d3863d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DabYeet123/CSC207Project.git",
+    "accountId": "a7fb78d8-006c-48c3-a6c9-96666325973c"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -269,7 +247,7 @@
       <workItem from="1732588516847" duration="10689000" />
       <workItem from="1732662312623" duration="23629000" />
       <workItem from="1732935818479" duration="109000" />
-      <workItem from="1732935936292" duration="4158000" />
+      <workItem from="1732935936292" duration="5792000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -463,7 +441,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732748911308</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="11.29 renew for refactor with the reorganization">
+      <option name="closed" value="true" />
+      <created>1732940209744</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732940209744</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +479,8 @@
     <MESSAGE value="update for Card Test and Exchange Test, make the coverage to 100%&#10;Remind: clean the useless user before run the Test, it will creat a lot of user to test each method&#10;clean the file store with the data of test each time to make test renew for each time." />
     <MESSAGE value="Renew of Yue Zheng's Story" />
     <MESSAGE value="Renew of refactor for Card and Exchange parts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renew of refactor for Card and Exchange parts" />
+    <MESSAGE value="11.29 renew for refactor with the reorganization" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.29 renew for refactor with the reorganization" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
