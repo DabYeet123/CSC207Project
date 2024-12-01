@@ -3,11 +3,11 @@ package cardandexchange.dataAccess;
 import java.util.List;
 import java.util.Objects;
 
-import DataAccess.DataAccessController;
-import DataAccess.DataAccessInterface;
-import DataObjects.UserObject;
-import DataObjects.UsersController;
 import cardandexchange.dataObject.Card;
+import dataaccess.DataAccessController;
+import dataaccess.DataAccessInterface;
+import userdataobject.UserObject;
+import userdataobject.UsersController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CardDBAccess implements DataAccessInterface<Card> {

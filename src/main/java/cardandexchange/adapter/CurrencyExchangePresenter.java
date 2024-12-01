@@ -1,8 +1,8 @@
 package cardandexchange.adapter;
 
-import App.PresenterInterface;
-import transaction.MakeTransaction.MakeTransactionController;
+import app.PresenterInterface;
 import cardandexchange.view.CurrencyExchangeView;
+import transaction.makeTransaction.MakeTransactionController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CurrencyExchangePresenter implements PresenterInterface<MakeTransactionController> {

@@ -1,9 +1,9 @@
 package cardandexchange;
 
-import DataObjects.UserObject;
-import DataObjects.UsersDBAccess;
 import cardandexchange.adapter.CurrencyExchangeController;
 import cardandexchange.view.CurrencyExchangeView;
+import userdataobject.UserObject;
+import userdataobject.UsersDBAccess;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

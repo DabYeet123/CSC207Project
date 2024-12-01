@@ -1,7 +1,7 @@
 package cardandexchange;
 
-import DataObjects.UserObject;
-import DataObjects.UsersDBAccess;
+import userdataobject.UserObject;
+import userdataobject.UsersDBAccess;
 import cardandexchange.adapter.CardController;
 import cardandexchange.view.CardView;
 import org.junit.jupiter.api.BeforeEach;

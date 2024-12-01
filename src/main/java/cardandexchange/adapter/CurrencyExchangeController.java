@@ -1,9 +1,9 @@
 package cardandexchange.adapter;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
+import app.ControllerInterface;
+import login.loggedin.LoggedInController;
 import lombok.Getter;
+import userdataobject.UserObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CurrencyExchangeController implements ControllerInterface {

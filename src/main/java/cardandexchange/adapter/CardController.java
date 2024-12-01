@@ -3,12 +3,12 @@ package cardandexchange.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
+import app.ControllerInterface;
 import cardandexchange.dataAccess.CardDBAccess;
 import cardandexchange.dataObject.Card;
+import login.loggedin.LoggedInController;
 import lombok.Getter;
+import userdataobject.UserObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CardController implements ControllerInterface {

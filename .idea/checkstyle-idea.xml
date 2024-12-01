@@ -7,9 +7,6 @@
     <option name="activeLocationIds">
       <option value="c72ee69e-3a70-4684-9c99-bdb9779f999d" />
     </option>
-    <option name="activeLocationIds">
-      <option value="fed26041-10c1-4dd5-8aa9-307f0d1feeee" />
-    </option>
     <option name="locations">
       <list>
         <ConfigurationLocation id="bundled-sun-checks" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>

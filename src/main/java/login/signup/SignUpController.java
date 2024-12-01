@@ -1,10 +1,10 @@
 package login.signup;
 
 import app.ControllerInterface;
-import userdataobject.UserObject;
-import userdataobject.UsersController;
 import login.loggedin.LoggedInController;
 import login.welcome.WelcomeController;
+import userdataobject.UserObject;
+import userdataobject.UsersController;
 
 /**
  * Controller class for the Sign-Up process.
