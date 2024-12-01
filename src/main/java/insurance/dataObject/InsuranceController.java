@@ -2,8 +2,6 @@ package insurance.dataObject;
 
 import java.util.List;
 
-import DataObjects.UserObject;
-
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class InsuranceController {
     private final InsuranceDBAccess insuranceDBAccess = new InsuranceDBAccess();

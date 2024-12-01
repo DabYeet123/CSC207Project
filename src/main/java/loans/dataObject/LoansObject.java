@@ -33,41 +33,8 @@ public class LoansObject implements Comparable<LoansObject> {
     }
 
     @Override
-    public int compareTo(@NotNull LoansObject anotherLoan) {
-        return sortByEndDate(anotherLoan);
+    public int compareTo(@NotNull LoansObject o) {
+        return LoansMethods.sortByEndDate(this, o);
     }
 
-    public int sortByEndDate(LoansObject anotherLoan) {
-        final int res;
-        if (this.endDate.isAfter(anotherLoan.endDate)) {
-            res = 1;
-        }
-        else if (this.endDate.isBefore(anotherLoan.endDate)) {
-            res = -1;
-        }
-        else {
-            res = sortByStartDate(anotherLoan);
-        }
-        return res;
-    }
-
-    public int sortByStartDate(LoansObject anotherLoan) {
-        final int res;
-        if (this.startDate.isAfter(anotherLoan.startDate)) {
-            res = 1;
-        }
-        else if (this.startDate.isBefore(anotherLoan.startDate)) {
-            res = -1;
-        }
-        else {
-            res = sortByRepayment(anotherLoan);
-        }
-        return res;
-    }
-
-    public int sortByRepayment(LoansObject anotherLoan) {
-        final Double x = this.repayment;
-        final Double y = anotherLoan.repayment;
-        return x.compareTo(y);
-    }
 }

@@ -59,29 +59,7 @@ public class ApplyLoansView extends JFrame {
         confirmButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    final String cardNumber = cardField.getText();
-                    final Double amount = (Double) Double.parseDouble(amountField.getText());
-                    final int term = Integer.parseInt(termField.getText());
-                    final Double rate = (Double) Double.parseDouble(interestRateField.getText());
-                    final boolean success = controller.applyLoansTriggered(amount, term, rate, cardNumber);
-                    if (success) {
-                        JOptionPane.showConfirmDialog(ApplyLoansView.this,
-                                "Are you sure to apply the loan?",
-                                "Confirmation", JOptionPane.YES_NO_OPTION);
-                        controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
-                    }
-                    else {
-                        JOptionPane.showMessageDialog(ApplyLoansView.this,
-                                "Please fill all the fields correctly.", "Invalid Selection",
-                                JOptionPane.WARNING_MESSAGE);
-                    }
-                }
-                catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(ApplyLoansView.this,
-                            "Amount, term and rate must be numbers.\\Card number must be valid.",
-                            "Invalid Selection", JOptionPane.WARNING_MESSAGE);
-                }
+                confirm(cardField, amountField, termField, interestRateField, controller);
             }
         });
 
@@ -91,5 +69,35 @@ public class ApplyLoansView extends JFrame {
                 controller.goBackToBaseView();
             }
         });
+    }
+
+    private void confirm(JTextField cardField, JTextField amountField, JTextField termField,
+                         JTextField interestRateField, ApplyLoansController controller) {
+        try {
+            final String cardNumber = cardField.getText();
+            final Double amount = (Double) Double.parseDouble(amountField.getText());
+            final int term = Integer.parseInt(termField.getText());
+            final Double rate = (Double) Double.parseDouble(interestRateField.getText());
+            final boolean success = controller.applyLoansTriggered(amount, term, rate, cardNumber);
+            if (success) {
+                JOptionPane.showConfirmDialog(ApplyLoansView.this,
+                        "Are you sure to apply the loan?",
+                        "Confirmation", JOptionPane.YES_NO_OPTION);
+                controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
+                JOptionPane.showMessageDialog(ApplyLoansView.this,
+                        "You have successfully applied the loan.",
+                        "Success", JOptionPane.PLAIN_MESSAGE);
+            }
+            else {
+                JOptionPane.showMessageDialog(ApplyLoansView.this,
+                        "Please fill all the fields correctly.", "Invalid Selection",
+                        JOptionPane.WARNING_MESSAGE);
+            }
+        }
+        catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(ApplyLoansView.this,
+                    "Amount, term and rate must be numbers.\\Card number must be valid.",
+                    "Invalid Selection", JOptionPane.WARNING_MESSAGE);
+        }
     }
 }
