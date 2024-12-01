@@ -2,7 +2,7 @@ package login.loggedin;
 
 import ATM.ATMMap.ATMMapController;
 import app.ControllerInterface;
-import Brokerage.BrokerageController;
+import brokerage.BrokerageController;
 import Card.CardController;
 import Exchange.CurrencyExchangeController;
 import House.HouseMap.HouseMapController;

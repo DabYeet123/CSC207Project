@@ -1,5 +1,12 @@
-package Brokerage;
+package brokerage;
+
 import app.PresenterInterface;
+import brokerage.view.BrokerageView;
+
+/**
+ * Handles the presentation layer for the brokerage system, managing the interaction
+ * between the controller and the view.
+ */
 
 public class BrokeragePresenter implements PresenterInterface<BrokerageController> {
     private final BrokerageView brokerageView;
@@ -9,12 +16,12 @@ public class BrokeragePresenter implements PresenterInterface<BrokerageControlle
     }
 
     @Override
-    public void showView(){
+    public void showView() {
         brokerageView.setVisible(true);
     }
 
     @Override
-    public void disposeView(){
+    public void disposeView() {
         brokerageView.setVisible(false);
         brokerageView.dispose();
     }

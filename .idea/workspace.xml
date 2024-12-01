@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Refactor Checkstyle">
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Added Readme">
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/data_access/BrokerageDBAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/entity/Stock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/view/BrokerageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageDBAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokeragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokeragePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/FetchStockDataUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/app/FetchStockDataUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/StockAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/StockApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/StockObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,36 +59,43 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2p2kRfzUgoATYvv5vUGgBKtn1B3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CardPresenter.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CardView.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CurrencyExchangePresenter.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WelcomePresenter.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.homework-5 [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;mattea.busato&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/mystyle.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.infernus.idea.checkstyle.CheckStyleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CardPresenter.executor": "Run",
+    "Application.CardView.executor": "Run",
+    "Application.CurrencyExchangePresenter.executor": "Run",
+    "Application.MainLauncher.executor": "Run",
+    "Application.WelcomePresenter.executor": "Run",
+    "Maven.homework-5 [clean,install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "stefano.mauloni",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/mystyle.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.View.CardView" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainLauncher">
@@ -131,6 +150,8 @@
       <workItem from="1732663320438" duration="1370000" />
       <workItem from="1732726984492" duration="27000" />
       <workItem from="1732738679000" duration="757000" />
+      <workItem from="1732905967206" duration="2823000" />
+      <workItem from="1732997667400" duration="10987000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -236,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732686939673</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added Readme">
+      <option name="closed" value="true" />
+      <created>1733008780455</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733008780455</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +288,7 @@
     <MESSAGE value="11.23 change amount is double" />
     <MESSAGE value="Refactor Transactions + CheckStyle" />
     <MESSAGE value="Refactor Checkstyle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor Checkstyle" />
+    <MESSAGE value="Added Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Readme" />
   </component>
 </project>
