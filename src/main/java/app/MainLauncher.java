@@ -58,8 +58,8 @@ public class MainLauncher {
         final LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, welcomeViewModel, loggedinViewModel,
                 loginViewModel, userDataAccessObject);
         views.add(loginView, loginView.getViewName());
-        final SignupView signupView = SignupUseCaseFactory.create(viewManagerModel, welcomeViewModel, signupViewModel,
-                userDataAccessObject);
+        final SignupView signupView = SignupUseCaseFactory.create(viewManagerModel, welcomeViewModel, loggedinViewModel,
+                signupViewModel, userDataAccessObject);
         views.add(signupView, signupView.getViewName());
         final LoggedinView loggedinView = LoggedinUseCaseFactory.create(viewManagerModel, welcomeViewModel,
                 makeTransactionViewModel, seeTransactionsViewModel, loggedinViewModel);

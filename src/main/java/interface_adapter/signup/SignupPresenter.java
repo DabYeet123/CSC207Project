@@ -1,6 +1,8 @@
 package interface_adapter.signup;
 
 import interface_adapter.ViewManagerModel;
+import interface_adapter.loggedin.LoggedinState;
+import interface_adapter.loggedin.LoggedinViewModel;
 import interface_adapter.welcome.WelcomeViewModel;
 import use_case.signup.SignupOutputBoundary;
 import use_case.signup.SignupOutputData;
@@ -11,14 +13,16 @@ import use_case.signup.SignupOutputData;
 public class SignupPresenter implements SignupOutputBoundary {
     private final SignupViewModel signupViewModel;
     private final WelcomeViewModel welcomeViewModel;
-    // private final LoggedInViewModel loggedInViewModel;
+    private final LoggedinViewModel loggedinViewModel;
     private final ViewManagerModel viewManagerModel;
 
     public SignupPresenter(ViewManagerModel viewManagerModel,
                            WelcomeViewModel welcomeViewModel,
+                           LoggedinViewModel loggedinViewModel,
                            SignupViewModel signupViewModel) {
         this.viewManagerModel = viewManagerModel;
         this.welcomeViewModel = welcomeViewModel;
+        this.loggedinViewModel = loggedinViewModel;
         this.signupViewModel = signupViewModel;
     }
 
@@ -26,15 +30,13 @@ public class SignupPresenter implements SignupOutputBoundary {
     public void prepareSuccessView(SignupOutputData response) {
         // On success, switch to the logged in view.
 
-        /**
-         final LoggedInState loggedInState = loggedInViewModel.getState();
-         loggedInState.setUserId(response.getUserId());
-         this.loggedInViewModel.setState(loggedInState);
-         this.loggedInViewModel.firePropertyChanged();
+        final LoggedinState loggedInState = loggedinViewModel.getState();
+        loggedInState.setUser(response.getUser());
+        this.loggedinViewModel.setState(loggedInState);
+        this.loggedinViewModel.firePropertyChanged();
 
-         this.viewManagerModel.setState(loggedInViewModel.getViewName());
-         this.viewManagerModel.firePropertyChanged();
-         */
+        viewManagerModel.setState(loggedinViewModel.getViewName());
+        viewManagerModel.firePropertyChanged();
     }
 
     @Override

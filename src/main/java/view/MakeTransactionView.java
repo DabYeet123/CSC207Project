@@ -25,10 +25,8 @@ public class MakeTransactionView extends JPanel implements ActionListener, Prope
     private static final int VERTICAL_GAP = 10;
     private static final int FRAME_WIDTH = 400;
     private static final int FRAME_HEIGHT = 400;
-    private static final int BUTTON_WIDTH = 80;
-    private static final int BUTTON_HEIGHT = 25;
 
-    private final String viewName = "maketransactions";
+    private final String viewName = "maketransaction";
     private final MakeTransactionViewModel makeTransactionViewModel;
     private final MakeTransactionController makeTransactionController;
 
@@ -72,6 +70,7 @@ public class MakeTransactionView extends JPanel implements ActionListener, Prope
 
         final JPanel buttons = new JPanel();
         makeTransactionButton = new JButton("Process Transaction");
+        buttons.add(makeTransactionButton);
         cancel = new JButton("Cancel");
         buttons.add(cancel);
 

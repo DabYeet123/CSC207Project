@@ -136,7 +136,7 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
     @Override
     public void actionPerformed(ActionEvent evt) {
         System.out.println("Click " + evt.getActionCommand());
-        if ("cancel".equals(evt.getActionCommand())) {
+        if ("Cancel".equals(evt.getActionCommand())) {
             loginController.switchToWelcomeView();
         }
     }

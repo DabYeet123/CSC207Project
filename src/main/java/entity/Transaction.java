@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
  * Represents a transaction object in the system.
  */
 public class Transaction {
-    private int transactionID;
+    private String transactionID;
     private int senderID;
     private int receiverID;
     private String cardUsed;
@@ -16,7 +16,7 @@ public class Transaction {
     public Transaction() {
     }
 
-    public Transaction(int transactionID, int senderID, int receiverID,
+    public Transaction(String transactionID, int senderID, int receiverID,
                              String cardUsed, double amount, LocalDateTime timeStamp) {
         this.transactionID = transactionID;
         this.senderID = senderID;
@@ -26,7 +26,7 @@ public class Transaction {
         this.timeStamp = timeStamp;
     }
 
-    public int getTransactionID() {
+    public String getTransactionID() {
         return transactionID;
     }
 

@@ -2,6 +2,7 @@ package app;
 
 import entity.UserFactory;
 import interface_adapter.ViewManagerModel;
+import interface_adapter.loggedin.LoggedinViewModel;
 import interface_adapter.signup.SignupController;
 import interface_adapter.signup.SignupPresenter;
 import interface_adapter.signup.SignupViewModel;
@@ -26,28 +27,31 @@ public final class SignupUseCaseFactory {
      * Factory function for creating the SignupView.
      * @param viewManagerModel the ViewManagerModel to inject into the SignupView
      * @param welcomeViewModel the LoginViewModel to inject into the LoginView
+     * @param loggedinViewModel the SignupViewModel to inject into the SignupView
      * @param signupViewModel the SignupViewModel to inject into the SignupView
      * @param userDataAccessObject the SignupUserDataAccessInterface to inject into the SignupView
      * @return the LoginView created for the provided input classes
      */
     public static SignupView create(
             ViewManagerModel viewManagerModel, WelcomeViewModel welcomeViewModel,
-            SignupViewModel signupViewModel, SignupUserDataAccessInterface userDataAccessObject) {
+            LoggedinViewModel loggedinViewModel, SignupViewModel signupViewModel,
+            SignupUserDataAccessInterface userDataAccessObject) {
 
         final SignupController signupController = createUserSignupUseCase(viewManagerModel, welcomeViewModel,
-                signupViewModel, userDataAccessObject);
+                loggedinViewModel, signupViewModel, userDataAccessObject);
         return new SignupView(signupController, signupViewModel);
 
     }
 
     private static SignupController createUserSignupUseCase(ViewManagerModel viewManagerModel,
                                                             WelcomeViewModel welcomeViewModel,
+                                                            LoggedinViewModel loggedinViewModel,
                                                             SignupViewModel signupViewModel,
                                                             SignupUserDataAccessInterface userDataAccessObject) {
 
         // Notice how we pass this method's parameters to the Presenter.
         final SignupOutputBoundary signupOutputBoundary = new SignupPresenter(viewManagerModel, welcomeViewModel,
-                signupViewModel);
+                loggedinViewModel, signupViewModel);
 
         final UserFactory userFactory = new UserFactory();
 

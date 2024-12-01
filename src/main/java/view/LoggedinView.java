@@ -116,7 +116,7 @@ public class LoggedinView extends JPanel implements ActionListener, PropertyChan
     @Override
     public void actionPerformed(ActionEvent evt) {
         System.out.println("Click " + evt.getActionCommand());
-        if ("cancel".equals(evt.getActionCommand())) {
+        if ("Log Out".equals(evt.getActionCommand())) {
             loggedinController.switchToWelcomeView();
         }
     }

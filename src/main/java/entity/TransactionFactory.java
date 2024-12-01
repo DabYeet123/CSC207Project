@@ -19,7 +19,7 @@ public class TransactionFactory {
                        String cardUsed, double amount) {
 
         final LocalDateTime timeStamp = LocalDateTime.now();
-        final int transactionID = Integer.parseInt(generateTransactionId(senderID, receiverID, timeStamp));
+        final String transactionID = generateTransactionId(senderID, receiverID, timeStamp);
 
         return new Transaction(transactionID, senderID, receiverID, cardUsed, amount, timeStamp);
     }
