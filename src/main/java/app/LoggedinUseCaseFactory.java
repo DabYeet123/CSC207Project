@@ -37,6 +37,7 @@ public final class LoggedinUseCaseFactory {
 
         final LoggedinController loggedinController = createLoggedinUseCase(viewManagerModel, makeTransactionViewModel,
                 seeTransactionsViewModel, welcomeViewModel, loggedinViewModel);
+
         return new LoggedinView(loggedinController, loggedinViewModel);
     }
 
@@ -45,8 +46,8 @@ public final class LoggedinUseCaseFactory {
                                                             SeeTransactionsViewModel seeTransactionsViewModel,
                                                             WelcomeViewModel welcomeViewModel,
                                                             LoggedinViewModel loggedinViewModel) {
-        final LoggedinOutputBoundary loggedinOutputBoundary = new LoggedinPresenter(viewManagerModel, makeTransactionViewModel,
-                seeTransactionsViewModel, welcomeViewModel, loggedinViewModel);
+        final LoggedinOutputBoundary loggedinOutputBoundary = new LoggedinPresenter(viewManagerModel,
+                makeTransactionViewModel, seeTransactionsViewModel, welcomeViewModel, loggedinViewModel);
 
         final LoggedinInputBoundary loggedinInputBoundary = new LoggedinInteractor(loggedinOutputBoundary);
 

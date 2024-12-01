@@ -29,6 +29,7 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
 
     private final String viewName = "login";
     private final LoginViewModel loginViewModel;
+    private final LoginController loginController;
 
     private final JTextField userIdInputField = new JTextField(15);
     private final JLabel usernameErrorField = new JLabel();
@@ -38,7 +39,6 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
 
     private final JButton logIn;
     private final JButton cancel;
-    private final LoginController loginController;
 
     public LoginView(LoginViewModel loginViewModel, LoginController controller) {
         setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
@@ -55,9 +55,9 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
                 new JLabel("Password"), passwordInputField);
 
         final JPanel buttons = new JPanel();
-        logIn = new JButton("log in");
+        logIn = new JButton("Log in");
         buttons.add(logIn);
-        cancel = new JButton("cancel");
+        cancel = new JButton("Cancel");
         buttons.add(cancel);
 
         logIn.addActionListener(
@@ -133,10 +133,7 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
         this.add(buttons);
     }
 
-    /**
-     * React to a button click that results in evt.
-     * @param evt the ActionEvent to react to
-     */
+    @Override
     public void actionPerformed(ActionEvent evt) {
         System.out.println("Click " + evt.getActionCommand());
         if ("cancel".equals(evt.getActionCommand())) {

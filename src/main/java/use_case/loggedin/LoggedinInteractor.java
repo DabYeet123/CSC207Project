@@ -1,5 +1,7 @@
 package use_case.loggedin;
 
+import entity.User;
+
 /**
  * The LoggedIn Interactor.
  */
@@ -11,13 +13,13 @@ public class LoggedinInteractor implements LoggedinInputBoundary {
     }
 
     @Override
-    public void switchToMakeTransactionView() {
-        loggedinOutputBoundary.switchToMakeTransactionView();
+    public void switchToMakeTransactionView(User user) {
+        loggedinOutputBoundary.switchToMakeTransactionView(user);
     }
 
     @Override
-    public void switchToSeeTransactionHistoryView() {
-        loggedinOutputBoundary.switchToSeeTransactionHistoryView();
+    public void switchToSeeTransactionHistoryView(User user) {
+        loggedinOutputBoundary.switchToSeeTransactionHistoryView(user);
     }
 
     @Override

@@ -5,23 +5,30 @@ import java.util.List;
 
 import entity.Transaction;
 import entity.User;
+import use_case.maketransaction.MakeTransactionDataAccessInterface;
 
 /**
  * This class provides methods for accessing and updating transaction data in the system. It is responsible
  * for saving transaction data to a file, reading transaction data from a file, and updating user balances
  * after a transaction is processed.
  */
-public class DBTransactionDataAccessObject implements DBDataAccessInterface<Transaction> {
+public class DBTransactionDataAccessObject implements MakeTransactionDataAccessInterface {
     private static final String DIRECTORY = "TransactionHistory.json";
     private DBDataAccessObject controller = new DBDataAccessObject();
     private DBUserDataAccessObject usersController = new DBUserDataAccessObject();
 
+    public DBTransactionDataAccessObject() {
+    }
+
+    public List<Transaction> readData(int userID) {
+        final User user = usersController.readDataPoint(userID);
+        return controller.readData(user.getFileDirectory() + FileSystems.getDefault().getSeparator()
+                + DIRECTORY, Transaction.class);
+    }
+
     @Override
-    public User saveData(int userID, Transaction transaction) {
-        final int senderID = userID;
-        final int receiverID = transaction.getReceiverID();
-        User sender = usersController.readDataPoint(senderID);
-        final double amount = transaction.getAmount();
+    public User save(Transaction transaction) {
+        User sender = usersController.readDataPoint(transaction.getSenderID());
 
         final List<Transaction> transactions = controller.readData(sender.getFileDirectory()
                 + FileSystems.getDefault().getSeparator() + DIRECTORY, Transaction.class);
@@ -29,31 +36,24 @@ public class DBTransactionDataAccessObject implements DBDataAccessInterface<Tran
         controller.saveData(sender.getFileDirectory() + FileSystems.getDefault().getSeparator()
                 + DIRECTORY, transactions, Transaction.class);
 
-        sender = updateSenderBalance(senderID, amount);
-        updateReceiverBalance(receiverID, amount);
-
+        sender.setBalance(sender.getBalance() - transaction.getAmount());
+        sender = setCurrentUser(transaction.getSenderID(), sender);
+        if (usersController.checkUserExistance(transaction.getReceiverID())) {
+            final User receiver = usersController.readDataPoint(transaction.getSenderID());
+            receiver.setBalance(receiver.getBalance() + transaction.getAmount());
+            setCurrentUser(transaction.getReceiverID(), receiver);
+        }
         return sender;
     }
 
     @Override
-    public List<Transaction> readData(int userID) {
-        final User user = usersController.readDataPoint(userID);
-        return controller.readData(user.getFileDirectory() + FileSystems.getDefault().getSeparator()
-                + DIRECTORY, Transaction.class);
-    }
-
-    private User updateSenderBalance(int userID, double amount) {
-        final User user = usersController.readDataPoint(userID);
-        user.setBalance(user.getBalance() - amount);
-        usersController.updateDataPoint(user.getUserID(), user);
+    public User setCurrentUser(int userId, User user) {
+        usersController.updateDataPoint(userId, user);
         return user;
     }
 
-    private void updateReceiverBalance(int userID, double amount) {
-        if (usersController.checkUserExistance(userID)) {
-            final User user = usersController.readDataPoint(userID);
-            user.setBalance(user.getBalance() + amount);
-            usersController.updateDataPoint(user.getUserID(), user);
-        }
+    @Override
+    public User getUser(int userId) {
+        return usersController.readDataPoint(userId);
     }
 }

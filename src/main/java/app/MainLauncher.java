@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
+import data_access.DBTransactionDataAccessObject;
 import data_access.DBUserDataAccessObject;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.loggedin.LoggedinViewModel;
@@ -50,6 +51,7 @@ public class MainLauncher {
         final SeeTransactionsViewModel seeTransactionsViewModel = new SeeTransactionsViewModel();
 
         final DBUserDataAccessObject userDataAccessObject = new DBUserDataAccessObject();
+        final DBTransactionDataAccessObject transactionDataAccessObject = new DBTransactionDataAccessObject();
 
         final WelcomeView welcomeView = WelcomeUseCaseFactory.create(viewManagerModel, signupViewModel, loginViewModel);
         views.add(welcomeView, welcomeView.getViewName());
@@ -62,6 +64,9 @@ public class MainLauncher {
         final LoggedinView loggedinView = LoggedinUseCaseFactory.create(viewManagerModel, welcomeViewModel,
                 makeTransactionViewModel, seeTransactionsViewModel, loggedinViewModel);
         views.add(loggedinView, loggedinView.getViewName());
+        final MakeTransactionView makeTransactionView = MakeTransactionUseCaseFactory.create(viewManagerModel,
+                loggedinViewModel, makeTransactionViewModel, transactionDataAccessObject);
+        views.add(makeTransactionView, makeTransactionView.getViewName());
 
         viewManagerModel.setState(welcomeView.getViewName());
         viewManagerModel.firePropertyChanged();

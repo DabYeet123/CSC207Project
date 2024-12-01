@@ -24,10 +24,16 @@ public class LoggedinView extends JPanel implements ActionListener, PropertyChan
     private static final int VERTICAL_GAP = 10;
     private static final int FRAME_WIDTH = 400;
     private static final int FRAME_HEIGHT = 400;
+
     private final String viewName = "loggedin";
     private final LoggedinViewModel loggedinViewModel;
     private final LoggedinController loggedinController;
 
+    private User loggedinUser;
+    private final JLabel name;
+    private final JLabel balance;
+
+    private final JLabel userErrorField = new JLabel();
     private final JButton makeTransaction;
     private final JButton seeTransactionHistory;
     private final JButton manageCards;
@@ -49,8 +55,10 @@ public class LoggedinView extends JPanel implements ActionListener, PropertyChan
         final JLabel title = new JLabel("Logged in Screen");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        final LoggedinState currentState = loggedinViewModel.getState();
-        final User loggedInUser = currentState.getUser();
+        final JLabel userInfo = new JLabel("Currently logged in: ");
+        name = new JLabel();
+        final JLabel balanceInfo = new JLabel("Balance: ");
+        balance = new JLabel();
 
         final JPanel buttons = new JPanel();
         buttons.setLayout(new GridLayout(ROW_COUNT, COLUMN_COUNT, HORIZONTAL_GAP, VERTICAL_GAP));
@@ -77,20 +85,22 @@ public class LoggedinView extends JPanel implements ActionListener, PropertyChan
         buttons.add(logout);
 
         this.add(title);
-        add(createTopPanel(loggedInUser), BorderLayout.NORTH);
-        add(buttons, BorderLayout.CENTER);
+        this.add(userInfo);
+        this.add(name);
+        this.add(balanceInfo);
+        this.add(balance);
 
         makeTransaction.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent evt) {
-                        loggedinController.switchToMakeTransactionView();
+                        loggedinController.switchToMakeTransactionView(loggedinUser);
                     }
                 }
         );
         seeTransactionHistory.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent evt) {
-                        loggedinController.switchToSeeTransactionHistoryView();
+                        loggedinController.switchToSeeTransactionHistoryView(loggedinUser);
                     }
                 }
         );
@@ -98,29 +108,9 @@ public class LoggedinView extends JPanel implements ActionListener, PropertyChan
 
         logout.addActionListener(this);
 
+        add(buttons, BorderLayout.CENTER);
+        this.add(userErrorField);
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-    }
-
-    /**
-     * Creates the top panel containing the user's information and logout button.
-     *
-     * @param loggedInUser the controller for handling user actions.
-     * @return the top panel component.
-     */
-    private JPanel createTopPanel(User loggedInUser) {
-        final JPanel topPanel = new JPanel();
-        topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.Y_AXIS));
-
-        final JLabel welcomeLabel = new JLabel("Welcome, " + loggedInUser.getFirstName() + " "
-                + loggedInUser.getLastName() + "!");
-        final JLabel accountLabel = new JLabel("UserID: " + loggedInUser.getUserID());
-        final JLabel balanceLabel = new JLabel("Balance: $" + loggedInUser.getBalance());
-
-        topPanel.add(welcomeLabel);
-        topPanel.add(accountLabel);
-        topPanel.add(balanceLabel);
-
-        return topPanel;
     }
 
     @Override
@@ -133,7 +123,10 @@ public class LoggedinView extends JPanel implements ActionListener, PropertyChan
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-
+        final LoggedinState state = (LoggedinState) evt.getNewValue();
+        loggedinUser = state.getUser();
+        name.setText(state.getUser().getFirstName() + " " + state.getUser().getLastName());
+        balance.setText(String.valueOf(state.getUser().getBalance()));
     }
 
     public String getViewName() {

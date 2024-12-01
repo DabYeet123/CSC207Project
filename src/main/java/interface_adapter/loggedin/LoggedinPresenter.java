@@ -1,6 +1,8 @@
 package interface_adapter.loggedin;
 
+import entity.User;
 import interface_adapter.ViewManagerModel;
+import interface_adapter.maketransaction.MakeTransactionState;
 import interface_adapter.maketransaction.MakeTransactionViewModel;
 import interface_adapter.seetransactions.SeeTransactionsViewModel;
 import interface_adapter.welcome.WelcomeViewModel;
@@ -27,13 +29,19 @@ public class LoggedinPresenter implements LoggedinOutputBoundary {
     }
 
     @Override
-    public void switchToMakeTransactionView() {
-        // viewManagerModel.setState(makeTransactionViewModel.getViewName());
-        // viewManagerModel.firePropertyChanged();
+    public void switchToMakeTransactionView(User user) {
+
+        final MakeTransactionState makeTransactionState = makeTransactionViewModel.getState();
+        makeTransactionState.setUser(user);
+        this.makeTransactionViewModel.setState(makeTransactionState);
+        this.makeTransactionViewModel.firePropertyChanged();
+
+        viewManagerModel.setState(makeTransactionViewModel.getViewName());
+        viewManagerModel.firePropertyChanged();
     }
 
     @Override
-    public void switchToSeeTransactionHistoryView() {
+    public void switchToSeeTransactionHistoryView(User user) {
         // viewManagerModel.setState(seeTransactionsViewModel.getViewName());
         // viewManagerModel.firePropertyChanged();
     }
