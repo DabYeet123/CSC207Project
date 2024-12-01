@@ -2,6 +2,8 @@ package insurance.dataObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class InsuranceMethods {
+    public static final String CHOOSE_INSURANCE_TYPE = "Choose Insurance Type";
+    public static final String CHOOSE_INSURANCE_NAME_ID = "Choose Insurance Name (ID)";
     public static final String END_LINE = "\n";
 
     public static String getInsurancePolicyDetails(String type, InsuranceObject insurance) {

@@ -21,7 +21,7 @@ public class PurchaseInsuranceController {
     private static final int MAX_TERM = 100;
     private UserObject loggedInUser;
     private final PurchaseInsurancePresenter purchaseInsurancePresenter;
-    private final NewInsurancePresenter newInsurancePresenter;
+    private NewInsuranceController newInsuranceController;
     private final WelcomeController welcomeController;
     private final UserInsuranceController userInsuranceController;
     private final List<InsuranceObject> availableInsurances;
@@ -32,10 +32,7 @@ public class PurchaseInsuranceController {
         this.userInsuranceController = new UserInsuranceController();
         final InsuranceController insuranceController = new InsuranceController();
         this.availableInsurances = getAvailableInsurances(user.getUserID(), insuranceController.getAllInsurance());
-
         this.purchaseInsurancePresenter = new PurchaseInsurancePresenter(this);
-        final NewInsuranceController newInsuranceController = new NewInsuranceController(user);
-        this.newInsurancePresenter = new NewInsurancePresenter(newInsuranceController);
     }
 
     public void launch() {
@@ -44,7 +41,8 @@ public class PurchaseInsuranceController {
 
     public void addNewInsuranceTriggered() {
         purchaseInsurancePresenter.disposeView();
-        newInsurancePresenter.showView();
+        newInsuranceController = new NewInsuranceController(loggedInUser);
+        newInsuranceController.launch();
     }
 
     public void goBackToBaseView() {

@@ -1,1 +1,65 @@
-[{"type":"Health","premium":150.0,"insuranceID":100000000,"policyDetails":"Covers hospitalization, surgery, and prescription costs.","insuranceName":"Comprehensive Health Plan"},{"type":"Vehicle","premium":200.0,"insuranceID":100000001,"policyDetails":"Covers damage, theft, and liability for accidents.","insuranceName":"Full Vehicle Insurance"},{"type":"Home","premium":300.0,"insuranceID":100000002,"policyDetails":"Covers fire, theft, and natural disasters.","insuranceName":"Home Protection Plan"},{"type":"Travel","premium":100.0,"insuranceID":100000003,"policyDetails":"Covers trip cancellation, medical emergencies, and lost luggage.","insuranceName":"Global Travel Insurance"},{"type":"Life","premium":250.0,"insuranceID":100000004,"policyDetails":"Covers life insurance providing death benefits to beneficiaries.","insuranceName":"Life Assurance Plan"},{"type":"Pet","premium":80.0,"insuranceID":100000005,"policyDetails":"Covers veterinary care, surgeries, and medications for pets.","insuranceName":"PetCare Insurance"},{"type":"Business","premium":500.0,"insuranceID":100000006,"policyDetails":"Covers liability, property damage, and business interruption.","insuranceName":"Business Shield Plan"},{"type":"Dental","premium":120.0,"insuranceID":100000007,"policyDetails":"Covers routine dental checkups, fillings, and dental surgeries.","insuranceName":"Dental Care Insurance"},{"type":"Other","premium":75.0,"insuranceID":100000008,"policyDetails":"Covers miscellaneous items or events not categorized in other policies.","insuranceName":"General Purpose Insurance"}]
+[
+  {
+    "type": "Health",
+    "premium": 150.0,
+    "insuranceID": 100000000,
+    "policyDetails": "Covers hospitalization, surgery, and prescription costs.",
+    "insuranceName": "Comprehensive Health Plan"
+  },
+  {
+    "type": "Vehicle",
+    "premium": 200.0,
+    "insuranceID": 100000001,
+    "policyDetails": "Covers damage, theft, and liability for accidents.",
+    "insuranceName": "Full Vehicle Insurance"
+  },
+  {
+    "type": "Home",
+    "premium": 300.0,
+    "insuranceID": 100000002,
+    "policyDetails": "Covers fire, theft, and natural disasters.",
+    "insuranceName": "Home Protection Plan"
+  },
+  {
+    "type": "Travel",
+    "premium": 100.0,
+    "insuranceID": 100000003,
+    "policyDetails": "Covers trip cancellation, medical emergencies, and lost luggage.",
+    "insuranceName": "Global Travel Insurance"
+  },
+  {
+    "type": "Life",
+    "premium": 250.0,
+    "insuranceID": 100000004,
+    "policyDetails": "Covers life insurance providing death benefits to beneficiaries.",
+    "insuranceName": "Life Assurance Plan"
+  },
+  {
+    "type": "Pet",
+    "premium": 80.0,
+    "insuranceID": 100000005,
+    "policyDetails": "Covers veterinary care, surgeries, and medications for pets.",
+    "insuranceName": "PetCare Insurance"
+  },
+  {
+    "type": "Business",
+    "premium": 500.0,
+    "insuranceID": 100000006,
+    "policyDetails": "Covers liability, property damage, and business interruption.",
+    "insuranceName": "Business Shield Plan"
+  },
+  {
+    "type": "Dental",
+    "premium": 120.0,
+    "insuranceID": 100000007,
+    "policyDetails": "Covers routine dental checkups, fillings, and dental surgeries.",
+    "insuranceName": "Dental Care Insurance"
+  },
+  {
+    "type": "Other",
+    "premium": 75.0,
+    "insuranceID": 100000008,
+    "policyDetails": "Covers miscellaneous items or events not categorized in other policies.",
+    "insuranceName": "General Purpose Insurance"
+  }
+]
