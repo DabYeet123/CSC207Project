@@ -2,6 +2,7 @@ package insurance.myInsurance;
 
 import App.PresenterInterface;
 
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class MyInsurancePresenter implements PresenterInterface<MyInsuranceController> {
     private final MyInsuranceView myInsuranceView;
 

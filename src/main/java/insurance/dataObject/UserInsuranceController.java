@@ -17,6 +17,10 @@ public class UserInsuranceController {
         return userInsuranceDBAccess.readData(userID);
     }
 
+    public void cancelAutoRenewByInsuranceID(int userID, int InsuranceID) {
+        userInsuranceDBAccess.cancelAutoRenewInsuranceID(userID, InsuranceID);
+    }
+
     public boolean isPurchased(int userID, InsuranceObject insurance) {
         final List<UserInsuranceObject> insurances = getAllInsurance(userID);
         for (UserInsuranceObject purchasedInsurance : insurances) {

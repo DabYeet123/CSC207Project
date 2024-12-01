@@ -55,6 +55,21 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
         return newInsurances;
     }
 
+    public void cancelAutoRenewInsuranceID(int userID, int insuranceID) {
+        final UserObject user = usersController.getUser(userID);
+        final List<UserInsuranceObject> insurances = readData(user.getUserID());
+        final List<UserInsuranceObject> newInsurances = new LinkedList<>();
+        for (UserInsuranceObject insurance : insurances) {
+            if (insurance.getInsurance().getInsuranceID() == insuranceID) {
+                newInsurances.add(cancelAutoRenew(insurance));
+            }
+            else {
+                newInsurances.add(insurance);
+            }
+        }
+        controller.saveData(user.getFileDirectory() + "\\Insurance.json", newInsurances, UserInsuranceObject.class);
+    }
+
     private void updateBalance(UserObject user, double amount) {
         user.setBalance(user.getBalance() + amount);
         usersController.changeUser(user.getUserID(), user);
@@ -63,6 +78,11 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
     private UserInsuranceObject renew(UserInsuranceObject insurance) {
         final LocalDate newEndDate = insurance.getEndDate().plusYears(1);
         return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(), insurance.getStartDate(), newEndDate, insurance.isAutoRenew(), insurance.getCardUsed());
+    }
+
+    private UserInsuranceObject cancelAutoRenew(UserInsuranceObject insurance) {
+        final boolean isAutoRenew = !insurance.isAutoRenew();
+        return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(), insurance.getStartDate(), insurance.getEndDate(), isAutoRenew, insurance.getCardUsed());
     }
 
     private int getTerm(UserInsuranceObject insurance) {

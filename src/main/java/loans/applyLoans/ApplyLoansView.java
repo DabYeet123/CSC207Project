@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ApplyLoansView extends JFrame {
-    private final JLabel messageLabel = new JLabel();
     UserObject user;
 
     public ApplyLoansView(ApplyLoansController controller) {
@@ -20,12 +19,6 @@ public class ApplyLoansView extends JFrame {
         setLocationRelativeTo(null);
 
         setLayout(new BorderLayout());
-
-        JPanel logoutPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        JButton logoutButton = new JButton("Logout");
-        logoutButton.setPreferredSize(new Dimension(80, 25)); // Small size
-        logoutPanel.add(logoutButton);
-        add(logoutPanel, BorderLayout.NORTH);
 
         JPanel loansPanel = new JPanel();
         loansPanel.setLayout(new GridLayout(5, 2, 10, 10));
@@ -54,24 +47,22 @@ public class ApplyLoansView extends JFrame {
 
         add(loansPanel, BorderLayout.CENTER);
 
-        confirmButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    String cardNumber = cardField.getText();
-                    int userID = user.getUserID();
-                    double amount = Double.parseDouble(amountField.getText());
-                    int term = Integer.parseInt(termField.getText());
-                    double rate = Double.parseDouble(interestRateField.getText());
-                    boolean success = controller.applyLoansTriggered(amount, term, rate, cardNumber);
-                    if (success) {
-                        controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
-                    } else {
-                        displayMessage("Please fill all the fields.", false);
-                    }
-                } catch (NumberFormatException ex) {
-                    displayMessage("Amount, term and rate must be numbers.\\Card number must be valid.", false);
+        confirmButton.addActionListener(e -> {
+            try {
+                final String cardNumber = cardField.getText();
+                final double amount = Double.parseDouble(amountField.getText());
+                final int term = Integer.parseInt(termField.getText());
+                final double rate = Double.parseDouble(interestRateField.getText());
+                final boolean success = controller.applyLoansTriggered(amount, term, rate, cardNumber);
+                if (success) {
+                    controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
                 }
+                else {
+                    JOptionPane.showMessageDialog(this, "Please fill all the fields correctly.", "Invalid Selection", JOptionPane.WARNING_MESSAGE);
+                }
+            }
+            catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(this, "Amount, term and rate must be numbers.\\Card number must be valid.", "Invalid Selection", JOptionPane.WARNING_MESSAGE);
             }
         });
         cancelButton.addActionListener(new ActionListener() {
@@ -80,16 +71,5 @@ public class ApplyLoansView extends JFrame {
                 controller.goBackToBaseView();
             }
         });
-        logoutButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controller.logOutTriggered();
-            }
-        });
-    }
-
-    public void displayMessage(String message, boolean isSuccess) {
-        messageLabel.setText(message);
-        messageLabel.setForeground(isSuccess ? Color.GREEN : Color.RED);
     }
 }

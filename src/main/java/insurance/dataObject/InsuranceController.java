@@ -1,7 +1,8 @@
 package insurance.dataObject;
 
-import DataObjects.UserObject;
 import java.util.List;
+
+import DataObjects.UserObject;
 
 public class InsuranceController {
     private InsuranceDBAccess insuranceDBAccess = new InsuranceDBAccess();
