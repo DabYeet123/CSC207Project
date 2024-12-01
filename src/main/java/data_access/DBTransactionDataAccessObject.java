@@ -5,7 +5,7 @@ import java.util.List;
 
 import entity.Transaction;
 import entity.User;
-import use_case.maketransaction.MakeTransactionDataAccessInterface;
+import maketransaction.use_case.MakeTransactionDataAccessInterface;
 
 /**
  * This class provides methods for accessing and updating transaction data in the system. It is responsible

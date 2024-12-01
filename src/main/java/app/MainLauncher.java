@@ -9,13 +9,23 @@ import javax.swing.WindowConstants;
 import data_access.DBTransactionDataAccessObject;
 import data_access.DBUserDataAccessObject;
 import interface_adapter.ViewManagerModel;
-import interface_adapter.loggedin.LoggedinViewModel;
-import interface_adapter.login.LoginViewModel;
-import interface_adapter.maketransaction.MakeTransactionViewModel;
-import interface_adapter.seetransactions.SeeTransactionsViewModel;
-import interface_adapter.signup.SignupViewModel;
-import interface_adapter.welcome.WelcomeViewModel;
+import loggedin.LoggedinUseCaseFactory;
+import loggedin.LoggedinView;
+import loggedin.interface_adapter.LoggedinViewModel;
+import login.LoginView;
+import login.interface_adapter.LoginViewModel;
+import maketransaction.MakeTransactionView;
+import maketransaction.interface_adapter.MakeTransactionViewModel;
+import seetransactions.interface_adapter.SeeTransactionsViewModel;
+import maketransaction.MakeTransactionUseCaseFactory;
+import signup.SignupView;
+import signup.interface_adapter.SignupViewModel;
+import login.LoginUseCaseFactory;
+import signup.SignupUseCaseFactory;
+import welcome.WelcomeView;
+import welcome.interface_adapter.WelcomeViewModel;
 import view.*;
+import welcome.WelcomeUseCaseFactory;
 
 /**
  * MainLauncher class to start the application.

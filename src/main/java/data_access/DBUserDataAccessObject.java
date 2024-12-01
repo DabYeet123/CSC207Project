@@ -3,8 +3,8 @@ package data_access;
 import java.util.List;
 
 import entity.User;
-import use_case.login.LoginUserDataAccessInterface;
-import use_case.signup.SignupUserDataAccessInterface;
+import login.use_case.LoginUserDataAccessInterface;
+import signup.use_case.SignupUserDataAccessInterface;
 
 /**
  * Provides database access operations for managing `UserObject` instances.
