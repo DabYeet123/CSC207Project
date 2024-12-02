@@ -44,16 +44,16 @@ public class UserInsuranceController {
      * @param userID       The ID of the user.
      * @param InsuranceID  The ID of the insurance policy to cancel auto-renew for.
      */
-    public void cancelAutoRenewalByInsuranceID(int userID, int InsuranceID) {
-        userInsuranceDBAccess.cancelAutoRenewInsuranceID(userID, InsuranceID);
+    public void changeAutoRenewalByInsuranceID(int userID, int InsuranceID) {
+        userInsuranceDBAccess.changeAutoRenewInsuranceID(userID, InsuranceID);
     }
 
     /**
-     * Checks if a specific insurance policy has been purchased by a user.
+     * Checks if a user has purchased a specific insurance policy.
      *
      * @param userID    The ID of the user.
      * @param insurance The insurance object to check.
-     * @return True if the insurance policy has been purchased by the user, false otherwise.
+     * @return True if the user has purchased the insurance policy, false otherwise.
      */
     public boolean isPurchased(int userID, InsuranceObject insurance) {
         boolean res = false;

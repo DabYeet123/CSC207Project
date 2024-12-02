@@ -32,7 +32,7 @@ public class MyInsuranceView extends JFrame {
     private static final int AUTO_RENEW_COL = 7;
     private static final int FONT_SIZE = 20;
     private static final int INTERVAL_1 = 300;
-    private static final int INTERVAL_2 = 400;
+    private static final int INTERVAL_2 = 380;
     private final UserObject user;
 
     /**
@@ -63,23 +63,23 @@ public class MyInsuranceView extends JFrame {
 
         final JPanel headerPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         final JLabel titleLabel = new JLabel("My Insurance Policies");
-        final JButton cancelButton = new JButton("Cancel Auto Renewal");
+        final JButton changeAutoRenewalButton = new JButton("Change Auto Renewal");
         titleLabel.setFont(new Font("Arial", Font.BOLD, FONT_SIZE));
         headerPanel.add(new JLabel("Filter by Type:"));
         headerPanel.add(typeComboBox);
         headerPanel.add(Box.createHorizontalStrut(INTERVAL_1));
         headerPanel.add(titleLabel);
         headerPanel.add(Box.createHorizontalStrut(INTERVAL_2));
-        headerPanel.add(cancelButton);
+        headerPanel.add(changeAutoRenewalButton);
         add(headerPanel, BorderLayout.NORTH);
 
         final JScrollPane scrollPane = new JScrollPane(insuranceTable);
         add(scrollPane, BorderLayout.CENTER);
 
-        cancelButton.addActionListener(new ActionListener() {
+        changeAutoRenewalButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cancelAutoRenewalButton(insuranceTable, controller);
+                changeAutoRenewal(insuranceTable, controller);
             }
         });
         backPanel(controller);
@@ -148,11 +148,11 @@ public class MyInsuranceView extends JFrame {
     }
 
     /**
-     * Handles the action for cancelling auto-renewal for the selected insurance policy.
+     * Handles the action for changing auto-renewal for the selected insurance policy.
      *
      * @param table The table displaying the insurance policies.
      */
-    private void cancelAutoRenewalButton(JTable table, MyInsuranceController controller) {
+    private void changeAutoRenewal(JTable table, MyInsuranceController controller) {
         final UserInsuranceController userInsuranceController = new UserInsuranceController();
         final int selectedRow = table.getSelectedRow();
         if (selectedRow == -1) {
@@ -162,16 +162,23 @@ public class MyInsuranceView extends JFrame {
         else {
             final String isAutoRenew = table.getValueAt(selectedRow, AUTO_RENEW_COL).toString();
             if ("No".equals(isAutoRenew)) {
-                JOptionPane.showMessageDialog(MyInsuranceView.this,
-                        "Please select a row that is auto-renew.",
-                        "Invalid Selection", JOptionPane.WARNING_MESSAGE);
+                if (JOptionPane.showConfirmDialog(MyInsuranceView.this,
+                        "Are you sure you to make the insurance auto-renewable?",
+                        "Confirmation", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                    final int insuranceID = Integer.parseInt(table.getValueAt(selectedRow, INSURANCE_ID_COL).toString());
+                    userInsuranceController.changeAutoRenewalByInsuranceID(user.getUserID(), insuranceID);
+                    JOptionPane.showMessageDialog(MyInsuranceView.this,
+                            "You have successfully changed the insurance to auto-renewal",
+                            "Success", JOptionPane.PLAIN_MESSAGE);
+                    controller.goBackToBaseView();
+                }
             }
             else {
                 if (JOptionPane.showConfirmDialog(MyInsuranceView.this,
-                "Are you sure to delete the selected insurance?",
+                "Are you sure to cancel the auto-renewal of this insurance?",
                 "Confirmation", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                     final int insuranceID = Integer.parseInt(table.getValueAt(selectedRow, INSURANCE_ID_COL).toString());
-                    userInsuranceController.cancelAutoRenewalByInsuranceID(user.getUserID(), insuranceID);
+                    userInsuranceController.changeAutoRenewalByInsuranceID(user.getUserID(), insuranceID);
                     JOptionPane.showMessageDialog(MyInsuranceView.this,
                             "You have successfully canceled the auto-renewal of this insurance.",
                             "Success", JOptionPane.PLAIN_MESSAGE);

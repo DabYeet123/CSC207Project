@@ -79,13 +79,13 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
      * @param userID      The ID of the user.
      * @param insuranceID The ID of the insurance policy to cancel auto-renew for.
      */
-    public void cancelAutoRenewInsuranceID(int userID, int insuranceID) {
+    public void changeAutoRenewInsuranceID(int userID, int insuranceID) {
         final UserObject user = usersController.getUser(userID);
         final List<UserInsuranceObject> insurances = readData(user.getUserID());
         final List<UserInsuranceObject> newInsurances = new LinkedList<>();
         for (UserInsuranceObject insurance : insurances) {
             if (insurance.getInsurance().getInsuranceID() == insuranceID) {
-                newInsurances.add(cancelAutoRenew(insurance));
+                newInsurances.add(changeAutoRenew(insurance));
             }
             else {
                 newInsurances.add(insurance);
@@ -121,16 +121,16 @@ public class UserInsuranceDBAccess implements DataAccessInterface<UserInsuranceO
      * Cancels the auto-renewal option for the given insurance object.
      *
      * @param insurance The insurance object to cancel auto-renew for.
-     * @return A new insurance object with auto-renew set to false.
+     * @return A new insurance object with an auto-renewal set to false.
      */
-    private UserInsuranceObject cancelAutoRenew(UserInsuranceObject insurance) {
-        final boolean isAutoRenew = false;
+    private UserInsuranceObject changeAutoRenew(UserInsuranceObject insurance) {
+        final boolean isAutoRenew = !insurance.isAutoRenew();
         return new UserInsuranceObject(insurance.getUserID(), insurance.getInsurance(),
                 insurance.getStartDate(), insurance.getEndDate(), isAutoRenew, insurance.getCardUsed());
     }
 
     /**
-     * Gets the term duration of the given insurance policy in years.
+     * Gets the term duration of the given insurance policy.
      *
      * @param insurance The insurance object.
      * @return The term duration in years.
