@@ -14,7 +14,7 @@ import userdataobject.UserObject;
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class PurchaseInsuranceController {
 
-    private static final int MAX_TERM = 100;
+    private static final int MAX_TERM = 1000;
     private UserObject loggedInUser;
     private final PurchaseInsurancePresenter purchaseInsurancePresenter;
     private NewInsuranceController newInsuranceController;

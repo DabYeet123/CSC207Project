@@ -9,7 +9,7 @@ import userdataobject.UserObject;
 @Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class ApplyLoansController implements ControllerInterface {
-    private static final int MAX_TERM = 100;
+    private static final int MAX_TERM = 1000;
     private UserObject loggedInUser;
     private final ApplyLoansPresenter applyLoansPresenter;
     private final LoansController loansController;

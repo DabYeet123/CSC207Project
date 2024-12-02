@@ -6,23 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="12.1 insurance update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Insurance.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Insurance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/XX10005/CardInformation.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/XX10005/CardInformation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/XX10005/Insurance.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/XX10005/Insurance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/useCase/InsuranceMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/useCase/InsuranceMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/view/MyInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/view/MyInsuranceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/view/NewInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/view/NewInsuranceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/view/PurchaseInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/view/PurchaseInsuranceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/view/ApplyLoansView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/view/ApplyLoansView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/insurance/useCase/InsuranceMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/insurance/useCase/InsuranceMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/insurance/view/MyInsuranceView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/insurance/view/MyInsuranceView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/insurance/view/MyInsuranceView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/insurance/view/MyInsuranceView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/insurance/view/MyInsuranceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/insurance/view/MyInsuranceView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/insurance/view/NewInsuranceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/insurance/view/NewInsuranceView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/insurance/view/PurchaseInsuranceView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/insurance/view/PurchaseInsuranceView$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/insurance/view/PurchaseInsuranceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/insurance/view/PurchaseInsuranceView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/loans/view/ApplyLoansView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/loans/view/ApplyLoansView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/adapter/PurchaseInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/adapter/PurchaseInsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loans/adapter/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/adapter/ApplyLoansController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733107198209</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="12.1 insurance update">
+      <option name="closed" value="true" />
+      <created>1733110910617</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733110910617</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
