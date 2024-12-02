@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="after merge from the main, change refactor thing into main">
+    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -39,12 +39,12 @@
     &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DabYeet123/CSC207Project.git",
-    "accountId": "a7fb78d8-006c-48c3-a6c9-96666325973c"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
+    &quot;accountId&quot;: &quot;a7fb78d8-006c-48c3-a6c9-96666325973c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -58,22 +58,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainLauncher.executor": "Run",
-    "Application.app.MainLauncher.executor": "Run",
-    "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "#45 on Yue-Zheng",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.app.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.cardandexchange in homework-5 (1).executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#45 on Yue-Zheng&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.CardMethods" />
@@ -441,9 +441,9 @@
     <MESSAGE value="Renew of Yue Zheng's Story" />
     <MESSAGE value="Renew of refactor for Card and Exchange parts" />
     <MESSAGE value="11.29 renew for refactor with the reorganization" />
-    <MESSAGE value="1" />
     <MESSAGE value="after merge from the main, change refactor thing into main" />
-    <option name="LAST_COMMIT_MESSAGE" value="after merge from the main, change refactor thing into main" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
