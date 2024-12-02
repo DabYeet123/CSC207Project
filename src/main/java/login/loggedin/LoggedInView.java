@@ -52,6 +52,9 @@ public class LoggedInView extends JFrame {
         final JPanel topPanel = new JPanel(new BorderLayout());
 
         final JPanel refreshPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        final JButton refreshButton = new JButton("Refresh");
+        refreshButton.setPreferredSize(new Dimension(LOGOUT_WIDTH, LOGOUT_HEIGHT));
+        refreshPanel.add(refreshButton);
         topPanel.add(refreshPanel, BorderLayout.CENTER);
 
         final JPanel logoutPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
@@ -73,6 +76,7 @@ public class LoggedInView extends JFrame {
         infoPanel.add(balanceLabel);
         topPanel.add(infoPanel, BorderLayout.WEST);
 
+        refreshButton.addActionListener(event -> controller.refreshTriggered());
         logoutButton.addActionListener(event -> controller.logOutTriggered());
 
         return topPanel;

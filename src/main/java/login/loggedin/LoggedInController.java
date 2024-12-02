@@ -68,6 +68,9 @@ public class LoggedInController implements ControllerInterface {
         welcomeController.launch();
     }
 
+    /**
+     * Refresh the current window.
+     */
     public void refreshTriggered() {
         loggedInPresenter.disposeView();
         seeLoansHistoryController.update();
