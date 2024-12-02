@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Assets Reorganization and bug fix" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Branch Reverted">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -361,7 +363,8 @@
     <MESSAGE value="House and ATM Usecase Refactored to follow clean architecture" />
     <MESSAGE value="Refactored for Clean Architecture and added test cases" />
     <MESSAGE value="Assets Reorganization and bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assets Reorganization and bug fix" />
+    <MESSAGE value="Branch Reverted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Branch Reverted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
