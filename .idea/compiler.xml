@@ -11,8 +11,10 @@
         <module name="CSC207Project" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="homework-5" target="11" />
-    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="homework-5" options="" />
+    </option>
   </component>
 </project>

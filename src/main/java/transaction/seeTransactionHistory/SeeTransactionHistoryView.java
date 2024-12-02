@@ -17,8 +17,8 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
-import userdataobject.UserObject;
 import transaction.dataObject.TransactionObject;
+import userdataobject.UserObject;
 
 /**
  * View for displaying the transaction history of a user. This class provides the user interface
