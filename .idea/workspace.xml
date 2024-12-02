@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="after merge from the main, change refactor thing into main">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,13 +39,12 @@
     &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
-    &quot;accountId&quot;: &quot;a7fb78d8-006c-48c3-a6c9-96666325973c&quot;
-    &quot;accountId&quot;: &quot;820b822e-b045-4e79-8f07-94b614ae1099&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DabYeet123/CSC207Project.git",
+    "accountId": "a7fb78d8-006c-48c3-a6c9-96666325973c"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -63,9 +63,15 @@
     "Application.MainLauncher.executor": "Run",
     "Application.app.MainLauncher.executor": "Run",
     "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Yue-Zheng",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "git-widget-placeholder": "#45 on Yue-Zheng",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -167,10 +173,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="1" />
+      <changelist id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="after merge from the main, change refactor thing into main" />
       <created>1731971551933</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -192,6 +206,7 @@
       <workItem from="1732662312623" duration="23629000" />
       <workItem from="1732935818479" duration="109000" />
       <workItem from="1732935936292" duration="5792000" />
+      <workItem from="1733096707616" duration="685000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -313,13 +328,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733093985951</updated>
     </task>
-    <task id="LOCAL-00016" summary="Add the override of interface of Controller and Presenter">
+    <task id="LOCAL-00016" summary="after merge from the main, change refactor thing into main">
       <option name="closed" value="true" />
-      <created>1732589257014</created>
+      <created>1733094338347</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1732589257014</updated>
+      <updated>1733094338347</updated>
     </task>
     <task id="LOCAL-00017" summary="Write for Card and ExchangeCurrency Tests">
       <option name="closed" value="true" />
@@ -393,7 +408,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
