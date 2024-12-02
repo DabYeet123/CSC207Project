@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="12.1 loggedin update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/view/PurchaseInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/view/PurchaseInsuranceView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/insurance/InsuranceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/insurance/InsuranceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/insurance/view/PurchaseInsuranceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/insurance/view/PurchaseInsuranceView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/insurance/InsuranceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/insurance/InsuranceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,23 +20,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DabYeet123/CSC207Project.git",
-    "accountId": "52a0db03-ac1e-4a5a-8a92-0f4811ad9340"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
+    &quot;accountId&quot;: &quot;52a0db03-ac1e-4a5a-8a92-0f4811ad9340&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainLauncher.executor": "Run",
-    "JUnit.InsuranceTest.executor": "Run",
-    "JUnit.InsuranceTest.readDataTest.executor": "Run",
-    "git-widget-placeholder": "sincer.xu",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InsuranceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InsuranceTest.readDataTest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sincer.xu&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.InsuranceTest">
+}</component>
+  <component name="RunManager" selected="Application.MainLauncher">
     <configuration name="MainLauncher" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="app.MainLauncher" />
       <module name="homework-5" />

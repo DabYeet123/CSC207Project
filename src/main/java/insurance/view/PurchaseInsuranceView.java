@@ -44,17 +44,18 @@ public class PurchaseInsuranceView extends JFrame {
 
         final JPanel inputPanel = createInputPanel(controller);
         add(inputPanel, BorderLayout.CENTER);
+
     }
 
     private JPanel createInputPanel(PurchaseInsuranceController controller) {
         final JPanel inputPanel = new JPanel(new GridLayout(8, 2, 10, 10));
 
-        final JComboBox<String> typeComboBox = createTypeComboBox(controller);
         final JComboBox<String> nameIDComboBox = createNameIDComboBox();
+        final JComboBox<String> typeComboBox = createTypeComboBox(controller, nameIDComboBox);
         final JTextField cardField = new JTextField();
         final JCheckBox autoRenewCheckBox = createAutoRenewCheckBox();
         final JTextField termField = createTermField(autoRenewCheckBox);
-        final JButton policyDetailsButton = getjButton(controller, typeComboBox, nameIDComboBox);
+        final JButton policyDetailsButton = createPolicyDetailsButton(controller, typeComboBox, nameIDComboBox);
         final JButton deleteButton = createDeleteButton(controller, nameIDComboBox, typeComboBox);
         final JButton newButton = createNewButton(controller);
         final JButton confirmButton = createConfirmButton(controller, nameIDComboBox, cardField,
@@ -79,16 +80,16 @@ public class PurchaseInsuranceView extends JFrame {
         return inputPanel;
     }
 
-    private JComboBox<String> createTypeComboBox(PurchaseInsuranceController controller) {
-        final JComboBox<String> typeComboBox = new JComboBox<>(
+    private JComboBox<String> createTypeComboBox(PurchaseInsuranceController controller,
+                                                 JComboBox<String> nameIDComboBox) {
+        JComboBox<String> typeComboBox = new JComboBox<>(
                 new String[]{InsuranceMethods.CHOOSE_INSURANCE_TYPE, "Health", "Vehicle",
-                    "Home", "Travel", "Life", "Pet", "Business", "Dental", "Other"});
+                        "Home", "Travel", "Life", "Pet", "Business", "Dental", "Other"});
         typeComboBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                typeComboBoxUpdate(typeComboBox, controller, createNameIDComboBox());
-            }
-        });
+                typeComboBoxUpdate(typeComboBox, controller, nameIDComboBox);
+            }});
         return typeComboBox;
     }
 
@@ -229,7 +230,7 @@ public class PurchaseInsuranceView extends JFrame {
     }
 
     @NotNull
-    private JButton getjButton(PurchaseInsuranceController controller, JComboBox<String> typeComboBox,
+    private JButton createPolicyDetailsButton(PurchaseInsuranceController controller, JComboBox<String> typeComboBox,
                                JComboBox<String> nameIDComboBox) {
         final JButton policyDetailsButton = new JButton("Insurance Policy Details");
 
@@ -261,6 +262,7 @@ public class PurchaseInsuranceView extends JFrame {
                                            JComboBox<String> nameIDComboBox) {
         final String selectedType = (String) typeComboBox.getSelectedItem();
         if (selectedType != null && !InsuranceMethods.CHOOSE_INSURANCE_TYPE.equals(selectedType)) {
+
             final List<InsuranceObject> filteredInsurances = controller.getInsurancesByType(selectedType);
             nameIDComboBox.removeAllItems();
             nameIDComboBox.addItem(InsuranceMethods.CHOOSE_INSURANCE_NAME_ID);
