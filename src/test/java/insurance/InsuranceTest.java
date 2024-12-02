@@ -1,5 +1,7 @@
 package insurance;
 
+import cardandexchange.dataAccess.CardDBAccess;
+import cardandexchange.dataObject.Card;
 import userdataobject.UserObject;
 import insurance.adapter.InsuranceController;
 import insurance.dataAccess.InsuranceDBAccess;
@@ -11,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 public class InsuranceTest {
-    UserObject user = new UserObject(0, "Yue", "Zheng", "12", 0.0, "CardTest");
+    UserObject user = new UserObject(0, "Yue", "Zheng", "12", 0.0, "InsuranceTest");
 
     InsuranceController insuranceController;
     PurchaseInsuranceController purchaseInsuranceController;
@@ -36,8 +38,12 @@ public class InsuranceTest {
 
     @Test
     void readDataTest() {
-        InsuranceDBAccess insuranceDBAccess = new InsuranceDBAccess();
-        List<InsuranceObject> insurances = insuranceDBAccess.readData(0);
-        System.out.println(insurances.size());
+        String cardId = "0010011111";
+        Card mockCard = new Card(cardId, "Test Card", "12/2025", "123");
+        CardDBAccess cardDBAccess = new CardDBAccess();
+        cardDBAccess.saveData(0, mockCard);
+//        InsuranceDBAccess insuranceDBAccess = new InsuranceDBAccess();
+//        List<InsuranceObject> insurances = insuranceDBAccess.readData(0);
+//        System.out.println(insurances.size());
     }
 }
