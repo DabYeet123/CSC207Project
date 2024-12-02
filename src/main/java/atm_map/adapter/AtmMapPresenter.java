@@ -2,7 +2,7 @@ package atm_map.adapter;
 
 import javax.swing.JPanel;
 
-import App.PresenterInterface;
+import app.PresenterInterface;
 import atm_map.use_case.AtmGenerationOutput;
 import atm_map.use_case.AtmGenerationOutputBoundary;
 import atm_map.view.AtmMapView;

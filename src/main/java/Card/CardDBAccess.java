@@ -1,9 +1,9 @@
 package Card;
 
-import DataAccess.DataAccessController;
-import DataAccess.DataAccessInterface;
-import DataObjects.UserObject;
-import DataObjects.UsersController;
+import dataaccess.DataAccessController;
+import dataaccess.DataAccessInterface;
+import userdataobject.UserObject;
+import userdataobject.UsersController;
 
 import java.util.List;
 import java.util.Objects;

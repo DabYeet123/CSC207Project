@@ -4,11 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Assets Reorganization and bug fix">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="temporary commit">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_assets.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_atm_map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_cards.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_exchange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_house_map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_loans.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_signup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_transaction.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_trasaction_history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/project_welcome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/PresenterInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/StockApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/data_access/BrokerageDBAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/entity/Stock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/view/BrokerageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dataaccess/DataAccessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/login/LogInController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/login/LogInView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/signup/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/signup/SignUpView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/welcome/WelcomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/welcome/WelcomeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transaction/dataObject/NewTransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transaction/dataObject/TransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transaction/dataObject/TransactionDBAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/userdataobject/NewUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/userdataobject/UsersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/userdataobject/UsersDBAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
@@ -17,16 +51,71 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Houses.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Houses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-5.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App/ControllerInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App/MainLauncher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App/PresenterInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageDBAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokeragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokeragePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/FetchStockDataUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/app/FetchStockDataUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/StockAPIConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/StockObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataAccess/DataAccessController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataAccess/DataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataaccess/DataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataObjects/NewUserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataObjects/UserObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/userdataobject/UserObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataObjects/UsersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataObjects/UsersDBAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/InsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/InsuranceDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/DataObject/InsuranceObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Insurance/InsuranceObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LogIn/LogInController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LogIn/LogInPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/login/LogInPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LogIn/LogInView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/LoggedIn/LoggedInView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/SignUp/SignUpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/SignUp/SignUpPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/signup/SignUpPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/SignUp/SignUpView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/Welcome/WelcomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/Welcome/WelcomePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/welcome/WelcomePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogIn/Welcome/WelcomeView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/DataObject/NewTransactionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/DataObject/TransactionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/DataObject/TransactionDBAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/DataObject/TransactionObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/dataObject/TransactionObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/MakeTransaction/MakeTransactionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/MakeTransaction/MakeTransactionPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/MakeTransaction/MakeTransactionView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/SeeTransactionHistory/SeeTransactionHistoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/SeeTransactionHistory/SeeTransactionHistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transaction/SeeTransactionHistory/SeeTransactionHistoryView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atm_map/view_maker/LabelMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atm_map/view_maker/LabelMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atm_map/view_maker/ViewMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atm_map/view_maker/ViewMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataObjects/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataObjects/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataObjects/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +125,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit3 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -59,7 +146,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
-    &quot;accountId&quot;: &quot;87327a85-0c93-46e1-a4b0-a7818d444d72&quot;
+    &quot;accountId&quot;: &quot;820b822e-b045-4e79-8f07-94b614ae1099&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -77,123 +164,58 @@
     "Application.CardPresenter.executor": "Run",
     "Application.CardView.executor": "Run",
     "Application.CurrencyExchangePresenter.executor": "Run",
-    "Application.HouseMapView.executor": "Run",
-    "Application.Main.executor": "Run",
     "Application.MainLauncher.executor": "Run",
     "Application.WelcomePresenter.executor": "Run",
-    "JUnit.HouseObjectTest.executor": "Run",
-    "JUnit.HouseTransactionUseCaseTest.executor": "Run",
-    "JUnit.HouseTransactionUseCaseTest.testConfirm.executor": "Run",
-    "JUnit.HouseTransactionUseCaseTest.testSellHouse.executor": "Run",
-    "JUnit.PopUpTransactionUseCaseTest.executor": "Run",
-    "JUnit.test in homework-5.executor": "Run",
-    "Maven.homework-5 [clean].executor": "Run",
-    "Maven.homework-5 [install].executor": "Run",
+    "Maven.homework-5 [clean,install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
-    "git-widget-placeholder": "zeyucai",
+    "git-widget-placeholder": "Merging zeyucai",
     "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/zeyuc/IdeaProjects/CSC207Project/src/test/java/ATMMap/DataObject",
-    "last_opened_file_path": "C:/Users/zeyuc/IdeaProjects/CAUserLogin",
+    "last_opened_file_path": "C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/mystyle.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\zeyuc\IdeaProjects\CSC207Project\src\main\java\atmMap" />
-      <recent name="C:\Users\zeyuc\IdeaProjects\CSC207Project\src\main\java\house_map" />
-      <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\Loans\SeeLoansHistory" />
-      <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\Loans" />
-    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.View.CardView" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="junit.framework.TestCase" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="ATMMap.DataObject" />
-      <recent name="HouseMap.DataObject" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="HouseMap.UseCase.BuyHouse" />
-      <recent name="HouseMap.UseCase.SellHouse" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainLauncher">
+    <configuration name="CardView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Card.Entity.CardView" />
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Card.Entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
+      <option name="MAIN_CLASS_NAME" value="app.MainLauncher" />
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="App.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HouseTransactionUseCaseTest.testConfirm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="house_map.use_case.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="house_map.use_case" />
-      <option name="MAIN_CLASS_NAME" value="house_map.use_case.HouseTransactionUseCaseTest" />
-      <option name="METHOD_NAME" value="testConfirm" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HouseTransactionUseCaseTest.testSellHouse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="house_map.use_case.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="house_map.use_case" />
-      <option name="MAIN_CLASS_NAME" value="house_map.use_case.HouseTransactionUseCaseTest" />
-      <option name="METHOD_NAME" value="testSellHouse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PopUpTransactionUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="house_map.use_case.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="house_map.use_case" />
-      <option name="MAIN_CLASS_NAME" value="house_map.use_case.PopUpTransactionUseCaseTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,10 +223,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainLauncher" />
-        <item itemvalue="JUnit.test in homework-5" />
-        <item itemvalue="JUnit.PopUpTransactionUseCaseTest" />
-        <item itemvalue="JUnit.HouseTransactionUseCaseTest.testConfirm" />
-        <item itemvalue="JUnit.HouseTransactionUseCaseTest.testSellHouse" />
+        <item itemvalue="Application.CardView" />
+        <item itemvalue="Application.MainLauncher" />
+        <item itemvalue="Application.CardView" />
+        <item itemvalue="Application.MainLauncher" />
       </list>
     </recent_temporary>
   </component>
@@ -219,6 +241,12 @@
       <workItem from="1731971553162" duration="418000" />
       <workItem from="1732142120786" duration="3555000" />
       <workItem from="1732383087980" duration="5623000" />
+      <workItem from="1732663282166" duration="26000" />
+      <workItem from="1732663320438" duration="1370000" />
+      <workItem from="1732726984492" duration="27000" />
+      <workItem from="1732738679000" duration="757000" />
+      <workItem from="1732905967206" duration="2823000" />
+      <workItem from="1732997667400" duration="10987000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -308,55 +336,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732387786548</updated>
     </task>
-    <task id="LOCAL-00012" summary="PopUpTransaction Menu added">
+    <task id="LOCAL-00012" summary="Refactor Transactions + CheckStyle">
       <option name="closed" value="true" />
-      <created>1732571014278</created>
+      <created>1732668544879</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1732571014278</updated>
+      <updated>1732668544880</updated>
     </task>
-    <task id="LOCAL-00013" summary="PopUpTransaction Menu added">
+    <task id="LOCAL-00013" summary="Refactor Checkstyle">
       <option name="closed" value="true" />
-      <created>1732571020815</created>
+      <created>1732686939673</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1732571020815</updated>
+      <updated>1732686939673</updated>
     </task>
-    <task id="LOCAL-00014" summary="PopUpTransaction Menu added">
+    <task id="LOCAL-00014" summary="Added Readme">
       <option name="closed" value="true" />
-      <created>1732571801819</created>
+      <created>1733008780455</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1732571801819</updated>
+      <updated>1733008780455</updated>
     </task>
-    <task id="LOCAL-00015" summary="House and ATM Usecase Refactored to follow clean architecture">
-      <option name="closed" value="true" />
-      <created>1732821725924</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1732821725924</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Refactored for Clean Architecture and added test cases">
-      <option name="closed" value="true" />
-      <created>1733152569599</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1733152569599</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Assets Reorganization and bug fix">
-      <option name="closed" value="true" />
-      <created>1733153143594</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1733153143594</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,25 +381,10 @@
     <MESSAGE value="1" />
     <MESSAGE value="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame." />
     <MESSAGE value="11.23 change amount is double" />
-    <MESSAGE value="PopUpTransaction Menu added" />
-    <MESSAGE value="House and ATM Usecase Refactored to follow clean architecture" />
-    <MESSAGE value="Refactored for Clean Architecture and added test cases" />
-    <MESSAGE value="Assets Reorganization and bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assets Reorganization and bug fix" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/house_map/use_case/HouseTransactionUseCaseTest.java</url>
-          <line>91</line>
-          <properties class="house_map.use_case.HouseTransactionUseCaseTest" method="testConfirm">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Refactor Transactions + CheckStyle" />
+    <MESSAGE value="Refactor Checkstyle" />
+    <MESSAGE value="Added Readme" />
+    <MESSAGE value="temporary commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="temporary commit" />
   </component>
 </project>

@@ -1,6 +1,5 @@
 package Card;
 
-import DataObjects.UserObject;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -2,7 +2,7 @@ package house_map.adapter;
 
 import java.util.List;
 
-import App.ControllerInterface;
+import app.ControllerInterface;
 import DataObjects.UserObject;
 import LogIn.LoggedIn.LoggedInController;
 import house_map.data_access.HouseData;

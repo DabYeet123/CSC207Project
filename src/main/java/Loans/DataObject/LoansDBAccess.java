@@ -2,10 +2,10 @@ package Loans.DataObject;
 
 import Card.Card;
 import Card.CardController;
-import DataAccess.DataAccessController;
-import DataAccess.DataAccessInterface;
-import DataObjects.UserObject;
-import DataObjects.UsersController;
+import dataaccess.DataAccessController;
+import dataaccess.DataAccessInterface;
+import userdataobject.UserObject;
+import userdataobject.UsersController;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -38,6 +38,7 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
         for (LoansObject loan : loans) {
             if (loan.endDate.isBefore(today)) {
                 user.setBalance(user.getBalance() - loan.repayment);
+                usersController.changeUser(userID, user);
                 Card card = cardController.getCard(loan.cardUsed);
                 card.updateAmount(loan.repayment);
             } else {

@@ -1,8 +1,8 @@
 package Card;
 
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
-import LogIn.Welcome.WelcomeController;
+import userdataobject.UserObject;
+import login.loggedin.LoggedInController;
+import login.welcome.WelcomeController;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;

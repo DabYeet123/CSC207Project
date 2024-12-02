@@ -2,7 +2,7 @@ package house_map.adapter;
 
 import javax.swing.JOptionPane;
 
-import App.PresenterInterface;
+import app.PresenterInterface;
 import house_map.use_case.house_transaction.HouseTransactionOutput;
 import house_map.use_case.house_transaction.HouseTransactionOutputBoundary;
 import house_map.view.HouseMapView;

@@ -1,15 +1,15 @@
 package atm_map.adapter;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
+import app.ControllerInterface;
 import atm_map.use_case.AtmGenerationInput;
 import atm_map.use_case.AtmGenerationUseCase;
+import login.loggedin.LoggedInController;
+import userdataobject.UserObject;
 
 /**
  * The Controller for the AtmMap.
  */
-public class AtmMapController implements ControllerInterface {
+public class AtmMapController{
 
     private final UserObject loggedInUser;
     private final AtmGenerationUseCase atmGenerationUseCase;
@@ -39,7 +39,7 @@ public class AtmMapController implements ControllerInterface {
 
 
     /**
-     * Checks if the address is valid
+     * Checks if the address is valid.
      * @param address the address
      */
     public boolean checkValidity(String address) {

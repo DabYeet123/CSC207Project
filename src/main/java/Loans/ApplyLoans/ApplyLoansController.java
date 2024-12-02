@@ -1,11 +1,11 @@
 package Loans.ApplyLoans;
 
-import App.ControllerInterface;
+import app.ControllerInterface;
 import Card.CardController;
-import DataObjects.UserObject;
+import userdataobject.UserObject;
 import Loans.DataObject.LoansController;
-import LogIn.LoggedIn.LoggedInController;
-import LogIn.Welcome.WelcomeController;
+import login.loggedin.LoggedInController;
+import login.welcome.WelcomeController;
 
 public class ApplyLoansController implements ControllerInterface {
     UserObject loggedInUser;
