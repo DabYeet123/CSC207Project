@@ -3,6 +3,8 @@ package insurance.adapter;
 import java.util.List;
 
 import app.ControllerInterface;
+import cardandexchange.adapter.CardController;
+import cardandexchange.dataObject.Card;
 import insurance.dataObject.UserInsuranceObject;
 import login.loggedin.LoggedInController;
 import login.welcome.WelcomeController;
@@ -63,5 +65,11 @@ public class MyInsuranceController implements ControllerInterface {
      */
     public List<UserInsuranceObject> getInsurancesByType(String type) {
         return insurances.stream().filter(insurance -> insurance.getInsurance().getType().equals(type)).toList();
+    }
+
+    public String showCardInformation(String cardUsed) {
+        final CardController cardController = new CardController(loggedInUser);
+        Card card = cardController.getCard(cardUsed);
+        return card.getId() + " (" + card.getUsage() + ")";
     }
 }

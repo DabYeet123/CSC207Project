@@ -2,9 +2,13 @@ package loans.adapter;
 
 import app.ControllerInterface;
 import cardandexchange.adapter.CardController;
+import cardandexchange.dataAccess.CardDBAccess;
+import cardandexchange.dataObject.Card;
 import login.loggedin.LoggedInController;
 import lombok.Getter;
 import userdataobject.UserObject;
+
+import java.util.List;
 
 @Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
@@ -12,6 +16,7 @@ public class ApplyLoansController implements ControllerInterface {
     private static final int MAX_TERM = 1000;
     private UserObject loggedInUser;
     private final ApplyLoansPresenter applyLoansPresenter;
+    private final CardDBAccess cardDBAccess;
     private final LoansController loansController;
 
     /**
@@ -22,6 +27,7 @@ public class ApplyLoansController implements ControllerInterface {
     public ApplyLoansController(UserObject user) {
         this.loggedInUser = user;
         this.loansController = new LoansController();
+        this.cardDBAccess = new CardDBAccess();
         this.applyLoansPresenter = new ApplyLoansPresenter(this);
     }
 
@@ -39,13 +45,11 @@ public class ApplyLoansController implements ControllerInterface {
      * @param amount     The loan amount.
      * @param term       The term of the loan in years.
      * @param rate       The interest rate for the loan.
-     * @param cardNumber The card number used for repayment.
      * @return True if the loan can be applied for; false otherwise.
      */
-    public boolean applyLoansTriggered(Double amount, int term, Double rate, String cardNumber) {
+    public boolean applyLoansTriggered(Double amount, int term, Double rate) {
         final CardController cardController = new CardController(loggedInUser);
-        return amount.compareTo(0.0) >= 0 && term > 0 && term < MAX_TERM
-                && rate.compareTo(0.0) >= 0 && cardController.getCard(cardNumber) != null;
+        return amount.compareTo(0.0) >= 0 && term > 0 && term < MAX_TERM && rate.compareTo(0.0) >= 0;
     }
 
     /**
@@ -70,5 +74,9 @@ public class ApplyLoansController implements ControllerInterface {
         applyLoansPresenter.disposeView();
         final LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();
+    }
+
+    public List<Card> getCards() {
+        return cardDBAccess.readData(loggedInUser.getUserID());
     }
 }

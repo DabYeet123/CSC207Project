@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cardandexchange.adapter.CardController;
+import cardandexchange.dataAccess.CardDBAccess;
+import cardandexchange.dataObject.Card;
 import insurance.dataObject.InsuranceObject;
 import login.loggedin.LoggedInController;
 import login.welcome.WelcomeController;
@@ -16,6 +18,7 @@ public class PurchaseInsuranceController {
 
     private static final int MAX_TERM = 1000;
     private UserObject loggedInUser;
+    private final CardDBAccess cardDBAccess;
     private final PurchaseInsurancePresenter purchaseInsurancePresenter;
     private NewInsuranceController newInsuranceController;
     private final WelcomeController welcomeController;
@@ -29,6 +32,7 @@ public class PurchaseInsuranceController {
      */
     public PurchaseInsuranceController(UserObject user) {
         this.loggedInUser = user;
+        this.cardDBAccess = new CardDBAccess();
         this.welcomeController = new WelcomeController();
         this.userInsuranceController = new UserInsuranceController();
         final InsuranceController insuranceController = new InsuranceController();
@@ -115,5 +119,9 @@ public class PurchaseInsuranceController {
             }
         }
         return newInsurances;
+    }
+
+    public List<Card> getCards() {
+        return cardDBAccess.readData(loggedInUser.getUserID());
     }
 }

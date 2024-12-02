@@ -3,6 +3,8 @@ package loans.adapter;
 import java.util.List;
 
 import app.ControllerInterface;
+import cardandexchange.adapter.CardController;
+import cardandexchange.dataObject.Card;
 import loans.dataObject.LoansObject;
 import login.loggedin.LoggedInController;
 import login.welcome.WelcomeController;
@@ -53,5 +55,11 @@ public class SeeLoansHistoryController implements ControllerInterface {
      */
     public void update() {
         this.loans = loansController.getAllLoans(loggedInUser.getUserID());
+    }
+
+    public String showCardInformation(String cardUsed) {
+        final CardController cardController = new CardController(loggedInUser);
+        Card card = cardController.getCard(cardUsed);
+        return card.getId() + " (" + card.getUsage() + ")";
     }
 }

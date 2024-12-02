@@ -51,13 +51,13 @@ public class MyInsuranceView extends JFrame {
             "Start Date", "End Date", "Auto Renew", "Card"};
         final DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         final JTable insuranceTable = new JTable(tableModel);
-        final JComboBox<String> typeComboBox = new JComboBox<>(new String[]{"Choose Insurance Type",
+        final JComboBox<String> typeComboBox = new JComboBox<>(new String[]{InsuranceMethods.CHOOSE_INSURANCE_TYPE,
             "Health", "Vehicle", "Home", "Travel", "Life", "Pet", "Business", "Dental", "Other"});
-        updateTable(tableModel, controller.getInsurances());
+        updateTable(typeComboBox, tableModel, controller);
         typeComboBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                filter(typeComboBox, controller, tableModel);
+                updateTable(typeComboBox, tableModel, controller);
             }
         });
 
@@ -104,14 +104,14 @@ public class MyInsuranceView extends JFrame {
     }
 
     /**
-     * Filters the insurance policies based on the selected type and updates the table.
+     * Updates the table with the given list of insurance policies.
      *
-     * @param typeComboBox The combo box for selecting the type of insurance.
-     * @param controller   The controller that provides the filtered insurance policies.
-     * @param tableModel   The table model to be updated with filtered insurance policies.
+     * @param typeComboBox       The combo box for selecting the type of insurance.
+     * @param tableModel         The table model to be updated.
+     * @param controller         The controller that provides the filtered insurance policies.
      */
-    private static void filter(JComboBox<String> typeComboBox, MyInsuranceController controller,
-                               DefaultTableModel tableModel) {
+    private static void updateTable(JComboBox<String> typeComboBox, DefaultTableModel tableModel,
+                                    MyInsuranceController controller) {
         final String selectedType = (String) typeComboBox.getSelectedItem();
         final List<UserInsuranceObject> filteredInsurances;
         if (selectedType != null && !"Choose Insurance Type".equals(selectedType)) {
@@ -120,16 +120,6 @@ public class MyInsuranceView extends JFrame {
         else {
             filteredInsurances = controller.getInsurances();
         }
-        updateTable(tableModel, filteredInsurances);
-    }
-
-    /**
-     * Updates the table with the given list of insurance policies.
-     *
-     * @param tableModel         The table model to be updated.
-     * @param filteredInsurances The list of insurance policies to populate the table.
-     */
-    private static void updateTable(DefaultTableModel tableModel, List<UserInsuranceObject> filteredInsurances) {
         tableModel.setRowCount(0);
         for (UserInsuranceObject insurance : filteredInsurances) {
             final String endDate;
@@ -151,7 +141,7 @@ public class MyInsuranceView extends JFrame {
                 String.valueOf(insurance.getStartDate()),
                 endDate,
                 autoRenew,
-                insurance.getCardUsed(),
+                controller.showCardInformation(insurance.getCardUsed()),
             };
             tableModel.addRow(rowData);
         }

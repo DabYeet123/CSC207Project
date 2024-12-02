@@ -1,1 +1,1 @@
-[]
+[{"userID":10005,"amount":100000.0,"startDate":[2024,12,2],"endDate":[2025,12,1],"rate":1.0,"repayment":101000.0,"cardUsed":"1001151021"},{"userID":10005,"amount":50.0,"startDate":[2024,12,2],"endDate":[2034,12,1],"rate":1.0,"repayment":55.00000000000001,"cardUsed":"5283675635"}]

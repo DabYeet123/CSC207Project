@@ -100,7 +100,7 @@ public class LoggedInView extends JFrame {
         final JButton assetsButton = createButton("Assets", controller::buyAssetsTriggered);
         final JButton loansButton = createButton("Apply Loans", controller::applyLoansTriggered);
         final JButton loansHistoryButton = createButton("Loans History", controller::seeLoansHistoryTriggered);
-        final JButton exchangeButton = createButton("Currency exchange", controller::exchangeTriggered);
+        final JButton exchangeButton = createButton("Currency Exchange", controller::exchangeTriggered);
         final JButton insuranceButton = createButton("Purchase Insurance", controller::purchaseInsuranceTriggered);
         final JButton myInsuranceButton = createButton("My Insurance", controller::myInsuranceTriggered);
 

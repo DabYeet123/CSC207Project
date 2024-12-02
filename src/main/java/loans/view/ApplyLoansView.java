@@ -1,17 +1,21 @@
 package loans.view;
 
+import java.util.List;
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import cardandexchange.dataObject.Card;
 import loans.adapter.ApplyLoansController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
@@ -45,8 +49,8 @@ public class ApplyLoansView extends JFrame {
         final JTextField termField = new JTextField();
         final JLabel interestRateLabel = new JLabel("Interest Rate (%):");
         final JTextField interestRateField = new JTextField();
-        final JLabel cardLabel = new JLabel("Number of Card for Repayment:");
-        final JTextField cardField = new JTextField();
+        final JLabel cardLabel = new JLabel("Card for Repayment:");
+        final JComboBox<String> cardComboBox = createCardComboBox(controller);
         final JButton confirmButton = new JButton("Confirm");
         final JButton cancelButton = new JButton("Cancel");
 
@@ -57,7 +61,7 @@ public class ApplyLoansView extends JFrame {
         loansPanel.add(interestRateLabel);
         loansPanel.add(interestRateField);
         loansPanel.add(cardLabel);
-        loansPanel.add(cardField);
+        loansPanel.add(cardComboBox);
         loansPanel.add(confirmButton);
         loansPanel.add(cancelButton);
 
@@ -66,7 +70,7 @@ public class ApplyLoansView extends JFrame {
         confirmButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                confirm(cardField, amountField, termField, interestRateField, controller);
+                confirm(cardComboBox, amountField, termField, interestRateField, controller);
             }
         });
 
@@ -78,36 +82,52 @@ public class ApplyLoansView extends JFrame {
         });
     }
 
+    private JComboBox<String> createCardComboBox(ApplyLoansController controller) {
+        JComboBox<String> cardComboBox = new JComboBox<>(new String[]{"Choose your Card"});
+        List<Card> cards = controller.getCards();
+        for (Card card : cards) {
+            cardComboBox.addItem(card.getId() + " (" + card.getUsage() + ")");
+        }
+        return cardComboBox;
+    }
+
     /**
      * Handles the confirmation process for applying for a loan.
      *
-     * @param cardField        The text field containing the card number for repayment.
+     * @param cardComboBox     The combo box containing the card for repayment.
      * @param amountField      The text field containing the loan amount.
      * @param termField        The text field containing the loan term in years.
      * @param interestRateField The text field containing the interest rate.
      * @param controller       The controller to manage the loan application process.
      */
-    private void confirm(JTextField cardField, JTextField amountField, JTextField termField,
+    private void confirm(JComboBox<String> cardComboBox, JTextField amountField, JTextField termField,
                          JTextField interestRateField, ApplyLoansController controller) {
         try {
-            final String cardNumber = cardField.getText();
-            final Double amount = (Double) Double.parseDouble(amountField.getText());
-            final int term = Integer.parseInt(termField.getText());
-            final Double rate = (Double) Double.parseDouble(interestRateField.getText());
-            final boolean success = controller.applyLoansTriggered(amount, term, rate, cardNumber);
-            if (success) {
-                if (JOptionPane.showConfirmDialog(ApplyLoansView.this,
-                        "Are you sure to apply the loan?",
-                        "Confirmation", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-                    controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
+            if (cardComboBox.getSelectedIndex() > 0) {
+                final String cardNumber = controller.getCards().get(cardComboBox.getSelectedIndex() - 1).getId();
+                final Double amount = (Double) Double.parseDouble(amountField.getText());
+                final int term = Integer.parseInt(termField.getText());
+                final Double rate = (Double) Double.parseDouble(interestRateField.getText());
+                final boolean success = controller.applyLoansTriggered(amount, term, rate);
+                if (success) {
+                    if (JOptionPane.showConfirmDialog(ApplyLoansView.this,
+                            "Are you sure to apply the loan?",
+                            "Confirmation", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                        controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
+                        JOptionPane.showMessageDialog(ApplyLoansView.this,
+                                "You have successfully applied the loan.",
+                                "Success", JOptionPane.PLAIN_MESSAGE);
+                    }
+                }
+                else {
                     JOptionPane.showMessageDialog(ApplyLoansView.this,
-                            "You have successfully applied the loan.",
-                            "Success", JOptionPane.PLAIN_MESSAGE);
+                            "Please fill all the fields correctly.", "Invalid Input",
+                            JOptionPane.WARNING_MESSAGE);
                 }
             }
             else {
                 JOptionPane.showMessageDialog(ApplyLoansView.this,
-                        "Please fill all the fields correctly.", "Invalid Selection",
+                        "Please choose a valid Card.", "Invalid Selection",
                         JOptionPane.WARNING_MESSAGE);
             }
         }

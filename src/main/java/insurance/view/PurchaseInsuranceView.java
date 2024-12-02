@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import cardandexchange.dataObject.Card;
 import org.jetbrains.annotations.NotNull;
 
 import insurance.adapter.InsuranceController;
@@ -52,13 +53,13 @@ public class PurchaseInsuranceView extends JFrame {
 
         final JComboBox<String> nameIDComboBox = createNameIDComboBox();
         final JComboBox<String> typeComboBox = createTypeComboBox(controller, nameIDComboBox);
-        final JTextField cardField = new JTextField();
+        final JComboBox<String> cardComboBox = createCardComboBox(controller);
         final JCheckBox autoRenewCheckBox = createAutoRenewCheckBox();
         final JTextField termField = createTermField(autoRenewCheckBox);
         final JButton policyDetailsButton = createPolicyDetailsButton(controller, typeComboBox, nameIDComboBox);
         final JButton deleteButton = createDeleteButton(controller, nameIDComboBox, typeComboBox);
         final JButton newButton = createNewButton(controller);
-        final JButton confirmButton = createConfirmButton(controller, nameIDComboBox, cardField,
+        final JButton confirmButton = createConfirmButton(controller, nameIDComboBox, cardComboBox,
                 termField, autoRenewCheckBox, typeComboBox);
         final JButton cancelButton = createCancelButton(controller);
         inputPanel.add(new JLabel("Insurance Type:"));
@@ -67,8 +68,8 @@ public class PurchaseInsuranceView extends JFrame {
         inputPanel.add(nameIDComboBox);
         inputPanel.add(policyDetailsButton);
         inputPanel.add(new JLabel());
-        inputPanel.add(new JLabel("Card Number:"));
-        inputPanel.add(cardField);
+        inputPanel.add(new JLabel("Card:"));
+        inputPanel.add(cardComboBox);
         inputPanel.add(autoRenewCheckBox);
         inputPanel.add(new JLabel());
         inputPanel.add(new JLabel("Term (Yrs):"));
@@ -78,6 +79,15 @@ public class PurchaseInsuranceView extends JFrame {
         inputPanel.add(confirmButton);
         inputPanel.add(cancelButton);
         return inputPanel;
+    }
+
+    private JComboBox<String> createCardComboBox(PurchaseInsuranceController controller) {
+        JComboBox<String> cardComboBox = new JComboBox<>(new String[]{"Choose your Card"});
+        List<Card> cards = controller.getCards();
+        for (Card card : cards) {
+            cardComboBox.addItem(card.getId() + " (" + card.getUsage() + ")");
+        }
+        return cardComboBox;
     }
 
     private JComboBox<String> createTypeComboBox(PurchaseInsuranceController controller,
@@ -139,13 +149,13 @@ public class PurchaseInsuranceView extends JFrame {
     }
 
     private JButton createConfirmButton(PurchaseInsuranceController controller, JComboBox<String> nameIDComboBox,
-                                        JTextField cardField, JTextField termField, JCheckBox autoRenewCheckBox,
+                                        JComboBox<String> cardComboBox, JTextField termField, JCheckBox autoRenewCheckBox,
                                         JComboBox<String> typeComboBox) {
         final JButton confirmButton = new JButton("Confirm");
         confirmButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                confirm(nameIDComboBox, cardField, termField, autoRenewCheckBox, controller, typeComboBox);
+                confirm(nameIDComboBox, cardComboBox, termField, autoRenewCheckBox, controller, typeComboBox);
             }
         });
         return confirmButton;
@@ -189,12 +199,12 @@ public class PurchaseInsuranceView extends JFrame {
         }
     }
 
-    private void confirm(JComboBox<String> nameIDComboBox, JTextField cardField, JTextField termField,
+    private void confirm(JComboBox<String> nameIDComboBox, JComboBox<String> cardComboBox, JTextField termField,
                          JCheckBox autoRenewCheckBox, PurchaseInsuranceController controller,
                          JComboBox<String> typeComboBox) {
         try {
-            if (nameIDComboBox.getSelectedIndex() > 0) {
-                final String cardUsed = cardField.getText();
+            if (nameIDComboBox.getSelectedIndex() > 0 && cardComboBox.getSelectedIndex() > 0) {
+                final String cardUsed = controller.getCards().get(cardComboBox.getSelectedIndex() - 1).getId();
                 final int term;
                 if (!termField.getText().isEmpty()) {
                     term = Integer.parseInt(termField.getText());
@@ -230,7 +240,7 @@ public class PurchaseInsuranceView extends JFrame {
             }
             else {
                 JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
-                        "Please select a valid Insurance.",
+                        "Please select a valid Insurance and a valid Card.",
                         INVALID_SELECTION, JOptionPane.WARNING_MESSAGE);
             }
         }

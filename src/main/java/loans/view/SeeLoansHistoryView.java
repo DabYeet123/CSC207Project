@@ -87,7 +87,7 @@ public class SeeLoansHistoryView extends JFrame {
                     String.valueOf(loan.getEndDate()),
                     String.format(DECIMAL, loan.getRate()),
                     String.format(DECIMAL, loan.getRepayment()),
-                    loan.getCardUsed(),
+                    controller.showCardInformation(loan.getCardUsed()),
             };
             tableModel.addRow(rowData);
             ++loanID;
