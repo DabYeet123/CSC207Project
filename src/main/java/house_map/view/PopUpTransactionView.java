@@ -117,7 +117,10 @@ public class PopUpTransactionView extends JFrame {
      */
     public void addInfo(PanelMaker infoPanel) {
 
-        final double balance = currentCard.getExpenses();
+        double balance = 0;
+        if(currentCard != null) {
+            balance = currentCard.getExpenses();
+        }
         final LabelMaker transaction = new LabelMaker("Transaction Amount: ", null);
         transactionAmount = new LabelMaker("$" + df.format(price), null);
         final LabelMaker currentBalance = new LabelMaker("Current Balance: ", null);
