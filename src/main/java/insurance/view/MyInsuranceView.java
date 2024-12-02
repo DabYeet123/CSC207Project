@@ -21,6 +21,7 @@ import javax.swing.table.DefaultTableModel;
 import insurance.adapter.MyInsuranceController;
 import insurance.adapter.UserInsuranceController;
 import insurance.dataObject.UserInsuranceObject;
+import insurance.useCase.InsuranceMethods;
 import userdataobject.UserObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
@@ -78,8 +79,7 @@ public class MyInsuranceView extends JFrame {
         cancelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cancelAutoRenewalButton(insuranceTable);
-                controller.goBackToBaseView();
+                cancelAutoRenewalButton(insuranceTable, controller);
             }
         });
         backPanel(controller);
@@ -162,7 +162,7 @@ public class MyInsuranceView extends JFrame {
      *
      * @param table The table displaying the insurance policies.
      */
-    private void cancelAutoRenewalButton(JTable table) {
+    private void cancelAutoRenewalButton(JTable table, MyInsuranceController controller) {
         final UserInsuranceController userInsuranceController = new UserInsuranceController();
         final int selectedRow = table.getSelectedRow();
         if (selectedRow == -1) {
@@ -177,8 +177,16 @@ public class MyInsuranceView extends JFrame {
                         "Invalid Selection", JOptionPane.WARNING_MESSAGE);
             }
             else {
-                final int insuranceID = Integer.parseInt(table.getValueAt(selectedRow, INSURANCE_ID_COL).toString());
-                userInsuranceController.cancelAutoRenewalByInsuranceID(user.getUserID(), insuranceID);
+                if (JOptionPane.showConfirmDialog(MyInsuranceView.this,
+                "Are you sure to delete the selected insurance?",
+                "Confirmation", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                    final int insuranceID = Integer.parseInt(table.getValueAt(selectedRow, INSURANCE_ID_COL).toString());
+                    userInsuranceController.cancelAutoRenewalByInsuranceID(user.getUserID(), insuranceID);
+                    JOptionPane.showMessageDialog(MyInsuranceView.this,
+                            "You have successfully canceled the auto-renewal of this insurance.",
+                            "Success", JOptionPane.PLAIN_MESSAGE);
+                    controller.goBackToBaseView();
+                }
             }
         }
     }

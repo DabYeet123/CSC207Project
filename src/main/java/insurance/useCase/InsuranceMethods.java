@@ -11,12 +11,11 @@ public class InsuranceMethods {
     /**
      * Retrieves the insurance policy details as a formatted string.
      *
-     * @param type      The type of the insurance.
      * @param insurance The insurance object containing details.
      * @return A formatted string with insurance details.
      */
-    public static String getInsurancePolicyDetails(String type, InsuranceObject insurance) {
-        return "Insurance Type: " + type + END_LINE
+    public static String getInsurancePolicyDetails(InsuranceObject insurance) {
+        return "Insurance Type: " + insurance.getType() + END_LINE
                 + "Insurance Name: " + insurance.getInsuranceName() + END_LINE
                 + "Insurance ID: " + insurance.getInsuranceID() + END_LINE
                 + "Premium per year ($): " + insurance.getPremium() + END_LINE

@@ -111,8 +111,8 @@ public class NewInsuranceView extends JFrame {
                     JOptionPane.showMessageDialog(NewInsuranceView.this,
                             "You have successfully added a new insurance."
                                     + InsuranceMethods.END_LINE + InsuranceMethods.END_LINE
-                                    + InsuranceMethods.getInsurancePolicyDetails(type,
-                                    insuranceController.getLatestInsurance()),
+                                    + InsuranceMethods.getInsurancePolicyDetails(
+                                            insuranceController.getLatestInsurance()),
                             "Success", JOptionPane.PLAIN_MESSAGE);
                     controller.goBackToBaseView();
                 }

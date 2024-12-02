@@ -169,17 +169,18 @@ public class PurchaseInsuranceView extends JFrame {
             final List<InsuranceObject> filteredInsurances = controller.getInsurancesByType(selectedType);
             final int selectedIndex = nameIDComboBox.getSelectedIndex() - 1;
             final InsuranceObject selectedInsurance = filteredInsurances.get(selectedIndex);
-            JOptionPane.showConfirmDialog(PurchaseInsuranceView.this,
+            if (JOptionPane.showConfirmDialog(PurchaseInsuranceView.this,
                     "Are you sure to delete the selected insurance?"
                             + InsuranceMethods.END_LINE + InsuranceMethods.END_LINE
-                            + InsuranceMethods.getInsurancePolicyDetails(selectedType, selectedInsurance),
-                    "Confirmation", JOptionPane.YES_NO_OPTION);
-            final InsuranceController insuranceController = new InsuranceController();
-            insuranceController.deleteInsurance(selectedInsurance);
-            JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
-                    "You have successfully deleted the selected insurance.",
-                    "Success", JOptionPane.PLAIN_MESSAGE);
-            controller.goBackToBaseView();
+                            + InsuranceMethods.getInsurancePolicyDetails(selectedInsurance),
+                    "Confirmation", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                final InsuranceController insuranceController = new InsuranceController();
+                insuranceController.deleteInsurance(selectedInsurance);
+                JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
+                        "You have successfully deleted the selected insurance.",
+                        "Success", JOptionPane.PLAIN_MESSAGE);
+                controller.goBackToBaseView();
+            }
         }
         else {
             JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
@@ -208,7 +209,18 @@ public class PurchaseInsuranceView extends JFrame {
                     final List<InsuranceObject> filteredInsurances = controller.getInsurancesByType(selectedType);
                     final int selectedIndex = nameIDComboBox.getSelectedIndex() - 1;
                     final InsuranceObject selectedInsurance = filteredInsurances.get(selectedIndex);
-                    controller.onPurchaseInsuranceSuccess(selectedInsurance, term, autoRenew, cardUsed);
+                    if (JOptionPane.showConfirmDialog(PurchaseInsuranceView.this,
+                            "Are you sure to purchase the selected insurance?"
+                                    + InsuranceMethods.END_LINE + InsuranceMethods.END_LINE
+                                    + InsuranceMethods.getInsurancePolicyDetails(selectedInsurance),
+                            "Confirmation", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                        controller.onPurchaseInsuranceSuccess(selectedInsurance, term, autoRenew, cardUsed);
+                        JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
+                                "You have successfully purchased the selected insurance."
+                                        + InsuranceMethods.END_LINE + InsuranceMethods.END_LINE
+                                        + InsuranceMethods.getInsurancePolicyDetails(selectedInsurance),
+                                "Success", JOptionPane.PLAIN_MESSAGE);
+                    }
                 }
                 else {
                     JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
@@ -244,8 +256,13 @@ public class PurchaseInsuranceView extends JFrame {
                         final int selectedIndex = nameIDComboBox.getSelectedIndex() - 1;
                         final InsuranceObject selectedInsurance = filteredInsurances.get(selectedIndex);
                         JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
-                                InsuranceMethods.getInsurancePolicyDetails(selectedType, selectedInsurance),
+                                InsuranceMethods.getInsurancePolicyDetails(selectedInsurance),
                                 "Insurance Policy Details", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(PurchaseInsuranceView.this,
+                                "Please select a valid Insurance.",
+                                INVALID_SELECTION, JOptionPane.WARNING_MESSAGE);
                     }
                 }
                 else {

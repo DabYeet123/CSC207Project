@@ -96,13 +96,14 @@ public class ApplyLoansView extends JFrame {
             final Double rate = (Double) Double.parseDouble(interestRateField.getText());
             final boolean success = controller.applyLoansTriggered(amount, term, rate, cardNumber);
             if (success) {
-                JOptionPane.showConfirmDialog(ApplyLoansView.this,
+                if (JOptionPane.showConfirmDialog(ApplyLoansView.this,
                         "Are you sure to apply the loan?",
-                        "Confirmation", JOptionPane.YES_NO_OPTION);
-                controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
-                JOptionPane.showMessageDialog(ApplyLoansView.this,
-                        "You have successfully applied the loan.",
-                        "Success", JOptionPane.PLAIN_MESSAGE);
+                        "Confirmation", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                    controller.onApplyLoansSuccess(amount, term, rate, cardNumber);
+                    JOptionPane.showMessageDialog(ApplyLoansView.this,
+                            "You have successfully applied the loan.",
+                            "Success", JOptionPane.PLAIN_MESSAGE);
+                }
             }
             else {
                 JOptionPane.showMessageDialog(ApplyLoansView.this,
