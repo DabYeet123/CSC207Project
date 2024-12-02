@@ -2,28 +2,57 @@ package brokerage.interface_adapter;
 
 import app.PresenterInterface;
 import brokerage.BrokerageView;
+import brokerage.use_case.BrokerageOutputBoundary;
+import brokerage.use_case.BrokerageOutputData;
+import login.loggedin.LoggedInView;
 
 /**
  * Handles the presentation layer for the brokerage system, managing the interaction
  * between the controller and the view.
  */
 
-public class BrokeragePresenter implements PresenterInterface<BrokerageController> {
-    private final BrokerageView brokerageView;
+public class BrokeragePresenter implements BrokerageOutputBoundary {
+    private final BrokerageViewModel brokerageViewModel;
+    private final LoggedinViewModel loggedinViewModel;
+    private final ViewManagerModel viewManagerModel;
 
-    public BrokeragePresenter(BrokerageController controller) {
-        brokerageView = new BrokerageView(controller);
+    public BrokeragePresenter(BrokerageViewModel brokerageViewModel, LoggedinViewModel loggedinViewModel,
+                              ViewManagerModel viewManagerModel) {
+        this.brokerageViewModel = brokerageViewModel;
+        this.loggedinViewModel = loggedinViewModel;
+        this.viewManagerModel = viewManagerModel;
     }
 
     @Override
-    public void showView() {
-        brokerageView.setVisible(true);
+    public void prepareTradeView(BrokerageOutputData outputData) {
+        final BrokerageState brokerageState = brokerageViewModel.getState();
+        brokerageState.setGraph(outputData.getGraph());
+        this.brokerageViewModel.setState(brokerageState);
+        this.brokerageViewModel.firePropertyChanged();
     }
 
     @Override
-    public void disposeView() {
-        brokerageView.setVisible(false);
-        brokerageView.dispose();
+    public void prepareSuccessView(BrokerageOutputData outputData) {
+        final LoggedinState loggedInState = loggedinViewModel.getState();
+        loggedInState.setUser(outputData.getUser());
+        this.loggedinViewModel.setState(loggedInState);
+        this.loggedinViewModel.firePropertyChanged();
+
+        viewManagerModel.setState(loggedinViewModel.getViewName());
+        viewManagerModel.firePropertyChanged();
+
     }
 
+    @Override
+    public void prepareFailView(String errorMessage) {
+        final BrokerageState brokerageState = brokerageViewModel.getState();
+        brokerageState.setTransactionError(errorMessage);
+        brokerageViewModel.firePropertyChanged();
+    }
+
+    @Override
+    public void switchToLoggedinView() {
+        viewManagerModel.setState(loggedinViewModel.getViewName());
+        viewManagerModel.firePropertyChanged();
+    }
 }

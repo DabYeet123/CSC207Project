@@ -10,7 +10,7 @@ import com.crazzyghost.alphavantage.timeseries.response.TimeSeriesResponse;
 
 import java.util.List;
 
-public class FetchStockDataUseCase {
+public class StockApi {
 
     public static List<StockUnit> execute(String stockSymbol) {
 

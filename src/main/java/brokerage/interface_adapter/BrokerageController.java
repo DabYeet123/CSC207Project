@@ -3,49 +3,46 @@ package brokerage.interface_adapter;
 import java.util.List;
 
 import app.ControllerInterface;
-import brokerage.app.FetchStockDataUseCase;
+import brokerage.app.StockApi;
 import brokerage.data_access.BrokerageDBAccess;
 import brokerage.entity.Stock;
+import brokerage.use_case.BrokerageInputData;
 import com.crazzyghost.alphavantage.timeseries.response.StockUnit;
 import login.loggedin.LoggedInController;
 import userdataobject.UserObject;
+import brokerage.use_case.BrokerageInputBoundary;
 
 /**
  * Controls the brokerage functionality for the application, including handling stock searches,
  * buying and selling stocks, and managing user data.
  */
-public class BrokerageController implements ControllerInterface {
+public class BrokerageController {
+    private final BrokerageInputBoundary brokerageInteractor;
 
-    private UserObject loggedInUser;
-    private final BrokeragePresenter brokeragePresenter;
-    private final BrokerageDBAccess brokerageDBAccess = new BrokerageDBAccess();
-
-    public BrokerageController(UserObject loggedInUser) {
-        this.loggedInUser = loggedInUser;
-        this.brokeragePresenter = new BrokeragePresenter(this);
+    public BrokerageController(BrokerageInputBoundary brokerageInteractor) {
+        this.brokerageInteractor = brokerageInteractor;
     }
 
-    @Override
-    public void launch() {
-        brokeragePresenter.showView();
+    public void searchStock(String stockSymbol) {
+        final BrokerageInputData brokerageInputData = new BrokerageInputData(stockSymbol);
+        brokerageInteractor.searchStock(brokerageInputData);
     }
 
-    /**
-     * Handles the event triggered when searching for a stock by its symbol.
-     *
-     * @param stockSymbol the stock symbol entered by the user
-     * @return {@code true} if the stock symbol is not empty, {@code false} otherwise
-     */
-    public boolean onSearchStockTriggered(String stockSymbol) {
-        return !stockSymbol.isEmpty();
+    public void tradeStock(UserObject user, String stockSymbol, int quantity, Stock stock) {
+        final BrokerageInputData brokerageInputData = new BrokerageInputData(user, stockSymbol, quantity, stock);
+        brokerageInteractor.tradeStock(brokerageInputData);
     }
 
-    /**
-     * Checks if a stock is found for the given symbol.
-     *
-     * @param stockSymbol the stock symbol to search
-     * @return {@code true} if stock data is available, {@code false} otherwise
-     */
+    public void switchToLoggedinView() {
+        brokerageInteractor.switchToLoggedinView();
+    }
+
+
+
+
+
+
+
     public boolean isStockFound(String stockSymbol) {
         final List<StockUnit> stocks = fetchStockData(stockSymbol);
         return !stocks.isEmpty();
@@ -59,7 +56,7 @@ public class BrokerageController implements ControllerInterface {
      */
 
     public List<StockUnit> fetchStockData(String stockSymbol) {
-        return FetchStockDataUseCase.execute(stockSymbol);
+        return StockApi.execute(stockSymbol);
     }
 
     /**

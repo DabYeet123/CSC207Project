@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Added Readme">
-      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/data_access/BrokerageDBAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/entity/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/brokerage/view/BrokerageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Changed file structure for CA refactoring">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageDBAccess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokeragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokeragePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/BrokerageView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/FetchStockDataUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/app/FetchStockDataUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/StockAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/StockApiConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Brokerage/StockObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/app/FetchStockDataUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/app/StockApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokeragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokeragePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,33 +63,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CardPresenter.executor": "Run",
-    "Application.CardView.executor": "Run",
-    "Application.CurrencyExchangePresenter.executor": "Run",
-    "Application.MainLauncher.executor": "Run",
-    "Application.WelcomePresenter.executor": "Run",
-    "Maven.homework-5 [clean,install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "stefano.mauloni",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/mystyle.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CardPresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CardView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CurrencyExchangePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WelcomePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.homework-5 [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;stefano.mauloni&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/mystyle.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="brokerage.use_case" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.View.CardView" />
     </key>
@@ -125,6 +127,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CardView" />
+      <item itemvalue="Application.MainLauncher" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainLauncher" />
@@ -265,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733008780455</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Changed file structure for CA refactoring">
+      <option name="closed" value="true" />
+      <created>1733156791624</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733156791624</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +303,7 @@
     <MESSAGE value="Refactor Transactions + CheckStyle" />
     <MESSAGE value="Refactor Checkstyle" />
     <MESSAGE value="Added Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Readme" />
+    <MESSAGE value="Changed file structure for CA refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed file structure for CA refactoring" />
   </component>
 </project>

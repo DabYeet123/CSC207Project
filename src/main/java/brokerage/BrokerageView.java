@@ -1,11 +1,9 @@
 package brokerage;
 
-import java.awt.BasicStroke;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeListener;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -19,8 +17,12 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 import brokerage.interface_adapter.BrokerageController;
+import brokerage.interface_adapter.BrokerageState;
+import brokerage.interface_adapter.BrokerageViewModel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -74,30 +76,142 @@ import com.crazzyghost.alphavantage.timeseries.response.StockUnit;
  * @see StockUnit
  * @see JFreeChart
  */
-public class BrokerageView extends JFrame {
+public class BrokerageView extends JPanel implements ActionListener, PropertyChangeListener {
 
-    private final JPanel graphPanel;
-    private JTextField stockNameField;
+    private final String viewName = "brokerage";
+    private final BrokerageViewModel brokerageViewModel;
+    private final BrokerageController brokerageController;
+
+    private final JTextField stockNameInputField = new JTextField(10);
     private JLabel stockPriceLabel;
-    private JButton buyButton;
-    private JButton sellButton;
+    private final JButton searchStockButton;
+    private final JButton buyButton;
+    private final JButton sellButton;
+    private final JButton cancelButton;
 
-    public BrokerageView(BrokerageController controller) {
-        setTitle("Crazy Bank - Asset Managing");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public BrokerageView(BrokerageController controller, BrokerageViewModel brokerageViewModel) {
+        this.brokerageViewModel = brokerageViewModel;
+        this.brokerageController = controller;
+        final JLabel title = new JLabel("Crazy Bank - Asset Managing");
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         final int frameWidth = 700;
         final int frameHeight = 500;
         setSize(frameWidth, frameHeight);
         setLayout(new BorderLayout());
-        setLocationRelativeTo(null);
 
-        final JPanel inputPanel = createInputPanel(controller);
-        final JPanel buttonsPanel = createButtonsPanel(controller);
-        this.graphPanel = createGraphPanel();
+        final JPanel inputPanel = new JPanel();
+        final JPanel graphPanel = new JPanel();
+        final JPanel buttons = new JPanel();
 
-        add(inputPanel, BorderLayout.NORTH);
-        add(graphPanel, BorderLayout.CENTER);
-        add(buttonsPanel, BorderLayout.SOUTH);
+        final LabelTextPanel stockSymbolInfo = new LabelTextPanel(
+                new JLabel("Search stock"), stockNameInputField);
+
+        searchStockButton = new JButton("Search");
+
+        buyButton = new JButton("Buy");
+        buttons.add(buyButton);
+        sellButton = new JButton("Sell");
+        buttons.add(sellButton);
+        cancelButton = new JButton("Cancel");
+        buttons.add(cancelButton);
+
+        searchStockButton.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent event) {
+                        if (event.getSource().equals(searchStockButton)) {
+                            BrokerageState state = brokerageViewModel.getState();
+                            brokerageController.searchStock(state.getStockSymbol());
+                        }
+                    }
+                }
+        );
+
+        buyButton.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent event) {
+                        if (event.getSource().equals(buyButton)) {
+                            BrokerageState state = brokerageViewModel.getState();
+                            brokerageController.tradeStock(state.getUser(), state.getStockSymbol(), state.getQuantity(),
+                                    state.getStock());
+                        }
+                    }
+                }
+        );
+
+        buyButton.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent event) {
+                        if (event.getSource().equals(buyButton)) {
+                            BrokerageState state = brokerageViewModel.getState();
+                            brokerageController.tradeStock(state.getUser(), state.getStockSymbol(), state.getQuantity(),
+                                    state.getStock());
+                        }
+                    }
+                }
+        );
+
+        cancelButton.addActionListener(this);
+
+        stockNameInputField.getDocument().addDocumentListener(new DocumentListener() {
+            private void documentListenerHelper() {
+                final BrokerageState state = brokerageViewModel.getState();
+                state.setStockSymbol(stockNameInputField.getText());
+                brokerageViewModel.setState(state);
+            }
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+        });
+
+        quantityInputField.getDocument().addDocumentListener(new DocumentListener() {
+            private void documentListenerHelper() {
+                final BrokerageState state = brokerageViewModel.getState();
+                state.setQuantity(quantityInputField.getText());
+                brokerageViewModel.setState(state);
+            }
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                documentListenerHelper();
+            }
+        });
+
+        this.add(title);
+        inputPanel.add(stockSymbolInfo);
+        inputPanel.add(stockNameInputField);
+        inputPanel.add(searchStockButton);
+        this.add(inputPanel, BorderLayout.NORTH);
+
+        graphPanel.add(graph);
+        this.add(graphPanel, BorderLayout.CENTER);
+
+        this.add(buttons, BorderLayout.SOUTH);
     }
 
     private JPanel createButtonsPanel(BrokerageController controller) {
@@ -113,8 +227,8 @@ public class BrokerageView extends JFrame {
         final int backButtonHeight = 50;
         backButton.setPreferredSize(new Dimension(backButtonWidth, backButtonHeight));
 
-        buyButton.addActionListener(event -> buyButtonAction(controller, this.stockNameField));
-        sellButton.addActionListener(event -> sellButtonAction(controller, this.stockNameField));
+        buyButton.addActionListener(event -> buyButtonAction(controller, this.stockNameInputField));
+        sellButton.addActionListener(event -> sellButtonAction(controller, this.stockNameInputField));
         backButton.addActionListener(event -> controller.goBackToBaseView());
 
         buttonsPanel.add(buyButton);
@@ -129,17 +243,17 @@ public class BrokerageView extends JFrame {
         final JLabel nameLabel = new JLabel("Stock Symbol:");
         final JLabel priceLabel = new JLabel("Price $:");
         final int columnsNumber = 10;
-        this.stockNameField = new JTextField(columnsNumber);
+        this.stockNameInputField = new JTextField(columnsNumber);
         this.stockPriceLabel = new JLabel("N/A");
         final JButton searchButton = new JButton("Search");
         inputPanel.add(nameLabel);
-        inputPanel.add(stockNameField);
+        inputPanel.add(stockNameInputField);
         inputPanel.add(searchButton);
         inputPanel.add(priceLabel);
         inputPanel.add(stockPriceLabel);
 
         searchButton.addActionListener(event -> {
-            searchButtonAction(controller, stockNameField, stockPriceLabel, buyButton, sellButton); });
+            searchButtonAction(controller, stockNameInputField, stockPriceLabel, buyButton, sellButton); });
 
         return inputPanel;
     }
@@ -321,3 +435,15 @@ public class BrokerageView extends JFrame {
         return this.graphPanel;
     }
 }
+
+
+
+
+/*
+estendi Jpoanel implemeta actionlistere, propertychangelisterner
+fai stringa viewname con getter
+costruttore prende viewmodel e controller
+quando cerchi stock cambi state del viewmodel con la stringa della stock (guarda loginview)
+quando premi tasto cìè un altro actionlister che chiama controller che fa cercare l'azione tramite state del viewmodel
+metodi void actionperformed e propertychanged[tienilo vuoto]
+ */
