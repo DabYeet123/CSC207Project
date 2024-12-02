@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Assets Reorganization and bug fix">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/BrokerageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Houses.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Houses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataObjects/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataObjects/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" afterDir="false" />
-    </list>
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Assets Reorganization and bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="91cdb89d94fa64344ca004bb089d3101f74d4408" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,6 +39,9 @@
     &quot;accountId&quot;: &quot;87327a85-0c93-46e1-a4b0-a7818d444d72&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -72,41 +52,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CardPresenter.executor": "Run",
-    "Application.CardView.executor": "Run",
-    "Application.CurrencyExchangePresenter.executor": "Run",
-    "Application.HouseMapView.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainLauncher.executor": "Run",
-    "Application.WelcomePresenter.executor": "Run",
-    "JUnit.HouseObjectTest.executor": "Run",
-    "JUnit.HouseTransactionUseCaseTest.executor": "Run",
-    "JUnit.HouseTransactionUseCaseTest.testConfirm.executor": "Run",
-    "JUnit.HouseTransactionUseCaseTest.testSellHouse.executor": "Run",
-    "JUnit.PopUpTransactionUseCaseTest.executor": "Run",
-    "JUnit.test in homework-5.executor": "Run",
-    "Maven.homework-5 [clean].executor": "Run",
-    "Maven.homework-5 [install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
-    "git-widget-placeholder": "zeyucai",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/zeyuc/IdeaProjects/CSC207Project/src/test/java/ATMMap/DataObject",
-    "last_opened_file_path": "C:/Users/zeyuc/IdeaProjects/CAUserLogin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CardPresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CardView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CurrencyExchangePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HouseMapView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WelcomePresenter.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HouseObjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HouseTransactionUseCaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HouseTransactionUseCaseTest.testConfirm.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HouseTransactionUseCaseTest.testSellHouse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PopUpTransactionUseCaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test in homework-5.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.homework-5 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.homework-5 [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;zeyucai&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/zeyuc/IdeaProjects/CSC207Project/src/test/java/ATMMap/DataObject&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zeyuc/IdeaProjects/CAUserLogin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.infernus.idea.checkstyle.CheckStyleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zeyuc\IdeaProjects\CSC207Project\src\main\java\atmMap" />
