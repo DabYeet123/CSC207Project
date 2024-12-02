@@ -1,12 +1,12 @@
 package LogIn.LoggedIn;
 
-import ATMMap.Adapter.ATMMapController;
+import atm_map.adapter.AtmMapController;
 import Card.CardController;
 import Brokerage.BrokerageController;
 import App.ControllerInterface;
 import DataObjects.UserObject;
 import Exchange.CurrencyExchangeController;
-import HouseMap.Adapter.HouseMapController;
+import house_map.adapter.HouseMapController;
 import Loans.ApplyLoans.ApplyLoansController;
 import Loans.SeeLoansHistory.SeeLoansHistoryController;
 import LogIn.Welcome.WelcomeController;
@@ -25,7 +25,7 @@ public class LoggedInController implements ControllerInterface {
     private ApplyLoansController applyLoansController;
     private SeeLoansHistoryController seeLoansHistoryController;
     private HouseMapController houseMapController;
-    private ATMMapController atmMapController;
+    private AtmMapController atmMapController;
 
     public LoggedInController(UserObject user) {
         this.loggedInUser = user;
@@ -33,7 +33,7 @@ public class LoggedInController implements ControllerInterface {
         this.makeTransactionController = new MakeTransactionController(loggedInUser);
         this.seeTransactionHistoryController = new SeeTransactionHistoryController(loggedInUser);
         this.houseMapController = new HouseMapController(user, this);
-        this.atmMapController = new ATMMapController(user, this);
+        this.atmMapController = new AtmMapController(user, this);
         this.applyLoansController = new ApplyLoansController(loggedInUser);
         this.seeLoansHistoryController = new SeeLoansHistoryController(loggedInUser);
         this.brokerageController = new BrokerageController(loggedInUser);
