@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Changed file structure for CA refactoring">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/app/FetchStockDataUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/app/StockApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokeragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokeragePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageDataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="mattea.busato" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
