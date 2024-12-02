@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Assets Reorganization and bug fix">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/BrokerageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_11_18_18_18__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Houses.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Houses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataObjects/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataObjects/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit3 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
+    &quot;accountId&quot;: &quot;87327a85-0c93-46e1-a4b0-a7818d444d72&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2p2kRfzUgoATYvv5vUGgBKtn1B3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CardPresenter.executor": "Run",
+    "Application.CardView.executor": "Run",
+    "Application.CurrencyExchangePresenter.executor": "Run",
+    "Application.HouseMapView.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainLauncher.executor": "Run",
+    "Application.WelcomePresenter.executor": "Run",
+    "JUnit.HouseObjectTest.executor": "Run",
+    "JUnit.HouseTransactionUseCaseTest.executor": "Run",
+    "JUnit.HouseTransactionUseCaseTest.testConfirm.executor": "Run",
+    "JUnit.HouseTransactionUseCaseTest.testSellHouse.executor": "Run",
+    "JUnit.PopUpTransactionUseCaseTest.executor": "Run",
+    "JUnit.test in homework-5.executor": "Run",
+    "Maven.homework-5 [clean].executor": "Run",
+    "Maven.homework-5 [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "git-widget-placeholder": "zeyucai",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/zeyuc/IdeaProjects/CSC207Project/src/test/java/ATMMap/DataObject",
+    "last_opened_file_path": "C:/Users/zeyuc/IdeaProjects/CAUserLogin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zeyuc\IdeaProjects\CSC207Project\src\main\java\atmMap" />
+      <recent name="C:\Users\zeyuc\IdeaProjects\CSC207Project\src\main\java\house_map" />
+      <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\Loans\SeeLoansHistory" />
+      <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\Loans" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="Card.View.CardView" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ATMMap.DataObject" />
+      <recent name="HouseMap.DataObject" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="HouseMap.UseCase.BuyHouse" />
+      <recent name="HouseMap.UseCase.SellHouse" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainLauncher">
+    <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HouseTransactionUseCaseTest.testConfirm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="house_map.use_case.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="house_map.use_case" />
+      <option name="MAIN_CLASS_NAME" value="house_map.use_case.HouseTransactionUseCaseTest" />
+      <option name="METHOD_NAME" value="testConfirm" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HouseTransactionUseCaseTest.testSellHouse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="house_map.use_case.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="house_map.use_case" />
+      <option name="MAIN_CLASS_NAME" value="house_map.use_case.HouseTransactionUseCaseTest" />
+      <option name="METHOD_NAME" value="testSellHouse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PopUpTransactionUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="house_map.use_case.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="house_map.use_case" />
+      <option name="MAIN_CLASS_NAME" value="house_map.use_case.PopUpTransactionUseCaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainLauncher" />
+        <item itemvalue="JUnit.test in homework-5" />
+        <item itemvalue="JUnit.PopUpTransactionUseCaseTest" />
+        <item itemvalue="JUnit.HouseTransactionUseCaseTest.testConfirm" />
+        <item itemvalue="JUnit.HouseTransactionUseCaseTest.testSellHouse" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="1" />
+      <created>1731971551933</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731971551933</updated>
+      <workItem from="1731971553162" duration="418000" />
+      <workItem from="1732142120786" duration="3555000" />
+      <workItem from="1732383087980" duration="5623000" />
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1731971694776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731971694776</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1">
+      <option name="closed" value="true" />
+      <created>1732142146287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732142146288</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1">
+      <option name="closed" value="true" />
+      <created>1732151551432</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732151551432</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1">
+      <option name="closed" value="true" />
+      <created>1732302926668</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732302926668</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1">
+      <option name="closed" value="true" />
+      <created>1732303253028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732303253028</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1">
+      <option name="closed" value="true" />
+      <created>1732307017465</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732307017465</updated>
+    </task>
+    <task id="LOCAL-00007" summary="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame.">
+      <option name="closed" value="true" />
+      <created>1732307399347</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732307399347</updated>
+    </task>
+    <task id="LOCAL-00008" summary="11.23 change amount is double">
+      <option name="closed" value="true" />
+      <created>1732383276595</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732383276595</updated>
+    </task>
+    <task id="LOCAL-00009" summary="11.23 change amount is double">
+      <option name="closed" value="true" />
+      <created>1732383310611</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732383310611</updated>
+    </task>
+    <task id="LOCAL-00010" summary="11.23 change amount is double">
+      <option name="closed" value="true" />
+      <created>1732383685692</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732383685692</updated>
+    </task>
+    <task id="LOCAL-00011" summary="11.23 change amount is">
+      <option name="closed" value="true" />
+      <created>1732387786548</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732387786548</updated>
+    </task>
+    <task id="LOCAL-00012" summary="PopUpTransaction Menu added">
+      <option name="closed" value="true" />
+      <created>1732571014278</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732571014278</updated>
+    </task>
+    <task id="LOCAL-00013" summary="PopUpTransaction Menu added">
+      <option name="closed" value="true" />
+      <created>1732571020815</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732571020815</updated>
+    </task>
+    <task id="LOCAL-00014" summary="PopUpTransaction Menu added">
+      <option name="closed" value="true" />
+      <created>1732571801819</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732571801819</updated>
+    </task>
+    <task id="LOCAL-00015" summary="House and ATM Usecase Refactored to follow clean architecture">
+      <option name="closed" value="true" />
+      <created>1732821725924</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732821725924</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactored for Clean Architecture and added test cases">
+      <option name="closed" value="true" />
+      <created>1733152569599</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733152569599</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Assets Reorganization and bug fix">
+      <option name="closed" value="true" />
+      <created>1733153143594</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733153143594</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame." />
+    <MESSAGE value="11.23 change amount is double" />
+    <MESSAGE value="PopUpTransaction Menu added" />
+    <MESSAGE value="House and ATM Usecase Refactored to follow clean architecture" />
+    <MESSAGE value="Refactored for Clean Architecture and added test cases" />
+    <MESSAGE value="Assets Reorganization and bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assets Reorganization and bug fix" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/house_map/use_case/HouseTransactionUseCaseTest.java</url>
+          <line>91</line>
+          <properties class="house_map.use_case.HouseTransactionUseCaseTest" method="testConfirm">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
