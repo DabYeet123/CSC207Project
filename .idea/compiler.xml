@@ -11,8 +11,5 @@
         <module name="CSC207Project" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="homework-5" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
