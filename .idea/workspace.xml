@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Refactor">
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/SeeTransactionsUseCaseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsDataAccessInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsOutputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/DBTransactionDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/DBTransactionDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loggedin/interface_adapter/LoggedinPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loggedin/interface_adapter/LoggedinPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seetransactions/SeeTransactionsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seetransactions/SeeTransactionsView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/maketransaction/use_case/MakeTransactionOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/maketransaction/use_case/MakeTransactionOutputBoundary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,6 +234,8 @@
       <workItem from="1733035032937" duration="448000" />
       <workItem from="1733035501499" duration="415000" />
       <workItem from="1733070624440" duration="5999000" />
+      <workItem from="1733156170451" duration="2506000" />
+      <workItem from="1733162346571" duration="4042000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -427,7 +413,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733017493202</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Refactor">
+      <option name="closed" value="true" />
+      <created>1733156236332</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733156236332</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

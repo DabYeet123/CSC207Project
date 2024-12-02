@@ -1,8 +1,6 @@
 package maketransaction.use_case;
 
-/**
- * The output boundary for the Login Use Case.
- */
+
 public interface MakeTransactionOutputBoundary {
     /**
      * Prepares the success view for the Login Use Case.
