@@ -6,13 +6,15 @@ import java.util.List;
 import entity.Transaction;
 import entity.User;
 import maketransaction.use_case.MakeTransactionDataAccessInterface;
+import seetransactions.use_case.SeeTransactionsDataAccessInterface;
 
 /**
  * This class provides methods for accessing and updating transaction data in the system. It is responsible
  * for saving transaction data to a file, reading transaction data from a file, and updating user balances
  * after a transaction is processed.
  */
-public class DBTransactionDataAccessObject implements MakeTransactionDataAccessInterface {
+public class DBTransactionDataAccessObject implements MakeTransactionDataAccessInterface,
+        SeeTransactionsDataAccessInterface {
     private static final String DIRECTORY = "TransactionHistory.json";
     private DBDataAccessObject controller = new DBDataAccessObject();
     private DBUserDataAccessObject usersController = new DBUserDataAccessObject();
@@ -55,5 +57,10 @@ public class DBTransactionDataAccessObject implements MakeTransactionDataAccessI
     @Override
     public User getUser(int userId) {
         return usersController.readDataPoint(userId);
+    }
+
+    @Override
+    public List<Transaction> getTransactions(User user) {
+        return readData(user.getUserID());
     }
 }

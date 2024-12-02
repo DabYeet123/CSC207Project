@@ -16,6 +16,8 @@ import login.LoginView;
 import login.interface_adapter.LoginViewModel;
 import maketransaction.MakeTransactionView;
 import maketransaction.interface_adapter.MakeTransactionViewModel;
+import seetransactions.SeeTransactionsUseCaseFactory;
+import seetransactions.SeeTransactionsView;
 import seetransactions.interface_adapter.SeeTransactionsViewModel;
 import maketransaction.MakeTransactionUseCaseFactory;
 import signup.SignupView;
@@ -77,6 +79,9 @@ public class MainLauncher {
         final MakeTransactionView makeTransactionView = MakeTransactionUseCaseFactory.create(viewManagerModel,
                 loggedinViewModel, makeTransactionViewModel, transactionDataAccessObject);
         views.add(makeTransactionView, makeTransactionView.getViewName());
+        final SeeTransactionsView seeTransactionsView = SeeTransactionsUseCaseFactory.create(viewManagerModel,
+                loggedinViewModel, seeTransactionsViewModel, transactionDataAccessObject);
+        views.add(seeTransactionsView, seeTransactionsView.getViewName());
 
         viewManagerModel.setState(welcomeView.getViewName());
         viewManagerModel.firePropertyChanged();
