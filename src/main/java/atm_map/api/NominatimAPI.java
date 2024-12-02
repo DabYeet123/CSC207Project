@@ -80,8 +80,8 @@ public class NominatimAPI {
      * @return a string consisting of all the information about the atms
      */
     public String getAtmCoordinates(double lon, double lat, double radius) {
-        final String query = "[out:json];(node[\"amenity\"=\"atm\"](around:%f,%f,%f););out body;"
-                .formatted(radius, lat, lon);
+        final String query = "[out:json];(node[\"amenity\"=\"atm\"](around:" + radius + "," + lat + "," + lon + "););out body;";
+
 
         final String url = "https://overpass-api.de/api/interpreter";
 
