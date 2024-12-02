@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="12.1 loggedin update">
+      <change beforePath="$PROJECT_DIR$/src/test/java/insurance/InsuranceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/insurance/InsuranceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DabYeet123/CSC207Project.git",
+    "accountId": "52a0db03-ac1e-4a5a-8a92-0f4811ad9340"
+  }
+}]]></component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainLauncher.executor": "Run",
+    "JUnit.InsuranceTest.executor": "Run",
+    "JUnit.InsuranceTest.readDataTest.executor": "Run",
+    "git-widget-placeholder": "sincer.xu",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.InsuranceTest">
+    <configuration name="MainLauncher" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="app.MainLauncher" />
+      <module name="homework-5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsuranceTest" type="JUnit" factoryName="JUnit">
+      <module name="homework-5" />
+      <option name="PACKAGE_NAME" value="insurance" />
+      <option name="MAIN_CLASS_NAME" value="insurance.InsuranceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsuranceTest.readDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="insurance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="insurance" />
+      <option name="MAIN_CLASS_NAME" value="insurance.InsuranceTest" />
+      <option name="METHOD_NAME" value="readDataTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoansTest" type="JUnit" factoryName="JUnit">
+      <module name="homework-5" />
+      <option name="PACKAGE_NAME" value="loans" />
+      <option name="MAIN_CLASS_NAME" value="loans.LoansTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainLauncher" />
+      <item itemvalue="JUnit.LoansTest" />
+      <item itemvalue="JUnit.InsuranceTest" />
+      <item itemvalue="JUnit.InsuranceTest.readDataTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InsuranceTest.readDataTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="12.1 loggedin update">
+      <option name="closed" value="true" />
+      <created>1733101075941</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733101075941</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="after merge from the main, change refactor thing into main" />
+    <MESSAGE value="12.1 loggedin update" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.1 loggedin update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.AssertionError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
