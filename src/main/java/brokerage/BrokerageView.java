@@ -1,4 +1,4 @@
-package brokerage.view;
+package brokerage;
 
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
@@ -20,7 +20,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 
-import brokerage.BrokerageController;
+import brokerage.interface_adapter.BrokerageController;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;

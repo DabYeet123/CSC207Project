@@ -1,4 +1,4 @@
-package brokerage;
+package brokerage.interface_adapter;
 
 import java.util.List;
 

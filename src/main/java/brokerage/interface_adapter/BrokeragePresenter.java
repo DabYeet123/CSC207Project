@@ -1,7 +1,7 @@
-package brokerage;
+package brokerage.interface_adapter;
 
 import app.PresenterInterface;
-import brokerage.view.BrokerageView;
+import brokerage.BrokerageView;
 
 /**
  * Handles the presentation layer for the brokerage system, managing the interaction
