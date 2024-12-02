@@ -1,11 +1,11 @@
 package Loans.SeeLoansHistory;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
+import app.ControllerInterface;
+import userdataobject.UserObject;
 import Loans.DataObject.LoansController;
 import Loans.DataObject.LoansObject;
-import LogIn.LoggedIn.LoggedInController;
-import LogIn.Welcome.WelcomeController;
+import login.loggedin.LoggedInController;
+import login.welcome.WelcomeController;
 
 import java.util.List;
 

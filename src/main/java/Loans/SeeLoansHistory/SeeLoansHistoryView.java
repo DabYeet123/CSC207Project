@@ -1,6 +1,6 @@
 package Loans.SeeLoansHistory;
 
-import DataObjects.UserObject;
+import userdataobject.UserObject;
 import Loans.DataObject.LoansObject;
 
 import javax.swing.*;
@@ -28,7 +28,7 @@ public class SeeLoansHistoryView extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 20));
         add(titleLabel, BorderLayout.NORTH);
 
-        String[] columnNames = {"ID", "Amount ($)", "Start Date", "End Date", "Interest Rate (%)", "Repayment ($)", "Card"};
+        String[] columnNames = {"ID", "Amount ($)", "Start Date", "End Date", "Interest Rate (%)", "Repayment ($)", "cardandexchange"};
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         JTable loanTable = new JTable(tableModel);
 

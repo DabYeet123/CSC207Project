@@ -1,11 +1,11 @@
 package Loans.DataObject;
 
-import Card.Card;
-import Card.CardController;
-import DataAccess.DataAccessController;
-import DataAccess.DataAccessInterface;
-import DataObjects.UserObject;
-import DataObjects.UsersController;
+import cardandexchange.adapter.CardController;
+import cardandexchange.dataObject.Card;
+import dataaccess.DataAccessController;
+import dataaccess.DataAccessInterface;
+import userdataobject.UserObject;
+import userdataobject.UsersController;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -37,13 +37,13 @@ public class LoansDBAccess implements DataAccessInterface<LoansObject> {
         LocalDate today = LocalDate.now();
         for (LoansObject loan : loans) {
             if (loan.endDate.isBefore(today)) {
-                user.setBalance(user.getBalance() - loan.repayment);
-                Card card = cardController.getCard(loan.cardUsed);
-                card.updateAmount(loan.repayment);
+                updateBalance(user, -loan.repayment);
+                cardController.updateData(userID, loan.cardUsed, loan.repayment);
             } else {
                 newLoans.add(loan);
             }
         }
+        controller.saveData(user.getFileDirectory() + "\\LoansHistory.json", newLoans, LoansObject.class);
         return newLoans;
     }
 

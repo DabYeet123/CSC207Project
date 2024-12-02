@@ -1,6 +1,6 @@
 package Loans.SeeLoansHistory;
 
-import App.PresenterInterface;
+import app.PresenterInterface;
 
 public class SeeLoansHistoryPresenter implements PresenterInterface<SeeLoansHistoryController> {
     private final SeeLoansHistoryView seeLoansHistoryView;
