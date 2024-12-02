@@ -1,10 +1,6 @@
 package house_map.view;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Rectangle;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,7 +22,7 @@ public class HouseMapView extends ViewMaker {
     public static final int HEIGHT = 600;
     public static final int SEARCHROOM = 50;
     public static final Rectangle BACKBUTTON = new Rectangle(WIDTH - 120, HEIGHT - 25, 85, 25);
-    private static final Image HOUSEMAP = Toolkit.getDefaultToolkit().getImage("src/main/java/HouseMap/HouseMap.png");
+    private static final Image HOUSEMAP = Toolkit.getDefaultToolkit().getImage("src/main/java/house_map/assets/HouseMap.png");
     private final Map<HouseObject, HouseButton> houseButtonMap;
 
     public HouseMapView(HouseMapController controller) {
@@ -43,7 +39,7 @@ public class HouseMapView extends ViewMaker {
         createHouseButtons(panel, controller, houseButtonMap);
         add(panel);
 
-        final PanelMaker buttonPanel = new PanelMaker(0, HEIGHT, WIDTH, 50, null, null);
+        final PanelMaker buttonPanel = new PanelMaker(0, HEIGHT, WIDTH, 50, new FlowLayout(), null);
         final ButtonMaker backButton = new ButtonMaker("Back",
                 BACKBUTTON.x, BACKBUTTON.y, BACKBUTTON.width, BACKBUTTON.height) {
             @Override

@@ -12,6 +12,8 @@ import atm_map.view_maker.ButtonMaker;
 import atm_map.view_maker.LabelMaker;
 import atm_map.view_maker.PanelMaker;
 
+import javax.swing.*;
+
 /**
  * The popup that shows all the information about the atm.
  */
@@ -33,13 +35,23 @@ public class AtmPopUp extends PanelMaker {
         final ButtonMaker withdraw = new ButtonMaker("Withdraw") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("withdrawing");
+                JOptionPane.showMessageDialog(
+                        this,
+                        "Please go to the location to perform such actions!",
+                        "Warning",
+                        JOptionPane.WARNING_MESSAGE
+                );
             }
         };
         final ButtonMaker deposit = new ButtonMaker("Deposit") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("depositing");
+                JOptionPane.showMessageDialog(
+                        this,
+                        "Please go to the location to perform such actions!",
+                        "Warning",
+                        JOptionPane.WARNING_MESSAGE
+                );
             }
         };
 
