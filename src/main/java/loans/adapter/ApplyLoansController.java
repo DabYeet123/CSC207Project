@@ -1,10 +1,10 @@
 package loans.adapter;
 
-import App.ControllerInterface;
-import Card.CardController;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
+import app.ControllerInterface;
+import cardandexchange.adapter.CardController;
+import login.loggedin.LoggedInController;
 import lombok.Getter;
+import userdataobject.UserObject;
 
 @Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

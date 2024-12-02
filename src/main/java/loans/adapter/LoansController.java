@@ -2,9 +2,9 @@ package loans.adapter;
 
 import java.util.List;
 
-import DataObjects.UserObject;
 import loans.dataAccess.LoansDBAccess;
 import loans.dataObject.LoansObject;
+import userdataobject.UserObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class LoansController {

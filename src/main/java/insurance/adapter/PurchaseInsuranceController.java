@@ -3,12 +3,12 @@ package insurance.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import Card.CardController;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
-import LogIn.Welcome.WelcomeController;
+import cardandexchange.adapter.CardController;
 import insurance.dataObject.InsuranceObject;
+import login.loggedin.LoggedInController;
+import login.welcome.WelcomeController;
 import lombok.Getter;
+import userdataobject.UserObject;
 
 @Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

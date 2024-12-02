@@ -1,6 +1,6 @@
 package loans.adapter;
 
-import App.PresenterInterface;
+import app.PresenterInterface;
 import loans.view.ApplyLoansView;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

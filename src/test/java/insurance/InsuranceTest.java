@@ -1,6 +1,6 @@
 package insurance;
 
-import DataObjects.UserObject;
+import userdataobject.UserObject;
 import insurance.adapter.InsuranceController;
 import insurance.dataAccess.InsuranceDBAccess;
 import insurance.dataObject.InsuranceObject;

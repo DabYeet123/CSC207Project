@@ -2,12 +2,12 @@ package insurance.adapter;
 
 import java.util.List;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
-import LogIn.Welcome.WelcomeController;
+import app.ControllerInterface;
 import insurance.dataObject.UserInsuranceObject;
+import login.loggedin.LoggedInController;
+import login.welcome.WelcomeController;
 import lombok.Getter;
+import userdataobject.UserObject;
 
 @Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

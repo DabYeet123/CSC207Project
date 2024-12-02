@@ -3,11 +3,11 @@ package insurance.dataAccess;
 import java.util.ArrayList;
 import java.util.List;
 
-import DataAccess.DataAccessController;
-import DataAccess.DataAccessInterface;
-import DataObjects.UserObject;
-import DataObjects.UsersController;
+import dataaccess.DataAccessController;
+import dataaccess.DataAccessInterface;
 import insurance.dataObject.InsuranceObject;
+import userdataobject.UserObject;
+import userdataobject.UsersController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class InsuranceDBAccess implements DataAccessInterface<InsuranceObject> {

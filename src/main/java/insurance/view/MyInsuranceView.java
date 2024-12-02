@@ -18,10 +18,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-import DataObjects.UserObject;
 import insurance.adapter.MyInsuranceController;
 import insurance.adapter.UserInsuranceController;
 import insurance.dataObject.UserInsuranceObject;
+import userdataobject.UserObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class MyInsuranceView extends JFrame {

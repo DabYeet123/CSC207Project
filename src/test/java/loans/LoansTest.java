@@ -1,11 +1,11 @@
 package loans;
 
 
-import Card.CardController;
-import Card.Card;
-import Card.CardDBAccess;
-import DataObjects.UserObject;
-import DataObjects.UsersDBAccess;
+import cardandexchange.adapter.CardController;
+import cardandexchange.dataObject.Card;
+import cardandexchange.dataAccess.CardDBAccess;
+import userdataobject.UserObject;
+import userdataobject.UsersDBAccess;
 import loans.dataAccess.LoansDBAccess;
 import loans.dataObject.LoansObject;
 import org.junit.jupiter.api.BeforeEach;

@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import Card.CardController;
-import DataAccess.DataAccessController;
-import DataAccess.DataAccessInterface;
-import DataObjects.UserObject;
-import DataObjects.UsersController;
+import cardandexchange.adapter.CardController;
+import dataaccess.DataAccessController;
+import dataaccess.DataAccessInterface;
 import loans.dataObject.LoansObject;
+import userdataobject.UserObject;
+import userdataobject.UsersController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class LoansDBAccess implements DataAccessInterface<LoansObject> {

@@ -2,10 +2,10 @@ package insurance.adapter;
 
 import java.util.List;
 
-import DataObjects.UserObject;
 import insurance.dataAccess.UserInsuranceDBAccess;
 import insurance.dataObject.InsuranceObject;
 import insurance.dataObject.UserInsuranceObject;
+import userdataobject.UserObject;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class UserInsuranceController {

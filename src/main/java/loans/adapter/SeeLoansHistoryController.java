@@ -2,12 +2,12 @@ package loans.adapter;
 
 import java.util.List;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
-import LogIn.Welcome.WelcomeController;
+import app.ControllerInterface;
 import loans.dataObject.LoansObject;
+import login.loggedin.LoggedInController;
+import login.welcome.WelcomeController;
 import lombok.Getter;
+import userdataobject.UserObject;
 
 @Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
