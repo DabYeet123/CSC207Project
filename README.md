@@ -8,15 +8,15 @@
 
 
 ## Project Purpose
-CrazyBank is an all-in-one financial app that combines traditional banking services like account management, 
+CrazyBank is an all-in-one financial appold that combines traditional banking services like account management, 
 card handling, and transactions with additional features such as asset management, currency exchange, 
 real estate purchases, loans, ATM location, and insurance policy management.
 
-It is the perfect app for anyone seeking a seamless experience with multiple services.
+It is the perfect appold for anyone seeking a seamless experience with multiple services.
 
-Conveniently accessible in one app, CrazyBank eliminates the hassle of managing multiple accounts and 
+Conveniently accessible in one appold, CrazyBank eliminates the hassle of managing multiple accounts and 
 dealing with different intermediaries, which often leads to complicated processes. With complete integration
-of services, everything can be done seamlessly within the app, ensuring a smoother and more efficient experience.
+of services, everything can be done seamlessly within the appold, ensuring a smoother and more efficient experience.
 
 <a id="toc"></a>
 ## Table of Contents
@@ -33,7 +33,7 @@ of services, everything can be done seamlessly within the app, ensuring a smooth
 <a id="fs"></a>
 ## Features of the Software <small><small><small><small>[↩︎ Back to TOC](#toc)</small></small></small></small>
 
-Through the welcome view, it is possible to access every functionality of the app: 
+Through the welcome view, it is possible to access every functionality of the appold: 
 
 <img alt="image info" height="340" src="./resources/project_welcome.png" title="Welcome view" width="360"/>
 
@@ -48,28 +48,28 @@ The sender just need to know the receiver's ID.
 <img alt="image info" height="330" src="./resources/project_transaction.png" title="Welcome view" width="350"/>
 
 3) **Asset Managing**: The user can acces a powerful brokerage service, in which they can search for an asset, 
-check its price trend througb an interactive graph, and decide to either buy or sell it. The app does not provide
+check its price trend througb an interactive graph, and decide to either buy or sell it. The appold does not provide
 fractional share trading or short-selling capabilities, but there are no commission on each trade.
 
 <img alt="image info" height="320" src="./resources/project_assets.png" title="Welcome view" width="450"/>
 
-4) **Loan Maker**: It is possible to request loans. The user decide the size and duration of the loan and the app 
+4) **Loan Maker**: It is possible to request loans. The user decide the size and duration of the loan and the appold 
 automatically provides an interest rate most suited to the user.
 
 <img alt="image info" height="290" src="./resources/project_loans.png" title="Welcome view" width="400"/>
 
 5) **Insurance Policies**: The user can request quotes for many kind of insurance policy. They get to choose the 
-type and the size of the insurance, and the app provides them the optimal insurance premium for them.
+type and the size of the insurance, and the appold provides them the optimal insurance premium for them.
 [MISSING BUTTON IN CURRENT RELEASE OF THE APP]
 
 <img alt="image info" height="300" src="./resources/project_insurance.png" title="Welcome view" width="300"/>
 
-6) **Real Estate Broker**: Included in the app there is a "House Buying Service". The user can buy a real estate asset
-through the app and potentially include an insurance policy on it, for a complete seamless experience.
+6) **Real Estate Broker**: Included in the appold there is a "House Buying Service". The user can buy a real estate asset
+through the appold and potentially include an insurance policy on it, for a complete seamless experience.
 
 <img alt="image info" height="320" src="./resources/project_house_map.png" title="Welcome view" width="320"/>
 
-7) **ATM Finder**: Anywhere in the world, the user has just to type in their current position and the app provides 
+7) **ATM Finder**: Anywhere in the world, the user has just to type in their current position and the appold provides 
 them information about the nearest ATMs. 
 
 <img alt="image info" height="338" src="./resources/project_atm_map.png" title="Welcome view" width="300"/>
@@ -200,18 +200,18 @@ After considering the investment opportunity by looking at the data, decides to 
 the stock and keep it in his portfolio.
 
 Mattea's Story: Emma wants to pay her university fees. She lunches the software, checks her balance and makes a 
-transaction through the app. She can then see the transaction information on her transaction history.
+transaction through the appold. She can then see the transaction information on her transaction history.
 
 Yue Zheng's Story: Jeff want to get a new card to save money for the trip abroad, he wants to transfer 500 dollars from
 his another card into the new one. Also before the travel, he wants to change the dollar into some
 other currency to make the trip easier.
 
-Zeyu's Story: Bob can open the banking app and use it to find ATM around the city(fake). 
+Zeyu's Story: Bob can open the banking appold and use it to find ATM around the city(fake). 
 Bob can take a loan from the, he chooses whether to pay periodically or automatically, with interests.
 
-Xing's Story: Joe wants to buy a houseObject, he goes on the banking app and see a list of properties displayed on the map. 
+Xing's Story: Joe wants to buy a houseObject, he goes on the banking appold and see a list of properties displayed on the map. 
 Joe chooses a houseObject he likes and makes the down payment and pays the mortgage rates every month. Joe also needs to buy 
-insurance through the banking app to make sure he has all the insurance he needs covered, and will list the ones he 
+insurance through the banking appold to make sure he has all the insurance he needs covered, and will list the ones he 
 requires for the property.
 
 

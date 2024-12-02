@@ -1,6 +1,6 @@
 package transaction.makeTransaction;
 
-import app.PresenterInterface;
+import appold.PresenterInterface;
 
 /**
  * Presenter for managing the presentation logic of the make transaction view.

@@ -2,9 +2,7 @@ package brokerage.interface_adapter;
 
 import java.util.List;
 
-import app.ControllerInterface;
 import brokerage.app.StockApi;
-import brokerage.data_access.BrokerageDBAccess;
 import brokerage.entity.Stock;
 import brokerage.use_case.BrokerageInputData;
 import com.crazzyghost.alphavantage.timeseries.response.StockUnit;

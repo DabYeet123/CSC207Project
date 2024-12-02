@@ -1,6 +1,6 @@
 package login.welcome;
 
-import app.ControllerInterface;
+import appold.ControllerInterface;
 import login.login.LogInController;
 import login.signup.SignUpController;
 

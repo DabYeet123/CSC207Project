@@ -1,6 +1,6 @@
 package Loans.ApplyLoans;
 
-import app.ControllerInterface;
+import appold.ControllerInterface;
 import Card.CardController;
 import userdataobject.UserObject;
 import Loans.DataObject.LoansController;

@@ -1,10 +1,7 @@
 package brokerage.interface_adapter;
 
-import app.PresenterInterface;
-import brokerage.BrokerageView;
 import brokerage.use_case.BrokerageOutputBoundary;
 import brokerage.use_case.BrokerageOutputData;
-import login.loggedin.LoggedInView;
 
 /**
  * Handles the presentation layer for the brokerage system, managing the interaction
