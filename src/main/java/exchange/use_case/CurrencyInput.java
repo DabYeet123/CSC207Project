@@ -1,6 +1,6 @@
-package exchange;
+package exchange.use_case;
 
-import javax.swing.*;
+import javax.swing.JComboBox;
 
 public class CurrencyInput {
     private final double inputAmount;

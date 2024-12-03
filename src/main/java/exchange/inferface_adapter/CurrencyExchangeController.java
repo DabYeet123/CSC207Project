@@ -1,12 +1,14 @@
-package exchange;
+package exchange.inferface_adapter;
+
+import javax.swing.JComboBox;
 
 import app.ControllerInterface;
-import card.use_case.CardOutput;
+import exchange.use_case.CurrencyInput;
+import exchange.use_case.CurrencyOutput;
+import exchange.use_case.CurrencyUsecase;
 import login.loggedin.LoggedInController;
 import lombok.Getter;
 import userdataobject.UserObject;
-
-import javax.swing.*;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CurrencyExchangeController implements ControllerInterface {
@@ -40,6 +42,12 @@ public class CurrencyExchangeController implements ControllerInterface {
         controller.launch();
     }
 
+    /**
+     * Act the button.
+     * @param amount the amount input.
+     * @param fromcurrencybox the From box of currency.
+     * @param tocurrencybox the To box of currency.
+     */
     public void execute(double amount, JComboBox<String> fromcurrencybox, JComboBox<String> tocurrencybox) {
         final CurrencyInput currencyInput = new CurrencyInput(amount, fromcurrencybox, tocurrencybox);
         final double inputAmount = currencyInput.getInputAmount();

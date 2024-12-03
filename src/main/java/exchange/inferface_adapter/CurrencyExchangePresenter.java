@@ -1,7 +1,9 @@
-package exchange;
+package exchange.inferface_adapter;
 
 import app.PresenterInterface;
 import exchange.CurrencyExchangeView;
+import exchange.use_case.CurrencyOutput;
+import exchange.use_case.CurrencyOutputBoundary;
 import transaction.makeTransaction.MakeTransactionController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

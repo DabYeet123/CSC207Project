@@ -5,32 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardDBAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyUsecase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyExchangeDataUsage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyUsecase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/card/adapter/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/adapter/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/card/use_case/CardMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/card/use_case/CardOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/card/use_case/CardUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/card/view/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/view/CardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyExchangeApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/inferface_adapter/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeDataUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/inferface_adapter/CurrencyExchangePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyInputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyOutputBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyUsecase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,24 +76,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainLauncher.executor": "Run",
-    "Application.app.MainLauncher.executor": "Run",
-    "JUnit.cardandexchange in homework-5 (1).executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Yue-Zheng",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/郑Y/IdeaProjects/CSC207Project/src/main/java/cardUML",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.app.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.cardandexchange in homework-5 (1).executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Yue-Zheng&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/郑Y/IdeaProjects/CSC207Project/src/main/java/cardUML&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\cardUML" />
@@ -246,7 +240,8 @@
       <workItem from="1732935936292" duration="5792000" />
       <workItem from="1733096707616" duration="685000" />
       <workItem from="1733196635562" duration="643000" />
-      <workItem from="1733197302153" duration="4305000" />
+      <workItem from="1733197302153" duration="4370000" />
+      <workItem from="1733201746509" duration="557000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -392,13 +387,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733197161363</updated>
     </task>
-    <task id="LOCAL-00019" summary="update for Card Test with Entity">
+    <task id="LOCAL-00019" summary="1">
       <option name="closed" value="true" />
-      <created>1732660014976</created>
+      <created>1733201675339</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1732660014976</updated>
+      <updated>1733201675339</updated>
     </task>
     <task id="LOCAL-00020" summary="update for Card Test and Exchange Test, make the coverage to 100%&#10;Remind: clean the useless user before run the Test, it will creat a lot of user to test each method&#10;clean the file store with the data of test each time to make test renew for each time.">
       <option name="closed" value="true" />
@@ -448,7 +443,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

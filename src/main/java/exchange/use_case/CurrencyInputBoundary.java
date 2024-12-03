@@ -1,4 +1,4 @@
-package exchange;
+package exchange.use_case;
 
 public interface CurrencyInputBoundary {
     /**

@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import exchange.inferface_adapter.CurrencyExchangeController;
 import lombok.Getter;
 
 @Getter

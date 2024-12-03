@@ -7,7 +7,7 @@ import Loans.SeeLoansHistory.SeeLoansHistoryController;
 import app.ControllerInterface;
 import brokerage.BrokerageController;
 import card.adapter.CardController;
-import exchange.CurrencyExchangeController;
+import exchange.inferface_adapter.CurrencyExchangeController;
 import login.welcome.WelcomeController;
 import transaction.makeTransaction.MakeTransactionController;
 import transaction.seeTransactionHistory.SeeTransactionHistoryController;

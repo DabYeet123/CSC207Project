@@ -1,28 +1,25 @@
-package exchange;
+package exchange.use_case;
 
+import exchange.inferface_adapter.CurrencyExchangeController;
 import com.crazzyghost.alphavantage.AlphaVantage;
 import com.crazzyghost.alphavantage.exchangerate.ExchangeRateResponse;
 
-public class CurrencyUsecase implements CurrencyInputBoundary{
-    private final CurrencyExchangePresenter currencyExchangePresenter;
-
-    public CurrencyUsecase(CurrencyExchangePresenter currencyExchangePresenter) {
-        this.currencyExchangePresenter = currencyExchangePresenter;
-    }
-
+@SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
+public class CurrencyExchangeDataUsage {
     /**
      * Change.
-     * @param currencyInput currency Input
+     * @param output output currency
+     * @param input input currency
      */
-    public void execute(CurrencyInput currencyInput) {
+    public static void execute(String input, String output) {
         // OMY21EWV5Y9FEBUJ
         // G8PHFOEQL7JRT4WA
         CurrencyExchangeApiConfig.initialize();
 
         AlphaVantage.api()
                 .exchangeRate()
-                .fromCurrency((String) currencyInput.getFromcurrencybox().getSelectedItem())
-                .toCurrency((String) currencyInput.getTocurrencybox().getSelectedItem())
+                .fromCurrency(input)
+                .toCurrency(output)
                 .onSuccess(CurrencyExchangeDataUsage::onData)
                 .fetch();
     }
