@@ -2,9 +2,9 @@ package house_map.adapter;
 
 import java.util.List;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
+import app.ControllerInterface;
+import userdataobject.UserObject;
+import login.loggedin.LoggedInController;
 import house_map.data_access.HouseData;
 import house_map.data_object.HouseObject;
 import house_map.use_case.house_transaction.HouseTransactionInput;

@@ -1,7 +1,7 @@
 package house_map.adapter;
 
-import App.PresenterInterface;
-import DataObjects.UserObject;
+import app.PresenterInterface;
+import userdataobject.UserObject;
 import house_map.use_case.pop_up_transaction.PopUpTransactionOutput;
 import house_map.use_case.pop_up_transaction.PopUpTransactionOutputBoundary;
 import house_map.view.PopUpTransactionView;

@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import Card.Card;
-import Card.CardDBAccess;
-import DataObjects.UserObject;
+import cardandexchange.dataObject.Card;
+import cardandexchange.dataAccess.CardDBAccess;
+import userdataobject.UserObject;
 
 /**
  * Holds all the card data associated with the user.
