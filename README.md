@@ -206,10 +206,10 @@ Yue Zheng's Story: Jeff wants to get a new card to spend money for the trip abro
 which used to spend money on paying last year loan. Also before the travel, he wants to change the money into some
 other currency to make the trip easier.
 
-Zeyu's Story: Bob can open the banking app and use it to find ATM around the city(fake). 
-Bob can take a loan from the, he chooses whether to pay periodically or automatically, with interests.
+Zeyu's Story: Bob can open the banking app and use it to find ATM around the city(fake). Bob wants to buy a house, he 
+goes on the banking app and see a list of properties displayed on the map which he can purchase.
 
-Xing's Story: Joe chooses a house he likes and applies for a loan to buy it. Joe also needs to buy insurance through 
-the banking app to make sure he has all the insurance he needs covered.
+Xing's Story: Joe can apply for a fixed-term loan from the banking app with interests. 
+Joe can buy insurance through the banking app to make sure he has all the insurance he needs covered.
 
 
