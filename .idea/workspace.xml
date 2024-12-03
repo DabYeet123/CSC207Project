@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="1">
+    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="update User's story">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ControllerInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/data_access/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/data_access/CardData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/data_access/HouseDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/data_access/HouseDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/pop_up_transaction/PopUpTransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/pop_up_transaction/PopUpTransactionUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/view/PopUpTransactionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/view/PopUpTransactionView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +42,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/delete" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -39,12 +59,12 @@
     &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
-    &quot;accountId&quot;: &quot;a7fb78d8-006c-48c3-a6c9-96666325973c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DabYeet123/CSC207Project.git",
+    "accountId": "52a0db03-ac1e-4a5a-8a92-0f4811ad9340"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -58,6 +78,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainLauncher.executor": "Run",
+    "Application.app.MainLauncher.executor": "Run",
+    "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "sincer.xu",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/U of T/CSC207/CSC207Project/src/main/java/app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
@@ -75,8 +110,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\cardUML" />
       <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\exchangeUML" />
@@ -180,6 +218,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.app.MainLauncher" />
+        <item itemvalue="Application.MainLauncher" />
+        <item itemvalue="JUnit.Exchange in homework-5" />
+        <item itemvalue="JUnit.CardViewTest" />
+        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
         <item itemvalue="JUnit.Exchange in homework-5" />
         <item itemvalue="JUnit.CardViewTest" />
         <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
@@ -355,21 +398,27 @@
       <option name="project" value="LOCAL" />
       <updated>1733094338347</updated>
     </task>
+    <task id="LOCAL-00017" summary="Merging">
     <task id="LOCAL-00017" summary="1">
       <option name="closed" value="true" />
+      <created>1733187487029</created>
       <created>1733197070665</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
+      <updated>1733187487029</updated>
       <updated>1733197070665</updated>
     </task>
+    <task id="LOCAL-00018" summary="update User's story">
     <task id="LOCAL-00018" summary="1">
       <option name="closed" value="true" />
+      <created>1733195776101</created>
       <created>1733197161363</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
       <updated>1733197161363</updated>
+      <updated>1733195776101</updated>
     </task>
     <task id="LOCAL-00019" summary="1">
       <option name="closed" value="true" />
@@ -428,6 +477,7 @@
       <updated>1732940209744</updated>
     </task>
     <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +512,9 @@
     <MESSAGE value="11.29 renew for refactor with the reorganization" />
     <MESSAGE value="after merge from the main, change refactor thing into main" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="Merging" />
+    <MESSAGE value="update User's story" />
+    <option name="LAST_COMMIT_MESSAGE" value="update User's story" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

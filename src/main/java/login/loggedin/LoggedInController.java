@@ -1,13 +1,15 @@
 package login.loggedin;
 
-import ATM.ATMMap.ATMMapController;
-import House.HouseMap.HouseMapController;
-import Loans.ApplyLoans.ApplyLoansController;
-import Loans.SeeLoansHistory.SeeLoansHistoryController;
+import atm_map.adapter.AtmMapController;
+import house_map.adapter.HouseMapController;
 import app.ControllerInterface;
 import brokerage.BrokerageController;
-import card.adapter.CardController;
-import exchange.inferface_adapter.CurrencyExchangeController;
+import cardandexchange.adapter.CardController;
+import cardandexchange.adapter.CurrencyExchangeController;
+import insurance.adapter.MyInsuranceController;
+import insurance.adapter.PurchaseInsuranceController;
+import loans.adapter.ApplyLoansController;
+import loans.adapter.SeeLoansHistoryController;
 import login.welcome.WelcomeController;
 import transaction.makeTransaction.MakeTransactionController;
 import transaction.seeTransactionHistory.SeeTransactionHistoryController;
@@ -28,7 +30,9 @@ public class LoggedInController implements ControllerInterface {
     private ApplyLoansController applyLoansController;
     private SeeLoansHistoryController seeLoansHistoryController;
     private HouseMapController houseMapController;
-    private ATMMapController atmMapController;
+    private AtmMapController atmMapController;
+    private PurchaseInsuranceController purchaseInsuranceController;
+    private MyInsuranceController myInsuranceController;
 
     public LoggedInController(UserObject user) {
         this.loggedInUser = user;
@@ -36,12 +40,14 @@ public class LoggedInController implements ControllerInterface {
         this.makeTransactionController = new MakeTransactionController(loggedInUser);
         this.seeTransactionHistoryController = new SeeTransactionHistoryController(loggedInUser);
         this.houseMapController = new HouseMapController(user, this);
-        this.atmMapController = new ATMMapController(user, this);
+        this.atmMapController = new AtmMapController(user, this);
         this.applyLoansController = new ApplyLoansController(loggedInUser);
         this.seeLoansHistoryController = new SeeLoansHistoryController(loggedInUser);
         this.brokerageController = new BrokerageController(loggedInUser);
         this.cardController = new CardController(user);
         this.exchangeController = new CurrencyExchangeController(user);
+        this.purchaseInsuranceController = new PurchaseInsuranceController(loggedInUser);
+        this.myInsuranceController = new MyInsuranceController(loggedInUser);
 
         // at last
         this.loggedInPresenter = new LoggedInPresenter(this);
@@ -50,6 +56,7 @@ public class LoggedInController implements ControllerInterface {
     @Override
     public void launch() {
         seeLoansHistoryController.update();
+        myInsuranceController.update();
         loggedInPresenter.showView();
     }
 
@@ -61,9 +68,13 @@ public class LoggedInController implements ControllerInterface {
         welcomeController.launch();
     }
 
+    /**
+     * Refresh the current window.
+     */
     public void refreshTriggered() {
         loggedInPresenter.disposeView();
         seeLoansHistoryController.update();
+        myInsuranceController.update();
         cardTriggered();
         cardController.goBackToBaseView();
     }
@@ -138,6 +149,22 @@ public class LoggedInController implements ControllerInterface {
     public void houseMapTriggered() {
         loggedInPresenter.disposeView();
         houseMapController.launch();
+    }
+
+    /**
+     * Navigates to the purchase insurance view.
+     */
+    public void purchaseInsuranceTriggered() {
+        loggedInPresenter.disposeView();
+        purchaseInsuranceController.launch();
+    }
+
+    /**
+     * Navigates to my insurance view.
+     */
+    public void myInsuranceTriggered() {
+        loggedInPresenter.disposeView();
+        myInsuranceController.launch();
     }
 
     /**
