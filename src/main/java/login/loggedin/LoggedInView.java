@@ -52,6 +52,9 @@ public class LoggedInView extends JFrame {
         final JPanel topPanel = new JPanel(new BorderLayout());
 
         final JPanel refreshPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        final JButton refreshButton = new JButton("Refresh");
+        refreshButton.setPreferredSize(new Dimension(LOGOUT_WIDTH, LOGOUT_HEIGHT));
+        refreshPanel.add(refreshButton);
         topPanel.add(refreshPanel, BorderLayout.CENTER);
 
         final JPanel logoutPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
@@ -73,6 +76,7 @@ public class LoggedInView extends JFrame {
         infoPanel.add(balanceLabel);
         topPanel.add(infoPanel, BorderLayout.WEST);
 
+        refreshButton.addActionListener(event -> controller.refreshTriggered());
         logoutButton.addActionListener(event -> controller.logOutTriggered());
 
         return topPanel;
@@ -96,7 +100,9 @@ public class LoggedInView extends JFrame {
         final JButton assetsButton = createButton("Assets", controller::buyAssetsTriggered);
         final JButton loansButton = createButton("Apply Loans", controller::applyLoansTriggered);
         final JButton loansHistoryButton = createButton("Loans History", controller::seeLoansHistoryTriggered);
-        final JButton exchangeButton = createButton("Currency exchange", controller::exchangeTriggered);
+        final JButton exchangeButton = createButton("Currency Exchange", controller::exchangeTriggered);
+        final JButton insuranceButton = createButton("Purchase Insurance", controller::purchaseInsuranceTriggered);
+        final JButton myInsuranceButton = createButton("My Insurance", controller::myInsuranceTriggered);
 
         buttonPanel.add(sendMoneyButton);
         buttonPanel.add(transactionsButton);
@@ -107,6 +113,8 @@ public class LoggedInView extends JFrame {
         buttonPanel.add(loansButton);
         buttonPanel.add(loansHistoryButton);
         buttonPanel.add(exchangeButton);
+        buttonPanel.add(insuranceButton);
+        buttonPanel.add(myInsuranceButton);
 
         return buttonPanel;
     }

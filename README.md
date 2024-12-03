@@ -202,16 +202,14 @@ the stock and keep it in his portfolio.
 Mattea's Story: Emma wants to pay her university fees. She lunches the software, checks her balance and makes a 
 transaction through the app. She can then see the transaction information on her transaction history.
 
-Yue Zheng's Story: Jeff want to get a new card to spend money for the trip abroad, also he wants to delete the past card
+Yue Zheng's Story: Jeff wants to get a new card to spend money for the trip abroad, also he wants to delete the past card
 which used to spend money on paying last year loan. Also before the travel, he wants to change the money into some
 other currency to make the trip easier.
 
-Zeyu's Story: Bob can open the banking app and use it to find ATM around the city(fake). 
-Bob can take a loan from the, he chooses whether to pay periodically or automatically, with interests.
+Zeyu's Story: Bob can open the banking app and use it to find ATM around the city(fake). Bob wants to buy a house, he 
+goes on the banking app and see a list of properties displayed on the map which he can purchase.
 
-Xing's Story: Joe wants to buy a houseObject, he goes on the banking app and see a list of properties displayed on the map. 
-Joe chooses a houseObject he likes and makes the down payment and pays the mortgage rates every month. Joe also needs to buy 
-insurance through the banking app to make sure he has all the insurance he needs covered, and will list the ones he 
-requires for the property.
+Xing's Story: Joe can apply for a fixed-term loan from the banking app with interests. 
+Joe can buy insurance through the banking app to make sure he has all the insurance he needs covered.
 
 
