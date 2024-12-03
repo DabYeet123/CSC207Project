@@ -1,4 +1,4 @@
-package card.view;
+package card.dataObject;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

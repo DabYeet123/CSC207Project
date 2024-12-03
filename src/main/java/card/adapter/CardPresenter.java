@@ -1,6 +1,9 @@
-package card.view;
+package card.adapter;
 
 import app.PresenterInterface;
+import card.use_case.CardOutput;
+import card.use_case.CardOutputBoundary;
+import card.view.CardView;
 import transaction.makeTransaction.MakeTransactionController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

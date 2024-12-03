@@ -3,8 +3,8 @@ package transaction.makeTransaction;
 import java.util.List;
 
 import app.ControllerInterface;
-import card.view.CardDBAccess;
-import card.view.Card;
+import card.dataAccess.CardDBAccess;
+import card.dataObject.Card;
 import login.loggedin.LoggedInController;
 import transaction.dataObject.TransactionController;
 import userdataobject.UserObject;

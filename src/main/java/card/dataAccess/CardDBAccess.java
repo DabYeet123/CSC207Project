@@ -1,8 +1,9 @@
-package card.view;
+package card.dataAccess;
 
 import java.util.List;
 import java.util.Objects;
 
+import card.dataObject.Card;
 import dataaccess.DataAccessController;
 import dataaccess.DataAccessInterface;
 import userdataobject.UserObject;

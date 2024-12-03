@@ -1,4 +1,4 @@
-package card.view;
+package card.use_case;
 
 public class CardInput {
     private final String name;

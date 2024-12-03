@@ -1,4 +1,6 @@
-package card.view;
+package card.use_case;
+
+import card.dataObject.Card;
 
 public interface CardInputBoundary {
     /**

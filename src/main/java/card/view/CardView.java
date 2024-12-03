@@ -1,5 +1,7 @@
 package card.view;
 
+import card.adapter.CardController;
+import card.dataObject.Card;
 import lombok.Getter;
 
 import javax.swing.*;

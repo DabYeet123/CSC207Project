@@ -1,8 +1,10 @@
-package card.view;
+package card.use_case;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
+import card.adapter.CardController;
+import card.dataObject.Card;
 import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})

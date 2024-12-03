@@ -1,4 +1,7 @@
-package card.view;
+package card.use_case;
+
+import card.adapter.CardController;
+import card.dataObject.Card;
 
 import java.util.ArrayList;
 import java.util.List;

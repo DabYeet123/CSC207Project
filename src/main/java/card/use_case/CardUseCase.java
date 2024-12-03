@@ -1,4 +1,7 @@
-package card.view;
+package card.use_case;
+
+import card.dataObject.Card;
+import card.adapter.CardPresenter;
 
 public class CardUseCase implements CardInputBoundary{
     private final CardPresenter cardPresenter;
