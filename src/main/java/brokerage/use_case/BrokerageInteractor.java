@@ -16,10 +16,9 @@ public class BrokerageInteractor implements BrokerageInputBoundary {
     private StockApi stockApi;
 
     public BrokerageInteractor(BrokerageDataAccessInterface brokerageDataAccessInterface,
-                               BrokerageOutputBoundary brokerageOutputBoundary, StockFactory stockFactory) {
+                               BrokerageOutputBoundary brokerageOutputBoundary) {
         this.brokerageDataAccessInterface = brokerageDataAccessInterface;
         this.brokerageOutputBoundary = brokerageOutputBoundary;
-        this.stockFactory = stockFactory;
     }
 
     @Override
@@ -33,9 +32,6 @@ public class BrokerageInteractor implements BrokerageInputBoundary {
             final BrokerageOutputData brokerageOutputData = new BrokerageOutputData(stockSymbol, stocks);
             brokerageOutputBoundary.prepareTradeView(brokerageOutputData);
         }
-        // logica (chiami api ecc). non ritorni niente, ma chiami brokerageoutputboundary.---(brokerageoututdata x)
-        // per visualizzare ciò che vuoi avere dopo
-
     }
 
     @Override
@@ -60,5 +56,5 @@ public class BrokerageInteractor implements BrokerageInputBoundary {
     public void switchToLoggedinView() {
         brokerageOutputBoundary.switchToLoggedinView();
     }
-
 }
+

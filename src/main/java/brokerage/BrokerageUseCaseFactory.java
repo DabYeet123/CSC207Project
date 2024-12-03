@@ -57,7 +57,7 @@ public class BrokerageUseCaseFactory {
         final StockFactory stockFactory = new StockFactory();
 
         final BrokerageInputBoundary brokerageInputBoundary = new BrokerageInteractor(brokerageDataAccessObject,
-                brokerageOutputBoundary, stockFactory);
+                brokerageOutputBoundary);
 
         return new BrokerageController(brokerageInputBoundary);
     }
