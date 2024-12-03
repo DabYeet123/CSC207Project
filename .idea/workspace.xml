@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="Merging">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/delete" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -66,7 +69,7 @@
     "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "#47 on zeyucai",
+    "git-widget-placeholder": "sincer.xu",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
