@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/src/main/java/cardandexchange" />
       <excludeFolder url="file://$MODULE_DIR$/src/test/java/cardandexchange" />
-      <excludeFolder url="file://$MODULE_DIR$/src/main/java/cardUML" />
     </content>
   </component>
   <component name="CheckStyle-IDEA-Module" serialisationVersion="2">
