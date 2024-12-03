@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import cardandexchange.adapter.CardController;
+import card.adapter.CardController;
 import dataaccess.DataAccessController;
 import dataaccess.DataAccessInterface;
 import insurance.dataObject.UserInsuranceObject;
