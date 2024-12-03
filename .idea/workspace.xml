@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="update User's story">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/ControllerInterface.java" afterDir="false" />
+    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="update atm_map and house_map to make main branch run">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/data_access/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/data_access/CardData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/data_access/HouseDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/data_access/HouseDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/pop_up_transaction/PopUpTransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/pop_up_transaction/PopUpTransactionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/view/PopUpTransactionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/view/PopUpTransactionView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loans/view/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/view/SeeLoansHistoryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,13 +360,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733195776101</updated>
     </task>
-    <task id="LOCAL-00019" summary="update for Card Test with Entity">
+    <task id="LOCAL-00019" summary="update atm_map and house_map to make main branch run">
       <option name="closed" value="true" />
-      <created>1732660014976</created>
+      <created>1733251357809</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1732660014976</updated>
+      <updated>1733251357809</updated>
     </task>
     <task id="LOCAL-00020" summary="update for Card Test and Exchange Test, make the coverage to 100%&#10;Remind: clean the useless user before run the Test, it will creat a lot of user to test each method&#10;clean the file store with the data of test each time to make test renew for each time.">
       <option name="closed" value="true" />
@@ -430,7 +416,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +453,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="Merging" />
     <MESSAGE value="update User's story" />
-    <option name="LAST_COMMIT_MESSAGE" value="update User's story" />
+    <MESSAGE value="update atm_map and house_map to make main branch run" />
+    <option name="LAST_COMMIT_MESSAGE" value="update atm_map and house_map to make main branch run" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

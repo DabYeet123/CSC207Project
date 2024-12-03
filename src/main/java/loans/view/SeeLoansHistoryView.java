@@ -48,7 +48,7 @@ public class SeeLoansHistoryView extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, FONT_SIZE));
         add(titleLabel, BorderLayout.NORTH);
 
-        final JScrollPane scrollPane = getjScrollPane(controller);
+        final JScrollPane scrollPane = getLoansHistory(controller);
         add(scrollPane, BorderLayout.CENTER);
 
         final JPanel backPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
@@ -71,7 +71,7 @@ public class SeeLoansHistoryView extends JFrame {
      * @return The JScrollPane with the loans history table.
      */
     @NotNull
-    private static JScrollPane getjScrollPane(SeeLoansHistoryController controller) {
+    private static JScrollPane getLoansHistory(SeeLoansHistoryController controller) {
         final String[] columnNames = {"ID", "Amount ($)", "Start Date", "End Date", "Interest Rate (%)",
             "Repayment ($)", "Card"};
         final DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
