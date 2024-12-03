@@ -3,9 +3,8 @@ package brokerage.use_case;
 import brokerage.entity.Stock;
 import brokerage.entity.StockFactory;
 import com.crazzyghost.alphavantage.timeseries.response.StockUnit;
-import dataaccess.DataAccessInterface;
 import brokerage.app.StockApi;
-import userdataobject.UserObject;
+import oldstuff.Views.userdataobject.UserObject;
 
 import java.util.List;
 
@@ -63,9 +62,3 @@ public class BrokerageInteractor implements BrokerageInputBoundary {
     }
 
 }
-
-/*
-riceve nel construccotr dataaccessinterface, outputboundary, stockfactory
-
-over
- */

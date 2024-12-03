@@ -1,6 +1,5 @@
 package brokerage.app;
 
-import brokerage.StockApiConfig;
 import com.crazzyghost.alphavantage.AlphaVantage;
 import com.crazzyghost.alphavantage.parameters.Interval;
 import com.crazzyghost.alphavantage.parameters.OutputSize;
@@ -16,7 +15,7 @@ public class StockApi {
 
         StockApiConfig.initialize();
 
-        TimeSeriesResponse response = AlphaVantage.api()
+        final TimeSeriesResponse response = AlphaVantage.api()
                 .timeSeries()
                 .intraday()
                 .forSymbol(stockSymbol)
@@ -24,7 +23,6 @@ public class StockApi {
                 .outputSize(OutputSize.FULL)
                 .dataType(DataType.JSON)
                 .fetchSync();
-
 
         //List<StockUnit> stockData = new ArrayList<>();
 

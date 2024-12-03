@@ -22,6 +22,11 @@ public class DBTransactionDataAccessObject implements MakeTransactionDataAccessI
     public DBTransactionDataAccessObject() {
     }
 
+    /**
+     * Reads datapoints.
+     * @param userID identifier
+     * @return list
+     */
     public List<Transaction> readData(int userID) {
         final User user = usersController.readDataPoint(userID);
         return controller.readData(user.getFileDirectory() + FileSystems.getDefault().getSeparator()

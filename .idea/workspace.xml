@@ -5,7 +5,180 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b98df37-13f9-4d47-990e-6a1c0dfae90b" name="Changes" comment="Changed file structure for CA refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data_access/DBBrokerageDataAccessObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data_access/DBUserDataAccessObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/TransactionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/UserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/ViewManagerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interface_adapter/ViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/LoggedinUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/LoggedinView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/interface_adapter/LoggedinController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/interface_adapter/LoggedinPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/interface_adapter/LoggedinState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/interface_adapter/LoggedinViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/use_case/LoggedinInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/use_case/LoggedinInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loggedin/use_case/LoggedinOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/LoginUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/LoginView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/interface_adapter/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/interface_adapter/LoginPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/interface_adapter/LoginState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/interface_adapter/LoginViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/use_case/LoginInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/use_case/LoginInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/use_case/LoginInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/use_case/LoginOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/use_case/LoginOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/login/use_case/LoginUserDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/MakeTransactionUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/MakeTransactionView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/interface_adapter/MakeTransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/interface_adapter/MakeTransactionPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/interface_adapter/MakeTransactionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/interface_adapter/MakeTransactionViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/use_case/MakeTransactionDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/use_case/MakeTransactionInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/use_case/MakeTransactionInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/use_case/MakeTransactionInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/use_case/MakeTransactionOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/maketransaction/use_case/MakeTransactionOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/SeeTransactionsUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/SeeTransactionsView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/interface_adapter/SeeTransactionsViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/seetransactions/use_case/SeeTransactionsOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/SignupUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/SignupView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/interface_adapter/SignupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/interface_adapter/SignupPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/interface_adapter/SignupState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/interface_adapter/SignupViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/use_case/SignupInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/use_case/SignupInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/use_case/SignupInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/use_case/SignupOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/use_case/SignupOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/signup/use_case/SignupUserDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/LabelTextPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/ViewManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/WelcomeUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/WelcomeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/interface_adapter/WelcomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/interface_adapter/WelcomePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/interface_adapter/WelcomeState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/interface_adapter/WelcomeViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/use_case/WelcomeInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/use_case/WelcomeInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/welcome/use_case/WelcomeOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/ATMMap/ATMMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/ATMMap/ATMMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/ATMMap/ATMMapPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/ATMMap/ATMMapPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/ATMMap/ATMMapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/ATMMap/ATMMapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/ATMMap/NominatimAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/ATMMap/NominatimAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/ATMMap/PixelConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/ATMMap/PixelConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/ATMMap/StaticMapAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/ATMMap/StaticMapAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/DataObject/ATMButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/DataObject/ATMButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/DataObject/ATMObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/DataObject/ATMObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ATM/DataObject/ATMPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ATM/DataObject/ATMPopUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Card/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Card/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Card/CardDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Card/CardPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Card/CardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Card/CardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/APIget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Exchange/APIget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Exchange/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Exchange/CurrencyExchangePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Exchange/CurrencyExchangeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Functionality/FunctionalityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Functionality/FunctionalityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Functionality/FunctionalityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Functionality/FunctionalityView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/DataObject/HouseButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/DataObject/HouseButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/DataObject/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/DataObject/HouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/DataObject/HouseDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/DataObject/HouseDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/DataObject/HouseObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/DataObject/HouseObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/DataObject/HousePopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/DataObject/HousePopUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/HouseMap.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/HouseMap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/HouseMap/HouseMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/HouseMap/HouseMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/HouseMap/HouseMapPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/HouseMap/HouseMapPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/HouseMap/HouseMapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/HouseMap/HouseMapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/House/Houses.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/House/Houses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/InsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Insurance/InsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/InsuranceDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Insurance/InsuranceDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Insurance/InsuranceObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Insurance/InsuranceObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/ApplyLoans/ApplyLoansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/ApplyLoans/ApplyLoansPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/ApplyLoans/ApplyLoansView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/DataObject/LoansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/DataObject/LoansDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/DataObject/LoansObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/SeeLoansHistory/SeeLoansHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/SeeLoansHistory/SeeLoansHistoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/SeeLoansHistory/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/Loans/SeeLoansHistory/SeeLoansHistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/ButtonMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ButtonMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/LabelMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/LabelMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/PanelMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/PanelMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/ViewMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/ViewMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MainLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appold/ControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/appold/ControllerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appold/MainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/appold/MainLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appold/PresenterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/appold/PresenterInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/BrokerageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/StockApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/app/StockApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/app/StockApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/app/StockApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/data_access/BrokerageDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/data_access/BrokerageDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokeragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokeragePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/interface_adapter/BrokerageViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/brokerage/use_case/BrokerageOutputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_access/DBTransactionDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_access/DBTransactionDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataaccess/DataAccessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/dataaccess/DataAccessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataaccess/DataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/dataaccess/DataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/loggedin/LoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/loggedin/LoggedInPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/loggedin/LoggedInView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/login/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/login/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/login/LogInPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/login/LogInPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/login/LogInView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/login/LogInView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/signup/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/signup/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/signup/SignUpPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/signup/SignUpPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/signup/SignUpView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/signup/SignUpView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/welcome/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/welcome/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/welcome/WelcomePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/welcome/WelcomePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/welcome/WelcomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/login/welcome/WelcomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/dataObject/NewTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/dataObject/NewTransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/dataObject/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/dataObject/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/dataObject/TransactionDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/dataObject/TransactionDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/dataObject/TransactionObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/dataObject/TransactionObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/makeTransaction/MakeTransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/makeTransaction/MakeTransactionPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/makeTransaction/MakeTransactionView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/seeTransactionHistory/SeeTransactionHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/seeTransactionHistory/SeeTransactionHistoryPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/transaction/seeTransactionHistory/SeeTransactionHistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userdataobject/NewUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/userdataobject/NewUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userdataobject/UserObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/userdataobject/UserObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userdataobject/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/userdataobject/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/userdataobject/UsersDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/oldstuff/Views/userdataobject/UsersDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataAccess/DataAccessController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/APIget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exchange/CurrencyExchangePresenter.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +236,7 @@
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;stefano.mauloni&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/mystyle.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/busat/OneDrive/Desktop/UofT/SoftwareDesign/CSC207Project/src/main/java/welcome&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -80,10 +253,18 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="brokerage.use_case" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\busat\OneDrive\Desktop\UofT\SoftwareDesign\CSC207Project\src\main\java\welcome" />
+      <recent name="C:\Users\busat\OneDrive\Desktop\UofT\SoftwareDesign\CSC207Project\src\main\java\view" />
+      <recent name="C:\Users\busat\OneDrive\Desktop\UofT\SoftwareDesign\CSC207Project\src\main\java\signup" />
+      <recent name="C:\Users\busat\OneDrive\Desktop\UofT\SoftwareDesign\CSC207Project\src\main\java\seetransactions" />
+      <recent name="C:\Users\busat\OneDrive\Desktop\UofT\SoftwareDesign\CSC207Project\src\main\java\maketransaction" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Card.View.CardView" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\busat\OneDrive\Desktop\UofT\SoftwareDesign\CSC207Project\src\main\java\welcome" />
       <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
@@ -145,6 +326,7 @@
       <workItem from="1732738679000" duration="757000" />
       <workItem from="1732905967206" duration="2823000" />
       <workItem from="1732997667400" duration="10987000" />
+      <workItem from="1733241832489" duration="3896000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -286,11 +468,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame." />
-    <MESSAGE value="11.23 change amount is double" />
     <MESSAGE value="Refactor Transactions + CheckStyle" />
     <MESSAGE value="Refactor Checkstyle" />
     <MESSAGE value="Added Readme" />
     <MESSAGE value="Changed file structure for CA refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed file structure for CA refactoring" />
+    <MESSAGE value="11.23 change amount is double" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.23 change amount is double" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

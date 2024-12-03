@@ -2,6 +2,9 @@ package brokerage.interface_adapter;
 
 import brokerage.use_case.BrokerageOutputBoundary;
 import brokerage.use_case.BrokerageOutputData;
+import interface_adapter.ViewManagerModel;
+import loggedin.interface_adapter.LoggedinState;
+import loggedin.interface_adapter.LoggedinViewModel;
 
 /**
  * Handles the presentation layer for the brokerage system, managing the interaction

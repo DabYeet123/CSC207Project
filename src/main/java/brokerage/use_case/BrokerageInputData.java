@@ -1,7 +1,7 @@
 package brokerage.use_case;
 
 import brokerage.entity.Stock;
-import userdataobject.UserObject;
+import oldstuff.Views.userdataobject.UserObject;
 
 public class BrokerageInputData {
     private final UserObject user;

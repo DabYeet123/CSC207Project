@@ -1,8 +1,7 @@
 package brokerage.interface_adapter;
 
-import brokerage.entity.Stock;
 import org.jfree.chart.plot.XYPlot;
-import userdataobject.UserObject;
+import oldstuff.Views.userdataobject.UserObject;
 
 public class BrokerageState {
     private UserObject user;

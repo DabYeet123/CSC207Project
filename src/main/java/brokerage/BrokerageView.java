@@ -32,6 +32,7 @@ import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
 
 import com.crazzyghost.alphavantage.timeseries.response.StockUnit;
+import view.LabelTextPanel;
 
 /**
  * The {@code BrokerageView} class provides a graphical user interface (GUI) for managing stock assets.

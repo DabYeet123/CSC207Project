@@ -4,7 +4,7 @@ import brokerage.entity.Stock;
 
 public interface BrokerageDataAccessInterface {
 
-    int getQuantity(int userID, int stockID);
+    int getQuantity(int userID, String stockID);
 
     void saveTrade(int userID, Stock stock);
 

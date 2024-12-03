@@ -3,7 +3,7 @@ package brokerage.use_case;
 
 import brokerage.entity.Stock;
 import com.crazzyghost.alphavantage.timeseries.response.StockUnit;
-import userdataobject.UserObject;
+import oldstuff.Views.userdataobject.UserObject;
 
 import java.util.List;
 

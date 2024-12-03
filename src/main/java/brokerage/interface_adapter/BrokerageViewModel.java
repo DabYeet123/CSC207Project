@@ -1,8 +1,12 @@
 package brokerage.interface_adapter;
 
-public class BrokerageViewModel extends ViewModel<BrokerageState>{
+import interface_adapter.ViewModel;
 
-    public BrokerageViewModel(){
+/**
+ * The ViewModel for the Brokerage View.
+ */
+public class BrokerageViewModel extends ViewModel<BrokerageState> {
+    public BrokerageViewModel() {
         super("brokerage");
         setState(new BrokerageState());
     }
