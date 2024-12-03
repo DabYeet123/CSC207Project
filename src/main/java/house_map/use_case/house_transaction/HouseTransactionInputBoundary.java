@@ -1,6 +1,6 @@
 package house_map.use_case.house_transaction;
 
-import DataObjects.UserObject;
+import userdataobject.UserObject;
 import house_map.data_object.HouseObject;
 
 /**

@@ -1,8 +1,8 @@
 package atm_map.adapter;
 
-import App.ControllerInterface;
-import DataObjects.UserObject;
-import LogIn.LoggedIn.LoggedInController;
+import app.ControllerInterface;
+import userdataobject.UserObject;
+import login.loggedin.LoggedInController;
 import atm_map.use_case.AtmGenerationInput;
 import atm_map.use_case.AtmGenerationUseCase;
 
