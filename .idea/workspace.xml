@@ -5,8 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/adapter/CardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/adapter/CardPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/dataAccess/CardDBAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/dataObject/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/card/view/CardView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeDataUsage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,24 +82,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.app.MainLauncher.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.cardandexchange in homework-5 (1).executor&quot;: &quot;Coverage&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#45 on Yue-Zheng&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainLauncher.executor": "Run",
+    "Application.app.MainLauncher.executor": "Run",
+    "JUnit.cardandexchange in homework-5 (1).executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Yue-Zheng",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/郑Y/IdeaProjects/CSC207Project/src/main/java/exchange",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\exchange" />
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\card\use_case" />
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\card\dataObject" />
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\card" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="card.adapter.CardPresenter" />
       <recent name="Card.CardMethods" />
       <recent name="Exchange.CurrencyExchangeDataUsage" />
       <recent name="Exchange.CurrencyExchangeAPIConfig" />
@@ -90,8 +123,12 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Card" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="card.dataAccess" />
+      <recent name="Card.view" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.cardandexchange in homework-5 (1)">
+  <component name="RunManager" selected="Application.app.MainLauncher">
     <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
       <module name="homework-5" />
@@ -123,7 +160,7 @@
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cardandexchange.adapter.*" />
+          <option name="PATTERN" value="card.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,8 +202,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
         <item itemvalue="Application.app.MainLauncher" />
+        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
         <item itemvalue="Application.MainLauncher" />
         <item itemvalue="Application.MainLauncher" />
         <item itemvalue="Application.MainLauncher" />
@@ -207,6 +244,7 @@
       <workItem from="1732935818479" duration="109000" />
       <workItem from="1732935936292" duration="5792000" />
       <workItem from="1733096707616" duration="685000" />
+      <workItem from="1733196635562" duration="243000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
