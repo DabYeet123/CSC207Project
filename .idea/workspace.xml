@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="Merging">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokerageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Brokerage/BrokeragePresenter.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\郑Y\IdeaProjects\CSC207Project\htmlReport" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
+    &quot;accountId&quot;: &quot;a7fb78d8-006c-48c3-a6c9-96666325973c&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2p2kRfzUgoATYvv5vUGgBKtn1B3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainLauncher.executor": "Run",
+    "Application.app.MainLauncher.executor": "Run",
+    "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "#47 on zeyucai",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="Card.CardMethods" />
+      <recent name="Exchange.CurrencyExchangeDataUsage" />
+      <recent name="Exchange.CurrencyExchangeAPIConfig" />
+      <recent name="Card.View.CardView" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Card" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.cardandexchange in homework-5 (1)">
+    <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true" />
+    <configuration name="app.MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.MainLauncher" />
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cardandexchange.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Card" />
+      <option name="MAIN_CLASS_NAME" value="Card.CardViewTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exchange in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cardandexchange.useCase.exchange.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Exchange" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cardandexchange in homework-5 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/cardandexchange" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.app.MainLauncher" />
+      <item itemvalue="Application.MainLauncher" />
+      <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
+      <item itemvalue="JUnit.CardViewTest" />
+      <item itemvalue="JUnit.Exchange in homework-5" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
+        <item itemvalue="Application.app.MainLauncher" />
+        <item itemvalue="Application.MainLauncher" />
+        <item itemvalue="Application.MainLauncher" />
+        <item itemvalue="Application.MainLauncher" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="after merge from the main, change refactor thing into main" />
+      <created>1731971551933</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731971551933</updated>
+      <workItem from="1731971553162" duration="418000" />
+      <workItem from="1732142120786" duration="3555000" />
+      <workItem from="1732383087980" duration="5623000" />
+      <workItem from="1732663282166" duration="26000" />
+      <workItem from="1732663320438" duration="1370000" />
+      <workItem from="1732726984492" duration="27000" />
+      <workItem from="1732738679000" duration="757000" />
+      <workItem from="1732905967206" duration="2823000" />
+      <workItem from="1732997667400" duration="10987000" />
+      <workItem from="1732383087980" duration="6021000" />
+      <workItem from="1732579545149" duration="351000" />
+      <workItem from="1732579970472" duration="5567000" />
+      <workItem from="1732588253253" duration="219000" />
+      <workItem from="1732588516847" duration="10689000" />
+      <workItem from="1732662312623" duration="23629000" />
+      <workItem from="1732935818479" duration="109000" />
+      <workItem from="1732935936292" duration="5792000" />
+      <workItem from="1733096707616" duration="685000" />
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1731971694776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731971694776</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1">
+      <option name="closed" value="true" />
+      <created>1732142146287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732142146288</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1">
+      <option name="closed" value="true" />
+      <created>1732151551432</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732151551432</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1">
+      <option name="closed" value="true" />
+      <created>1732302926668</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732302926668</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1">
+      <option name="closed" value="true" />
+      <created>1732303253028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732303253028</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1">
+      <option name="closed" value="true" />
+      <created>1732307017465</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732307017465</updated>
+    </task>
+    <task id="LOCAL-00007" summary="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame.">
+      <option name="closed" value="true" />
+      <created>1732307399347</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732307399347</updated>
+    </task>
+    <task id="LOCAL-00008" summary="11.23 change amount is double">
+      <option name="closed" value="true" />
+      <created>1732383276595</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732383276595</updated>
+    </task>
+    <task id="LOCAL-00009" summary="11.23 change amount is double">
+      <option name="closed" value="true" />
+      <created>1732383310611</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732383310611</updated>
+    </task>
+    <task id="LOCAL-00010" summary="11.23 change amount is double">
+      <option name="closed" value="true" />
+      <created>1732383685692</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732383685692</updated>
+    </task>
+    <task id="LOCAL-00011" summary="11.23 change amount is">
+      <option name="closed" value="true" />
+      <created>1732387786548</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732387786548</updated>
+    </task>
+    <task id="LOCAL-00012" summary="11.23 change the back to main button and add the button of exchange currency">
+      <option name="closed" value="true" />
+      <created>1732389153443</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732389153443</updated>
+    </task>
+    <task id="LOCAL-00013" summary="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)">
+      <option name="closed" value="true" />
+      <created>2016572429998</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>2016572429998</updated>
+    </task>
+    <task id="LOCAL-00014" summary="renew of some issue of card and make 5 test for card controller and DBA">
+      <option name="closed" value="true" />
+      <created>1732584621284</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732584621284</updated>
+    </task>
+    <task id="LOCAL-00015" summary="after merge from the main, change refactor thing into main">
+      <option name="closed" value="true" />
+      <created>1733093985951</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733093985951</updated>
+    </task>
+    <task id="LOCAL-00016" summary="after merge from the main, change refactor thing into main">
+      <option name="closed" value="true" />
+      <created>1733094338347</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733094338347</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Write for Card and ExchangeCurrency Tests">
+      <option name="closed" value="true" />
+      <created>1732658883178</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732658883178</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Write for Card and ExchangeCurrency Tests">
+      <option name="closed" value="true" />
+      <created>1732659398250</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732659398250</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update for Card Test with Entity">
+      <option name="closed" value="true" />
+      <created>1732660014976</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732660014976</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update for Card Test and Exchange Test, make the coverage to 100%&#10;Remind: clean the useless user before run the Test, it will creat a lot of user to test each method&#10;clean the file store with the data of test each time to make test renew for each time.">
+      <option name="closed" value="true" />
+      <created>1732681913473</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732681913473</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Renew of Yue Zheng's Story">
+      <option name="closed" value="true" />
+      <created>1732683961779</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732683961779</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Renew of refactor for Card and Exchange parts">
+      <option name="closed" value="true" />
+      <created>1732748304858</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732748304858</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Renew of refactor for Card and Exchange parts">
+      <option name="closed" value="true" />
+      <created>1732748876186</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732748876186</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Renew of refactor for Card and Exchange parts">
+      <option name="closed" value="true" />
+      <created>1732748911308</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732748911308</updated>
+    </task>
+    <task id="LOCAL-00025" summary="11.29 renew for refactor with the reorganization">
+      <option name="closed" value="true" />
+      <created>1732940209744</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732940209744</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="seems the card part and exchange parts are already done. As for the Button in loggined part, there is no button of exchangeButton in the frame I have already created one button so just need to add it in frame." />
+    <MESSAGE value="11.23 change amount is double" />
+    <MESSAGE value="Refactor Transactions + CheckStyle" />
+    <MESSAGE value="Refactor Checkstyle" />
+    <MESSAGE value="Added Readme" />
+    <MESSAGE value="11.23 change the back to main button and add the button of exchange currency" />
+    <MESSAGE value="loan and card connection and update the method in card to directly use the method to update the Expenses. (with Xing Xu)" />
+    <MESSAGE value="renew of some issue of card and make 5 test for card controller and DBA" />
+    <MESSAGE value="Add the override of interface of Controller and Presenter" />
+    <MESSAGE value="Write for Card and ExchangeCurrency Tests" />
+    <MESSAGE value="update for Card Test with Entity" />
+    <MESSAGE value="update for Card Test and Exchange Test, make the coverage to 100%&#10;Remind: clean the useless user before run the Test, it will creat a lot of user to test each method&#10;clean the file store with the data of test each time to make test renew for each time." />
+    <MESSAGE value="Renew of Yue Zheng's Story" />
+    <MESSAGE value="Renew of refactor for Card and Exchange parts" />
+    <MESSAGE value="11.29 renew for refactor with the reorganization" />
+    <MESSAGE value="after merge from the main, change refactor thing into main" />
+    <MESSAGE value="1" />
+    <MESSAGE value="Merging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merging" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CSC207Project$cardViewTest.ic" NAME="cardViewTest Coverage Results" MODIFIED="1732664840152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardTest_successDeleteCardTest.ic" NAME="CardTest.successDeleteCardTest Coverage Results" MODIFIED="1732670682718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_successInputAmountTest.ic" NAME="ExchangeCurrencyTest.successInputAmountTest Coverage Results" MODIFIED="1732679392712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardTest.ic" NAME="CardTest Coverage Results" MODIFIED="1732664784233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$Exchange_in_homework_5.ic" NAME="Exchange in homework-5 Coverage Results" MODIFIED="1732747986111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardViewTest_testBack.ic" NAME="CardViewTest.testBack Coverage Results" MODIFIED="1732669762032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest.ic" NAME="ExchangeCurrencyTest Coverage Results" MODIFIED="1732680404115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$CardViewTest.ic" NAME="CardViewTest Coverage Results" MODIFIED="1732670008439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$cardandexchange_in_homework_5__1_.ic" NAME="cardandexchange in homework-5 (1) Coverage Results" MODIFIED="1733094264308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_failureInvalidInputAmountTest.ic" NAME="ExchangeCurrencyTest.failureInvalidInputAmountTest Coverage Results" MODIFIED="1732679333915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_viewTestForButtonExchange.ic" NAME="ExchangeCurrencyTest.viewTestForButtonExchange Coverage Results" MODIFIED="1732680258226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Exchange.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$Card_in_homework_5.ic" NAME="Card in homework-5 Coverage Results" MODIFIED="1732747859367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>Card.*</FILTER>
+    </SUITE>
+  </component>
+</project>
