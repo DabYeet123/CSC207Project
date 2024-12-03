@@ -1,7 +1,9 @@
 package exchange.use_case;
 
 import exchange.inferface_adapter.CurrencyExchangeController;
+import lombok.Getter;
 
+@Getter
 public class CurrencyOutput {
     private final double changedAmount;
 
@@ -9,7 +11,4 @@ public class CurrencyOutput {
         this.changedAmount = CurrencyExchangeController.getRate() * inputAmount;
     }
 
-    public double getChangedAmount() {
-        return changedAmount;
-    }
 }

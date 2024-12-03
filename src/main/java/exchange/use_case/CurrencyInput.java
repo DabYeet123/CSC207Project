@@ -1,7 +1,10 @@
 package exchange.use_case;
 
+import lombok.Getter;
+
 import javax.swing.JComboBox;
 
+@Getter
 public class CurrencyInput {
     private final double inputAmount;
     private final JComboBox<String> fromcurrencybox;
@@ -13,15 +16,4 @@ public class CurrencyInput {
         this.tocurrencybox = tocurrencybox;
     }
 
-    public JComboBox<String> getFromcurrencybox() {
-        return fromcurrencybox;
-    }
-
-    public JComboBox<String> getTocurrencybox() {
-        return tocurrencybox;
-    }
-
-    public double getInputAmount() {
-        return inputAmount;
-    }
 }

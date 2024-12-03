@@ -2,7 +2,9 @@ package card.use_case;
 
 import card.adapter.CardPresenter;
 import card.dataObject.Card;
+import lombok.Getter;
 
+@Getter
 public class CardUseCase implements CardInputBoundary {
     private final CardPresenter cardPresenter;
 
@@ -24,7 +26,4 @@ public class CardUseCase implements CardInputBoundary {
         return generateCard(name);
     }
 
-    public CardPresenter getCardPresenter() {
-        return cardPresenter;
-    }
 }

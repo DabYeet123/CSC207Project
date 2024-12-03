@@ -5,7 +5,9 @@ import java.util.List;
 
 import card.adapter.CardController;
 import card.dataObject.Card;
+import lombok.Getter;
 
+@Getter
 public class CardOutput {
     private final List<Object[]> newLine;
 
@@ -21,7 +23,4 @@ public class CardOutput {
         this.newLine = listCard;
     }
 
-    public List<Object[]> getNewLine() {
-        return newLine;
-    }
 }

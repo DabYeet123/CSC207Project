@@ -11,7 +11,9 @@ import javax.swing.JTextField;
 
 import exchange.inferface_adapter.CurrencyExchangeController;
 import lombok.Getter;
+import lombok.Setter;
 
+@Setter
 @Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CurrencyExchangeView extends JFrame {
@@ -141,27 +143,4 @@ public class CurrencyExchangeView extends JFrame {
 //        }
 //    }
 
-    public void setInputAmountField(JTextField inputAmountField) {
-        this.inputAmountField = inputAmountField;
-    }
-
-    public void setOutputAmountField(JTextField outputAmountField) {
-        this.outputAmountField = outputAmountField;
-    }
-
-    public void setFromCurrencyBox(JComboBox<String> fromCurrencyBox) {
-        this.fromCurrencyBox = fromCurrencyBox;
-    }
-
-    public void setToCurrencyBox(JComboBox<String> toCurrencyBox) {
-        this.toCurrencyBox = toCurrencyBox;
-    }
-
-    public void setExchangeButton(JButton exchangeButton) {
-        this.exchangeButton = exchangeButton;
-    }
-
-    public void setBackButton(JButton backButton) {
-        this.backButton = backButton;
-    }
 }

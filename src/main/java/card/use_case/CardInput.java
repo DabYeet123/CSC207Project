@@ -1,5 +1,8 @@
 package card.use_case;
 
+import lombok.Getter;
+
+@Getter
 public class CardInput {
     private final String name;
 
@@ -7,7 +10,4 @@ public class CardInput {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
 }
