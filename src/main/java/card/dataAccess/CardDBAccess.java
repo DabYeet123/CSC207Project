@@ -1,9 +1,9 @@
-package cardandexchange.dataAccess;
+package card.dataAccess;
 
 import java.util.List;
 import java.util.Objects;
 
-import cardandexchange.dataObject.Card;
+import card.dataObject.Card;
 import dataaccess.DataAccessController;
 import dataaccess.DataAccessInterface;
 import userdataobject.UserObject;

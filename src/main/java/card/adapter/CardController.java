@@ -1,11 +1,14 @@
-package cardandexchange.adapter;
+package card.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import app.ControllerInterface;
-import cardandexchange.dataAccess.CardDBAccess;
-import cardandexchange.dataObject.Card;
+import card.dataAccess.CardDBAccess;
+import card.dataObject.Card;
+import card.use_case.CardInput;
+import card.use_case.CardOutput;
+import card.use_case.CardUseCase;
 import login.loggedin.LoggedInController;
 import lombok.Getter;
 import userdataobject.UserObject;
@@ -16,6 +19,7 @@ public class CardController implements ControllerInterface {
     @Getter
     private static List<Card> cardList = new ArrayList<>();
     private static UserObject loggedInUser;
+    private final CardUseCase cardUseCase;
     private final CardPresenter cardPresenter;
 
     /**
@@ -25,15 +29,24 @@ public class CardController implements ControllerInterface {
     public CardController(UserObject user) {
         loggedInUser = user;
         this.cardPresenter = new CardPresenter(this);
-    }
-
-    public static void setCardList(List<Card> cardList) {
-        CardController.cardList = cardList;
+        this.cardUseCase = new CardUseCase(cardPresenter);
     }
 
     @Override
     public void launch() {
         cardPresenter.showView();
+    }
+
+    /**
+     * Refresh the view.
+     */
+    public void refresh() {
+        loadFromFile();
+        cardPresenter.refresh(new CardOutput());
+    }
+
+    public static void setCardList(List<Card> cardList) {
+        CardController.cardList = cardList;
     }
 
     /**
@@ -43,6 +56,15 @@ public class CardController implements ControllerInterface {
         cardPresenter.disposeView();
         final LoggedInController controller = new LoggedInController(loggedInUser);
         controller.launch();
+    }
+
+    /**
+     * Add a Card.
+     * @param name the input name
+     */
+    public void addCard(String name) {
+        final Card newCard = cardUseCase.addCard(new CardInput(name));
+        saveCards(newCard);
     }
 
     /**

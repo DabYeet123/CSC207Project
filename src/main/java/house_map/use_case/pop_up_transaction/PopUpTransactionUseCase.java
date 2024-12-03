@@ -1,6 +1,6 @@
 package house_map.use_case.pop_up_transaction;
 
-import cardandexchange.dataObject.Card;
+import card.dataObject.Card;
 import userdataobject.UserObject;
 import house_map.adapter.PopUpTransactionPresenter;
 

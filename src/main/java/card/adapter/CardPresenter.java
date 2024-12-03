@@ -1,15 +1,26 @@
-package cardandexchange.adapter;
+package card.adapter;
 
 import app.PresenterInterface;
-import cardandexchange.view.CardView;
+import card.use_case.CardOutput;
+import card.use_case.CardOutputBoundary;
+import card.view.CardView;
 import transaction.makeTransaction.MakeTransactionController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
-public class CardPresenter implements PresenterInterface<MakeTransactionController> {
+public class CardPresenter implements PresenterInterface<MakeTransactionController>, CardOutputBoundary {
     private final CardView cardView;
 
     public CardPresenter(CardController controller) {
         this.cardView = new CardView(controller);
+    }
+
+    @Override
+    public void refresh(CardOutput cardOutput) {
+        cardView.getModel().setRowCount(0);
+        for (Object[] oneCard : cardOutput.getNewLine()) {
+            cardView.getModel().addRow(oneCard);
+        }
+        cardView.getUsageField().setText("");
     }
 
     @Override
@@ -22,4 +33,5 @@ public class CardPresenter implements PresenterInterface<MakeTransactionControll
         cardView.getFrame().setVisible(false);
         cardView.dispose();
     }
+
 }

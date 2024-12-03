@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import cardandexchange.dataObject.Card;
+import card.dataObject.Card;
 import org.jetbrains.annotations.NotNull;
 
 import insurance.adapter.InsuranceController;

@@ -1,4 +1,4 @@
-package cardandexchange.view;
+package card.view;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -16,9 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
-import cardandexchange.adapter.CardController;
-import cardandexchange.dataObject.Card;
-import cardandexchange.useCase.card.CardMethods;
+import card.adapter.CardController;
+import card.dataObject.Card;
 import lombok.Getter;
 
 @Getter
@@ -64,7 +63,13 @@ public class CardView extends JFrame {
         getAddButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CardView.this.addCard();
+                if (CardController.getCardList().size() >= CARD_LIMIT) {
+                    JOptionPane.showMessageDialog(getFrame(), "Too much cards", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else {
+                    controller.addCard(getUsageField().getText());
+                }
+                controller.refresh();
             }
         });
 
@@ -115,26 +120,26 @@ public class CardView extends JFrame {
         }
     }
 
-    /**
-     * Used to add the card and renew the GUI.
-     */
-    public void addCard() {
-        CardController.loadFromFile();
-        final String name = getUsageField().getText();
-        final String securityCode = CardMethods.newCode();
-        final String id = CardMethods.newId(name);
-        final String expiryDate = CardMethods.newDate();
+//    /**
+//     * Used to add the card and renew the GUI.
+//     */
+//    public void addCard() {
+//        CardController.loadFromFile();
+//        final String name = getUsageField().getText();
+//        final String securityCode = CardMethods.newCode();
+//        final String id = CardMethods.newId(name);
+//        final String expiryDate = CardMethods.newDate();
 
-        if (CardController.getCardList().size() >= CARD_LIMIT) {
-            JOptionPane.showMessageDialog(getFrame(), "Too much cards", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        else {
-            final Card newCard = new Card(id, name, expiryDate, securityCode);
-            CardController.saveCards(newCard);
-            getUsageField().setText("");
-        }
-        refresh(this);
-    }
+//        if (CardController.getCardList().size() >= CARD_LIMIT) {
+//            JOptionPane.showMessageDialog(getFrame(), "Too much cards", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
+//        else {
+//            final Card newCard = new Card(id, name, expiryDate, securityCode);
+//            CardController.saveCards(newCard);
+//            getUsageField().setText("");
+//        }
+//        refresh(this);
+//    }
 
     /**
      * Used to delete the card and renew the GUI.

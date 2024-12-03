@@ -1,9 +1,9 @@
 package loans.adapter;
 
 import app.ControllerInterface;
-import cardandexchange.adapter.CardController;
-import cardandexchange.dataAccess.CardDBAccess;
-import cardandexchange.dataObject.Card;
+import card.adapter.CardController;
+import card.dataAccess.CardDBAccess;
+import card.dataObject.Card;
 import login.loggedin.LoggedInController;
 import lombok.Getter;
 import userdataobject.UserObject;

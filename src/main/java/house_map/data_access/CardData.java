@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cardandexchange.dataObject.Card;
-import cardandexchange.dataAccess.CardDBAccess;
+import card.dataObject.Card;
+import card.dataAccess.CardDBAccess;
 import userdataobject.UserObject;
 
 /**

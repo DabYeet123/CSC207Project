@@ -3,8 +3,8 @@ package loans.adapter;
 import java.util.List;
 
 import app.ControllerInterface;
-import cardandexchange.adapter.CardController;
-import cardandexchange.dataObject.Card;
+import card.adapter.CardController;
+import card.dataObject.Card;
 import loans.dataObject.LoansObject;
 import login.loggedin.LoggedInController;
 import login.welcome.WelcomeController;

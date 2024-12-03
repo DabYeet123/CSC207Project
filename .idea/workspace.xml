@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="update User's story">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/ControllerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atm_map/adapter/AtmMapPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/HouseMapPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/data_access/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/data_access/CardData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/data_access/HouseDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/data_access/HouseDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/house_transaction/HouseTransactionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/pop_up_transaction/PopUpTransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/pop_up_transaction/PopUpTransactionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/view/PopUpTransactionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/view/PopUpTransactionView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
+    <list default="true" id="1b372dda-078c-412d-8d5a-f0dbe3a89582" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loans/view/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/view/SeeLoansHistoryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +42,12 @@
     &quot;assignee&quot;: &quot;Jackzhengqaq&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DabYeet123/CSC207Project.git",
-    "accountId": "52a0db03-ac1e-4a5a-8a92-0f4811ad9340"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DabYeet123/CSC207Project.git&quot;,
+    &quot;accountId&quot;: &quot;52a0db03-ac1e-4a5a-8a92-0f4811ad9340&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -80,24 +65,23 @@
   "keyToString": {
     "Application.MainLauncher.executor": "Run",
     "Application.app.MainLauncher.executor": "Run",
-    "JUnit.cardandexchange in homework-5 (1).executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "sincer.xu",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/U of T/CSC207/CSC207Project/src/main/java/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+    "git-widget-placeholder": "Yue-Zheng",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\app" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\cardUML" />
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\exchangeUML" />
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\exchange" />
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\card\use_case" />
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\card\dataObject" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="card.adapter.CardPresenter" />
       <recent name="Card.CardMethods" />
       <recent name="Exchange.CurrencyExchangeDataUsage" />
       <recent name="Exchange.CurrencyExchangeAPIConfig" />
@@ -111,6 +95,11 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Card" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="exchangeUML" />
+      <recent name="card.dataAccess" />
+      <recent name="Card.view" />
     </key>
   </component>
   <component name="RunManager" selected="Application.app.MainLauncher">
@@ -145,7 +134,7 @@
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cardandexchange.adapter.*" />
+          <option name="PATTERN" value="card.dataObject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -195,14 +184,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -229,6 +210,10 @@
       <workItem from="1732935818479" duration="109000" />
       <workItem from="1732935936292" duration="5792000" />
       <workItem from="1733096707616" duration="685000" />
+      <workItem from="1733196635562" duration="643000" />
+      <workItem from="1733197302153" duration="4370000" />
+      <workItem from="1733201746509" duration="4219000" />
+      <workItem from="1733250445211" duration="1172000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -358,53 +343,53 @@
       <option name="project" value="LOCAL" />
       <updated>1733094338347</updated>
     </task>
-    <task id="LOCAL-00017" summary="Merging">
+    <task id="LOCAL-00017" summary="1">
       <option name="closed" value="true" />
-      <created>1733187487029</created>
+      <created>1733197070665</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1733187487029</updated>
+      <updated>1733197070665</updated>
     </task>
-    <task id="LOCAL-00018" summary="update User's story">
+    <task id="LOCAL-00018" summary="1">
       <option name="closed" value="true" />
-      <created>1733195776101</created>
+      <created>1733197161363</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
       <updated>1733195776101</updated>
     </task>
-    <task id="LOCAL-00019" summary="update for Card Test with Entity">
+    <task id="LOCAL-00019" summary="1">
       <option name="closed" value="true" />
-      <created>1732660014976</created>
+      <created>1733201675339</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1732660014976</updated>
+      <updated>1733201675339</updated>
     </task>
-    <task id="LOCAL-00020" summary="update for Card Test and Exchange Test, make the coverage to 100%&#10;Remind: clean the useless user before run the Test, it will creat a lot of user to test each method&#10;clean the file store with the data of test each time to make test renew for each time.">
+    <task id="LOCAL-00020" summary="1">
       <option name="closed" value="true" />
-      <created>1732681913473</created>
+      <created>1733202368201</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1732681913473</updated>
+      <updated>1733202368201</updated>
     </task>
-    <task id="LOCAL-00021" summary="Renew of Yue Zheng's Story">
+    <task id="LOCAL-00021" summary="1">
       <option name="closed" value="true" />
-      <created>1732683961779</created>
+      <created>1733203312890</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1732683961779</updated>
+      <updated>1733203312890</updated>
     </task>
-    <task id="LOCAL-00022" summary="Renew of refactor for Card and Exchange parts">
+    <task id="LOCAL-00022" summary="1">
       <option name="closed" value="true" />
-      <created>1732748304858</created>
+      <created>1733253313356</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1732748304858</updated>
+      <updated>1733253313356</updated>
     </task>
     <task id="LOCAL-00023" summary="Renew of refactor for Card and Exchange parts">
       <option name="closed" value="true" />
@@ -430,7 +415,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,10 +449,10 @@
     <MESSAGE value="Renew of refactor for Card and Exchange parts" />
     <MESSAGE value="11.29 renew for refactor with the reorganization" />
     <MESSAGE value="after merge from the main, change refactor thing into main" />
-    <MESSAGE value="1" />
     <MESSAGE value="Merging" />
     <MESSAGE value="update User's story" />
-    <option name="LAST_COMMIT_MESSAGE" value="update User's story" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

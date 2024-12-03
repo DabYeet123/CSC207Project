@@ -11,7 +11,7 @@ import java.util.Map;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 
-import cardandexchange.dataObject.Card;
+import card.dataObject.Card;
 import userdataobject.UserObject;
 import house_map.adapter.PopUpTransactionController;
 import house_map.data_access.CardData;

@@ -1,4 +1,4 @@
-package cardandexchange.view;
+package exchange;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,13 +7,13 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import cardandexchange.adapter.CurrencyExchangeController;
-import cardandexchange.useCase.exchange.CurrencyExchangeDataUsage;
+import exchange.inferface_adapter.CurrencyExchangeController;
 import lombok.Getter;
+import lombok.Setter;
 
+@Setter
 @Getter
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CurrencyExchangeView extends JFrame {
@@ -103,10 +103,8 @@ public class CurrencyExchangeView extends JFrame {
         getExchangeButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CurrencyExchangeView.this.exchangeCurrency(
-                        CurrencyExchangeView.this.getFromCurrencyBox(),
-                        CurrencyExchangeView.this.getInputAmountField(),
-                        CurrencyExchangeView.this.getToCurrencyBox());
+                currencyExchangeController.execute(Double.parseDouble(inputAmountField.getText()),
+                        fromCurrencyBox, toCurrencyBox);
             }
         });
 
@@ -122,50 +120,27 @@ public class CurrencyExchangeView extends JFrame {
         });
     }
 
-    /**
-     * Used to get the amount.
-     * @param fromcurrencybox from box
-     * @param tocurrencybox to box
-     * @param inputamountfield input num
-     */
-    public void exchangeCurrency(JComboBox<String> fromcurrencybox,
-                                 JTextField inputamountfield,
-                                 JComboBox<String> tocurrencybox) {
-        try {
-            final double inputAmount = Double.parseDouble(inputamountfield.getText());
-            final String fromCurrency = (String) fromcurrencybox.getSelectedItem();
-            final String toCurrency = (String) tocurrencybox.getSelectedItem();
+//    /**
+//     * Used to get the amount.
+//     * @param fromcurrencybox from box
+//     * @param tocurrencybox to box
+//     * @param inputamountfield input num
+//     */
+//    public void exchangeCurrency(JComboBox<String> fromcurrencybox,
+//                                 JTextField inputamountfield,
+//                                 JComboBox<String> tocurrencybox) {
+//        try {
+//            final double inputAmount = Double.parseDouble(inputamountfield.getText());
+//            final String fromCurrency = (String) fromcurrencybox.getSelectedItem();
+//            final String toCurrency = (String) tocurrencybox.getSelectedItem();
+//
+//            CurrencyExchangeDataUsage.execute(fromCurrency, toCurrency);
+//            final double outputAmount = inputAmount * CurrencyExchangeController.getRate();
+//            getOutputAmountField().setText(String.format("%.2f", outputAmount));
+//        }
+//        catch (NumberFormatException ex) {
+//            JOptionPane.showMessageDialog(this, "Invalid Input Amount", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
+//    }
 
-            CurrencyExchangeDataUsage.execute(fromCurrency, toCurrency);
-            final double outputAmount = inputAmount * CurrencyExchangeController.getRate();
-            getOutputAmountField().setText(String.format("%.2f", outputAmount));
-        }
-        catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Invalid Input Amount", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-    public void setInputAmountField(JTextField inputAmountField) {
-        this.inputAmountField = inputAmountField;
-    }
-
-    public void setOutputAmountField(JTextField outputAmountField) {
-        this.outputAmountField = outputAmountField;
-    }
-
-    public void setFromCurrencyBox(JComboBox<String> fromCurrencyBox) {
-        this.fromCurrencyBox = fromCurrencyBox;
-    }
-
-    public void setToCurrencyBox(JComboBox<String> toCurrencyBox) {
-        this.toCurrencyBox = toCurrencyBox;
-    }
-
-    public void setExchangeButton(JButton exchangeButton) {
-        this.exchangeButton = exchangeButton;
-    }
-
-    public void setBackButton(JButton backButton) {
-        this.backButton = backButton;
-    }
 }

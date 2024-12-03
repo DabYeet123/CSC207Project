@@ -1,11 +1,13 @@
-package cardandexchange.adapter;
+package exchange.inferface_adapter;
 
 import app.PresenterInterface;
-import cardandexchange.view.CurrencyExchangeView;
+import exchange.CurrencyExchangeView;
+import exchange.use_case.CurrencyOutput;
+import exchange.use_case.CurrencyOutputBoundary;
 import transaction.makeTransaction.MakeTransactionController;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
-public class CurrencyExchangePresenter implements PresenterInterface<MakeTransactionController> {
+public class CurrencyExchangePresenter implements PresenterInterface<MakeTransactionController>, CurrencyOutputBoundary {
     private final CurrencyExchangeView currencyExchangeView;
 
     public CurrencyExchangePresenter(CurrencyExchangeController currencyExchangeController) {
@@ -21,5 +23,10 @@ public class CurrencyExchangePresenter implements PresenterInterface<MakeTransac
     public void disposeView() {
         currencyExchangeView.setVisible(false);
         currencyExchangeView.dispose();
+    }
+
+    @Override
+    public void showData(CurrencyOutput currencyOutput) {
+        currencyExchangeView.getOutputAmountField().setText(String.format("%.2f", currencyOutput.getChangedAmount()));
     }
 }

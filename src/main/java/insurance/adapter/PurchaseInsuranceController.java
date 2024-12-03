@@ -3,9 +3,9 @@ package insurance.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import cardandexchange.adapter.CardController;
-import cardandexchange.dataAccess.CardDBAccess;
-import cardandexchange.dataObject.Card;
+import card.adapter.CardController;
+import card.dataAccess.CardDBAccess;
+import card.dataObject.Card;
 import insurance.dataObject.InsuranceObject;
 import login.loggedin.LoggedInController;
 import login.welcome.WelcomeController;

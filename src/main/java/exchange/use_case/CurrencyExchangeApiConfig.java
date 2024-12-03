@@ -1,4 +1,4 @@
-package cardandexchange.useCase.exchange;
+package exchange.use_case;
 
 import com.crazzyghost.alphavantage.AlphaVantage;
 import com.crazzyghost.alphavantage.Config;

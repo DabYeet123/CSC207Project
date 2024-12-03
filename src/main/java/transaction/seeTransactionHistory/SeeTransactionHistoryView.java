@@ -48,7 +48,7 @@ public class SeeTransactionHistoryView extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, FONT_SIZE));
         add(titleLabel, BorderLayout.NORTH);
 
-        final String[] columnNames = {"ID", "Card", "Receiver", "Amount $"};
+        final String[] columnNames = {"ID", "card", "Receiver", "Amount $"};
         final DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         final JTable transactionTable = new JTable(tableModel);
 

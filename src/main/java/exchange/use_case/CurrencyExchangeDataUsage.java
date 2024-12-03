@@ -1,6 +1,6 @@
-package cardandexchange.useCase.exchange;
+package exchange.use_case;
 
-import cardandexchange.adapter.CurrencyExchangeController;
+import exchange.inferface_adapter.CurrencyExchangeController;
 import com.crazzyghost.alphavantage.AlphaVantage;
 import com.crazzyghost.alphavantage.exchangerate.ExchangeRateResponse;
 

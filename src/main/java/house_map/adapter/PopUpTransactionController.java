@@ -1,7 +1,7 @@
 package house_map.adapter;
 
 import app.ControllerInterface;
-import cardandexchange.dataObject.Card;
+import card.dataObject.Card;
 import userdataobject.UserObject;
 import house_map.use_case.pop_up_transaction.PopUpTransactionInput;
 import house_map.use_case.pop_up_transaction.PopUpTransactionUseCase;
