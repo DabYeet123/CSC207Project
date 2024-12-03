@@ -68,7 +68,7 @@ public class SeeLoansHistoryView extends JFrame {
      * Creates and returns a JScrollPane containing the loans' history.
      *
      * @param controller The controller to provide the list of loans.
-     * @return The JScrollPane with the loans history table.
+     * @return The JScrollPane with the loans' history table.
      */
     @NotNull
     private static JScrollPane getLoansHistory(SeeLoansHistoryController controller) {
