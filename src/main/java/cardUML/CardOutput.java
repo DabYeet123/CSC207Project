@@ -1,10 +1,7 @@
-package card.use_case;
+package cardUML;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import card.adapter.CardController;
-import card.dataObject.Card;
 
 public class CardOutput {
     private final List<Object[]> newLine;

@@ -1,12 +1,9 @@
-package card.use_case;
-
-import java.time.LocalDate;
-import java.util.Objects;
+package cardUML;
 
 import org.jetbrains.annotations.NotNull;
 
-import card.adapter.CardController;
-import card.dataObject.Card;
+import java.time.LocalDate;
+import java.util.Objects;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CardMethods {

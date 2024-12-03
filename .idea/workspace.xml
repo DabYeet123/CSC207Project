@@ -5,32 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/adapter/CardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/adapter/CardPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/dataAccess/CardDBAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/dataObject/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/card/view/CardView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeDataUsage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardDBAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardUML/CardView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyUsecase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/ApplyLoans/ApplyLoansController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Loans/DataObject/LoansDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/makeTransaction/MakeTransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/seeTransactionHistory/SeeTransactionHistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/card/adapter/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/adapter/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/card/use_case/CardMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/card/use_case/CardOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/card/use_case/CardUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/card/use_case/CardUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/CurrencyExchangeView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -91,17 +91,18 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Yue-Zheng",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/郑Y/IdeaProjects/CSC207Project/src/main/java/exchange",
+    "last_opened_file_path": "C:/Users/郑Y/IdeaProjects/CSC207Project/src/main/java/cardUML",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\cardUML" />
       <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\exchange" />
       <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\card\use_case" />
       <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\card\dataObject" />
@@ -160,7 +161,7 @@
       <module name="homework-5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="card.view.*" />
+          <option name="PATTERN" value="card.dataObject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -244,7 +245,8 @@
       <workItem from="1732935818479" duration="109000" />
       <workItem from="1732935936292" duration="5792000" />
       <workItem from="1733096707616" duration="685000" />
-      <workItem from="1733196635562" duration="243000" />
+      <workItem from="1733196635562" duration="643000" />
+      <workItem from="1733197302153" duration="4305000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -374,21 +376,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733094338347</updated>
     </task>
-    <task id="LOCAL-00017" summary="Write for Card and ExchangeCurrency Tests">
+    <task id="LOCAL-00017" summary="1">
       <option name="closed" value="true" />
-      <created>1732658883178</created>
+      <created>1733197070665</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1732658883178</updated>
+      <updated>1733197070665</updated>
     </task>
-    <task id="LOCAL-00018" summary="Write for Card and ExchangeCurrency Tests">
+    <task id="LOCAL-00018" summary="1">
       <option name="closed" value="true" />
-      <created>1732659398250</created>
+      <created>1733197161363</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1732659398250</updated>
+      <updated>1733197161363</updated>
     </task>
     <task id="LOCAL-00019" summary="update for Card Test with Entity">
       <option name="closed" value="true" />
@@ -446,7 +448,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

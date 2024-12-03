@@ -1,7 +1,4 @@
-package card.use_case;
-
-import card.adapter.CardPresenter;
-import card.dataObject.Card;
+package cardUML;
 
 public class CardUseCase implements CardInputBoundary {
     private final CardPresenter cardPresenter;
@@ -22,9 +19,5 @@ public class CardUseCase implements CardInputBoundary {
     public Card addCard(CardInput cardInput) {
         final String name = cardInput.getName();
         return generateCard(name);
-    }
-
-    public CardPresenter getCardPresenter() {
-        return cardPresenter;
     }
 }

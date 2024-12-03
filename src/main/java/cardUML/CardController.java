@@ -1,17 +1,12 @@
-package card.adapter;
-
-import java.util.ArrayList;
-import java.util.List;
+package cardUML;
 
 import app.ControllerInterface;
-import card.dataAccess.CardDBAccess;
-import card.dataObject.Card;
-import card.use_case.CardInput;
-import card.use_case.CardOutput;
-import card.use_case.CardUseCase;
 import login.loggedin.LoggedInController;
 import lombok.Getter;
 import userdataobject.UserObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings({"checkstyle:WriteTag", "checkstyle:SuppressWarnings"})
 public class CardController implements ControllerInterface {
@@ -59,7 +54,7 @@ public class CardController implements ControllerInterface {
     }
 
     /**
-     * Add a Card.
+     * Back to base view.
      * @param name the input name
      */
     public void addCard(String name) {

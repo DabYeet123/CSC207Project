@@ -7,11 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import exchange.CurrencyExchangeController;
-import exchange.CurrencyExchangeDataUsage;
 import lombok.Getter;
 
 @Getter
@@ -103,10 +100,8 @@ public class CurrencyExchangeView extends JFrame {
         getExchangeButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CurrencyExchangeView.this.exchangeCurrency(
-                        CurrencyExchangeView.this.getFromCurrencyBox(),
-                        CurrencyExchangeView.this.getInputAmountField(),
-                        CurrencyExchangeView.this.getToCurrencyBox());
+                currencyExchangeController.execute(Double.parseDouble(inputAmountField.getText()),
+                        fromCurrencyBox, toCurrencyBox);
             }
         });
 
@@ -122,28 +117,28 @@ public class CurrencyExchangeView extends JFrame {
         });
     }
 
-    /**
-     * Used to get the amount.
-     * @param fromcurrencybox from box
-     * @param tocurrencybox to box
-     * @param inputamountfield input num
-     */
-    public void exchangeCurrency(JComboBox<String> fromcurrencybox,
-                                 JTextField inputamountfield,
-                                 JComboBox<String> tocurrencybox) {
-        try {
-            final double inputAmount = Double.parseDouble(inputamountfield.getText());
-            final String fromCurrency = (String) fromcurrencybox.getSelectedItem();
-            final String toCurrency = (String) tocurrencybox.getSelectedItem();
-
-            CurrencyExchangeDataUsage.execute(fromCurrency, toCurrency);
-            final double outputAmount = inputAmount * CurrencyExchangeController.getRate();
-            getOutputAmountField().setText(String.format("%.2f", outputAmount));
-        }
-        catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Invalid Input Amount", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
+//    /**
+//     * Used to get the amount.
+//     * @param fromcurrencybox from box
+//     * @param tocurrencybox to box
+//     * @param inputamountfield input num
+//     */
+//    public void exchangeCurrency(JComboBox<String> fromcurrencybox,
+//                                 JTextField inputamountfield,
+//                                 JComboBox<String> tocurrencybox) {
+//        try {
+//            final double inputAmount = Double.parseDouble(inputamountfield.getText());
+//            final String fromCurrency = (String) fromcurrencybox.getSelectedItem();
+//            final String toCurrency = (String) tocurrencybox.getSelectedItem();
+//
+//            CurrencyExchangeDataUsage.execute(fromCurrency, toCurrency);
+//            final double outputAmount = inputAmount * CurrencyExchangeController.getRate();
+//            getOutputAmountField().setText(String.format("%.2f", outputAmount));
+//        }
+//        catch (NumberFormatException ex) {
+//            JOptionPane.showMessageDialog(this, "Invalid Input Amount", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
+//    }
 
     public void setInputAmountField(JTextField inputAmountField) {
         this.inputAmountField = inputAmountField;
