@@ -5,33 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b372dda-078c-412d-8d5a-f0dbe3a89582" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CardPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CurrencyExchangeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/adapter/CurrencyExchangePresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/dataAccess/CardDBAccess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/dataObject/Card.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/card/CardMethods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/exchange/CurrencyExchangeApiConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/useCase/exchange/CurrencyExchangeDataUsage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/view/CardView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardandexchange/view/CurrencyExchangeView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/adapter/PopUpTransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/data_access/CardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/data_access/CardData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/use_case/pop_up_transaction/PopUpTransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/use_case/pop_up_transaction/PopUpTransactionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/house_map/view/PopUpTransactionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/house_map/view/PopUpTransactionView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/adapter/MyInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/adapter/MyInsuranceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/adapter/PurchaseInsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/adapter/PurchaseInsuranceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/dataAccess/UserInsuranceDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/dataAccess/UserInsuranceDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/insurance/view/PurchaseInsuranceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/insurance/view/PurchaseInsuranceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/adapter/ApplyLoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/adapter/ApplyLoansController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/adapter/SeeLoansHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/adapter/SeeLoansHistoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/dataAccess/LoansDBAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/dataAccess/LoansDBAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/view/ApplyLoansView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/view/ApplyLoansView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/login/loggedin/LoggedInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loans/view/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/view/SeeLoansHistoryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -408,13 +383,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733203312890</updated>
     </task>
-    <task id="LOCAL-00022" summary="Renew of refactor for Card and Exchange parts">
+    <task id="LOCAL-00022" summary="1">
       <option name="closed" value="true" />
-      <created>1732748304858</created>
+      <created>1733253313356</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1732748304858</updated>
+      <updated>1733253313356</updated>
     </task>
     <task id="LOCAL-00023" summary="Renew of refactor for Card and Exchange parts">
       <option name="closed" value="true" />
@@ -440,7 +415,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,10 +449,10 @@
     <MESSAGE value="Renew of refactor for Card and Exchange parts" />
     <MESSAGE value="11.29 renew for refactor with the reorganization" />
     <MESSAGE value="after merge from the main, change refactor thing into main" />
-    <MESSAGE value="1" />
     <MESSAGE value="Merging" />
     <MESSAGE value="update User's story" />
-    <option name="LAST_COMMIT_MESSAGE" value="update User's story" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
