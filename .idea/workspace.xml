@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="Merging">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -95,7 +94,7 @@
       <recent name="Card" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.cardandexchange in homework-5 (1)">
+  <component name="RunManager" selected="Application.MainLauncher">
     <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
       <module name="homework-5" />
@@ -169,9 +168,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainLauncher" />
         <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
         <item itemvalue="Application.app.MainLauncher" />
-        <item itemvalue="Application.MainLauncher" />
         <item itemvalue="Application.MainLauncher" />
         <item itemvalue="Application.MainLauncher" />
       </list>
@@ -340,13 +339,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733094338347</updated>
     </task>
-    <task id="LOCAL-00017" summary="Write for Card and ExchangeCurrency Tests">
+    <task id="LOCAL-00017" summary="Merging">
       <option name="closed" value="true" />
-      <created>1732658883178</created>
+      <created>1733187487029</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1732658883178</updated>
+      <updated>1733187487029</updated>
     </task>
     <task id="LOCAL-00018" summary="Write for Card and ExchangeCurrency Tests">
       <option name="closed" value="true" />
@@ -412,7 +411,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
