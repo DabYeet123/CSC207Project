@@ -1,10 +1,8 @@
-package cardandexchange;
+package exchange;
 
 import exchange.inferface_adapter.CurrencyExchangeController;
-import exchange.CurrencyExchangeView;
 import exchange.inferface_adapter.CurrencyExchangePresenter;
 import exchange.use_case.CurrencyInput;
-import exchange.use_case.CurrencyInputBoundary;
 import exchange.use_case.CurrencyUsecase;
 import userdataobject.UserObject;
 import userdataobject.UsersDBAccess;

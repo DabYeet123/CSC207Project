@@ -1,4 +1,4 @@
-package cardandexchange;
+package card;
 
 import userdataobject.UserObject;
 import userdataobject.UsersDBAccess;
