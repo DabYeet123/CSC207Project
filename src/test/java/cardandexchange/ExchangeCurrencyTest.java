@@ -1,7 +1,11 @@
 package cardandexchange;
 
-import cardandexchange.adapter.CurrencyExchangeController;
-import cardandexchange.view.CurrencyExchangeView;
+import exchange.inferface_adapter.CurrencyExchangeController;
+import exchange.CurrencyExchangeView;
+import exchange.inferface_adapter.CurrencyExchangePresenter;
+import exchange.use_case.CurrencyInput;
+import exchange.use_case.CurrencyInputBoundary;
+import exchange.use_case.CurrencyUsecase;
 import userdataobject.UserObject;
 import userdataobject.UsersDBAccess;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,6 +23,7 @@ public class ExchangeCurrencyTest {
     UsersDBAccess usersDBAccess = new UsersDBAccess();
     CurrencyExchangeController controller = new CurrencyExchangeController(userObject);
     CurrencyExchangeView currencyExchangeView = new CurrencyExchangeView(controller);
+    CurrencyExchangePresenter currencyExchangePresenter = new CurrencyExchangePresenter(controller);
 
     @BeforeEach
     void setUp() {
@@ -32,7 +37,9 @@ public class ExchangeCurrencyTest {
         JTextField mockInputField = new JTextField();
         JComboBox<String> fromCurrencyBox = new JComboBox<>(new String[]{"USD"});
         JComboBox<String> toCurrencyBox = new JComboBox<>(new String[]{"EUR"});
-        mockView.exchangeCurrency(fromCurrencyBox, mockInputField, toCurrencyBox);
+        CurrencyUsecase usecase = new CurrencyUsecase(currencyExchangePresenter);
+        CurrencyInput input = new CurrencyInput(Double.parseDouble(mockInputField.getText()), fromCurrencyBox, toCurrencyBox);
+        usecase.execute(input);
     }
 
     @Test
@@ -41,7 +48,9 @@ public class ExchangeCurrencyTest {
         JTextField mockInputField = new JTextField("100");
         JComboBox<String> fromCurrencyBox = new JComboBox<>(new String[]{"USD"});
         JComboBox<String> toCurrencyBox = new JComboBox<>(new String[]{"EUR"});
-        mockView.exchangeCurrency(fromCurrencyBox, mockInputField, toCurrencyBox);
+        CurrencyUsecase usecase = new CurrencyUsecase(currencyExchangePresenter);
+        CurrencyInput input = new CurrencyInput(Double.parseDouble(mockInputField.getText()), fromCurrencyBox, toCurrencyBox);
+        usecase.execute(input);
     }
 
     @Test
