@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b372dda-078c-412d-8d5a-f0dbe3a89582" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyExchangeDataUsage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyUsecase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyUsecase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/card/CardViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/card/CardViewTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/exchange/ExchangeCurrencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exchange/ExchangeCurrencyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +223,7 @@
       <workItem from="1733197302153" duration="4370000" />
       <workItem from="1733201746509" duration="4219000" />
       <workItem from="1733250445211" duration="1172000" />
-      <workItem from="1733269495048" duration="2399000" />
+      <workItem from="1733269495048" duration="2515000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -440,7 +433,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733270782498</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="1">
+      <option name="closed" value="true" />
+      <created>1733271947441</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733271947441</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,6 +520,6 @@
     <SUITE FILE_PATH="coverage/CSC207Project$Card_in_homework_5.ic" NAME="Card in homework-5 Coverage Results" MODIFIED="1732747859367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Card.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CSC207Project$exchange_in_homework_5.ic" NAME="exchange in homework-5 Coverage Results" MODIFIED="1733271836702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CSC207Project$exchange_in_homework_5.ic" NAME="exchange in homework-5 Coverage Results" MODIFIED="1733271920778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
