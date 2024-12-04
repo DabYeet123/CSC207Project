@@ -1,9 +1,9 @@
 package loans;
 
 
-import cardandexchange.adapter.CardController;
-import cardandexchange.dataObject.Card;
-import cardandexchange.dataAccess.CardDBAccess;
+import card.adapter.CardController;
+import card.dataObject.Card;
+import card.dataAccess.CardDBAccess;
 import userdataobject.UserObject;
 import userdataobject.UsersDBAccess;
 import loans.dataAccess.LoansDBAccess;

@@ -1,7 +1,7 @@
 package insurance;
 
-import cardandexchange.dataAccess.CardDBAccess;
-import cardandexchange.dataObject.Card;
+import card.dataAccess.CardDBAccess;
+import card.dataObject.Card;
 import userdataobject.UserObject;
 import insurance.adapter.InsuranceController;
 import insurance.dataAccess.InsuranceDBAccess;

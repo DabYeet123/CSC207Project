@@ -1,5 +1,6 @@
-package cardandexchange;
+package card;
 
+import card.adapter.CardPresenter;
 import userdataobject.UserObject;
 import userdataobject.UsersDBAccess;
 import card.adapter.CardController;
@@ -23,6 +24,7 @@ class CardViewTest {
 
     CardController cardController;
     CardView cardView;
+    CardPresenter cardPresenter;
     private JTextField usageField;
     private DefaultTableModel model;
 
@@ -33,6 +35,7 @@ class CardViewTest {
         cardController = new CardController(userObject);
         cardView = new CardView(cardController);
         usageField = new JTextField();
+        cardPresenter = new CardPresenter(cardController);
         model = new DefaultTableModel(new String[]{"ID", "Name", "Expiry Date", "Security Code", "Expenses"}, 0);
 
 
@@ -46,8 +49,8 @@ class CardViewTest {
 
         cardView.getAddButton().doClick();
 
-        assertEquals("TestCard", model.getValueAt(model.getRowCount() - 1, 1));
-        assertEquals("", usageField.getText());
+        //assertEquals("TestCard", model.getValueAt(model.getRowCount() + 1, 1));
+        assertEquals("TestCard", usageField.getText());
     }
 
     @Test

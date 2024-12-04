@@ -1,10 +1,8 @@
-package cardandexchange;
+package exchange;
 
 import exchange.inferface_adapter.CurrencyExchangeController;
-import exchange.CurrencyExchangeView;
 import exchange.inferface_adapter.CurrencyExchangePresenter;
 import exchange.use_case.CurrencyInput;
-import exchange.use_case.CurrencyInputBoundary;
 import exchange.use_case.CurrencyUsecase;
 import userdataobject.UserObject;
 import userdataobject.UsersDBAccess;
@@ -34,12 +32,12 @@ public class ExchangeCurrencyTest {
     @Test
     void failureInvalidInputAmountTest() {
         CurrencyExchangeView mockView = new CurrencyExchangeView(controller);
-        JTextField mockInputField = new JTextField();
+        JTextField mockInputField = new JTextField("0");
         JComboBox<String> fromCurrencyBox = new JComboBox<>(new String[]{"USD"});
         JComboBox<String> toCurrencyBox = new JComboBox<>(new String[]{"EUR"});
         CurrencyUsecase usecase = new CurrencyUsecase(currencyExchangePresenter);
         CurrencyInput input = new CurrencyInput(Double.parseDouble(mockInputField.getText()), fromCurrencyBox, toCurrencyBox);
-        usecase.execute(input);
+        controller.execute(input.getInputAmount(),input.getFromcurrencybox(), input.getTocurrencybox());
     }
 
     @Test
@@ -50,7 +48,7 @@ public class ExchangeCurrencyTest {
         JComboBox<String> toCurrencyBox = new JComboBox<>(new String[]{"EUR"});
         CurrencyUsecase usecase = new CurrencyUsecase(currencyExchangePresenter);
         CurrencyInput input = new CurrencyInput(Double.parseDouble(mockInputField.getText()), fromCurrencyBox, toCurrencyBox);
-        usecase.execute(input);
+        controller.execute(input.getInputAmount(),input.getFromcurrencybox(), input.getTocurrencybox());
     }
 
     @Test
