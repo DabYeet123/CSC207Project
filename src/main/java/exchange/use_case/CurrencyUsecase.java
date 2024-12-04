@@ -25,7 +25,7 @@ public class CurrencyUsecase implements CurrencyInputBoundary{
                 .exchangeRate()
                 .fromCurrency((String) currencyInput.getFromcurrencybox().getSelectedItem())
                 .toCurrency((String) currencyInput.getTocurrencybox().getSelectedItem())
-                .onSuccess(CurrencyExchangeDataUsage::onData)
+                .onSuccess(CurrencyUsecase::onData)
                 .fetch();
     }
 

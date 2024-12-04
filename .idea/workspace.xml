@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b372dda-078c-412d-8d5a-f0dbe3a89582" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cardandexchange/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/CardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cardandexchange/CardViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/CardViewTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cardandexchange/ExchangeCurrencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/ExchangeCurrencyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework-5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyExchangeDataUsage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyUsecase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exchange/use_case/CurrencyUsecase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/card/CardViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/card/CardViewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/exchange/ExchangeCurrencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/exchange/ExchangeCurrencyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,10 @@
   "keyToString": {
     "Application.MainLauncher.executor": "Run",
     "Application.app.MainLauncher.executor": "Run",
+    "JUnit.card in homework-5.executor": "Coverage",
+    "JUnit.exchange in homework-5.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Yue-Zheng",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -81,9 +85,6 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\U of T\CSC207\CSC207Project\src\main\java\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\cardUML" />
       <recent name="C:\Users\郑Y\IdeaProjects\CSC207Project\src\main\java\exchangeUML" />
@@ -104,6 +105,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="exchange" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Card" />
     </key>
@@ -113,7 +117,7 @@
       <recent name="Card.view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.app.MainLauncher">
+  <component name="RunManager" selected="JUnit.exchange in homework-5">
     <configuration name="MainLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.MainLauncher" />
       <module name="homework-5" />
@@ -141,21 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework-5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="card.dataObject.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Card" />
-      <option name="MAIN_CLASS_NAME" value="Card.CardViewTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Exchange in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <extension name="coverage">
@@ -170,10 +159,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cardandexchange in homework-5 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="card in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework-5" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/cardandexchange" />
+      <dir value="$PROJECT_DIR$/src/test/java/card" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exchange in homework-5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework-5" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/exchange" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,17 +178,17 @@
     <list>
       <item itemvalue="Application.app.MainLauncher" />
       <item itemvalue="Application.MainLauncher" />
-      <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
-      <item itemvalue="JUnit.CardViewTest" />
+      <item itemvalue="JUnit.card in homework-5" />
+      <item itemvalue="JUnit.exchange in homework-5" />
       <item itemvalue="JUnit.Exchange in homework-5" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.exchange in homework-5" />
         <item itemvalue="Application.app.MainLauncher" />
+        <item itemvalue="JUnit.card in homework-5" />
         <item itemvalue="Application.MainLauncher" />
         <item itemvalue="JUnit.Exchange in homework-5" />
-        <item itemvalue="JUnit.CardViewTest" />
-        <item itemvalue="JUnit.cardandexchange in homework-5 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +230,7 @@
       <workItem from="1733197302153" duration="4370000" />
       <workItem from="1733201746509" duration="4219000" />
       <workItem from="1733250445211" duration="1172000" />
-      <workItem from="1733269495048" duration="1048000" />
+      <workItem from="1733269495048" duration="2399000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -427,15 +424,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733253623143</updated>
     </task>
-    <task id="LOCAL-00025" summary="11.29 renew for refactor with the reorganization">
+    <task id="LOCAL-00025" summary="1">
       <option name="closed" value="true" />
-      <created>1732940209744</created>
+      <created>1733270577398</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1732940209744</updated>
+      <updated>1733270577398</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00026" summary="1">
+      <option name="closed" value="true" />
+      <created>1733270782498</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733270782498</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,6 +509,7 @@
       <FILTER>Card.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CSC207Project$cardandexchange_in_homework_5__1_.ic" NAME="cardandexchange in homework-5 (1) Coverage Results" MODIFIED="1733094264308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CSC207Project$card_in_homework_5.ic" NAME="card in homework-5 Coverage Results" MODIFIED="1733271356881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/CSC207Project$ExchangeCurrencyTest_failureInvalidInputAmountTest.ic" NAME="ExchangeCurrencyTest.failureInvalidInputAmountTest Coverage Results" MODIFIED="1732679333915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Exchange.*</FILTER>
     </SUITE>
@@ -513,5 +519,6 @@
     <SUITE FILE_PATH="coverage/CSC207Project$Card_in_homework_5.ic" NAME="Card in homework-5 Coverage Results" MODIFIED="1732747859367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>Card.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/CSC207Project$exchange_in_homework_5.ic" NAME="exchange in homework-5 Coverage Results" MODIFIED="1733271836702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
