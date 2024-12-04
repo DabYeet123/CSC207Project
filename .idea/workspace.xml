@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b372dda-078c-412d-8d5a-f0dbe3a89582" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Users.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/Users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loans/view/SeeLoansHistoryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loans/view/SeeLoansHistoryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cardandexchange/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cardandexchange/CardViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/CardViewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cardandexchange/ExchangeCurrencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cardandexchange/ExchangeCurrencyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +70,14 @@
   "keyToString": {
     "Application.MainLauncher.executor": "Run",
     "Application.app.MainLauncher.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Yue-Zheng",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -184,10 +195,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fb82fd94-a9d1-4a02-bde7-3ccd6d55900f" name="Changes" comment="after merge from the main, change refactor thing into main" />
+      <changelist id="1b372dda-078c-412d-8d5a-f0dbe3a89582" name="Changes" comment="1" />
       <created>1731971551933</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -214,6 +233,7 @@
       <workItem from="1733197302153" duration="4370000" />
       <workItem from="1733201746509" duration="4219000" />
       <workItem from="1733250445211" duration="1172000" />
+      <workItem from="1733269495048" duration="1048000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -391,21 +411,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733253313356</updated>
     </task>
-    <task id="LOCAL-00023" summary="Renew of refactor for Card and Exchange parts">
+    <task id="LOCAL-00023" summary="1">
       <option name="closed" value="true" />
-      <created>1732748876186</created>
+      <created>1733253504684</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1732748876186</updated>
+      <updated>1733253504684</updated>
     </task>
-    <task id="LOCAL-00024" summary="Renew of refactor for Card and Exchange parts">
+    <task id="LOCAL-00024" summary="1">
       <option name="closed" value="true" />
-      <created>1732748911308</created>
+      <created>1733253623143</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1732748911308</updated>
+      <updated>1733253623143</updated>
     </task>
     <task id="LOCAL-00025" summary="11.29 renew for refactor with the reorganization">
       <option name="closed" value="true" />
@@ -415,7 +435,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732940209744</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
